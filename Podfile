@@ -12,5 +12,6 @@ target 'KiteFly' do
   pod 'ObjectMapper', '4.2.0'
   # 键盘控制器
   pod 'IQKeyboardManager', '6.5.6'
-
+  # 轮播图
+  pod 'TYCyclePagerView', '1.2.0'
 end

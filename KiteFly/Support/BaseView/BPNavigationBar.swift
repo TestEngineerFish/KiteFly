@@ -35,7 +35,7 @@ open class BPNavigationBar: BPView {
         label.text          = ""
         label.font          = UIFont.iconFont(size: AdaptSize(18))
         label.textAlignment = .center
-        label.textColor     = UIColor.black0
+        label.textColor     = UIColor.white
         return label
     }()
     
@@ -133,6 +133,7 @@ open class BPNavigationBar: BPView {
 //            self.rightTitle = currentVC.rightText
 //            self.rightButton.setImage(currentVC.rightImage, for: .normal)
         }
+        self.backgroundColor = .theme
     }
     
     // MARK: ==== Event ====

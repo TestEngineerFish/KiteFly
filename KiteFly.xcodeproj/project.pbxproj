@@ -49,6 +49,9 @@
 		185F5EC827F445C500AFBA3F /* BPCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EC727F445C500AFBA3F /* BPCollectionViewCell.swift */; };
 		185F5ECD27F44DD900AFBA3F /* NewsModelList.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5ECC27F44DD900AFBA3F /* NewsModelList.json */; };
 		185F5ECF27F45B9E00AFBA3F /* NoticModelList.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5ECE27F45B9D00AFBA3F /* NoticModelList.json */; };
+		185F5ED127F4729300AFBA3F /* KFHomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5ED027F4729300AFBA3F /* KFHomePageCell.swift */; };
+		185F5ED327F4791F00AFBA3F /* KFHomePageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5ED227F4791F00AFBA3F /* KFHomePageModel.swift */; };
+		185F5ED527F47A6A00AFBA3F /* PageUrl.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5ED427F47A6A00AFBA3F /* PageUrl.json */; };
 		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +102,9 @@
 		185F5EC727F445C500AFBA3F /* BPCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPCollectionViewCell.swift; sourceTree = "<group>"; };
 		185F5ECC27F44DD900AFBA3F /* NewsModelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NewsModelList.json; sourceTree = "<group>"; };
 		185F5ECE27F45B9D00AFBA3F /* NoticModelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NoticModelList.json; sourceTree = "<group>"; };
+		185F5ED027F4729300AFBA3F /* KFHomePageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomePageCell.swift; sourceTree = "<group>"; };
+		185F5ED227F4791F00AFBA3F /* KFHomePageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomePageModel.swift; sourceTree = "<group>"; };
+		185F5ED427F47A6A00AFBA3F /* PageUrl.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PageUrl.json; sourceTree = "<group>"; };
 		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
 		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,6 +264,7 @@
 			children = (
 				185F5EBC27F43F1900AFBA3F /* KFNewsModel.swift */,
 				185F5EBE27F440D300AFBA3F /* KFNoticeModel.swift */,
+				185F5ED227F4791F00AFBA3F /* KFHomePageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,6 +274,7 @@
 			children = (
 				185F5EC127F4433800AFBA3F /* KFHomeNewsItem.swift */,
 				185F5EC327F4442700AFBA3F /* KFHomeNoticCell.swift */,
+				185F5ED027F4729300AFBA3F /* KFHomePageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +282,7 @@
 		185F5EC927F44C3300AFBA3F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				185F5ED427F47A6A00AFBA3F /* PageUrl.json */,
 				185F5ECE27F45B9D00AFBA3F /* NoticModelList.json */,
 				185F5ECC27F44DD900AFBA3F /* NewsModelList.json */,
 			);
@@ -360,6 +369,7 @@
 			files = (
 				185F5ECD27F44DD900AFBA3F /* NewsModelList.json in Resources */,
 				185F5E6627F41CD200AFBA3F /* LaunchScreen.storyboard in Resources */,
+				185F5ED527F47A6A00AFBA3F /* PageUrl.json in Resources */,
 				185F5ECF27F45B9E00AFBA3F /* NoticModelList.json in Resources */,
 				185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */,
 				185F5E6127F41CD100AFBA3F /* Main.storyboard in Resources */,
@@ -419,6 +429,7 @@
 				185F5EBD27F43F1900AFBA3F /* KFNewsModel.swift in Sources */,
 				185F5E8827F4205500AFBA3F /* UIViewController+Extension.swift in Sources */,
 				185F5E9427F4228100AFBA3F /* BPTableViewEmptyView.swift in Sources */,
+				185F5ED327F4791F00AFBA3F /* KFHomePageModel.swift in Sources */,
 				185F5EB827F438F100AFBA3F /* KFRegisterViewController.swift in Sources */,
 				185F5E7E27F41ED800AFBA3F /* BPNavigationBar.swift in Sources */,
 				185F5EC227F4433800AFBA3F /* KFHomeNewsItem.swift in Sources */,
@@ -442,6 +453,7 @@
 				185F5EA327F424F700AFBA3F /* Date+Extension.swift in Sources */,
 				185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */,
 				185F5EB627F433F500AFBA3F /* BPNavigationController.swift in Sources */,
+				185F5ED127F4729300AFBA3F /* KFHomePageCell.swift in Sources */,
 				185F5E8A27F4207700AFBA3F /* UIView+Extension.swift in Sources */,
 				185F5E9F27F4242200AFBA3F /* NSTextAttachment.swift in Sources */,
 				185F5E9027F4223F00AFBA3F /* CALayer+Extension.swift in Sources */,
