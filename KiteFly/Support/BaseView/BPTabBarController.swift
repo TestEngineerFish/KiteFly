@@ -19,14 +19,14 @@ open class BPTabBarController: UITabBarController, UITabBarControllerDelegate {
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        let messageVC = BPViewController()
-        messageVC.tabBarItem.title         = "首页"
-        messageVC.tabBarItem.image         = UIImage(named: "message_unselect")?.withRenderingMode(.alwaysOriginal)
-        messageVC.tabBarItem.selectedImage = UIImage(named: "message_selected")?.withRenderingMode(.alwaysOriginal)
-        messageVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-        messageVC.tabBarItem.isSpringLoaded = true
+        let homeVC = KFHomeViewController()
+        homeVC.tabBarItem.title         = "首页"
+        homeVC.tabBarItem.image         = UIImage(named: "message_unselect")?.withRenderingMode(.alwaysOriginal)
+        homeVC.tabBarItem.selectedImage = UIImage(named: "message_selected")?.withRenderingMode(.alwaysOriginal)
+        homeVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        homeVC.tabBarItem.isSpringLoaded = true
         
-        let taskVC = BPViewController()
+        let taskVC = KFRegisterViewController()
         taskVC.view.backgroundColor = .white
         taskVC.tabBarItem.title         = "动态"
         taskVC.tabBarItem.image         = UIImage(named: "task_unselect")?.withRenderingMode(.alwaysOriginal)
@@ -34,21 +34,22 @@ open class BPTabBarController: UITabBarController, UITabBarControllerDelegate {
         taskVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         taskVC.tabBarItem.isSpringLoaded = true
         
-        let studioVC = BPViewController()
-        studioVC.view.backgroundColor = .white
-        studioVC.tabBarItem.title         = "设置"
-        studioVC.tabBarItem.image         = UIImage(named: "studio_unselect")?.withRenderingMode(.alwaysOriginal)
-        studioVC.tabBarItem.selectedImage = UIImage(named: "studio_selected")?.withRenderingMode(.alwaysOriginal)
-        studioVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-        studioVC.tabBarItem.isSpringLoaded = true
+        let settingVC = BPViewController()
+        settingVC.view.backgroundColor = .white
+        settingVC.tabBarItem.title         = "设置"
+        settingVC.tabBarItem.image         = UIImage(named: "studio_unselect")?.withRenderingMode(.alwaysOriginal)
+        settingVC.tabBarItem.selectedImage = UIImage(named: "studio_selected")?.withRenderingMode(.alwaysOriginal)
+        settingVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        settingVC.tabBarItem.isSpringLoaded = true
         
-        self.viewControllers = []
+        self.viewControllers = [homeVC, taskVC, settingVC]
         self.updateUI()
         
     }
     
     open func updateUI() {
-        UITabBar.appearance().backgroundImage         = UIImage.imageWithColor(.white)
-        UITabBar.appearance().isTranslucent           = false
+        self.view.backgroundColor             = .white
+        UITabBar.appearance().backgroundImage = UIImage.imageWithColor(.white)
+        UITabBar.appearance().isTranslucent   = false
     }
 }

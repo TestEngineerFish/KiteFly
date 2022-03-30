@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 public struct BPFileManager {
     
@@ -179,6 +180,68 @@ public struct BPFileManager {
         }
         let data = fileHandle.readDataToEndOfFile()
         return data
+    }
+    
+    // TODO: ==== 本地文件操作 ====
+    func getJson<T>(file name: String, type: T) -> T? {
+        guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
+            return nil
+        }
+        do {
+            let json = try String(contentsOfFile: path, encoding: .utf8)
+            guard let data = json.data(using: .utf8) else {
+                return nil
+            }
+            let jsonStr = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
+            return jsonStr as? T
+        } catch let error {
+            print("get json error: \(error)")
+        }
+        return nil
+    }
+    
+    func getJsonModel(file name: String, type: Mappable.Type) -> Mappable? {
+        guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
+            return nil
+        }
+        do {
+            let json = try String(contentsOfFile: path, encoding: .utf8)
+            guard let data = json.data(using: .utf8) else {
+                return nil
+            }
+            guard let jsonDic = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) as? [String:Any] else {
+                return nil
+            }
+            return type.init(JSON: jsonDic)
+        } catch let error {
+            print("get json error: \(error)")
+        }
+        return nil
+    }
+    
+    func getJsonModelList(file name: String, type: Mappable.Type) -> [Mappable] {
+        guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
+            return []
+        }
+        do {
+            let json = try String(contentsOfFile: path, encoding: .utf8)
+            guard let data = json.data(using: .utf8) else {
+                return []
+            }
+            guard let jsonArray = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) as? [[String:Any]] else {
+                return []
+            }
+            var modelList = [Mappable]()
+            jsonArray.forEach { dict in
+                if let model = type.init(JSON: dict) {
+                    modelList.append(model)
+                }
+            }
+            return modelList
+        } catch let error {
+            print("get json error: \(error)")
+        }
+        return []
     }
     
     // TODO: ==== Tools ====

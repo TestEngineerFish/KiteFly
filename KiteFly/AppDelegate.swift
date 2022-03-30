@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.registerModule()
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        if true {
+        if false {
             let vc = KFLoginViewController()
             let nvc = BPNavigationController(rootViewController: vc)
             self.window?.rootViewController = nvc
