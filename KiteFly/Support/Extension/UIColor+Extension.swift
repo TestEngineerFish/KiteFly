@@ -35,7 +35,7 @@ public extension UIColor {
             return UIColor(red: red, green: green, blue: blue, alpha: alpha)
         }
     }
-
+    
     /// 根据方向,设置渐变色
     ///
     /// - Parameters:
@@ -175,7 +175,7 @@ public extension UIColor {
     static let orange0 = ColorWithRGBA(red: 254, green: 90, blue: 63)
     
     /// VIP提示文案  (red: 125, green: 99, blue: 47)
-    static let yellow0 = ColorWithRGBA(red: 125, green: 99, blue: 47)
+    static let yellow0 = ColorWithRGBA(red: 255, green: 99, blue: 47)
     /// 开通贵族价格文案  (red: 254, green: 211, blue: 184)
     static let yellow1 = ColorWithRGBA(red: 254, green: 211, blue: 184)
     /// 去充值按钮  (red: 255, green: 184, blue: 0)
@@ -193,6 +193,8 @@ public extension UIColor {
     /// 同城项目的主体紫色 (red: 209, green: 187, blue: 250)
     static let purple2 = ColorWithRGBA(red: 132, green: 120, blue: 250)
 
+    static let theme = ColorWithRGBA(red: 255, green: 196, blue: 47)
+    
     /// 主题渐变
     static let themeGradientList = [UIColor.hex(0xFF68E8).cgColor, UIColor.hex(0xB741FE).cgColor, UIColor.hex(0x669BFF).cgColor]
     /// VIP渐变

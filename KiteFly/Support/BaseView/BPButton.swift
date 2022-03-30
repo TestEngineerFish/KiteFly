@@ -81,7 +81,7 @@ open class BPButton: UIButton {
         case .normal:
             self.isEnabled     = true
             if self.type == .theme {
-                self.backgroundColor = UIColor.gradientColor(with: self.size, colors: UIColor.themeGradientList, direction: .horizontal)
+                self.backgroundColor = UIColor.theme
             } else {
                 self.layer.opacity = normalOpacity
             }
@@ -106,12 +106,15 @@ open class BPButton: UIButton {
             self.setTitleColor(UIColor.white)
             self.layer.cornerRadius  = AdaptSize(5)
             self.layer.masksToBounds = true
-            self.backgroundColor     = UIColor.gradientColor(with: self.size, colors: UIColor.themeGradientList, direction: .horizontal)
+            self.backgroundColor     = UIColor.theme
         case .second:
             self.setTitleColor(UIColor.white)
-            self.backgroundColor     = UIColor.purple2
+            self.backgroundColor     = UIColor.white
             self.layer.cornerRadius  = AdaptSize(5)
             self.layer.masksToBounds = true
+            self.layer.borderColor   = UIColor.theme.cgColor
+            self.layer.borderWidth   = AdaptSize(1)
+            self.setTitleColor(.theme)
         }
     }
     

@@ -10,6 +10,7 @@ target 'KiteFly' do
   pod 'SDWebImage', '5.12.1'
   # JSON转对象（MIT License）
   pod 'ObjectMapper', '4.2.0'
-
+  # 键盘控制器
+  pod 'IQKeyboardManager', '6.5.6'
 
 end

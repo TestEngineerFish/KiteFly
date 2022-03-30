@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		185F5E5A27F41CD100AFBA3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E5927F41CD100AFBA3F /* AppDelegate.swift */; };
-		185F5E5C27F41CD100AFBA3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E5B27F41CD100AFBA3F /* SceneDelegate.swift */; };
-		185F5E5E27F41CD100AFBA3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E5D27F41CD100AFBA3F /* ViewController.swift */; };
 		185F5E6127F41CD100AFBA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E5F27F41CD100AFBA3F /* Main.storyboard */; };
 		185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E6227F41CD200AFBA3F /* Assets.xcassets */; };
 		185F5E6627F41CD200AFBA3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E6427F41CD200AFBA3F /* LaunchScreen.storyboard */; };
@@ -36,6 +34,11 @@
 		185F5E9F27F4242200AFBA3F /* NSTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9E27F4242200AFBA3F /* NSTextAttachment.swift */; };
 		185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA027F4244100AFBA3F /* BPFileManager.swift */; };
 		185F5EA327F424F700AFBA3F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA227F424F700AFBA3F /* Date+Extension.swift */; };
+		185F5EA527F425E100AFBA3F /* BPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA427F425E100AFBA3F /* BPTextField.swift */; };
+		185F5EA927F4285C00AFBA3F /* BPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA827F4285C00AFBA3F /* BPTabBarController.swift */; };
+		185F5EAB27F4289C00AFBA3F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EAA27F4289C00AFBA3F /* UIImage+Extension.swift */; };
+		185F5EB027F42B8800AFBA3F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EAF27F42B8800AFBA3F /* Data+Extension.swift */; };
+		185F5EB627F433F500AFBA3F /* BPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EB527F433F500AFBA3F /* BPNavigationController.swift */; };
 		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +46,6 @@
 		1206E9800750F747AF76704B /* Pods_KiteFly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiteFly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		185F5E5627F41CD100AFBA3F /* KiteFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiteFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185F5E5927F41CD100AFBA3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		185F5E5B27F41CD100AFBA3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		185F5E5D27F41CD100AFBA3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		185F5E6027F41CD100AFBA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		185F5E6227F41CD200AFBA3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185F5E6527F41CD200AFBA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +73,12 @@
 		185F5E9E27F4242200AFBA3F /* NSTextAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextAttachment.swift; sourceTree = "<group>"; };
 		185F5EA027F4244100AFBA3F /* BPFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPFileManager.swift; sourceTree = "<group>"; };
 		185F5EA227F424F700AFBA3F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		185F5EA427F425E100AFBA3F /* BPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPTextField.swift; sourceTree = "<group>"; };
+		185F5EA827F4285C00AFBA3F /* BPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPTabBarController.swift; sourceTree = "<group>"; };
+		185F5EAA27F4289C00AFBA3F /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		185F5EAF27F42B8800AFBA3F /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		185F5EB127F42C1A00AFBA3F /* KiteFly-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KiteFly-Bridging-Header.h"; sourceTree = "<group>"; };
+		185F5EB527F433F500AFBA3F /* BPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPNavigationController.swift; sourceTree = "<group>"; };
 		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
 		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,12 +122,11 @@
 				185F5E6E27F41D6600AFBA3F /* HomePage */,
 				185F5E6D27F41D6100AFBA3F /* Login */,
 				185F5E5927F41CD100AFBA3F /* AppDelegate.swift */,
-				185F5E5B27F41CD100AFBA3F /* SceneDelegate.swift */,
-				185F5E5D27F41CD100AFBA3F /* ViewController.swift */,
 				185F5E5F27F41CD100AFBA3F /* Main.storyboard */,
 				185F5E6227F41CD200AFBA3F /* Assets.xcassets */,
 				185F5E6427F41CD200AFBA3F /* LaunchScreen.storyboard */,
 				185F5E6727F41CD200AFBA3F /* Info.plist */,
+				185F5EB127F42C1A00AFBA3F /* KiteFly-Bridging-Header.h */,
 			);
 			path = KiteFly;
 			sourceTree = "<group>";
@@ -168,6 +174,8 @@
 		185F5E7427F41E2400AFBA3F /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				185F5EA827F4285C00AFBA3F /* BPTabBarController.swift */,
+				185F5EA427F425E100AFBA3F /* BPTextField.swift */,
 				185F5E7527F41E3D00AFBA3F /* BPViewController.swift */,
 				185F5E7727F41E7D00AFBA3F /* BPView.swift */,
 				185F5E7927F41E8D00AFBA3F /* BPLabel.swift */,
@@ -176,6 +184,7 @@
 				185F5E9127F4226200AFBA3F /* BPTableView.swift */,
 				185F5E9327F4228100AFBA3F /* BPTableViewEmptyView.swift */,
 				185F5E9527F4229100AFBA3F /* BPImageView.swift */,
+				185F5EB527F433F500AFBA3F /* BPNavigationController.swift */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -202,6 +211,8 @@
 				185F5E9C27F423E700AFBA3F /* String+Extension.swift */,
 				185F5E9E27F4242200AFBA3F /* NSTextAttachment.swift */,
 				185F5EA227F424F700AFBA3F /* Date+Extension.swift */,
+				185F5EAA27F4289C00AFBA3F /* UIImage+Extension.swift */,
+				185F5EAF27F42B8800AFBA3F /* Data+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -266,6 +277,7 @@
 				TargetAttributes = {
 					185F5E5527F41CD100AFBA3F = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -347,7 +359,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185F5E5E27F41CD100AFBA3F /* ViewController.swift in Sources */,
 				185F5E8827F4205500AFBA3F /* UIViewController+Extension.swift in Sources */,
 				185F5E9427F4228100AFBA3F /* BPTableViewEmptyView.swift in Sources */,
 				185F5E7E27F41ED800AFBA3F /* BPNavigationBar.swift in Sources */,
@@ -360,10 +371,13 @@
 				185F5E9927F422E200AFBA3F /* BPMediaModel.swift in Sources */,
 				185F5E7827F41E7D00AFBA3F /* BPView.swift in Sources */,
 				185F5E9D27F423E700AFBA3F /* String+Extension.swift in Sources */,
-				185F5E5C27F41CD100AFBA3F /* SceneDelegate.swift in Sources */,
+				185F5EA927F4285C00AFBA3F /* BPTabBarController.swift in Sources */,
 				185F5E9227F4226200AFBA3F /* BPTableView.swift in Sources */,
+				185F5EA527F425E100AFBA3F /* BPTextField.swift in Sources */,
+				185F5EB027F42B8800AFBA3F /* Data+Extension.swift in Sources */,
 				185F5EA327F424F700AFBA3F /* Date+Extension.swift in Sources */,
 				185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */,
+				185F5EB627F433F500AFBA3F /* BPNavigationController.swift in Sources */,
 				185F5E8A27F4207700AFBA3F /* UIView+Extension.swift in Sources */,
 				185F5E9F27F4242200AFBA3F /* NSTextAttachment.swift in Sources */,
 				185F5E9027F4223F00AFBA3F /* CALayer+Extension.swift in Sources */,
@@ -371,6 +385,7 @@
 				185F5E8E27F421D300AFBA3F /* UINavigationController+Extension.swift in Sources */,
 				185F5E7A27F41E8D00AFBA3F /* BPLabel.swift in Sources */,
 				185F5E7227F41DE200AFBA3F /* KFLoginViewController.swift in Sources */,
+				185F5EAB27F4289C00AFBA3F /* UIImage+Extension.swift in Sources */,
 				185F5E7C27F41E9800AFBA3F /* BPButton.swift in Sources */,
 				185F5E8427F41FC300AFBA3F /* UIFont+Extension.swift in Sources */,
 			);
@@ -518,16 +533,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35QFLB7H5A;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KiteFly/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,8 +556,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.KiteFly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "KiteFly/KiteFly-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -547,16 +569,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35QFLB7H5A;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KiteFly/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -565,8 +592,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.KiteFly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "KiteFly/KiteFly-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
