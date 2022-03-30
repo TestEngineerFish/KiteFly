@@ -11,9 +11,9 @@ class KFHomeNewsItem: BPCollectionViewCell {
     
     private var customContentView: BPView = {
         let view = BPView()
-        view.backgroundColor = UIColor.gray0
-        view.layer.setDefaultShadow()
+        view.backgroundColor = UIColor.white
         view.layer.cornerRadius = AdaptSize(5)
+        view.layer.setDefaultShadow()
         return view
     }()
     
@@ -76,7 +76,6 @@ class KFHomeNewsItem: BPCollectionViewCell {
     
     override func updateUI() {
         super.updateUI()
-        
     }
     
     // MARK: ==== Event ====

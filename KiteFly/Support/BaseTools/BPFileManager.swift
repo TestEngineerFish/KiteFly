@@ -183,23 +183,12 @@ public struct BPFileManager {
     }
     
     // TODO: ==== 本地文件操作 ====
-    func getJson<T>(file name: String, type: T) -> T? {
-        guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
-            return nil
-        }
-        do {
-            let json = try String(contentsOfFile: path, encoding: .utf8)
-            guard let data = json.data(using: .utf8) else {
-                return nil
-            }
-            let jsonStr = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
-            return jsonStr as? T
-        } catch let error {
-            print("get json error: \(error)")
-        }
-        return nil
-    }
     
+    /// 获取本地转换单个对象
+    /// - Parameters:
+    ///   - name: 文件名
+    ///   - type: 类型
+    /// - Returns: 对象
     func getJsonModel(file name: String, type: Mappable.Type) -> Mappable? {
         guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
             return nil
@@ -219,6 +208,11 @@ public struct BPFileManager {
         return nil
     }
     
+    /// 获取本地对象列表
+    /// - Parameters:
+    ///   - name: 文件名
+    ///   - type: 类型
+    /// - Returns: 对象列表
     func getJsonModelList(file name: String, type: Mappable.Type) -> [Mappable] {
         guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
             return []

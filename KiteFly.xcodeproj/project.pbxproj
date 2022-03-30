@@ -48,6 +48,7 @@
 		185F5EC627F4445D00AFBA3F /* BPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EC527F4445D00AFBA3F /* BPTableViewCell.swift */; };
 		185F5EC827F445C500AFBA3F /* BPCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EC727F445C500AFBA3F /* BPCollectionViewCell.swift */; };
 		185F5ECD27F44DD900AFBA3F /* NewsModelList.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5ECC27F44DD900AFBA3F /* NewsModelList.json */; };
+		185F5ECF27F45B9E00AFBA3F /* NoticModelList.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5ECE27F45B9D00AFBA3F /* NoticModelList.json */; };
 		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		185F5EC527F4445D00AFBA3F /* BPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPTableViewCell.swift; sourceTree = "<group>"; };
 		185F5EC727F445C500AFBA3F /* BPCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPCollectionViewCell.swift; sourceTree = "<group>"; };
 		185F5ECC27F44DD900AFBA3F /* NewsModelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NewsModelList.json; sourceTree = "<group>"; };
+		185F5ECE27F45B9D00AFBA3F /* NoticModelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NoticModelList.json; sourceTree = "<group>"; };
 		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
 		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,6 +274,7 @@
 		185F5EC927F44C3300AFBA3F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				185F5ECE27F45B9D00AFBA3F /* NoticModelList.json */,
 				185F5ECC27F44DD900AFBA3F /* NewsModelList.json */,
 			);
 			path = Resource;
@@ -357,6 +360,7 @@
 			files = (
 				185F5ECD27F44DD900AFBA3F /* NewsModelList.json in Resources */,
 				185F5E6627F41CD200AFBA3F /* LaunchScreen.storyboard in Resources */,
+				185F5ECF27F45B9E00AFBA3F /* NoticModelList.json in Resources */,
 				185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */,
 				185F5E6127F41CD100AFBA3F /* Main.storyboard in Resources */,
 			);

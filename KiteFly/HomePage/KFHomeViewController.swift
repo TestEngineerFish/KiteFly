@@ -28,13 +28,14 @@ class KFHomeViewController: BPViewController, UICollectionViewDelegate, UICollec
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator   = false
+        collectionView.backgroundColor = UIColor.clear
         return collectionView
     }()
     
     private var tableView: BPTableView = {
         let tableView = BPTableView()
         tableView.estimatedRowHeight             = AdaptSize(56)
-        tableView.backgroundColor                = UIColor.gray0
+        tableView.backgroundColor                = UIColor.clear
         tableView.separatorStyle                 = .none
         tableView.showsVerticalScrollIndicator   = false
         tableView.showsHorizontalScrollIndicator = false
@@ -46,6 +47,7 @@ class KFHomeViewController: BPViewController, UICollectionViewDelegate, UICollec
         self.createSubviews()
         self.bindProperty()
         self.bindData()
+        self.updateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,13 +90,19 @@ class KFHomeViewController: BPViewController, UICollectionViewDelegate, UICollec
     override func bindData() {
         super.bindData()
         self.newsModelList = BPFileManager.share.getJsonModelList(file: "NewsModelList", type: KFNewsModel.self) as? [KFNewsModel] ?? []
+        self.noticeModelList = BPFileManager.share.getJsonModelList(file: "NoticModelList", type: KFNoticeModel.self) as? [KFNoticeModel] ?? []
         self.collectionView.reloadData()
         self.tableView.reloadData()
     }
     
     override func updateViewConstraints() {
-        
         super.updateViewConstraints()
+    }
+    
+    override func updateUI() {
+        super.updateUI()
+        self.view.backgroundColor = .white
+        
     }
     
     // MARK: ==== Event ====

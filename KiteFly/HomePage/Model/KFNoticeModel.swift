@@ -24,7 +24,7 @@ struct KFNoticeModel: Mappable {
     var contact: String = ""
     /// 地址
     var address: String = ""
-    /// 是否已注册
+    /// 是否已报名
     var isRegister: Bool = false
     /// 备注
     var remark: String = ""

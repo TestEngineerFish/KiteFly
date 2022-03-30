@@ -12,12 +12,16 @@ class KFHomeNoticCell: BPTableViewCell {
     private var customContentView: BPView = {
         let view = BPView()
         view.backgroundColor = UIColor.white
+        view.layer.cornerRadius = AdaptSize(10)
+        view.layer.setDefaultShadow()
         return view
     }()
     
     private var logoImageView: BPImageView = {
         let imageView = BPImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.size = CGSize(width: kScreenWidth - AdaptSize(20), height: AdaptSize(180))
+        imageView.clipRectCorner(directionList: [.topLeft, .topRight], cornerRadius: AdaptSize(10))
         return imageView
     }()
     
@@ -64,6 +68,7 @@ class KFHomeNoticCell: BPTableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.createSubviews()
         self.bindProperty()
+        self.updateUI()
     }
     
     required init?(coder: NSCoder) {
@@ -85,13 +90,16 @@ class KFHomeNoticCell: BPTableViewCell {
             make.right.bottom.equalToSuperview().offset(AdaptSize(-10))
         }
         logoImageView.snp.makeConstraints { make in
-            make.left.right.top.equalToSuperview()
-            make.height.equalTo(AdaptSize(110))
+            make.top.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.size.equalTo(logoImageView.size)
         }
         addressLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(AdaptSize(15))
             make.right.equalToSuperview().offset(AdaptSize(-15))
+            make.bottom.equalToSuperview()
             make.height.equalTo(AdaptSize(40))
+            make.top.equalTo(logoImageView.snp.bottom)
         }
         contactLabel.snp.makeConstraints { make in
             make.left.right.equalTo(addressLabel)
@@ -104,12 +112,12 @@ class KFHomeNoticCell: BPTableViewCell {
             make.bottom.equalTo(contactLabel.snp.top).offset(AdaptSize(-10))
         }
         titleLabel.snp.makeConstraints { make in
-            make.left.right.equalTo(addressLabel)
             make.height.equalTo(titleLabel.font.lineHeight)
-            make.bottom.equalTo(amountLabel.snp.top).offset(AdaptSize(-10))
+            make.top.left.equalToSuperview().offset(AdaptSize(15))
+            make.right.equalToSuperview().offset(AdaptSize(-15))
         }
         registerButton.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: AdaptSize(80), height: AdaptSize(40)))
+            make.size.equalTo(CGSize(width: AdaptSize(80), height: AdaptSize(30)))
             make.right.equalToSuperview().offset(AdaptSize(-15))
             make.bottom.equalTo(logoImageView).offset(AdaptSize(-15))
         }
@@ -123,11 +131,18 @@ class KFHomeNoticCell: BPTableViewCell {
         super.updateConstraints()
     }
     
+    override func updateUI() {
+        super.updateUI()
+        self.backgroundColor = .clear
+        self.contentView.backgroundColor = .clear
+    }
+    
     // MARK: ==== Event ====
     func setData(model: KFNoticeModel) {
         self.logoImageView.setImage(with: model.icon)
         self.amountLabel.text  = "报名人数: \(model.amount) 人"
         self.contactLabel.text = "联系电话: \(model.contact)"
         self.addressLabel.text = "地址: \(model.address)"
+        self.titleLabel.text   = model.title
     }
 }
