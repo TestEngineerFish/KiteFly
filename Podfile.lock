@@ -1,0 +1,26 @@
+PODS:
+  - ObjectMapper (4.2.0)
+  - SDWebImage (5.12.1):
+    - SDWebImage/Core (= 5.12.1)
+  - SDWebImage/Core (5.12.1)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - ObjectMapper (= 4.2.0)
+  - SDWebImage (= 5.12.1)
+  - SnapKit (= 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - ObjectMapper
+    - SDWebImage
+    - SnapKit
+
+SPEC CHECKSUMS:
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 449344bdc0c43d4eba08a8b18526562b3b7a9495
+
+COCOAPODS: 1.11.2

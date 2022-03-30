@@ -13,9 +13,34 @@
 		185F5E6127F41CD100AFBA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E5F27F41CD100AFBA3F /* Main.storyboard */; };
 		185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E6227F41CD200AFBA3F /* Assets.xcassets */; };
 		185F5E6627F41CD200AFBA3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E6427F41CD200AFBA3F /* LaunchScreen.storyboard */; };
+		185F5E7227F41DE200AFBA3F /* KFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7127F41DE200AFBA3F /* KFLoginViewController.swift */; };
+		185F5E7627F41E3D00AFBA3F /* BPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7527F41E3D00AFBA3F /* BPViewController.swift */; };
+		185F5E7827F41E7D00AFBA3F /* BPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7727F41E7D00AFBA3F /* BPView.swift */; };
+		185F5E7A27F41E8D00AFBA3F /* BPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7927F41E8D00AFBA3F /* BPLabel.swift */; };
+		185F5E7C27F41E9800AFBA3F /* BPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7B27F41E9800AFBA3F /* BPButton.swift */; };
+		185F5E7E27F41ED800AFBA3F /* BPNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7D27F41ED800AFBA3F /* BPNavigationBar.swift */; };
+		185F5E8127F41F2600AFBA3F /* CommonGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8027F41F2600AFBA3F /* CommonGlobal.swift */; };
+		185F5E8427F41FC300AFBA3F /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8327F41FC300AFBA3F /* UIFont+Extension.swift */; };
+		185F5E8627F4201D00AFBA3F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8527F4201D00AFBA3F /* UIColor+Extension.swift */; };
+		185F5E8827F4205500AFBA3F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8727F4205500AFBA3F /* UIViewController+Extension.swift */; };
+		185F5E8A27F4207700AFBA3F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8927F4207700AFBA3F /* UIView+Extension.swift */; };
+		185F5E8C27F4219C00AFBA3F /* Iconfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8B27F4219C00AFBA3F /* Iconfont.swift */; };
+		185F5E8E27F421D300AFBA3F /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8D27F421D300AFBA3F /* UINavigationController+Extension.swift */; };
+		185F5E9027F4223F00AFBA3F /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8F27F4223F00AFBA3F /* CALayer+Extension.swift */; };
+		185F5E9227F4226200AFBA3F /* BPTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9127F4226200AFBA3F /* BPTableView.swift */; };
+		185F5E9427F4228100AFBA3F /* BPTableViewEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9327F4228100AFBA3F /* BPTableViewEmptyView.swift */; };
+		185F5E9627F4229100AFBA3F /* BPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9527F4229100AFBA3F /* BPImageView.swift */; };
+		185F5E9927F422E200AFBA3F /* BPMediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9827F422E200AFBA3F /* BPMediaModel.swift */; };
+		185F5E9B27F4231400AFBA3F /* BPMediaImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9A27F4231400AFBA3F /* BPMediaImageModel.swift */; };
+		185F5E9D27F423E700AFBA3F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9C27F423E700AFBA3F /* String+Extension.swift */; };
+		185F5E9F27F4242200AFBA3F /* NSTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9E27F4242200AFBA3F /* NSTextAttachment.swift */; };
+		185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA027F4244100AFBA3F /* BPFileManager.swift */; };
+		185F5EA327F424F700AFBA3F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA227F424F700AFBA3F /* Date+Extension.swift */; };
+		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1206E9800750F747AF76704B /* Pods_KiteFly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiteFly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		185F5E5627F41CD100AFBA3F /* KiteFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiteFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185F5E5927F41CD100AFBA3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185F5E5B27F41CD100AFBA3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +49,31 @@
 		185F5E6227F41CD200AFBA3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185F5E6527F41CD200AFBA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185F5E6727F41CD200AFBA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185F5E7127F41DE200AFBA3F /* KFLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFLoginViewController.swift; sourceTree = "<group>"; };
+		185F5E7527F41E3D00AFBA3F /* BPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPViewController.swift; sourceTree = "<group>"; };
+		185F5E7727F41E7D00AFBA3F /* BPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPView.swift; sourceTree = "<group>"; };
+		185F5E7927F41E8D00AFBA3F /* BPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPLabel.swift; sourceTree = "<group>"; };
+		185F5E7B27F41E9800AFBA3F /* BPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPButton.swift; sourceTree = "<group>"; };
+		185F5E7D27F41ED800AFBA3F /* BPNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPNavigationBar.swift; sourceTree = "<group>"; };
+		185F5E8027F41F2600AFBA3F /* CommonGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonGlobal.swift; sourceTree = "<group>"; };
+		185F5E8327F41FC300AFBA3F /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		185F5E8527F4201D00AFBA3F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		185F5E8727F4205500AFBA3F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		185F5E8927F4207700AFBA3F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		185F5E8B27F4219C00AFBA3F /* Iconfont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iconfont.swift; sourceTree = "<group>"; };
+		185F5E8D27F421D300AFBA3F /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		185F5E8F27F4223F00AFBA3F /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		185F5E9127F4226200AFBA3F /* BPTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPTableView.swift; sourceTree = "<group>"; };
+		185F5E9327F4228100AFBA3F /* BPTableViewEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPTableViewEmptyView.swift; sourceTree = "<group>"; };
+		185F5E9527F4229100AFBA3F /* BPImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPImageView.swift; sourceTree = "<group>"; };
+		185F5E9827F422E200AFBA3F /* BPMediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMediaModel.swift; sourceTree = "<group>"; };
+		185F5E9A27F4231400AFBA3F /* BPMediaImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMediaImageModel.swift; sourceTree = "<group>"; };
+		185F5E9C27F423E700AFBA3F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		185F5E9E27F4242200AFBA3F /* NSTextAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextAttachment.swift; sourceTree = "<group>"; };
+		185F5EA027F4244100AFBA3F /* BPFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPFileManager.swift; sourceTree = "<group>"; };
+		185F5EA227F424F700AFBA3F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
+		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +93,8 @@
 			children = (
 				185F5E5827F41CD100AFBA3F /* KiteFly */,
 				185F5E5727F41CD100AFBA3F /* Products */,
+				AFB796CE5F1A8941B8062004 /* Pods */,
+				599314E84E022005B57DE891 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +109,11 @@
 		185F5E5827F41CD100AFBA3F /* KiteFly */ = {
 			isa = PBXGroup;
 			children = (
+				185F5E7327F41E0800AFBA3F /* Support */,
+				185F5E7027F41DA600AFBA3F /* Setting */,
+				185F5E6F27F41D8400AFBA3F /* Community */,
+				185F5E6E27F41D6600AFBA3F /* HomePage */,
+				185F5E6D27F41D6100AFBA3F /* Login */,
 				185F5E5927F41CD100AFBA3F /* AppDelegate.swift */,
 				185F5E5B27F41CD100AFBA3F /* SceneDelegate.swift */,
 				185F5E5D27F41CD100AFBA3F /* ViewController.swift */,
@@ -67,6 +125,113 @@
 			path = KiteFly;
 			sourceTree = "<group>";
 		};
+		185F5E6D27F41D6100AFBA3F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				185F5E7127F41DE200AFBA3F /* KFLoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		185F5E6E27F41D6600AFBA3F /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		185F5E6F27F41D8400AFBA3F /* Community */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		185F5E7027F41DA600AFBA3F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		185F5E7327F41E0800AFBA3F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				185F5E9727F422D100AFBA3F /* BaseModel */,
+				185F5E8227F41FAB00AFBA3F /* Extension */,
+				185F5E7F27F41F0900AFBA3F /* BaseTools */,
+				185F5E7427F41E2400AFBA3F /* BaseView */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		185F5E7427F41E2400AFBA3F /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				185F5E7527F41E3D00AFBA3F /* BPViewController.swift */,
+				185F5E7727F41E7D00AFBA3F /* BPView.swift */,
+				185F5E7927F41E8D00AFBA3F /* BPLabel.swift */,
+				185F5E7B27F41E9800AFBA3F /* BPButton.swift */,
+				185F5E7D27F41ED800AFBA3F /* BPNavigationBar.swift */,
+				185F5E9127F4226200AFBA3F /* BPTableView.swift */,
+				185F5E9327F4228100AFBA3F /* BPTableViewEmptyView.swift */,
+				185F5E9527F4229100AFBA3F /* BPImageView.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		185F5E7F27F41F0900AFBA3F /* BaseTools */ = {
+			isa = PBXGroup;
+			children = (
+				185F5E8027F41F2600AFBA3F /* CommonGlobal.swift */,
+				185F5E8B27F4219C00AFBA3F /* Iconfont.swift */,
+				185F5EA027F4244100AFBA3F /* BPFileManager.swift */,
+			);
+			path = BaseTools;
+			sourceTree = "<group>";
+		};
+		185F5E8227F41FAB00AFBA3F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				185F5E8327F41FC300AFBA3F /* UIFont+Extension.swift */,
+				185F5E8527F4201D00AFBA3F /* UIColor+Extension.swift */,
+				185F5E8727F4205500AFBA3F /* UIViewController+Extension.swift */,
+				185F5E8927F4207700AFBA3F /* UIView+Extension.swift */,
+				185F5E8D27F421D300AFBA3F /* UINavigationController+Extension.swift */,
+				185F5E8F27F4223F00AFBA3F /* CALayer+Extension.swift */,
+				185F5E9C27F423E700AFBA3F /* String+Extension.swift */,
+				185F5E9E27F4242200AFBA3F /* NSTextAttachment.swift */,
+				185F5EA227F424F700AFBA3F /* Date+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		185F5E9727F422D100AFBA3F /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				185F5E9827F422E200AFBA3F /* BPMediaModel.swift */,
+				185F5E9A27F4231400AFBA3F /* BPMediaImageModel.swift */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		599314E84E022005B57DE891 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1206E9800750F747AF76704B /* Pods_KiteFly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFB796CE5F1A8941B8062004 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */,
+				1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 185F5E6A27F41CD200AFBA3F /* Build configuration list for PBXNativeTarget "KiteFly" */;
 			buildPhases = (
+				865D25E7D60CDCBFCA03252F /* [CP] Check Pods Manifest.lock */,
 				185F5E5227F41CD100AFBA3F /* Sources */,
 				185F5E5327F41CD100AFBA3F /* Frameworks */,
 				185F5E5427F41CD100AFBA3F /* Resources */,
+				F1980771258E45DAC0CD4BF1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +300,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		865D25E7D60CDCBFCA03252F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KiteFly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1980771258E45DAC0CD4BF1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KiteFly/Pods-KiteFly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KiteFly/Pods-KiteFly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KiteFly/Pods-KiteFly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		185F5E5227F41CD100AFBA3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				185F5E5E27F41CD100AFBA3F /* ViewController.swift in Sources */,
+				185F5E8827F4205500AFBA3F /* UIViewController+Extension.swift in Sources */,
+				185F5E9427F4228100AFBA3F /* BPTableViewEmptyView.swift in Sources */,
+				185F5E7E27F41ED800AFBA3F /* BPNavigationBar.swift in Sources */,
+				185F5E9B27F4231400AFBA3F /* BPMediaImageModel.swift in Sources */,
+				185F5E8C27F4219C00AFBA3F /* Iconfont.swift in Sources */,
 				185F5E5A27F41CD100AFBA3F /* AppDelegate.swift in Sources */,
+				185F5E8627F4201D00AFBA3F /* UIColor+Extension.swift in Sources */,
+				185F5E8127F41F2600AFBA3F /* CommonGlobal.swift in Sources */,
+				185F5E9627F4229100AFBA3F /* BPImageView.swift in Sources */,
+				185F5E9927F422E200AFBA3F /* BPMediaModel.swift in Sources */,
+				185F5E7827F41E7D00AFBA3F /* BPView.swift in Sources */,
+				185F5E9D27F423E700AFBA3F /* String+Extension.swift in Sources */,
 				185F5E5C27F41CD100AFBA3F /* SceneDelegate.swift in Sources */,
+				185F5E9227F4226200AFBA3F /* BPTableView.swift in Sources */,
+				185F5EA327F424F700AFBA3F /* Date+Extension.swift in Sources */,
+				185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */,
+				185F5E8A27F4207700AFBA3F /* UIView+Extension.swift in Sources */,
+				185F5E9F27F4242200AFBA3F /* NSTextAttachment.swift in Sources */,
+				185F5E9027F4223F00AFBA3F /* CALayer+Extension.swift in Sources */,
+				185F5E7627F41E3D00AFBA3F /* BPViewController.swift in Sources */,
+				185F5E8E27F421D300AFBA3F /* UINavigationController+Extension.swift in Sources */,
+				185F5E7A27F41E8D00AFBA3F /* BPLabel.swift in Sources */,
+				185F5E7227F41DE200AFBA3F /* KFLoginViewController.swift in Sources */,
+				185F5E7C27F41E9800AFBA3F /* BPButton.swift in Sources */,
+				185F5E8427F41FC300AFBA3F /* UIFont+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +514,7 @@
 		};
 		185F5E6B27F41CD200AFBA3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +543,7 @@
 		};
 		185F5E6C27F41CD200AFBA3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
