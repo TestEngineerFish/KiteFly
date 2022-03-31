@@ -34,6 +34,7 @@ struct KFUserModel: Mappable {
     var age: Int        = 0
     var sex: KFSex      = .unknown
     var remark: String  = ""
+    var address: String = ""
     
     init() {}
     init?(map: Map) {}
@@ -45,5 +46,6 @@ struct KFUserModel: Mappable {
         age     <- map["age"]
         sex     <- (map["sex"], EnumTransform<KFSex>())
         remark  <- map["remark"]
+        address <- map["address"]
     }
 }

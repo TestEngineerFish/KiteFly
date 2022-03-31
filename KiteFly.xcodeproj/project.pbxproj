@@ -60,6 +60,12 @@
 		185F5EE327F556EF00AFBA3F /* KFHomeMemberListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EE227F556EF00AFBA3F /* KFHomeMemberListCell.swift */; };
 		185F5EE527F5595600AFBA3F /* KFUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EE427F5595600AFBA3F /* KFUserModel.swift */; };
 		185F5EE727F562D900AFBA3F /* UserModelList.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5EE627F562D900AFBA3F /* UserModelList.json */; };
+		185F5EEC27F5708800AFBA3F /* KFCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EEB27F5708800AFBA3F /* KFCommunityViewController.swift */; };
+		185F5EEE27F5780400AFBA3F /* KFCommunityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EED27F5780400AFBA3F /* KFCommunityCell.swift */; };
+		185F5EF027F578BE00AFBA3F /* KFCommunityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EEF27F578BE00AFBA3F /* KFCommunityModel.swift */; };
+		185F5EF227F5792200AFBA3F /* KFCommunityRemarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EF127F5792200AFBA3F /* KFCommunityRemarkModel.swift */; };
+		185F5EF427F5816E00AFBA3F /* KFCommunityImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EF327F5816E00AFBA3F /* KFCommunityImageCell.swift */; };
+		185F5EF727F583B800AFBA3F /* CommunityList.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5EF627F583B800AFBA3F /* CommunityList.json */; };
 		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +127,12 @@
 		185F5EE227F556EF00AFBA3F /* KFHomeMemberListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomeMemberListCell.swift; sourceTree = "<group>"; };
 		185F5EE427F5595600AFBA3F /* KFUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFUserModel.swift; sourceTree = "<group>"; };
 		185F5EE627F562D900AFBA3F /* UserModelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserModelList.json; sourceTree = "<group>"; };
+		185F5EEB27F5708800AFBA3F /* KFCommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityViewController.swift; sourceTree = "<group>"; };
+		185F5EED27F5780400AFBA3F /* KFCommunityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityCell.swift; sourceTree = "<group>"; };
+		185F5EEF27F578BE00AFBA3F /* KFCommunityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityModel.swift; sourceTree = "<group>"; };
+		185F5EF127F5792200AFBA3F /* KFCommunityRemarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityRemarkModel.swift; sourceTree = "<group>"; };
+		185F5EF327F5816E00AFBA3F /* KFCommunityImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityImageCell.swift; sourceTree = "<group>"; };
+		185F5EF627F583B800AFBA3F /* CommunityList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CommunityList.json; sourceTree = "<group>"; };
 		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
 		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +209,10 @@
 		185F5E6F27F41D8400AFBA3F /* Community */ = {
 			isa = PBXGroup;
 			children = (
+				185F5EF527F5838C00AFBA3F /* Resource */,
+				185F5EEA27F5707700AFBA3F /* ViewController */,
+				185F5EE927F5707300AFBA3F /* Model */,
+				185F5EE827F5706E00AFBA3F /* View */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -329,6 +345,40 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		185F5EE827F5706E00AFBA3F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				185F5EED27F5780400AFBA3F /* KFCommunityCell.swift */,
+				185F5EF327F5816E00AFBA3F /* KFCommunityImageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		185F5EE927F5707300AFBA3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				185F5EEF27F578BE00AFBA3F /* KFCommunityModel.swift */,
+				185F5EF127F5792200AFBA3F /* KFCommunityRemarkModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		185F5EEA27F5707700AFBA3F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				185F5EEB27F5708800AFBA3F /* KFCommunityViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		185F5EF527F5838C00AFBA3F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				185F5EF627F583B800AFBA3F /* CommunityList.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		599314E84E022005B57DE891 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +460,7 @@
 				185F5EDB27F5400B00AFBA3F /* iconfont.ttf in Resources */,
 				185F5ECD27F44DD900AFBA3F /* NewsModelList.json in Resources */,
 				185F5E6627F41CD200AFBA3F /* LaunchScreen.storyboard in Resources */,
+				185F5EF727F583B800AFBA3F /* CommunityList.json in Resources */,
 				185F5ED527F47A6A00AFBA3F /* PageUrl.json in Resources */,
 				185F5ECF27F45B9E00AFBA3F /* NoticModelList.json in Resources */,
 				185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */,
@@ -471,6 +522,7 @@
 				185F5EBD27F43F1900AFBA3F /* KFNewsModel.swift in Sources */,
 				185F5E8827F4205500AFBA3F /* UIViewController+Extension.swift in Sources */,
 				185F5E9427F4228100AFBA3F /* BPTableViewEmptyView.swift in Sources */,
+				185F5EF427F5816E00AFBA3F /* KFCommunityImageCell.swift in Sources */,
 				185F5ED327F4791F00AFBA3F /* KFHomePageModel.swift in Sources */,
 				185F5EB827F438F100AFBA3F /* KFRegisterViewController.swift in Sources */,
 				185F5ED827F47B6300AFBA3F /* KFNewsDetailViewController.swift in Sources */,
@@ -497,6 +549,7 @@
 				185F5EA327F424F700AFBA3F /* Date+Extension.swift in Sources */,
 				185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */,
 				185F5EB627F433F500AFBA3F /* BPNavigationController.swift in Sources */,
+				185F5EF227F5792200AFBA3F /* KFCommunityRemarkModel.swift in Sources */,
 				185F5ED127F4729300AFBA3F /* KFHomePageCell.swift in Sources */,
 				185F5EDF27F54FC100AFBA3F /* KFNoticeDetailViewController.swift in Sources */,
 				185F5E8A27F4207700AFBA3F /* UIView+Extension.swift in Sources */,
@@ -505,7 +558,10 @@
 				185F5E7627F41E3D00AFBA3F /* BPViewController.swift in Sources */,
 				185F5E8E27F421D300AFBA3F /* UINavigationController+Extension.swift in Sources */,
 				185F5E7A27F41E8D00AFBA3F /* BPLabel.swift in Sources */,
+				185F5EEE27F5780400AFBA3F /* KFCommunityCell.swift in Sources */,
 				185F5EDD27F54EFE00AFBA3F /* UIView+Toast.swift in Sources */,
+				185F5EF027F578BE00AFBA3F /* KFCommunityModel.swift in Sources */,
+				185F5EEC27F5708800AFBA3F /* KFCommunityViewController.swift in Sources */,
 				185F5EE127F5561C00AFBA3F /* KFRegisterListViewController.swift in Sources */,
 				185F5E7227F41DE200AFBA3F /* KFLoginViewController.swift in Sources */,
 				185F5EAB27F4289C00AFBA3F /* UIImage+Extension.swift in Sources */,

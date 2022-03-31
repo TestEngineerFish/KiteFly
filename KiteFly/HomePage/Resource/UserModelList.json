@@ -4,34 +4,39 @@
     "name":"我是张三",
     "age":11,
     "sex":0,
-    "remark":"欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天"
+    "remark":"欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天欢迎聊天",
+    "address":"上海市上海市徐汇区"
 },{
     "id":"123",
     "avatar":"https://img2.baidu.com/it/u=3455461026,595687157&fm=253&fmt=auto&app=138&f=JPEG?w=878&h=500",
     "name":"我是李四",
     "age":11,
     "sex":0,
-    "remark":"欢迎聊天"
+    "remark":"欢迎聊天",
+    "address":"上海市上海市徐汇区"
 },{
     "id":"123",
     "avatar":"https://img2.baidu.com/it/u=3455461026,595687157&fm=253&fmt=auto&app=138&f=JPEG?w=878&h=500",
     "name":"我是张三",
     "age":11,
     "sex":0,
-    "remark":"欢迎聊天"
+    "remark":"欢迎聊天",
+    "address":"上海市上海市徐汇区"
 },{
     "id":"123",
     "avatar":"https://img2.baidu.com/it/u=3455461026,595687157&fm=253&fmt=auto&app=138&f=JPEG?w=878&h=500",
     "name":"我是张三",
     "age":11,
     "sex":0,
-    "remark":"欢迎聊天"
+    "remark":"欢迎聊天",
+    "address":"上海市上海市徐汇区"
 },{
     "id":"123",
     "avatar":"https://img2.baidu.com/it/u=3455461026,595687157&fm=253&fmt=auto&app=138&f=JPEG?w=878&h=500",
     "name":"我是张三",
     "age":11,
     "sex":0,
-    "remark":"欢迎聊天"
+    "remark":"欢迎聊天",
+    "address":"上海市上海市徐汇区"
 },
 ]

@@ -26,9 +26,9 @@ open class BPTabBarController: UITabBarController, UITabBarControllerDelegate {
         homeVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         homeVC.tabBarItem.isSpringLoaded = true
         
-        let taskVC = KFRegisterViewController()
+        let taskVC = KFCommunityViewController()
         taskVC.view.backgroundColor = .white
-        taskVC.tabBarItem.title         = "动态"
+        taskVC.tabBarItem.title         = "社区"
         taskVC.tabBarItem.image         = UIImage(named: "task_unselect")?.withRenderingMode(.alwaysOriginal)
         taskVC.tabBarItem.selectedImage = UIImage(named: "task_selected")?.withRenderingMode(.alwaysOriginal)
         taskVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
@@ -44,7 +44,7 @@ open class BPTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         self.viewControllers = [homeVC, taskVC, settingVC]
         self.updateUI()
-        
+        self.selectedIndex = 1
     }
     
     open func updateUI() {
