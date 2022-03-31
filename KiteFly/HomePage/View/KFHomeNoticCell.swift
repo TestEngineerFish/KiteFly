@@ -60,7 +60,7 @@ class KFHomeNoticCell: BPTableViewCell {
     private var registerButton: BPButton = {
         let button = BPButton(.theme)
         button.setTitle("马上报名", for: .normal)
-        button.titleLabel?.font = UIFont.mediumFont(ofSize: AdaptSize(18))
+        button.titleLabel?.font = UIFont.mediumFont(ofSize: AdaptSize(16))
         return button
     }()
     

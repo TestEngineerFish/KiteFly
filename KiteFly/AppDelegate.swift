@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let nvc = BPNavigationController(rootViewController: vc)
             self.window?.rootViewController = nvc
         } else {
-            self.window?.rootViewController = BPTabBarController()
+            let tbc = BPTabBarController()
+            let nvc = BPNavigationController(rootViewController: tbc)
+            self.window?.rootViewController = nvc
         }
         self.window?.makeKeyAndVisible()
         return true

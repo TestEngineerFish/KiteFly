@@ -41,9 +41,11 @@ open class BPNavigationBar: BPView {
     
     public var leftButton: BPButton = {
         let button = BPButton()
-        button.setImage(UIImage(named: "app_back_nomal"), for: .normal)
+//        button.setImage(UIImage(named: "app_back_nomal"), for: .normal)
+        button.setTitle(IconFont.back.rawValue, for: .normal)
+        button.titleLabel?.font = UIFont.iconFont(size: AdaptSize(16))
         button.contentHorizontalAlignment = .left
-        button.setTitleColor(UIColor.black0)
+        button.setTitleColor(UIColor.white)
         return button
     }()
     
@@ -52,7 +54,7 @@ open class BPNavigationBar: BPView {
         button.titleLabel?.font = UIFont.iconFont(size: AdaptSize(16))
         button.isHidden = true
         button.contentHorizontalAlignment = .center
-        button.setTitleColor(UIColor.black0)
+        button.setTitleColor(UIColor.white)
         return button
     }()
     

@@ -52,6 +52,10 @@
 		185F5ED127F4729300AFBA3F /* KFHomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5ED027F4729300AFBA3F /* KFHomePageCell.swift */; };
 		185F5ED327F4791F00AFBA3F /* KFHomePageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5ED227F4791F00AFBA3F /* KFHomePageModel.swift */; };
 		185F5ED527F47A6A00AFBA3F /* PageUrl.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5ED427F47A6A00AFBA3F /* PageUrl.json */; };
+		185F5ED827F47B6300AFBA3F /* KFNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5ED727F47B6300AFBA3F /* KFNewsDetailViewController.swift */; };
+		185F5EDB27F5400B00AFBA3F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 185F5EDA27F47C5500AFBA3F /* iconfont.ttf */; };
+		185F5EDD27F54EFE00AFBA3F /* UIView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EDC27F54EFE00AFBA3F /* UIView+Toast.swift */; };
+		185F5EDF27F54FC100AFBA3F /* KFNoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EDE27F54FC100AFBA3F /* KFNoticeDetailViewController.swift */; };
 		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +109,10 @@
 		185F5ED027F4729300AFBA3F /* KFHomePageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomePageCell.swift; sourceTree = "<group>"; };
 		185F5ED227F4791F00AFBA3F /* KFHomePageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomePageModel.swift; sourceTree = "<group>"; };
 		185F5ED427F47A6A00AFBA3F /* PageUrl.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PageUrl.json; sourceTree = "<group>"; };
+		185F5ED727F47B6300AFBA3F /* KFNewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFNewsDetailViewController.swift; sourceTree = "<group>"; };
+		185F5EDA27F47C5500AFBA3F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		185F5EDC27F54EFE00AFBA3F /* UIView+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Toast.swift"; sourceTree = "<group>"; };
+		185F5EDE27F54FC100AFBA3F /* KFNoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFNoticeDetailViewController.swift; sourceTree = "<group>"; };
 		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
 		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +150,7 @@
 		185F5E5827F41CD100AFBA3F /* KiteFly */ = {
 			isa = PBXGroup;
 			children = (
+				185F5ED927F47C4500AFBA3F /* Resource */,
 				185F5E7327F41E0800AFBA3F /* Support */,
 				185F5E7027F41DA600AFBA3F /* Setting */,
 				185F5E6F27F41D8400AFBA3F /* Community */,
@@ -172,7 +181,7 @@
 				185F5EC927F44C3300AFBA3F /* Resource */,
 				185F5EC027F4431800AFBA3F /* View */,
 				185F5EBB27F43F0300AFBA3F /* Model */,
-				185F5EB927F43E1700AFBA3F /* KFHomeViewController.swift */,
+				185F5ED627F47B4A00AFBA3F /* ViewController */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -246,6 +255,7 @@
 				185F5EA227F424F700AFBA3F /* Date+Extension.swift */,
 				185F5EAA27F4289C00AFBA3F /* UIImage+Extension.swift */,
 				185F5EAF27F42B8800AFBA3F /* Data+Extension.swift */,
+				185F5EDC27F54EFE00AFBA3F /* UIView+Toast.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -285,6 +295,24 @@
 				185F5ED427F47A6A00AFBA3F /* PageUrl.json */,
 				185F5ECE27F45B9D00AFBA3F /* NoticModelList.json */,
 				185F5ECC27F44DD900AFBA3F /* NewsModelList.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		185F5ED627F47B4A00AFBA3F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				185F5EB927F43E1700AFBA3F /* KFHomeViewController.swift */,
+				185F5ED727F47B6300AFBA3F /* KFNewsDetailViewController.swift */,
+				185F5EDE27F54FC100AFBA3F /* KFNoticeDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		185F5ED927F47C4500AFBA3F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				185F5EDA27F47C5500AFBA3F /* iconfont.ttf */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -367,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185F5EDB27F5400B00AFBA3F /* iconfont.ttf in Resources */,
 				185F5ECD27F44DD900AFBA3F /* NewsModelList.json in Resources */,
 				185F5E6627F41CD200AFBA3F /* LaunchScreen.storyboard in Resources */,
 				185F5ED527F47A6A00AFBA3F /* PageUrl.json in Resources */,
@@ -431,6 +460,7 @@
 				185F5E9427F4228100AFBA3F /* BPTableViewEmptyView.swift in Sources */,
 				185F5ED327F4791F00AFBA3F /* KFHomePageModel.swift in Sources */,
 				185F5EB827F438F100AFBA3F /* KFRegisterViewController.swift in Sources */,
+				185F5ED827F47B6300AFBA3F /* KFNewsDetailViewController.swift in Sources */,
 				185F5E7E27F41ED800AFBA3F /* BPNavigationBar.swift in Sources */,
 				185F5EC227F4433800AFBA3F /* KFHomeNewsItem.swift in Sources */,
 				185F5E9B27F4231400AFBA3F /* BPMediaImageModel.swift in Sources */,
@@ -454,12 +484,14 @@
 				185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */,
 				185F5EB627F433F500AFBA3F /* BPNavigationController.swift in Sources */,
 				185F5ED127F4729300AFBA3F /* KFHomePageCell.swift in Sources */,
+				185F5EDF27F54FC100AFBA3F /* KFNoticeDetailViewController.swift in Sources */,
 				185F5E8A27F4207700AFBA3F /* UIView+Extension.swift in Sources */,
 				185F5E9F27F4242200AFBA3F /* NSTextAttachment.swift in Sources */,
 				185F5E9027F4223F00AFBA3F /* CALayer+Extension.swift in Sources */,
 				185F5E7627F41E3D00AFBA3F /* BPViewController.swift in Sources */,
 				185F5E8E27F421D300AFBA3F /* UINavigationController+Extension.swift in Sources */,
 				185F5E7A27F41E8D00AFBA3F /* BPLabel.swift in Sources */,
+				185F5EDD27F54EFE00AFBA3F /* UIView+Toast.swift in Sources */,
 				185F5E7227F41DE200AFBA3F /* KFLoginViewController.swift in Sources */,
 				185F5EAB27F4289C00AFBA3F /* UIImage+Extension.swift in Sources */,
 				185F5E7C27F41E9800AFBA3F /* BPButton.swift in Sources */,

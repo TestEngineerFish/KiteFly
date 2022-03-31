@@ -10,12 +10,15 @@ import ObjectMapper
 /// 放风筝的新闻
 struct KFNoticeModel: Mappable {
     
+    var id: String?
     var icon: String    = ""
     /// 发布时间
     var time: Date?
     /// 截止时间
     var lastTime: Date?
     var title: String   = ""
+    /// 发布者
+    var name: String?
     /// 具体内容
     var content: String = ""
     /// 报名人数
@@ -45,6 +48,7 @@ struct KFNoticeModel: Mappable {
         address <- map["address"]
         isRegister <- map["isRegister"]
         remark <- map["remark"]
+        name <- map["name"]
     }
 }
 

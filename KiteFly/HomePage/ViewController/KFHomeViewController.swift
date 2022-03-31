@@ -92,6 +92,7 @@ class KFHomeViewController: BPViewController, UICollectionViewDelegate, UICollec
     override func bindProperty() {
         super.bindProperty()
         self.customNavigationBar?.title = "风筝"
+        self.customNavigationBar?.hideLeftView()
         self.pageView.register(KFHomePageCell.classForCoder(), forCellWithReuseIdentifier: pageCellID)
         self.collectionView.register(KFHomeNewsItem.classForCoder(), forCellWithReuseIdentifier: newsCellID)
         self.tableView.register(KFHomeNoticCell.classForCoder(), forCellReuseIdentifier: noticCellID)
@@ -168,6 +169,13 @@ class KFHomeViewController: BPViewController, UICollectionViewDelegate, UICollec
         return item
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = self.newsModelList[indexPath.row]
+        let vc = KFNewsDetailViewController()
+        vc.model = model
+        self.navigationController?.push(vc: vc)
+    }
+    
     
     // MARK: ==== UITableViewDelegate, UITableViewDataSource ====
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -181,5 +189,12 @@ class KFHomeViewController: BPViewController, UICollectionViewDelegate, UICollec
         let model = noticeModelList[indexPath.row]
         cell.setData(model: model)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = self.noticeModelList[indexPath.row]
+        let vc = KFNoticeDetailViewController()
+        vc.model = model
+        self.navigationController?.push(vc: vc)
     }
 }

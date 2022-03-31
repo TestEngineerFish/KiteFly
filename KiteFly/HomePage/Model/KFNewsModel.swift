@@ -21,7 +21,7 @@ struct KFNewsModel: Mappable {
     
     mutating func mapping(map: Map) {
         icon    <- map["icon"]
-        time    <- map["time"]
+        time    <- (map["time"], DateTransform())
         title   <- map["title"]
         content <- map["content"]
         isFollow <- map["isFollow"]
