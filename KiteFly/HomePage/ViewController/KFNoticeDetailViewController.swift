@@ -76,7 +76,15 @@ class KFNoticeDetailViewController: BPViewController {
     
     override func bindProperty() {
         super.bindProperty()
-        self.customNavigationBar?.title = "详情"
+        self.customNavigationBar?.title      = "详情"
+        self.customNavigationBar?.rightTitle = "参与列表"
+        self.registerButton.addTarget(self, action: #selector(registerAction), for: .touchUpInside)
+    }
+    
+    override func rightAction() {
+        super.rightAction()
+        let vc = KFRegisterListViewController()
+        self.navigationController?.push(vc: vc)
     }
     
     override func bindData() {
@@ -113,9 +121,19 @@ class KFNoticeDetailViewController: BPViewController {
             make.top.equalTo(imageView.snp.bottom).offset(AdaptSize(20))
             make.bottom.equalToSuperview().offset(AdaptSize(-20))
         }
+        registerButton.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: AdaptSize(100), height: AdaptSize(40)))
+            make.bottom.equalToSuperview().offset(AdaptSize(-20) - kSafeBottomMargin)
+            make.centerX.equalToSuperview()
+        }
         super.updateViewConstraints()
     }
     
     // MARK: ==== Event ====
-    
+    @objc
+    private func registerAction() {
+        self.view.toast("报名成功")
+        let vc = KFRegisterListViewController()
+        self.navigationController?.push(vc: vc)
+    }
 }

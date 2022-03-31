@@ -56,6 +56,10 @@
 		185F5EDB27F5400B00AFBA3F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 185F5EDA27F47C5500AFBA3F /* iconfont.ttf */; };
 		185F5EDD27F54EFE00AFBA3F /* UIView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EDC27F54EFE00AFBA3F /* UIView+Toast.swift */; };
 		185F5EDF27F54FC100AFBA3F /* KFNoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EDE27F54FC100AFBA3F /* KFNoticeDetailViewController.swift */; };
+		185F5EE127F5561C00AFBA3F /* KFRegisterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EE027F5561C00AFBA3F /* KFRegisterListViewController.swift */; };
+		185F5EE327F556EF00AFBA3F /* KFHomeMemberListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EE227F556EF00AFBA3F /* KFHomeMemberListCell.swift */; };
+		185F5EE527F5595600AFBA3F /* KFUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EE427F5595600AFBA3F /* KFUserModel.swift */; };
+		185F5EE727F562D900AFBA3F /* UserModelList.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5EE627F562D900AFBA3F /* UserModelList.json */; };
 		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +117,10 @@
 		185F5EDA27F47C5500AFBA3F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		185F5EDC27F54EFE00AFBA3F /* UIView+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Toast.swift"; sourceTree = "<group>"; };
 		185F5EDE27F54FC100AFBA3F /* KFNoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFNoticeDetailViewController.swift; sourceTree = "<group>"; };
+		185F5EE027F5561C00AFBA3F /* KFRegisterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFRegisterListViewController.swift; sourceTree = "<group>"; };
+		185F5EE227F556EF00AFBA3F /* KFHomeMemberListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomeMemberListCell.swift; sourceTree = "<group>"; };
+		185F5EE427F5595600AFBA3F /* KFUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFUserModel.swift; sourceTree = "<group>"; };
+		185F5EE627F562D900AFBA3F /* UserModelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserModelList.json; sourceTree = "<group>"; };
 		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
 		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -275,6 +283,7 @@
 				185F5EBC27F43F1900AFBA3F /* KFNewsModel.swift */,
 				185F5EBE27F440D300AFBA3F /* KFNoticeModel.swift */,
 				185F5ED227F4791F00AFBA3F /* KFHomePageModel.swift */,
+				185F5EE427F5595600AFBA3F /* KFUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 				185F5EC127F4433800AFBA3F /* KFHomeNewsItem.swift */,
 				185F5EC327F4442700AFBA3F /* KFHomeNoticCell.swift */,
 				185F5ED027F4729300AFBA3F /* KFHomePageCell.swift */,
+				185F5EE227F556EF00AFBA3F /* KFHomeMemberListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +302,7 @@
 		185F5EC927F44C3300AFBA3F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				185F5EE627F562D900AFBA3F /* UserModelList.json */,
 				185F5ED427F47A6A00AFBA3F /* PageUrl.json */,
 				185F5ECE27F45B9D00AFBA3F /* NoticModelList.json */,
 				185F5ECC27F44DD900AFBA3F /* NewsModelList.json */,
@@ -305,6 +316,7 @@
 				185F5EB927F43E1700AFBA3F /* KFHomeViewController.swift */,
 				185F5ED727F47B6300AFBA3F /* KFNewsDetailViewController.swift */,
 				185F5EDE27F54FC100AFBA3F /* KFNoticeDetailViewController.swift */,
+				185F5EE027F5561C00AFBA3F /* KFRegisterListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -401,6 +413,7 @@
 				185F5ED527F47A6A00AFBA3F /* PageUrl.json in Resources */,
 				185F5ECF27F45B9E00AFBA3F /* NoticModelList.json in Resources */,
 				185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */,
+				185F5EE727F562D900AFBA3F /* UserModelList.json in Resources */,
 				185F5E6127F41CD100AFBA3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +483,7 @@
 				185F5E5A27F41CD100AFBA3F /* AppDelegate.swift in Sources */,
 				185F5EBA27F43E1700AFBA3F /* KFHomeViewController.swift in Sources */,
 				185F5E8627F4201D00AFBA3F /* UIColor+Extension.swift in Sources */,
+				185F5EE327F556EF00AFBA3F /* KFHomeMemberListCell.swift in Sources */,
 				185F5EC627F4445D00AFBA3F /* BPTableViewCell.swift in Sources */,
 				185F5E8127F41F2600AFBA3F /* CommonGlobal.swift in Sources */,
 				185F5E9627F4229100AFBA3F /* BPImageView.swift in Sources */,
@@ -492,9 +506,11 @@
 				185F5E8E27F421D300AFBA3F /* UINavigationController+Extension.swift in Sources */,
 				185F5E7A27F41E8D00AFBA3F /* BPLabel.swift in Sources */,
 				185F5EDD27F54EFE00AFBA3F /* UIView+Toast.swift in Sources */,
+				185F5EE127F5561C00AFBA3F /* KFRegisterListViewController.swift in Sources */,
 				185F5E7227F41DE200AFBA3F /* KFLoginViewController.swift in Sources */,
 				185F5EAB27F4289C00AFBA3F /* UIImage+Extension.swift in Sources */,
 				185F5E7C27F41E9800AFBA3F /* BPButton.swift in Sources */,
+				185F5EE527F5595600AFBA3F /* KFUserModel.swift in Sources */,
 				185F5E8427F41FC300AFBA3F /* UIFont+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
