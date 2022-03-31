@@ -14,4 +14,6 @@ target 'KiteFly' do
   pod 'IQKeyboardManager', '6.5.6'
   # 轮播图
   pod 'TYCyclePagerView', '1.2.0'
+  # 网络库
+  pod 'AFNetworking', '4.0.1'
 end

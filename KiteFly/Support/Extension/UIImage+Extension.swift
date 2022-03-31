@@ -1,12 +1,16 @@
 //
 //  UIImage+Extension.swift
-//  BaseProject
+//  MessageCenter
 //
-//  Created by 沙庭宇 on 2019/8/5.
-//  Copyright © 2019 沙庭宇. All rights reserved.
+//  Created by apple on 2021/10/28.
+//  Copyright © 2021 KLC. All rights reserved.
 //
 
 import UIKit
+
+//NSString *path = [[NSBundle mainBundle] pathForResource:@"ImgFramework" ofType:@"framework" inDirectory:@"Frameworks"];
+//NSBundle *bundle = [NSBundle bundleWithPath:path];
+//UIImage *img = [UIImage imageNamed:imgName inBundle:bundle compatibleWithTraitCollection:nil];
 
 public enum BPImageType: String {
     case jpeg = "jpeg"
@@ -20,21 +24,22 @@ public extension UIImage {
 
     /// 通过颜色绘制图片
     class func imageWithColor(_ color: UIColor, width: CGFloat = 1.0, height: CGFloat = 1.0, cornerRadius: CGFloat = 0) -> UIImage {
-        
-        let rect = CGRect(x: 0, y: 0, width: width, height: height)
-        let roundedRect: UIBezierPath = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)
-        roundedRect.lineWidth = 0
-        
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
-        color.setFill()
-        roundedRect.fill()
-        roundedRect.stroke()
-        roundedRect.addClip()
-        var image: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        image = image?.resizableImage(withCapInsets: UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius))
-        return image!
+        autoreleasepool {
+            let rect = CGRect(x: 0, y: 0, width: width, height: height)
+            let roundedRect: UIBezierPath = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)
+            roundedRect.lineWidth = 0
+            
+            UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+            color.setFill()
+            roundedRect.fill()
+            roundedRect.stroke()
+            roundedRect.addClip()
+            var image: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            image = image?.resizableImage(withCapInsets: UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius))
+            return image!
+        }
     }
 
 
@@ -64,34 +69,38 @@ public extension UIImage {
     /// 普通的缩放方式
     /// - Parameter newSize: 新图大小
     func scaledImageOld(_ newSize: CGSize) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
-        self.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage
+        autoreleasepool {
+            UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
+            self.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return newImage
+        }
     }
     
     //将图片缩放成指定尺寸（多余部分自动删除）
     func scaled(to newSize: CGSize) -> UIImage {
-        //计算比例
-        let aspectWidth  = newSize.width/size.width
-        let aspectHeight = newSize.height/size.height
-        let aspectRatio = max(aspectWidth, aspectHeight)
-         
-        //图片绘制区域
-        var scaledImageRect = CGRect.zero
-        scaledImageRect.size.width  = size.width * aspectRatio
-        scaledImageRect.size.height = size.height * aspectRatio
-        scaledImageRect.origin.x    = (newSize.width - size.width * aspectRatio) / 2.0
-        scaledImageRect.origin.y    = (newSize.height - size.height * aspectRatio) / 2.0
-         
-        //绘制并获取最终图片
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
-        draw(in: scaledImageRect)
-        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-         
-        return scaledImage!
+        autoreleasepool {
+            //计算比例
+            let aspectWidth  = newSize.width/size.width
+            let aspectHeight = newSize.height/size.height
+            let aspectRatio = max(aspectWidth, aspectHeight)
+             
+            //图片绘制区域
+            var scaledImageRect = CGRect.zero
+            scaledImageRect.size.width  = size.width * aspectRatio
+            scaledImageRect.size.height = size.height * aspectRatio
+            scaledImageRect.origin.x    = (newSize.width - size.width * aspectRatio) / 2.0
+            scaledImageRect.origin.y    = (newSize.height - size.height * aspectRatio) / 2.0
+             
+            //绘制并获取最终图片
+            UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
+            draw(in: scaledImageRect)
+            let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+             
+            return scaledImage!
+        }
     }
     
     /// 统一压缩方式
@@ -137,5 +146,42 @@ public extension UIImage {
             data = imageData
         }
         return data
+    }
+    
+    /// 统一压缩方式
+    /// - Parameter size: 尺寸
+    /// - Returns: 压缩后图片尺寸
+    func compress(size: CGSize, compressionQuality: CGFloat) -> Data? {
+        // 压缩尺寸
+        UIGraphicsBeginImageContext(size)
+        self.draw(in: CGRect(origin: .zero, size: size))
+        UIGraphicsEndImageContext()
+        guard let imageData = self.jpegData(compressionQuality: compressionQuality) else {
+            return nil
+        }
+        return imageData
+    }
+    
+    func convertGreyImage() -> UIImage? {
+        guard let beginImage = CIImage(image: self) else {
+            return nil
+        }
+        let parameters = [kCIInputImageKey      : beginImage,
+                          kCIInputBrightnessKey : 0.0,
+                          kCIInputContrastKey   : 1.1,
+                          kCIInputSaturationKey : 0.0] as [String : Any]
+        
+        let blackAndWhite = CIFilter(name: "CIColorControls", parameters: parameters)?.outputImage
+        let outputParam = [kCIInputImageKey : blackAndWhite as Any,
+                               kCIInputEVKey: 0.7] as [String : Any]
+        let output = CIFilter(name: "CIExposureAdjust", parameters: outputParam)?.outputImage
+        guard let outputCI = output else {
+            return nil
+        }
+        let context = CIContext(options: nil)
+        guard let cgimage = context.createCGImage(outputCI, from: outputCI.extent) else {
+            return nil
+        }
+        return UIImage(cgImage: cgimage, scale: 0, orientation: self.imageOrientation)
     }
 }

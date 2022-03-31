@@ -48,4 +48,12 @@ class KFCommunityImageCell: BPCollectionViewCell {
     func setData(image url: String) {
         self.imageView.setImage(with: url)
     }
+    
+    func setImage(image: UIImage?) {
+        if let _image = image {
+            self.imageView.image = _image
+        } else {
+            self.imageView.image = UIImage(named: "emptyImage")
+        }
+    }
 }

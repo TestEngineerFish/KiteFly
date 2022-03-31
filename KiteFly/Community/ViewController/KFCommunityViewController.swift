@@ -46,7 +46,8 @@ class KFCommunityViewController: BPViewController, UITableViewDelegate, UITableV
     
     override func rightAction() {
         super.rightAction()
-        
+        let vc = KFCommunityPublishViewController()
+        self.navigationController?.push(vc: vc)
     }
     
     override func bindData() {

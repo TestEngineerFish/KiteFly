@@ -157,40 +157,38 @@ public extension UIView {
         static var blurEffect: String = "kBlurEffect"
     }
     
-//    /// 显示loading图
-//    func showLoading() {
-//        self.loadingView.isHidden = false
-//        self.loadingView.play()
-//    }
-//
-//    /// 隐藏loading图
-//    func hideLoading() {
-//        self.loadingView.stop()
-//        self.loadingView.isHidden = true
-//    }
+    /// 显示loading图
+    func showLoading() {
+        self.loadingView.startAnimating()
+    }
+
+    /// 隐藏loading图
+    func hideLoading() {
+        self.loadingView.stopAnimating()
+    }
     
-//    /// Loading 视图
-//    private var loadingView: AnimationView {
-//        get {
-//            if let animationView = objc_getAssociatedObject(self, AssociatedKeys.loadingView) as? AnimationView {
-//                return animationView
-//            } else {
-//                let animationView = AnimationView(name: "view_loading")
-//                animationView.size = CGSize(width: AdaptSize(40), height: AdaptSize(40))
-//                animationView.loopMode = .loop
-//                self.addSubview(animationView)
-//                animationView.snp.makeConstraints { make in
-//                    make.center.equalToSuperview()
-//                    make.size.equalTo(animationView.size)
-//                }
-//                return animationView
-//            }
-//        }
-//
-//        set {
-//            objc_setAssociatedObject(self, AssociatedKeys.loadingView, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-//        }
-//    }
+    /// Loading 视图
+    private var loadingView: UIActivityIndicatorView {
+        get {
+            if let animationView = objc_getAssociatedObject(self, AssociatedKeys.loadingView) as? UIActivityIndicatorView {
+                return animationView
+            } else {
+                let view = UIActivityIndicatorView()
+                view.size = CGSize(width: AdaptSize(40), height: AdaptSize(40))
+                view.hidesWhenStopped = true
+                self.addSubview(view)
+                view.snp.makeConstraints { make in
+                    make.size.equalTo(view.size)
+                    make.center.equalToSuperview()
+                }
+                return view
+            }
+        }
+
+        set {
+            objc_setAssociatedObject(self, AssociatedKeys.loadingView, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
 }
 
 public extension UIView {
@@ -261,6 +259,14 @@ public extension UIView {
     func hideBlurEffect() {
         if let effectView = objc_getAssociatedObject(self, &AssociatedKeys.blurEffect) as? UIVisualEffectView {
             effectView.isHidden = true
+        }
+    }
+    
+    /// 将当前视图转为UIImage
+    func toImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
         }
     }
 }

@@ -40,6 +40,7 @@ class KFCommunityDetailViewController: BPViewController, UITableViewDelegate, UI
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(tableView)
+        self.view.addSubview(remarkButton)
     }
     
     override func bindProperty() {
@@ -48,6 +49,7 @@ class KFCommunityDetailViewController: BPViewController, UITableViewDelegate, UI
         self.tableView.delegate   = self
         self.tableView.dataSource = self
         self.tableView.register(KFCommunityRemarkCell.classForCoder(), forCellReuseIdentifier: cellID)
+        self.remarkButton.addTarget(self, action: #selector(remarkAction), for: .touchUpInside)
     }
     
     override func bindData() {
@@ -59,10 +61,20 @@ class KFCommunityDetailViewController: BPViewController, UITableViewDelegate, UI
             make.left.right.bottom.equalToSuperview()
             make.top.equalToSuperview().offset(kNavHeight)
         }
+        remarkButton.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: AdaptSize(200), height: AdaptSize(36)))
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().offset(AdaptSize(-20) - kSafeBottomMargin)
+        }
         super.updateViewConstraints()
     }
     
     // MARK: ==== Event ====
+    @objc
+    private func remarkAction() {
+        let vc = KFCommunityRemarkViewController()
+        self.navigationController?.push(vc: vc)
+    }
     
     // MARK: ==== UITableViewDelegate, UITableViewDataSource ====
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -73,6 +73,7 @@ class KFCommunityRemarkCell: BPTableViewCell {
     
     override func bindProperty() {
         super.bindProperty()
+        self.backgroundColor = .clear
     }
     
     override func updateConstraints() {

@@ -193,6 +193,7 @@ public extension UIColor {
     /// 同城项目的主体紫色 (red: 209, green: 187, blue: 250)
     static let purple2 = ColorWithRGBA(red: 132, green: 120, blue: 250)
 
+    /// FFC42F
     static let theme = ColorWithRGBA(red: 255, green: 196, blue: 47)
     
     /// 主题渐变
