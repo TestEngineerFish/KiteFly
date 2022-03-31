@@ -34,7 +34,7 @@ open class BPTabBarController: UITabBarController, UITabBarControllerDelegate {
         taskVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         taskVC.tabBarItem.isSpringLoaded = true
         
-        let settingVC = BPViewController()
+        let settingVC = KFSettingViewController()
         settingVC.view.backgroundColor = .white
         settingVC.tabBarItem.title         = "设置"
         settingVC.tabBarItem.image         = UIImage(named: "studio_unselect")?.withRenderingMode(.alwaysOriginal)
@@ -44,7 +44,7 @@ open class BPTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         self.viewControllers = [homeVC, taskVC, settingVC]
         self.updateUI()
-        self.selectedIndex = 1
+        self.selectedIndex = 2
     }
     
     open func updateUI() {

@@ -100,6 +100,10 @@
 		185F5F3F27F5A69A00AFBA3F /* PHAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F3E27F5A69A00AFBA3F /* PHAsset+Extension.swift */; };
 		185F5F4227F5A70400AFBA3F /* BPDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4127F5A70400AFBA3F /* BPDownloadManager.swift */; };
 		185F5F4427F5B2AD00AFBA3F /* KFCommunityReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4327F5B2AD00AFBA3F /* KFCommunityReportViewController.swift */; };
+		185F5F4A27F5C55F00AFBA3F /* KFSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4927F5C55F00AFBA3F /* KFSettingViewController.swift */; };
+		185F5F4C27F5C5CD00AFBA3F /* KFSettingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4B27F5C5CD00AFBA3F /* KFSettingHeaderView.swift */; };
+		185F5F4E27F5CA0200AFBA3F /* KFSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4D27F5CA0200AFBA3F /* KFSettingCell.swift */; };
+		185F5F5027F5CCFE00AFBA3F /* UserModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5F4F27F5CCFE00AFBA3F /* UserModel.json */; };
 		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
 
@@ -201,6 +205,10 @@
 		185F5F3E27F5A69A00AFBA3F /* PHAsset+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHAsset+Extension.swift"; sourceTree = "<group>"; };
 		185F5F4127F5A70400AFBA3F /* BPDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPDownloadManager.swift; sourceTree = "<group>"; };
 		185F5F4327F5B2AD00AFBA3F /* KFCommunityReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityReportViewController.swift; sourceTree = "<group>"; };
+		185F5F4927F5C55F00AFBA3F /* KFSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingViewController.swift; sourceTree = "<group>"; };
+		185F5F4B27F5C5CD00AFBA3F /* KFSettingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingHeaderView.swift; sourceTree = "<group>"; };
+		185F5F4D27F5CA0200AFBA3F /* KFSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingCell.swift; sourceTree = "<group>"; };
+		185F5F4F27F5CCFE00AFBA3F /* UserModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserModel.json; sourceTree = "<group>"; };
 		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
 		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -288,6 +296,10 @@
 		185F5E7027F41DA600AFBA3F /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				185F5F4827F5C54300AFBA3F /* Resource */,
+				185F5F4727F5C53F00AFBA3F /* View */,
+				185F5F4627F5C53B00AFBA3F /* Model */,
+				185F5F4527F5C53400AFBA3F /* ViewController */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -553,6 +565,38 @@
 			path = Download;
 			sourceTree = "<group>";
 		};
+		185F5F4527F5C53400AFBA3F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				185F5F4927F5C55F00AFBA3F /* KFSettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		185F5F4627F5C53B00AFBA3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		185F5F4727F5C53F00AFBA3F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				185F5F4B27F5C5CD00AFBA3F /* KFSettingHeaderView.swift */,
+				185F5F4D27F5CA0200AFBA3F /* KFSettingCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		185F5F4827F5C54300AFBA3F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				185F5F4F27F5CCFE00AFBA3F /* UserModel.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		599314E84E022005B57DE891 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -639,6 +683,7 @@
 				185F5ECF27F45B9E00AFBA3F /* NoticModelList.json in Resources */,
 				185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */,
 				185F5EE727F562D900AFBA3F /* UserModelList.json in Resources */,
+				185F5F5027F5CCFE00AFBA3F /* UserModel.json in Resources */,
 				185F5E6127F41CD100AFBA3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,6 +758,7 @@
 				185F5F3427F5A59F00AFBA3F /* BPAlertViewOneButton.swift in Sources */,
 				185F5F2127F5A43B00AFBA3F /* BPBrowserVideoCell.swift in Sources */,
 				185F5EC227F4433800AFBA3F /* KFHomeNewsItem.swift in Sources */,
+				185F5F4C27F5C5CD00AFBA3F /* KFSettingHeaderView.swift in Sources */,
 				185F5F3B27F5A62F00AFBA3F /* BPAttributionView.swift in Sources */,
 				185F5E9B27F4231400AFBA3F /* BPMediaImageModel.swift in Sources */,
 				185F5E8C27F4219C00AFBA3F /* Iconfont.swift in Sources */,
@@ -741,6 +787,7 @@
 				185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */,
 				185F5EFF27F595C200AFBA3F /* KFCommunityRemarkViewController.swift in Sources */,
 				185F5EB627F433F500AFBA3F /* BPNavigationController.swift in Sources */,
+				185F5F4E27F5CA0200AFBA3F /* KFSettingCell.swift in Sources */,
 				185F5F2227F5A43B00AFBA3F /* BPBrowserImageCell.swift in Sources */,
 				185F5EF227F5792200AFBA3F /* KFCommunityRemarkModel.swift in Sources */,
 				185F5F3927F5A5F700AFBA3F /* Double+Extension.swift in Sources */,
@@ -773,6 +820,7 @@
 				185F5EAB27F4289C00AFBA3F /* UIImage+Extension.swift in Sources */,
 				185F5E7C27F41E9800AFBA3F /* BPButton.swift in Sources */,
 				185F5EE527F5595600AFBA3F /* KFUserModel.swift in Sources */,
+				185F5F4A27F5C55F00AFBA3F /* KFSettingViewController.swift in Sources */,
 				185F5F4227F5A70400AFBA3F /* BPDownloadManager.swift in Sources */,
 				185F5F0C27F5A15200AFBA3F /* BPSystemAlbumListView.swift in Sources */,
 				185F5E8427F41FC300AFBA3F /* UIFont+Extension.swift in Sources */,
