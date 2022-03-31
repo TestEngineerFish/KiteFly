@@ -1,5 +1,5 @@
 //
-//  KFCommunityViewController.swift
+//  KFCommunityDetailViewController.swift
 //  KiteFly
 //
 //  Created by apple on 2022/3/31.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-class KFCommunityViewController: BPViewController, UITableViewDelegate, UITableViewDataSource {
+class KFCommunityDetailViewController: BPViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private let cellID = "kKFCommunityCell"
-    private var modelList: [KFCommunityModel] = []
+    var model: KFCommunityModel?
+    private let cellID = "kKFCommunityRemarkCell"
     
     private var tableView: BPTableView = {
-        let tableView = BPTableView()
+        let tableView = BPTableView(frame: .zero, style: .grouped)
         tableView.estimatedRowHeight             = AdaptSize(56)
         tableView.backgroundColor                = UIColor.gray0
         tableView.separatorStyle                 = .none
@@ -22,13 +22,21 @@ class KFCommunityViewController: BPViewController, UITableViewDelegate, UITableV
         return tableView
     }()
     
+    private var remarkButton: BPButton = {
+        let button = BPButton(.theme)
+        button.setTitle("评论", for: .normal)
+        button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(15))
+        button.layer.setDefaultShadow()
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createSubviews()
         self.bindProperty()
         self.bindData()
     }
-
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(tableView)
@@ -36,23 +44,14 @@ class KFCommunityViewController: BPViewController, UITableViewDelegate, UITableV
     
     override func bindProperty() {
         super.bindProperty()
-        self.customNavigationBar?.title      = "社区"
-        self.customNavigationBar?.rightTitle = "发布"
-        self.customNavigationBar?.hideLeftView()
-        self.tableView.delegate              = self
-        self.tableView.dataSource            = self
-        self.tableView.register(KFCommunityCell.classForCoder(), forCellReuseIdentifier: cellID)
-    }
-    
-    override func rightAction() {
-        super.rightAction()
-        
+        self.customNavigationBar?.title = "详情"
+        self.tableView.delegate   = self
+        self.tableView.dataSource = self
+        self.tableView.register(KFCommunityRemarkCell.classForCoder(), forCellReuseIdentifier: cellID)
     }
     
     override func bindData() {
         super.bindData()
-        self.modelList = BPFileManager.share.getJsonModelList(file: "CommunityList", type: KFCommunityModel.self) as? [KFCommunityModel] ?? []
-        self.tableView.reloadData()
     }
     
     override func updateViewConstraints() {
@@ -65,25 +64,25 @@ class KFCommunityViewController: BPViewController, UITableViewDelegate, UITableV
     
     // MARK: ==== Event ====
     
-    
     // MARK: ==== UITableViewDelegate, UITableViewDataSource ====
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.modelList.count
+        return self.model?.remarkList.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = KFCommunityHeaderView()
+        if let model = self.model {
+            headerView.setData(model: model)
+        }
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID) as? KFCommunityCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID) as? KFCommunityRemarkCell, let remarkList = self.model?.remarkList else {
             return UITableViewCell()
         }
-        let model = self.modelList[indexPath.row]
+        let model = remarkList[indexPath.row]
         cell.setData(model: model)
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = KFCommunityDetailViewController()
-        let model = self.modelList[indexPath.row]
-        vc.model = model
-        self.navigationController?.push(vc: vc)
     }
 }
