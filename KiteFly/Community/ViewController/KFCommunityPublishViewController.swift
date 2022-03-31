@@ -99,7 +99,12 @@ class KFCommunityPublishViewController: BPViewController, UICollectionViewDelega
     // MARK: ==== Event ====
     @objc
     private func submitAction() {
-        
+        guard textView.text.isNotEmpty else {
+            kWindow.toast("请输入内容")
+            return
+        }
+        kWindow.toast("发布成功")
+        self.navigationController?.pop()
     }
     
     // MARK: ==== UICollectionViewDelegate, UICollectionViewDataSource ====

@@ -99,6 +99,7 @@
 		185F5F3D27F5A65C00AFBA3F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F3C27F5A65C00AFBA3F /* UILabel+Extension.swift */; };
 		185F5F3F27F5A69A00AFBA3F /* PHAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F3E27F5A69A00AFBA3F /* PHAsset+Extension.swift */; };
 		185F5F4227F5A70400AFBA3F /* BPDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4127F5A70400AFBA3F /* BPDownloadManager.swift */; };
+		185F5F4427F5B2AD00AFBA3F /* KFCommunityReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4327F5B2AD00AFBA3F /* KFCommunityReportViewController.swift */; };
 		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
 
@@ -199,6 +200,7 @@
 		185F5F3C27F5A65C00AFBA3F /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		185F5F3E27F5A69A00AFBA3F /* PHAsset+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHAsset+Extension.swift"; sourceTree = "<group>"; };
 		185F5F4127F5A70400AFBA3F /* BPDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPDownloadManager.swift; sourceTree = "<group>"; };
+		185F5F4327F5B2AD00AFBA3F /* KFCommunityReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityReportViewController.swift; sourceTree = "<group>"; };
 		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
 		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -452,6 +454,7 @@
 				185F5EF827F58C6500AFBA3F /* KFCommunityDetailViewController.swift */,
 				185F5EFE27F595C200AFBA3F /* KFCommunityRemarkViewController.swift */,
 				185F5F0027F598BD00AFBA3F /* KFCommunityPublishViewController.swift */,
+				185F5F4327F5B2AD00AFBA3F /* KFCommunityReportViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				185F5E8A27F4207700AFBA3F /* UIView+Extension.swift in Sources */,
 				185F5F2527F5A48200AFBA3F /* BPMediaVideoModel.swift in Sources */,
 				185F5F3027F5A59F00AFBA3F /* BPToastView.swift in Sources */,
+				185F5F4427F5B2AD00AFBA3F /* KFCommunityReportViewController.swift in Sources */,
 				185F5E9F27F4242200AFBA3F /* NSTextAttachment.swift in Sources */,
 				185F5F3327F5A59F00AFBA3F /* BPBaseAlertView.swift in Sources */,
 				185F5E9027F4223F00AFBA3F /* CALayer+Extension.swift in Sources */,

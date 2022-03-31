@@ -8,10 +8,19 @@
 import Foundation
 import UIKit
 
+protocol KFCommunityCellDelegate: NSObject {
+    // 评论
+    func remarkAction(model: KFCommunityModel)
+    // 举报
+    func reportAction(model: KFCommunityModel)
+}
+
 class KFCommunityCell: BPTableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
     private let cellID: String = "kKFCommunityImageCell"
     private var imageList = [String]()
+    private var model: KFCommunityModel?
+    weak var delegate: KFCommunityCellDelegate?
     
     private var customContentView: BPView = {
         let view = BPView()
@@ -74,7 +83,6 @@ class KFCommunityCell: BPTableViewCell, UICollectionViewDelegate, UICollectionVi
     }()
     private var remarkButton: BPButton = {
         let button = BPButton()
-//        button.setImage(UIImage(named: "remark"), for: .normal)
         button.setTitle("评论", for: .normal)
         button.setTitleColor(UIColor.black0, for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(13))
@@ -109,6 +117,8 @@ class KFCommunityCell: BPTableViewCell, UICollectionViewDelegate, UICollectionVi
         self.collectionView.delegate   = self
         self.collectionView.dataSource = self
         self.collectionView.register(KFCommunityImageCell.classForCoder(), forCellWithReuseIdentifier: cellID)
+        self.reportButton.addTarget(self, action: #selector(reportAction), for: .touchUpInside)
+        self.remarkButton.addTarget(self, action: #selector(remarkAction), for: .touchUpInside)
     }
     
     override func updateConstraints() {
@@ -166,6 +176,7 @@ class KFCommunityCell: BPTableViewCell, UICollectionViewDelegate, UICollectionVi
     
     // MARK: ==== Event ====
     func setData(model: KFCommunityModel) {
+        self.model = model
         if let userModel = model.userModel {
             self.avatarImageView.setImage(with: userModel.avatar)
             self.nameLabel.text    = userModel.name
@@ -176,6 +187,23 @@ class KFCommunityCell: BPTableViewCell, UICollectionViewDelegate, UICollectionVi
         self.updateConstraints()
         self.collectionView.reloadData()
     }
+    
+    @objc
+    private func reportAction() {
+        guard let _model = self.model else {
+            return
+        }
+        self.delegate?.reportAction(model: _model)
+    }
+    
+    @objc
+    private func remarkAction() {
+        guard let _model = self.model else {
+            return
+        }
+        self.delegate?.remarkAction(model: _model)
+    }
+    
     
     // MARK: ==== UICollectionViewDelegate, UICollectionViewDataSource ====
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

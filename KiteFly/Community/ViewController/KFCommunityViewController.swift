@@ -7,7 +7,7 @@
 
 import Foundation
 
-class KFCommunityViewController: BPViewController, UITableViewDelegate, UITableViewDataSource {
+class KFCommunityViewController: BPViewController, UITableViewDelegate, UITableViewDataSource, KFCommunityCellDelegate {
     
     private let cellID = "kKFCommunityCell"
     private var modelList: [KFCommunityModel] = []
@@ -78,12 +78,25 @@ class KFCommunityViewController: BPViewController, UITableViewDelegate, UITableV
         }
         let model = self.modelList[indexPath.row]
         cell.setData(model: model)
+        cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = KFCommunityDetailViewController()
         let model = self.modelList[indexPath.row]
+        vc.model = model
+        self.navigationController?.push(vc: vc)
+    }
+    
+    // MARK: ==== KFCommunityCellDelegate ====
+    func reportAction(model: KFCommunityModel) {
+        let vc = KFCommunityReportViewController()
+        self.navigationController?.present(vc, animated: true)
+    }
+    
+    func remarkAction(model: KFCommunityModel) {
+        let vc = KFCommunityRemarkViewController()
         vc.model = model
         self.navigationController?.push(vc: vc)
     }

@@ -7,10 +7,17 @@
 
 import Foundation
 
+protocol KFCommunityHeaderViewDelegate: NSObject {
+    func reportAction(model: KFCommunityModel)
+    func clickAvatarAction(model: KFUserModel)
+}
+
 class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewDataSource {
     
     private let cellID: String = "kKFCommunityImageCell"
     private var imageList = [String]()
+    private var model: KFCommunityModel?
+    weak var delegate: KFCommunityHeaderViewDelegate?
     
     private var customContentView: BPView = {
         let view = BPView()
@@ -23,8 +30,9 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
         let imageView = BPImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.size = CGSize(width: AdaptSize(60), height: AdaptSize(60))
-        imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = AdaptSize(30)
+        imageView.layer.masksToBounds       = true
+        imageView.layer.cornerRadius        = AdaptSize(30)
+        imageView.isUserInteractionEnabled  = true
         return imageView
     }()
     private var nameLabel: BPLabel = {
@@ -108,6 +116,8 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
         self.collectionView.delegate   = self
         self.collectionView.dataSource = self
         self.collectionView.register(KFCommunityImageCell.classForCoder(), forCellWithReuseIdentifier: cellID)
+        let tapGes = UITapGestureRecognizer(target: self, action: #selector(clickAvatarAction))
+        self.avatarImageView.addGestureRecognizer(tapGes)
     }
     
     override func updateConstraints() {
@@ -160,6 +170,7 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
     
     // MARK: ==== Event ====
     func setData(model: KFCommunityModel) {
+        self.model = model
         if let userModel = model.userModel {
             self.avatarImageView.setImage(with: userModel.avatar)
             self.nameLabel.text    = userModel.name
@@ -169,6 +180,19 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
         self.imageList = model.imageList
         self.updateConstraints()
         self.collectionView.reloadData()
+    }
+    
+    @objc
+    private func reportAction() {
+        guard let _model = self.model else {
+            return
+        }
+        self.delegate?.reportAction(model: _model)
+    }
+    
+    @objc
+    private func clickAvatarAction() {
+        kWindow.toast("进入个人中心")
     }
     
     // MARK: ==== UICollectionViewDelegate, UICollectionViewDataSource ====
