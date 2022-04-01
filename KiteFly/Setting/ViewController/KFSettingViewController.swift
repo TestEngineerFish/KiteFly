@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import StoreKit
 
 enum KFSettingType: String {
     /// 我的帖子
@@ -131,11 +132,19 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
                 kWindow.toast("清理完成")
             }
         case .contact:
-            break
+            BPActionSheet(title: "联系我们").addItem(title: "邮箱：report@kangkanghui.com") {
+                let email = "report@kangkanghui.com"
+                if let url = URL(string: "mailto:\(email)") {
+                   UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }.show()
         case .appraise:
-            break
+            SKStoreReviewController.requestReview()
         case .agreement:
-            break
+            let vc = KFWebViewController()
+            let path = Bundle.main.path(forResource: "Agreement", ofType: "html")
+            vc.localHtml = path
+            self.navigationController?.push(vc: vc)
         case .more:
             break
         }
