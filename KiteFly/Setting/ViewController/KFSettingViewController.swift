@@ -73,7 +73,11 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        BPAlertManager.share.oneButton(title: "提示", description: "点击个人信息可编辑修改", buttonName: "知道了", closure: nil).show()
+        if !KFUserModel.share.isShowSettingAlert {
+            BPAlertManager.share.oneButton(title: "提示", description: "点击个人信息可修改", buttonName: "知道了", closure: {
+                KFUserModel.share.isShowSettingAlert = true
+            }).show()
+        }
     }
     
     override func createSubviews() {

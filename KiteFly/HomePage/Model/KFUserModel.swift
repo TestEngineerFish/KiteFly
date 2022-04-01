@@ -43,6 +43,7 @@ class KFUserModel: Mappable {
     var sex: KFSex      = .unknown
     var remark: String  = ""
     var address: String = ""
+    var isShowSettingAlert = false
     
     init() {}
     required init?(map: Map) {}

@@ -55,6 +55,11 @@ class KFSettingHeaderView: BPView {
         label.isUserInteractionEnabled = true
         return label
     }()
+    private var lineView: BPView = {
+        let view = BPView()
+        view.backgroundColor = UIColor.gray4
+        return view
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -74,6 +79,7 @@ class KFSettingHeaderView: BPView {
         self.addSubview(sexLabel)
         self.addSubview(addressLabel)
         self.addSubview(remarkLabel)
+        self.addSubview(lineView)
     }
     
     override func bindProperty() {
@@ -113,7 +119,11 @@ class KFSettingHeaderView: BPView {
             make.left.equalTo(avatarImageView)
             make.right.equalTo(nameLabel)
             make.top.equalTo(avatarImageView.snp.bottom).offset(AdaptSize(20))
-            make.bottom.equalToSuperview().offset(AdaptSize(-10))
+        }
+        lineView.snp.makeConstraints { make in
+            make.top.equalTo(remarkLabel.snp.bottom).offset(AdaptSize(15))
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(AdaptSize(15))
         }
         super.updateConstraints()
     }
