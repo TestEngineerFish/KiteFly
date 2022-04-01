@@ -87,7 +87,6 @@ class BPBrowserImageCell: BPCollectionViewCell, UIScrollViewDelegate, UIGestureR
         self.backgroundColor     = .clear
         self.progressView.isHidden = true
         self.configGesture()
-        NotificationCenter.default.addObserver(self, selector: #selector(didEndScroll), name: Notification.Name("kScrollDidEndDecelerating"), object: nil)
     }
     
     /// 配置手势

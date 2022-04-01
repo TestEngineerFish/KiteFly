@@ -45,7 +45,6 @@ open class BPTopWindowView: BPView {
     
     open override func registerNotification() {
         super.registerNotification()
-//        NotificationCenter.default.addObserver(self, selector: #selector(hide), name: BPNotification.kShowCall, object: nil)
     }
     
     open override func updateUI() {}

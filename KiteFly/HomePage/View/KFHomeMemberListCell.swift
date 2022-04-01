@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 class KFHomeMemberListCell: BPTableViewCell {
+    
+    private var model: KFUserModel?
     
     private var avatarImageView: BPImageView = {
         let imageView = BPImageView()
@@ -71,6 +74,7 @@ class KFHomeMemberListCell: BPTableViewCell {
     override func bindProperty() {
         super.bindProperty()
         self.setLine()
+        self.chatButton.addTarget(self, action: #selector(chatAction), for: .touchUpInside)
     }
     
     override func updateConstraints() {
@@ -101,12 +105,20 @@ class KFHomeMemberListCell: BPTableViewCell {
         }
         super.updateConstraints()
     }
-    
+
     // MARK: ==== Event ====
     func setData(model: KFUserModel) {
+        self.model = model
         self.avatarImageView.setImage(with: model.avatar)
         self.nameLabel.text   = model.name
         self.sexLabel.text    = "性别：\(model.sex.str)"
         self.remarkLabel.text = "简介：\(model.remark)"
+    }
+    
+    @objc
+    private func chatAction() {
+        let vc = BPChatRoomViewController()
+        vc.userModel = model
+        UIViewController.currentNavigationController?.push(vc: vc)
     }
 }

@@ -255,7 +255,6 @@ public class BPBrowserView:
     
     // 滑动结束通知Cell
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        NotificationCenter.default.post(name: Notification.Name("kScrollDidEndDecelerating"), object: nil)
     }
     
     // MARK: ==== BPBrowserVideoCellDelegate ====

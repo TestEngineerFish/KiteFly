@@ -14,9 +14,30 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - IQKeyboardManager (6.5.6)
   - lottie-ios (3.2.3)
   - ObjectMapper (4.2.0)
+  - RongCloudIM/ChatRoom (5.1.3.6):
+    - RongCloudIM/IMLibCore
+  - RongCloudIM/CustomerService (5.1.3.6):
+    - RongCloudIM/IMLibCore
+  - RongCloudIM/Discussion (5.1.3.6):
+    - RongCloudIM/IMLibCore
+  - RongCloudIM/IMLib (5.1.3.6):
+    - RongCloudIM/ChatRoom
+    - RongCloudIM/CustomerService
+    - RongCloudIM/Discussion
+    - RongCloudIM/IMLibCore
+    - RongCloudIM/Location
+    - RongCloudIM/PublicService
+  - RongCloudIM/IMLibCore (5.1.3.6)
+  - RongCloudIM/Location (5.1.3.6):
+    - RongCloudIM/IMLibCore
+  - RongCloudIM/PublicService (5.1.3.6):
+    - RongCloudIM/IMLibCore
   - SDWebImage (5.12.1):
     - SDWebImage/Core (= 5.12.1)
   - SDWebImage/Core (5.12.1)
@@ -25,9 +46,11 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 4.0.1)
+  - FMDB (= 2.7.5)
   - IQKeyboardManager (= 6.5.6)
-  - lottie-ios
+  - lottie-ios (= 3.2.3)
   - ObjectMapper (= 4.2.0)
+  - RongCloudIM/IMLib (~> 5.1.3.4)
   - SDWebImage (= 5.12.1)
   - SnapKit (= 5.0.1)
   - TYCyclePagerView (= 1.2.0)
@@ -35,22 +58,26 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - FMDB
     - IQKeyboardManager
     - lottie-ios
     - ObjectMapper
+    - RongCloudIM
     - SDWebImage
     - SnapKit
     - TYCyclePagerView
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  RongCloudIM: b85c2d48c06212be169311f5bc23a2384f1ec8d3
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   TYCyclePagerView: 2b051dade0615c70784aa34f40c646feeddb7344
 
-PODFILE CHECKSUM: 37d1d4cfd87cb251cc79a145395cd3fce02ec2ef
+PODFILE CHECKSUM: fe59f10c07f1915c7618e72a523432febfb6a19a
 
 COCOAPODS: 1.11.2

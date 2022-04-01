@@ -26,7 +26,6 @@ open class BPView: UIView, BPViewDelegate {
         #if DEBUG
         print(self.classForCoder, "资源释放")
         #endif
-        NotificationCenter.default.removeObserver(self)
     }
     
     public override init(frame: CGRect) {

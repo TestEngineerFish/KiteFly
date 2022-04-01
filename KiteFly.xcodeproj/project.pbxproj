@@ -113,6 +113,40 @@
 		185F5F5E27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F5D27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift */; };
 		185F5F6027F6ACD600AFBA3F /* KFSettingRegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F5F27F6ACD600AFBA3F /* KFSettingRegisterCell.swift */; };
 		185F5F6227F6BFAB00AFBA3F /* KFSettingRenameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F6127F6BFAB00AFBA3F /* KFSettingRenameViewController.swift */; };
+		185F5F9627F6D03000AFBA3F /* BPChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F6E27F6D03000AFBA3F /* BPChatRoomViewController.swift */; };
+		185F5F9E27F6D03000AFBA3F /* BPChatRoomMessageImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7927F6D03000AFBA3F /* BPChatRoomMessageImageCell.swift */; };
+		185F5F9F27F6D03000AFBA3F /* BPChatRoomMessageAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7A27F6D03000AFBA3F /* BPChatRoomMessageAudioCell.swift */; };
+		185F5FA027F6D03000AFBA3F /* BPChatRoomBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7B27F6D03000AFBA3F /* BPChatRoomBaseCell.swift */; };
+		185F5FA327F6D03000AFBA3F /* BPChatRoomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7E27F6D03000AFBA3F /* BPChatRoomMessageCell.swift */; };
+		185F5FA427F6D03000AFBA3F /* BPChatRoomMessageTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7F27F6D03000AFBA3F /* BPChatRoomMessageTextCell.swift */; };
+		185F5FA527F6D03000AFBA3F /* BPChatRoomMessageCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8027F6D03000AFBA3F /* BPChatRoomMessageCellFactory.swift */; };
+		185F5FA627F6D03000AFBA3F /* BPChatRoomMessageCellStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8227F6D03000AFBA3F /* BPChatRoomMessageCellStatusView.swift */; };
+		185F5FA727F6D03000AFBA3F /* BPChatRoomEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8327F6D03000AFBA3F /* BPChatRoomEmptyCell.swift */; };
+		185F5FA827F6D03000AFBA3F /* BPChatRoomBaseMessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8527F6D03000AFBA3F /* BPChatRoomBaseMessageBubble.swift */; };
+		185F5FA927F6D03000AFBA3F /* BPChatRoomToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8727F6D03000AFBA3F /* BPChatRoomToolsView.swift */; };
+		185F5FAA27F6D03000AFBA3F /* BPChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8927F6D03000AFBA3F /* BPChatInputView.swift */; };
+		185F5FAB27F6D03000AFBA3F /* BPRecordToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8B27F6D03000AFBA3F /* BPRecordToolView.swift */; };
+		185F5FAC27F6D03000AFBA3F /* BPRecordAnimationItemLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8C27F6D03000AFBA3F /* BPRecordAnimationItemLayer.swift */; };
+		185F5FAD27F6D03000AFBA3F /* BPRecordVoiceAnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8D27F6D03000AFBA3F /* BPRecordVoiceAnimationLayer.swift */; };
+		185F5FAE27F6D03000AFBA3F /* BPEmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8F27F6D03000AFBA3F /* BPEmojiModel.swift */; };
+		185F5FAF27F6D03000AFBA3F /* BPEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F9027F6D03000AFBA3F /* BPEmojiCell.swift */; };
+		185F5FB027F6D03000AFBA3F /* BPEmojiToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F9127F6D03000AFBA3F /* BPEmojiToolView.swift */; };
+		185F5FB127F6D03000AFBA3F /* BPChatMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F9227F6D03000AFBA3F /* BPChatMoreView.swift */; };
+		185F5FB527F6D15300AFBA3F /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FB427F6D15300AFBA3F /* UITextView+Extension.swift */; };
+		185F5FB727F6D23E00AFBA3F /* BPRedDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FB627F6D23E00AFBA3F /* BPRedDotView.swift */; };
+		185F5FBA27F6D34500AFBA3F /* RCMessag+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FB927F6D34500AFBA3F /* RCMessag+Extension.swift */; };
+		185F5FBE27F6D40400AFBA3F /* BPAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FBC27F6D40400AFBA3F /* BPAudioManager.swift */; };
+		185F5FBF27F6D40400AFBA3F /* BPPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FBD27F6D40400AFBA3F /* BPPlayerManager.swift */; };
+		185F5FC127F6D42A00AFBA3F /* BPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC027F6D42A00AFBA3F /* BPStackView.swift */; };
+		185F5FC327F6D4AF00AFBA3F /* RCHQVoiceMessage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC227F6D4AF00AFBA3F /* RCHQVoiceMessage+Extension.swift */; };
+		185F5FC527F6D66D00AFBA3F /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC427F6D66D00AFBA3F /* Dictionary+Extension.swift */; };
+		185F5FCC27F6D70000AFBA3F /* BPDBCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC727F6D70000AFBA3F /* BPDBCenter.swift */; };
+		185F5FCD27F6D70000AFBA3F /* BPDatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC827F6D70000AFBA3F /* BPDatabaseProtocol.swift */; };
+		185F5FCE27F6D70000AFBA3F /* BPSQLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC927F6D70000AFBA3F /* BPSQLManager.swift */; };
+		185F5FCF27F6D70000AFBA3F /* BPDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FCA27F6D70000AFBA3F /* BPDatabaseManager.swift */; };
+		185F5FD027F6D70000AFBA3F /* BPIMDBOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FCB27F6D70000AFBA3F /* BPIMDBOperator.swift */; };
+		185F5FD227F6D8E900AFBA3F /* BPChatRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FD127F6D8E900AFBA3F /* BPChatRequestManager.swift */; };
+		185F5FD427F6E1DF00AFBA3F /* emoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185F5FD327F6E1DF00AFBA3F /* emoji.bundle */; };
 		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
 
@@ -227,6 +261,40 @@
 		185F5F5D27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingMyRegisterViewController.swift; sourceTree = "<group>"; };
 		185F5F5F27F6ACD600AFBA3F /* KFSettingRegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingRegisterCell.swift; sourceTree = "<group>"; };
 		185F5F6127F6BFAB00AFBA3F /* KFSettingRenameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingRenameViewController.swift; sourceTree = "<group>"; };
+		185F5F6E27F6D03000AFBA3F /* BPChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomViewController.swift; sourceTree = "<group>"; };
+		185F5F7927F6D03000AFBA3F /* BPChatRoomMessageImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageImageCell.swift; sourceTree = "<group>"; };
+		185F5F7A27F6D03000AFBA3F /* BPChatRoomMessageAudioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageAudioCell.swift; sourceTree = "<group>"; };
+		185F5F7B27F6D03000AFBA3F /* BPChatRoomBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomBaseCell.swift; sourceTree = "<group>"; };
+		185F5F7E27F6D03000AFBA3F /* BPChatRoomMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageCell.swift; sourceTree = "<group>"; };
+		185F5F7F27F6D03000AFBA3F /* BPChatRoomMessageTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageTextCell.swift; sourceTree = "<group>"; };
+		185F5F8027F6D03000AFBA3F /* BPChatRoomMessageCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageCellFactory.swift; sourceTree = "<group>"; };
+		185F5F8227F6D03000AFBA3F /* BPChatRoomMessageCellStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageCellStatusView.swift; sourceTree = "<group>"; };
+		185F5F8327F6D03000AFBA3F /* BPChatRoomEmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomEmptyCell.swift; sourceTree = "<group>"; };
+		185F5F8527F6D03000AFBA3F /* BPChatRoomBaseMessageBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomBaseMessageBubble.swift; sourceTree = "<group>"; };
+		185F5F8727F6D03000AFBA3F /* BPChatRoomToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomToolsView.swift; sourceTree = "<group>"; };
+		185F5F8927F6D03000AFBA3F /* BPChatInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatInputView.swift; sourceTree = "<group>"; };
+		185F5F8B27F6D03000AFBA3F /* BPRecordToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPRecordToolView.swift; sourceTree = "<group>"; };
+		185F5F8C27F6D03000AFBA3F /* BPRecordAnimationItemLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPRecordAnimationItemLayer.swift; sourceTree = "<group>"; };
+		185F5F8D27F6D03000AFBA3F /* BPRecordVoiceAnimationLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPRecordVoiceAnimationLayer.swift; sourceTree = "<group>"; };
+		185F5F8F27F6D03000AFBA3F /* BPEmojiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPEmojiModel.swift; sourceTree = "<group>"; };
+		185F5F9027F6D03000AFBA3F /* BPEmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPEmojiCell.swift; sourceTree = "<group>"; };
+		185F5F9127F6D03000AFBA3F /* BPEmojiToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPEmojiToolView.swift; sourceTree = "<group>"; };
+		185F5F9227F6D03000AFBA3F /* BPChatMoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatMoreView.swift; sourceTree = "<group>"; };
+		185F5FB427F6D15300AFBA3F /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
+		185F5FB627F6D23E00AFBA3F /* BPRedDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPRedDotView.swift; sourceTree = "<group>"; };
+		185F5FB927F6D34500AFBA3F /* RCMessag+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RCMessag+Extension.swift"; sourceTree = "<group>"; };
+		185F5FBC27F6D40400AFBA3F /* BPAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPAudioManager.swift; sourceTree = "<group>"; };
+		185F5FBD27F6D40400AFBA3F /* BPPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPPlayerManager.swift; sourceTree = "<group>"; };
+		185F5FC027F6D42A00AFBA3F /* BPStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPStackView.swift; sourceTree = "<group>"; };
+		185F5FC227F6D4AF00AFBA3F /* RCHQVoiceMessage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RCHQVoiceMessage+Extension.swift"; sourceTree = "<group>"; };
+		185F5FC427F6D66D00AFBA3F /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		185F5FC727F6D70000AFBA3F /* BPDBCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPDBCenter.swift; sourceTree = "<group>"; };
+		185F5FC827F6D70000AFBA3F /* BPDatabaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPDatabaseProtocol.swift; sourceTree = "<group>"; };
+		185F5FC927F6D70000AFBA3F /* BPSQLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPSQLManager.swift; sourceTree = "<group>"; };
+		185F5FCA27F6D70000AFBA3F /* BPDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPDatabaseManager.swift; sourceTree = "<group>"; };
+		185F5FCB27F6D70000AFBA3F /* BPIMDBOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPIMDBOperator.swift; sourceTree = "<group>"; };
+		185F5FD127F6D8E900AFBA3F /* BPChatRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRequestManager.swift; sourceTree = "<group>"; };
+		185F5FD327F6E1DF00AFBA3F /* emoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = emoji.bundle; sourceTree = "<group>"; };
 		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
 		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,6 +332,7 @@
 		185F5E5827F41CD100AFBA3F /* KiteFly */ = {
 			isa = PBXGroup;
 			children = (
+				185F5F6527F6CD5400AFBA3F /* Message */,
 				185F5ED927F47C4500AFBA3F /* Resource */,
 				185F5E7327F41E0800AFBA3F /* Support */,
 				185F5E7027F41DA600AFBA3F /* Setting */,
@@ -336,6 +405,7 @@
 		185F5E7427F41E2400AFBA3F /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				185F5FC027F6D42A00AFBA3F /* BPStackView.swift */,
 				185F5F3A27F5A62F00AFBA3F /* BPAttributionView.swift */,
 				185F5F3627F5A5D200AFBA3F /* BPProgressView.swift */,
 				185F5EA827F4285C00AFBA3F /* BPTabBarController.swift */,
@@ -351,6 +421,7 @@
 				185F5EB527F433F500AFBA3F /* BPNavigationController.swift */,
 				185F5EC527F4445D00AFBA3F /* BPTableViewCell.swift */,
 				185F5EC727F445C500AFBA3F /* BPCollectionViewCell.swift */,
+				185F5FB627F6D23E00AFBA3F /* BPRedDotView.swift */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -358,6 +429,8 @@
 		185F5E7F27F41F0900AFBA3F /* BaseTools */ = {
 			isa = PBXGroup;
 			children = (
+				185F5FC627F6D70000AFBA3F /* Database */,
+				185F5FBB27F6D40400AFBA3F /* AVFAudio */,
 				185F5F4027F5A70400AFBA3F /* Download */,
 				185F5F2927F5A59E00AFBA3F /* AlertView */,
 				185F5F2627F5A4BB00AFBA3F /* AVPlayer */,
@@ -391,6 +464,8 @@
 				185F5EAF27F42B8800AFBA3F /* Data+Extension.swift */,
 				185F5EDC27F54EFE00AFBA3F /* UIView+Toast.swift */,
 				185F5F3827F5A5F700AFBA3F /* Double+Extension.swift */,
+				185F5FB427F6D15300AFBA3F /* UITextView+Extension.swift */,
+				185F5FC427F6D66D00AFBA3F /* Dictionary+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -453,6 +528,7 @@
 		185F5ED927F47C4500AFBA3F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				185F5FD327F6E1DF00AFBA3F /* emoji.bundle */,
 				185F5EDA27F47C5500AFBA3F /* iconfont.ttf */,
 			);
 			path = Resource;
@@ -624,6 +700,120 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		185F5F6527F6CD5400AFBA3F /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				185F5FB827F6D33400AFBA3F /* RongCloud */,
+				185F5F6E27F6D03000AFBA3F /* BPChatRoomViewController.swift */,
+				185F5F7627F6D03000AFBA3F /* MessageCell */,
+				185F5F8627F6D03000AFBA3F /* ToolsView */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		185F5F7627F6D03000AFBA3F /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				185F5F7927F6D03000AFBA3F /* BPChatRoomMessageImageCell.swift */,
+				185F5F7A27F6D03000AFBA3F /* BPChatRoomMessageAudioCell.swift */,
+				185F5F7B27F6D03000AFBA3F /* BPChatRoomBaseCell.swift */,
+				185F5F7E27F6D03000AFBA3F /* BPChatRoomMessageCell.swift */,
+				185F5F7F27F6D03000AFBA3F /* BPChatRoomMessageTextCell.swift */,
+				185F5F8027F6D03000AFBA3F /* BPChatRoomMessageCellFactory.swift */,
+				185F5F8127F6D03000AFBA3F /* MessageCellStatus */,
+				185F5F8327F6D03000AFBA3F /* BPChatRoomEmptyCell.swift */,
+				185F5F8427F6D03000AFBA3F /* MessageCellBubble */,
+			);
+			path = MessageCell;
+			sourceTree = "<group>";
+		};
+		185F5F8127F6D03000AFBA3F /* MessageCellStatus */ = {
+			isa = PBXGroup;
+			children = (
+				185F5F8227F6D03000AFBA3F /* BPChatRoomMessageCellStatusView.swift */,
+			);
+			path = MessageCellStatus;
+			sourceTree = "<group>";
+		};
+		185F5F8427F6D03000AFBA3F /* MessageCellBubble */ = {
+			isa = PBXGroup;
+			children = (
+				185F5F8527F6D03000AFBA3F /* BPChatRoomBaseMessageBubble.swift */,
+			);
+			path = MessageCellBubble;
+			sourceTree = "<group>";
+		};
+		185F5F8627F6D03000AFBA3F /* ToolsView */ = {
+			isa = PBXGroup;
+			children = (
+				185F5F8727F6D03000AFBA3F /* BPChatRoomToolsView.swift */,
+				185F5F8827F6D03000AFBA3F /* Views */,
+			);
+			path = ToolsView;
+			sourceTree = "<group>";
+		};
+		185F5F8827F6D03000AFBA3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				185F5F8927F6D03000AFBA3F /* BPChatInputView.swift */,
+				185F5F8A27F6D03000AFBA3F /* RecordVoice */,
+				185F5F8E27F6D03000AFBA3F /* Emoji */,
+				185F5F9227F6D03000AFBA3F /* BPChatMoreView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		185F5F8A27F6D03000AFBA3F /* RecordVoice */ = {
+			isa = PBXGroup;
+			children = (
+				185F5F8B27F6D03000AFBA3F /* BPRecordToolView.swift */,
+				185F5F8C27F6D03000AFBA3F /* BPRecordAnimationItemLayer.swift */,
+				185F5F8D27F6D03000AFBA3F /* BPRecordVoiceAnimationLayer.swift */,
+			);
+			path = RecordVoice;
+			sourceTree = "<group>";
+		};
+		185F5F8E27F6D03000AFBA3F /* Emoji */ = {
+			isa = PBXGroup;
+			children = (
+				185F5F8F27F6D03000AFBA3F /* BPEmojiModel.swift */,
+				185F5F9027F6D03000AFBA3F /* BPEmojiCell.swift */,
+				185F5F9127F6D03000AFBA3F /* BPEmojiToolView.swift */,
+			);
+			path = Emoji;
+			sourceTree = "<group>";
+		};
+		185F5FB827F6D33400AFBA3F /* RongCloud */ = {
+			isa = PBXGroup;
+			children = (
+				185F5FD127F6D8E900AFBA3F /* BPChatRequestManager.swift */,
+				185F5FC227F6D4AF00AFBA3F /* RCHQVoiceMessage+Extension.swift */,
+				185F5FB927F6D34500AFBA3F /* RCMessag+Extension.swift */,
+			);
+			path = RongCloud;
+			sourceTree = "<group>";
+		};
+		185F5FBB27F6D40400AFBA3F /* AVFAudio */ = {
+			isa = PBXGroup;
+			children = (
+				185F5FBC27F6D40400AFBA3F /* BPAudioManager.swift */,
+				185F5FBD27F6D40400AFBA3F /* BPPlayerManager.swift */,
+			);
+			path = AVFAudio;
+			sourceTree = "<group>";
+		};
+		185F5FC627F6D70000AFBA3F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				185F5FC727F6D70000AFBA3F /* BPDBCenter.swift */,
+				185F5FC827F6D70000AFBA3F /* BPDatabaseProtocol.swift */,
+				185F5FC927F6D70000AFBA3F /* BPSQLManager.swift */,
+				185F5FCA27F6D70000AFBA3F /* BPDatabaseManager.swift */,
+				185F5FCB27F6D70000AFBA3F /* BPIMDBOperator.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		599314E84E022005B57DE891 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,6 +843,7 @@
 				185F5E5327F41CD100AFBA3F /* Frameworks */,
 				185F5E5427F41CD100AFBA3F /* Resources */,
 				F1980771258E45DAC0CD4BF1 /* [CP] Embed Pods Frameworks */,
+				1A889047F14C511DA4B88888 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -702,6 +893,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185F5FD427F6E1DF00AFBA3F /* emoji.bundle in Resources */,
 				185F5EDB27F5400B00AFBA3F /* iconfont.ttf in Resources */,
 				185F5ECD27F44DD900AFBA3F /* NewsModelList.json in Resources */,
 				185F5E6627F41CD200AFBA3F /* LaunchScreen.storyboard in Resources */,
@@ -719,6 +911,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1A889047F14C511DA4B88888 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KiteFly/Pods-KiteFly-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KiteFly/Pods-KiteFly-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KiteFly/Pods-KiteFly-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		865D25E7D60CDCBFCA03252F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -768,10 +977,14 @@
 				185F5EC827F445C500AFBA3F /* BPCollectionViewCell.swift in Sources */,
 				185F5EFD27F58E9900AFBA3F /* KFCommunityRemarkCell.swift in Sources */,
 				185F5EBD27F43F1900AFBA3F /* KFNewsModel.swift in Sources */,
+				185F5FA727F6D03000AFBA3F /* BPChatRoomEmptyCell.swift in Sources */,
+				185F5FBE27F6D40400AFBA3F /* BPAudioManager.swift in Sources */,
+				185F5FB727F6D23E00AFBA3F /* BPRedDotView.swift in Sources */,
 				185F5E8827F4205500AFBA3F /* UIViewController+Extension.swift in Sources */,
 				185F5F1927F5A1AA00AFBA3F /* BPActionSheet.swift in Sources */,
 				185F5EF927F58C6500AFBA3F /* KFCommunityDetailViewController.swift in Sources */,
 				185F5E9427F4228100AFBA3F /* BPTableViewEmptyView.swift in Sources */,
+				185F5FA327F6D03000AFBA3F /* BPChatRoomMessageCell.swift in Sources */,
 				185F5F1327F5A18300AFBA3F /* BPMediaCell.swift in Sources */,
 				185F5EF427F5816E00AFBA3F /* KFCommunityImageCell.swift in Sources */,
 				185F5F5627F6A4CA00AFBA3F /* KFHomeHeaderView.swift in Sources */,
@@ -779,49 +992,68 @@
 				185F5F0B27F5A15200AFBA3F /* BPSystemAlbumCell.swift in Sources */,
 				185F5F0A27F5A15200AFBA3F /* BPSystemPhotoViewController.swift in Sources */,
 				185F5EB827F438F100AFBA3F /* KFRegisterViewController.swift in Sources */,
+				185F5FAB27F6D03000AFBA3F /* BPRecordToolView.swift in Sources */,
 				185F5ED827F47B6300AFBA3F /* KFNewsDetailViewController.swift in Sources */,
 				185F5E7E27F41ED800AFBA3F /* BPNavigationBar.swift in Sources */,
 				185F5F1627F5A18300AFBA3F /* BPPhotoAlbumViewController.swift in Sources */,
+				185F5FA627F6D03000AFBA3F /* BPChatRoomMessageCellStatusView.swift in Sources */,
 				185F5F3527F5A59F00AFBA3F /* BPAlertViewTwoButton.swift in Sources */,
 				185F5F3D27F5A65C00AFBA3F /* UILabel+Extension.swift in Sources */,
 				185F5F5227F69BB600AFBA3F /* KFWebViewController.swift in Sources */,
+				185F5F9E27F6D03000AFBA3F /* BPChatRoomMessageImageCell.swift in Sources */,
 				185F5F3427F5A59F00AFBA3F /* BPAlertViewOneButton.swift in Sources */,
 				185F5F2127F5A43B00AFBA3F /* BPBrowserVideoCell.swift in Sources */,
+				185F5FA827F6D03000AFBA3F /* BPChatRoomBaseMessageBubble.swift in Sources */,
+				185F5FA427F6D03000AFBA3F /* BPChatRoomMessageTextCell.swift in Sources */,
+				185F5FCE27F6D70000AFBA3F /* BPSQLManager.swift in Sources */,
 				185F5EC227F4433800AFBA3F /* KFHomeNewsItem.swift in Sources */,
 				185F5F4C27F5C5CD00AFBA3F /* KFSettingHeaderView.swift in Sources */,
 				185F5F3B27F5A62F00AFBA3F /* BPAttributionView.swift in Sources */,
 				185F5E9B27F4231400AFBA3F /* BPMediaImageModel.swift in Sources */,
+				185F5F9F27F6D03000AFBA3F /* BPChatRoomMessageAudioCell.swift in Sources */,
 				185F5E8C27F4219C00AFBA3F /* Iconfont.swift in Sources */,
 				185F5EC427F4442700AFBA3F /* KFHomeNoticCell.swift in Sources */,
 				185F5EBF27F440D300AFBA3F /* KFNoticeModel.swift in Sources */,
 				185F5F1427F5A18300AFBA3F /* BPPhotoAlbumToolsView.swift in Sources */,
 				185F5F6227F6BFAB00AFBA3F /* KFSettingRenameViewController.swift in Sources */,
 				185F5E5A27F41CD100AFBA3F /* AppDelegate.swift in Sources */,
+				185F5FD227F6D8E900AFBA3F /* BPChatRequestManager.swift in Sources */,
 				185F5F0927F5A15200AFBA3F /* BPSystemPhotoManager.swift in Sources */,
 				185F5EBA27F43E1700AFBA3F /* KFHomeViewController.swift in Sources */,
+				185F5FBA27F6D34500AFBA3F /* RCMessag+Extension.swift in Sources */,
 				185F5E8627F4201D00AFBA3F /* UIColor+Extension.swift in Sources */,
+				185F5FAD27F6D03000AFBA3F /* BPRecordVoiceAnimationLayer.swift in Sources */,
 				185F5EE327F556EF00AFBA3F /* KFHomeMemberListCell.swift in Sources */,
 				185F5EC627F4445D00AFBA3F /* BPTableViewCell.swift in Sources */,
 				185F5E8127F41F2600AFBA3F /* CommonGlobal.swift in Sources */,
 				185F5E9627F4229100AFBA3F /* BPImageView.swift in Sources */,
+				185F5FCC27F6D70000AFBA3F /* BPDBCenter.swift in Sources */,
+				185F5FAE27F6D03000AFBA3F /* BPEmojiModel.swift in Sources */,
 				185F5E9927F422E200AFBA3F /* BPMediaModel.swift in Sources */,
+				185F5FAC27F6D03000AFBA3F /* BPRecordAnimationItemLayer.swift in Sources */,
 				185F5E7827F41E7D00AFBA3F /* BPView.swift in Sources */,
 				185F5F0127F598BD00AFBA3F /* KFCommunityPublishViewController.swift in Sources */,
 				185F5EFB27F58D7C00AFBA3F /* KFCommunityHeaderView.swift in Sources */,
 				185F5E9D27F423E700AFBA3F /* String+Extension.swift in Sources */,
+				185F5FC327F6D4AF00AFBA3F /* RCHQVoiceMessage+Extension.swift in Sources */,
 				185F5F2827F5A4BB00AFBA3F /* BPVideoManager.swift in Sources */,
 				185F5EA927F4285C00AFBA3F /* BPTabBarController.swift in Sources */,
+				185F5FC527F6D66D00AFBA3F /* Dictionary+Extension.swift in Sources */,
 				185F5E9227F4226200AFBA3F /* BPTableView.swift in Sources */,
 				185F5EA527F425E100AFBA3F /* BPTextField.swift in Sources */,
 				185F5F5827F6A7DB00AFBA3F /* KFSettingMoreViewController.swift in Sources */,
 				185F5EB027F42B8800AFBA3F /* Data+Extension.swift in Sources */,
 				185F5EA327F424F700AFBA3F /* Date+Extension.swift in Sources */,
+				185F5FCD27F6D70000AFBA3F /* BPDatabaseProtocol.swift in Sources */,
 				185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */,
 				185F5EFF27F595C200AFBA3F /* KFCommunityRemarkViewController.swift in Sources */,
 				185F5EB627F433F500AFBA3F /* BPNavigationController.swift in Sources */,
+				185F5FC127F6D42A00AFBA3F /* BPStackView.swift in Sources */,
+				185F5FAF27F6D03000AFBA3F /* BPEmojiCell.swift in Sources */,
 				185F5F4E27F5CA0200AFBA3F /* KFSettingCell.swift in Sources */,
 				185F5F2227F5A43B00AFBA3F /* BPBrowserImageCell.swift in Sources */,
 				185F5EF227F5792200AFBA3F /* KFCommunityRemarkModel.swift in Sources */,
+				185F5FB127F6D03000AFBA3F /* BPChatMoreView.swift in Sources */,
 				185F5F3927F5A5F700AFBA3F /* Double+Extension.swift in Sources */,
 				185F5ED127F4729300AFBA3F /* KFHomePageCell.swift in Sources */,
 				185F5F6027F6ACD600AFBA3F /* KFSettingRegisterCell.swift in Sources */,
@@ -832,30 +1064,40 @@
 				185F5F3727F5A5D200AFBA3F /* BPProgressView.swift in Sources */,
 				185F5F5E27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift in Sources */,
 				185F5E8A27F4207700AFBA3F /* UIView+Extension.swift in Sources */,
+				185F5FA027F6D03000AFBA3F /* BPChatRoomBaseCell.swift in Sources */,
 				185F5F2527F5A48200AFBA3F /* BPMediaVideoModel.swift in Sources */,
 				185F5F3027F5A59F00AFBA3F /* BPToastView.swift in Sources */,
 				185F5F4427F5B2AD00AFBA3F /* KFCommunityReportViewController.swift in Sources */,
 				185F5E9F27F4242200AFBA3F /* NSTextAttachment.swift in Sources */,
+				185F5F9627F6D03000AFBA3F /* BPChatRoomViewController.swift in Sources */,
 				185F5F3327F5A59F00AFBA3F /* BPBaseAlertView.swift in Sources */,
+				185F5FD027F6D70000AFBA3F /* BPIMDBOperator.swift in Sources */,
 				185F5F5C27F6AABB00AFBA3F /* KFSettingNoticeCell.swift in Sources */,
+				185F5FA527F6D03000AFBA3F /* BPChatRoomMessageCellFactory.swift in Sources */,
 				185F5E9027F4223F00AFBA3F /* CALayer+Extension.swift in Sources */,
 				185F5E7627F41E3D00AFBA3F /* BPViewController.swift in Sources */,
 				185F5E8E27F421D300AFBA3F /* UINavigationController+Extension.swift in Sources */,
 				185F5E7A27F41E8D00AFBA3F /* BPLabel.swift in Sources */,
 				185F5F1527F5A18300AFBA3F /* BPPhotoAlbumModel.swift in Sources */,
 				185F5EEE27F5780400AFBA3F /* KFCommunityCell.swift in Sources */,
+				185F5FB027F6D03000AFBA3F /* BPEmojiToolView.swift in Sources */,
 				185F5EDD27F54EFE00AFBA3F /* UIView+Toast.swift in Sources */,
 				185F5F3127F5A59F00AFBA3F /* BPAlertManager.swift in Sources */,
 				185F5F5A27F6AA1000AFBA3F /* KFSettingNoticeViewController.swift in Sources */,
+				185F5FB527F6D15300AFBA3F /* UITextView+Extension.swift in Sources */,
 				185F5EF027F578BE00AFBA3F /* KFCommunityModel.swift in Sources */,
 				185F5EEC27F5708800AFBA3F /* KFCommunityViewController.swift in Sources */,
+				185F5FA927F6D03000AFBA3F /* BPChatRoomToolsView.swift in Sources */,
 				185F5F1C27F5A1DD00AFBA3F /* BPAuthoriationManager.swift in Sources */,
 				185F5F2327F5A43B00AFBA3F /* BPBrowserView.swift in Sources */,
 				185F5EE127F5561C00AFBA3F /* KFRegisterListViewController.swift in Sources */,
 				185F5E7227F41DE200AFBA3F /* KFLoginViewController.swift in Sources */,
+				185F5FCF27F6D70000AFBA3F /* BPDatabaseManager.swift in Sources */,
 				185F5EAB27F4289C00AFBA3F /* UIImage+Extension.swift in Sources */,
+				185F5FAA27F6D03000AFBA3F /* BPChatInputView.swift in Sources */,
 				185F5E7C27F41E9800AFBA3F /* BPButton.swift in Sources */,
 				185F5EE527F5595600AFBA3F /* KFUserModel.swift in Sources */,
+				185F5FBF27F6D40400AFBA3F /* BPPlayerManager.swift in Sources */,
 				185F5F4A27F5C55F00AFBA3F /* KFSettingViewController.swift in Sources */,
 				185F5F4227F5A70400AFBA3F /* BPDownloadManager.swift in Sources */,
 				185F5F0C27F5A15200AFBA3F /* BPSystemAlbumListView.swift in Sources */,
@@ -1014,6 +1256,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KiteFly/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "请允许使用相机，以便您使用拍照功能";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "请允许使用麦克风，以便于您使用语音消息功能";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "请允许访问相册，以便于发送图片";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "请允许访问相册，以便于上传头像和发布动态";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1053,6 +1296,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KiteFly/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "请允许使用相机，以便您使用拍照功能";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "请允许使用麦克风，以便于您使用语音消息功能";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "请允许访问相册，以便于发送图片";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "请允许访问相册，以便于上传头像和发布动态";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

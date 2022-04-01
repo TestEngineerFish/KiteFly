@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "输入法.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

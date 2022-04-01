@@ -18,4 +18,8 @@ target 'KiteFly' do
   pod 'AFNetworking', '4.0.1'
   # 动画库
   pod 'lottie-ios', '3.2.3'
+  # 融云-稳定版(即时通讯基础能力)
+  pod 'RongCloudIM/IMLib', '~> 5.1.3.4'
+  # 数据库
+  pod "FMDB", '2.7.5'
 end
