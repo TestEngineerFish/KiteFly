@@ -1,13 +1,13 @@
 //
-//  KFHomeNoticCell.swift
+//  KFSettingRegisterCell.swift
 //  KiteFly
 //
-//  Created by apple on 2022/3/30.
+//  Created by apple on 2022/4/1.
 //
 
 import Foundation
 
-class KFHomeNoticCell: BPTableViewCell {
+class KFSettingRegisterCell: BPTableViewCell {
     
     private var customContentView: BPView = {
         let view = BPView()
@@ -57,14 +57,6 @@ class KFHomeNoticCell: BPTableViewCell {
         label.textAlignment = .left
         return label
     }()
-    private var registerButton: BPButton = {
-        let button = BPButton(.second)
-        button.setTitle("去报名", for: .normal)
-        button.isUserInteractionEnabled = false
-        button.backgroundColor = .clear
-        button.titleLabel?.font = UIFont.mediumFont(ofSize: AdaptSize(16))
-        return button
-    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -85,7 +77,6 @@ class KFHomeNoticCell: BPTableViewCell {
         customContentView.addSubview(amountLabel)
         customContentView.addSubview(contactLabel)
         customContentView.addSubview(addressLabel)
-        customContentView.addSubview(registerButton)
         
         customContentView.snp.makeConstraints { make in
             make.left.top.equalToSuperview().offset(AdaptSize(10))
@@ -117,11 +108,6 @@ class KFHomeNoticCell: BPTableViewCell {
             make.height.equalTo(titleLabel.font.lineHeight)
             make.top.left.equalToSuperview().offset(AdaptSize(15))
             make.right.equalToSuperview().offset(AdaptSize(-15))
-        }
-        registerButton.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: AdaptSize(80), height: AdaptSize(30)))
-            make.right.equalToSuperview().offset(AdaptSize(-15))
-            make.bottom.equalTo(logoImageView).offset(AdaptSize(-15))
         }
     }
     

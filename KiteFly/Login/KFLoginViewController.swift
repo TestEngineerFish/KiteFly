@@ -121,6 +121,7 @@ class KFLoginViewController: BPViewController {
     @objc
     private func loginEvent() {
         let tbc = BPTabBarController()
-        kWindow.rootViewController = tbc
+        let nvc = BPNavigationController(rootViewController: tbc)
+        kWindow.rootViewController = nvc
     }
 }

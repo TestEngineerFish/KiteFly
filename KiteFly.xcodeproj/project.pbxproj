@@ -107,6 +107,11 @@
 		185F5F5227F69BB600AFBA3F /* KFWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F5127F69BB600AFBA3F /* KFWebViewController.swift */; };
 		185F5F5427F69CBE00AFBA3F /* Agreement.html in Resources */ = {isa = PBXBuildFile; fileRef = 185F5F5327F69CBE00AFBA3F /* Agreement.html */; };
 		185F5F5627F6A4CA00AFBA3F /* KFHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F5527F6A4CA00AFBA3F /* KFHomeHeaderView.swift */; };
+		185F5F5827F6A7DB00AFBA3F /* KFSettingMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F5727F6A7DB00AFBA3F /* KFSettingMoreViewController.swift */; };
+		185F5F5A27F6AA1000AFBA3F /* KFSettingNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F5927F6AA1000AFBA3F /* KFSettingNoticeViewController.swift */; };
+		185F5F5C27F6AABB00AFBA3F /* KFSettingNoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F5B27F6AABB00AFBA3F /* KFSettingNoticeCell.swift */; };
+		185F5F5E27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F5D27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift */; };
+		185F5F6027F6ACD600AFBA3F /* KFSettingRegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F5F27F6ACD600AFBA3F /* KFSettingRegisterCell.swift */; };
 		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
 
@@ -215,6 +220,11 @@
 		185F5F5127F69BB600AFBA3F /* KFWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFWebViewController.swift; sourceTree = "<group>"; };
 		185F5F5327F69CBE00AFBA3F /* Agreement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Agreement.html; sourceTree = "<group>"; };
 		185F5F5527F6A4CA00AFBA3F /* KFHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomeHeaderView.swift; sourceTree = "<group>"; };
+		185F5F5727F6A7DB00AFBA3F /* KFSettingMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingMoreViewController.swift; sourceTree = "<group>"; };
+		185F5F5927F6AA1000AFBA3F /* KFSettingNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingNoticeViewController.swift; sourceTree = "<group>"; };
+		185F5F5B27F6AABB00AFBA3F /* KFSettingNoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingNoticeCell.swift; sourceTree = "<group>"; };
+		185F5F5D27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingMyRegisterViewController.swift; sourceTree = "<group>"; };
+		185F5F5F27F6ACD600AFBA3F /* KFSettingRegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingRegisterCell.swift; sourceTree = "<group>"; };
 		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
 		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -577,6 +587,9 @@
 			children = (
 				185F5F4927F5C55F00AFBA3F /* KFSettingViewController.swift */,
 				185F5F5127F69BB600AFBA3F /* KFWebViewController.swift */,
+				185F5F5727F6A7DB00AFBA3F /* KFSettingMoreViewController.swift */,
+				185F5F5927F6AA1000AFBA3F /* KFSettingNoticeViewController.swift */,
+				185F5F5D27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -593,6 +606,8 @@
 			children = (
 				185F5F4B27F5C5CD00AFBA3F /* KFSettingHeaderView.swift */,
 				185F5F4D27F5CA0200AFBA3F /* KFSettingCell.swift */,
+				185F5F5B27F6AABB00AFBA3F /* KFSettingNoticeCell.swift */,
+				185F5F5F27F6ACD600AFBA3F /* KFSettingRegisterCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -794,6 +809,7 @@
 				185F5EA927F4285C00AFBA3F /* BPTabBarController.swift in Sources */,
 				185F5E9227F4226200AFBA3F /* BPTableView.swift in Sources */,
 				185F5EA527F425E100AFBA3F /* BPTextField.swift in Sources */,
+				185F5F5827F6A7DB00AFBA3F /* KFSettingMoreViewController.swift in Sources */,
 				185F5EB027F42B8800AFBA3F /* Data+Extension.swift in Sources */,
 				185F5EA327F424F700AFBA3F /* Date+Extension.swift in Sources */,
 				185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */,
@@ -804,17 +820,20 @@
 				185F5EF227F5792200AFBA3F /* KFCommunityRemarkModel.swift in Sources */,
 				185F5F3927F5A5F700AFBA3F /* Double+Extension.swift in Sources */,
 				185F5ED127F4729300AFBA3F /* KFHomePageCell.swift in Sources */,
+				185F5F6027F6ACD600AFBA3F /* KFSettingRegisterCell.swift in Sources */,
 				185F5F3227F5A59F00AFBA3F /* BPTopWindowView.swift in Sources */,
 				185F5EDF27F54FC100AFBA3F /* KFNoticeDetailViewController.swift in Sources */,
 				185F5F0D27F5A15200AFBA3F /* BPSystemPhotoView.swift in Sources */,
 				185F5F3F27F5A69A00AFBA3F /* PHAsset+Extension.swift in Sources */,
 				185F5F3727F5A5D200AFBA3F /* BPProgressView.swift in Sources */,
+				185F5F5E27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift in Sources */,
 				185F5E8A27F4207700AFBA3F /* UIView+Extension.swift in Sources */,
 				185F5F2527F5A48200AFBA3F /* BPMediaVideoModel.swift in Sources */,
 				185F5F3027F5A59F00AFBA3F /* BPToastView.swift in Sources */,
 				185F5F4427F5B2AD00AFBA3F /* KFCommunityReportViewController.swift in Sources */,
 				185F5E9F27F4242200AFBA3F /* NSTextAttachment.swift in Sources */,
 				185F5F3327F5A59F00AFBA3F /* BPBaseAlertView.swift in Sources */,
+				185F5F5C27F6AABB00AFBA3F /* KFSettingNoticeCell.swift in Sources */,
 				185F5E9027F4223F00AFBA3F /* CALayer+Extension.swift in Sources */,
 				185F5E7627F41E3D00AFBA3F /* BPViewController.swift in Sources */,
 				185F5E8E27F421D300AFBA3F /* UINavigationController+Extension.swift in Sources */,
@@ -823,6 +842,7 @@
 				185F5EEE27F5780400AFBA3F /* KFCommunityCell.swift in Sources */,
 				185F5EDD27F54EFE00AFBA3F /* UIView+Toast.swift in Sources */,
 				185F5F3127F5A59F00AFBA3F /* BPAlertManager.swift in Sources */,
+				185F5F5A27F6AA1000AFBA3F /* KFSettingNoticeViewController.swift in Sources */,
 				185F5EF027F578BE00AFBA3F /* KFCommunityModel.swift in Sources */,
 				185F5EEC27F5708800AFBA3F /* KFCommunityViewController.swift in Sources */,
 				185F5F1C27F5A1DD00AFBA3F /* BPAuthoriationManager.swift in Sources */,

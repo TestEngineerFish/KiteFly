@@ -122,9 +122,11 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
         let type = self.typeList[indexPath.row]
         switch type {
         case .notice:
-            break
+            let vc = KFSettingNoticeViewController()
+            self.navigationController?.push(vc: vc)
         case .register:
-            break
+            let vc = KFSettingMyRegisterViewController()
+            self.navigationController?.push(vc: vc)
         case .clear:
             kWindow.showLoading()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -146,7 +148,8 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
             vc.localHtml = path
             self.navigationController?.push(vc: vc)
         case .more:
-            break
+            let vc = KFSettingMoreViewController()
+            self.navigationController?.push(vc: vc)
         }
     }
 }

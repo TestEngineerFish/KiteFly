@@ -28,7 +28,15 @@ class KFSettingHeaderView: BPView {
     private var sexLabel: BPLabel = {
         let label = BPLabel()
         label.text          = ""
-        label.textColor     = UIColor.black0
+        label.textColor     = UIColor.gray0
+        label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
+        label.textAlignment = .left
+        return label
+    }()
+    private var addressLabel: BPLabel = {
+        let label = BPLabel()
+        label.text          = ""
+        label.textColor     = UIColor.gray0
         label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
         label.textAlignment = .left
         return label
@@ -59,6 +67,7 @@ class KFSettingHeaderView: BPView {
         self.addSubview(avatarImageView)
         self.addSubview(nameLabel)
         self.addSubview(sexLabel)
+        self.addSubview(addressLabel)
         self.addSubview(remarkLabel)
     }
     
@@ -80,6 +89,10 @@ class KFSettingHeaderView: BPView {
             make.left.right.equalTo(nameLabel)
             make.top.equalTo(nameLabel.snp.bottom).offset(AdaptSize(5))
         }
+        addressLabel.snp.makeConstraints { make in
+            make.left.right.equalTo(nameLabel)
+            make.top.equalTo(sexLabel.snp.bottom).offset(AdaptSize(5))
+        }
         remarkLabel.snp.makeConstraints { make in
             make.left.equalTo(avatarImageView)
             make.right.equalTo(nameLabel)
@@ -92,9 +105,10 @@ class KFSettingHeaderView: BPView {
     // MARK: ==== Event ====
     func setData(model: KFUserModel) {
         self.avatarImageView.setImage(with: model.avatar)
-        self.nameLabel.text   = model.name
-        self.sexLabel.text    = model.sex.str
-        self.remarkLabel.text = model.remark
+        self.nameLabel.text    = model.name
+        self.sexLabel.text     = model.sex.str
+        self.addressLabel.text = model.address
+        self.remarkLabel.text  = model.remark
     }
 }
 
