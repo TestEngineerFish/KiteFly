@@ -23,24 +23,27 @@ open class BPTabBarController: UITabBarController, UITabBarControllerDelegate {
         homeVC.tabBarItem.title         = "首页"
         homeVC.tabBarItem.image         = UIImage(named: "message_unselect")?.withRenderingMode(.alwaysOriginal)
         homeVC.tabBarItem.selectedImage = UIImage(named: "message_selected")?.withRenderingMode(.alwaysOriginal)
-        homeVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        homeVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         homeVC.tabBarItem.isSpringLoaded = true
+        homeVC.tabBarItem.setTitleTextAttributes([.foregroundColor:UIColor.theme], for: .selected)
         
         let taskVC = KFCommunityViewController()
-        taskVC.view.backgroundColor = .white
+        taskVC.view.backgroundColor     = .white
         taskVC.tabBarItem.title         = "社区"
         taskVC.tabBarItem.image         = UIImage(named: "task_unselect")?.withRenderingMode(.alwaysOriginal)
         taskVC.tabBarItem.selectedImage = UIImage(named: "task_selected")?.withRenderingMode(.alwaysOriginal)
-        taskVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        taskVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         taskVC.tabBarItem.isSpringLoaded = true
+        taskVC.tabBarItem.setTitleTextAttributes([.foregroundColor:UIColor.theme], for: .selected)
         
         let settingVC = KFSettingViewController()
-        settingVC.view.backgroundColor = .white
+        settingVC.view.backgroundColor  = .white
         settingVC.tabBarItem.title         = "设置"
         settingVC.tabBarItem.image         = UIImage(named: "studio_unselect")?.withRenderingMode(.alwaysOriginal)
         settingVC.tabBarItem.selectedImage = UIImage(named: "studio_selected")?.withRenderingMode(.alwaysOriginal)
-        settingVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        settingVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         settingVC.tabBarItem.isSpringLoaded = true
+        settingVC.tabBarItem.setTitleTextAttributes([.foregroundColor:UIColor.theme], for: .selected)
         
         self.viewControllers = [homeVC, taskVC, settingVC]
         self.updateUI()

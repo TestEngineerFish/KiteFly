@@ -16,4 +16,6 @@ target 'KiteFly' do
   pod 'TYCyclePagerView', '1.2.0'
   # 网络库
   pod 'AFNetworking', '4.0.1'
+  # 动画库
+  pod 'lottie-ios', '3.2.3'
 end

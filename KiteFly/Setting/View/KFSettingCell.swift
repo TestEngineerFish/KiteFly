@@ -54,7 +54,7 @@ class KFSettingCell: BPTableViewCell {
         iconImageView.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(AdaptSize(15))
             make.centerY.equalToSuperview()
-            make.size.equalTo(CGSize(width: AdaptSize(40), height: AdaptSize(40)))
+            make.size.equalTo(CGSize(width: AdaptSize(25), height: AdaptSize(25)))
         }
         titleLabel.snp.makeConstraints { make in
             make.left.equalTo(iconImageView.snp.right).offset(AdaptSize(15))

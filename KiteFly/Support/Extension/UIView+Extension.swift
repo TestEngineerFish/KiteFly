@@ -170,7 +170,7 @@ public extension UIView {
     /// Loading 视图
     private var loadingView: UIActivityIndicatorView {
         get {
-            if let animationView = objc_getAssociatedObject(self, AssociatedKeys.loadingView) as? UIActivityIndicatorView {
+            if let animationView = objc_getAssociatedObject(self, &AssociatedKeys.loadingView) as? UIActivityIndicatorView {
                 return animationView
             } else {
                 let view = UIActivityIndicatorView()
@@ -181,12 +181,13 @@ public extension UIView {
                     make.size.equalTo(view.size)
                     make.center.equalToSuperview()
                 }
+                self.loadingView = view
                 return view
             }
         }
 
         set {
-            objc_setAssociatedObject(self, AssociatedKeys.loadingView, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.loadingView, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 }

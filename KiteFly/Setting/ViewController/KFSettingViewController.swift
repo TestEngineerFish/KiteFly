@@ -9,7 +9,7 @@ import Foundation
 
 enum KFSettingType: String {
     /// 我的帖子
-    case notice     = "我的帖子"
+    case notice     = "我的动态"
     /// 已报名
     case register   = "已报名"
     ///  清理缓存
@@ -25,19 +25,19 @@ enum KFSettingType: String {
     var icon: UIImage? {
         switch self {
         case .notice:
-            return UIImage(named: "remark")
+            return UIImage(named: "dynamic")
         case .register:
-            return UIImage(named: "remark")
+            return UIImage(named: "register")
         case .clear:
-            return UIImage(named: "remark")
+            return UIImage(named: "clear")
         case .contact:
-            return UIImage(named: "remark")
+            return UIImage(named: "contact")
         case .appraise:
-            return UIImage(named: "remark")
+            return UIImage(named: "appraise")
         case .agreement:
-            return UIImage(named: "remark")
+            return UIImage(named: "agreement")
         case .more:
-            return UIImage(named: "remark")
+            return UIImage(named: "more")
         }
     }
 }
@@ -115,5 +115,29 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
         let type = self.typeList[indexPath.row]
         cell.setData(type: type)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let type = self.typeList[indexPath.row]
+        switch type {
+        case .notice:
+            break
+        case .register:
+            break
+        case .clear:
+            kWindow.showLoading()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                kWindow.hideLoading()
+                kWindow.toast("清理完成")
+            }
+        case .contact:
+            break
+        case .appraise:
+            break
+        case .agreement:
+            break
+        case .more:
+            break
+        }
     }
 }
