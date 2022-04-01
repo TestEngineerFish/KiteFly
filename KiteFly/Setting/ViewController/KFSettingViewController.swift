@@ -52,7 +52,7 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
     private var tableView: BPTableView = {
         let tableView = BPTableView(frame: .zero, style: .grouped)
         tableView.estimatedRowHeight             = AdaptSize(56)
-        tableView.backgroundColor                = UIColor.gray0
+        tableView.backgroundColor                = UIColor.white
         tableView.separatorStyle                 = .none
         tableView.showsVerticalScrollIndicator   = false
         tableView.showsHorizontalScrollIndicator = false
@@ -64,6 +64,16 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
         self.createSubviews()
         self.bindProperty()
         self.bindData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.bindData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        BPAlertManager.share.oneButton(title: "提示", description: "点击个人信息可编辑修改", buttonName: "知道了", closure: nil).show()
     }
     
     override func createSubviews() {
@@ -82,7 +92,7 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
     
     override func bindData() {
         super.bindData()
-        self.model = BPFileManager.share.getJsonModel(file: "UserModel", type: KFUserModel.self) as? KFUserModel
+        self.model = KFUserModel.share
         self.tableView.reloadData()
     }
     
@@ -95,6 +105,7 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
     }
     
     // MARK: ==== Event ====
+
     
     // MARK: ==== UITableViewDelegate, UITableViewDataSource ====
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

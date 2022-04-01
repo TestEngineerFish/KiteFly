@@ -47,7 +47,7 @@ open class BPTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         self.viewControllers = [homeVC, taskVC, settingVC]
         self.updateUI()
-        self.selectedIndex = 2
+        self.selectedIndex = 0
     }
     
     open func updateUI() {

@@ -129,11 +129,11 @@ open class BPBaseAlertView: BPTopWindowView {
 
     /// 右边按钮
     open var rightButton: BPButton = {
-        let button = BPButton(.theme, size: CGSize(width: AdaptSize(100), height: AdaptSize(35)))
+        let button = BPButton(.theme, size: CGSize(width: AdaptSize(100), height: AdaptSize(35)), animation: false)
         button.setTitleColor(UIColor.white, for: .normal)
         button.titleLabel?.font    = UIFont.semiboldFont(ofSize: AdaptSize(14))
-        button.layer.cornerRadius  = AdaptSize(17.5)
-        button.layer.masksToBounds = true
+//        button.layer.cornerRadius  = AdaptSize(17.5)
+//        button.layer.masksToBounds = true
         return button
     }()
     

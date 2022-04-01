@@ -15,6 +15,7 @@ class KFSettingHeaderView: BPView {
         imageView.size                = CGSize(width: AdaptSize(60), height: AdaptSize(60))
         imageView.layer.cornerRadius  = AdaptSize(30)
         imageView.layer.masksToBounds = true
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
     private var nameLabel: BPLabel = {
@@ -23,22 +24,25 @@ class KFSettingHeaderView: BPView {
         label.textColor     = UIColor.black0
         label.font          = UIFont.semiboldFont(ofSize: AdaptSize(15))
         label.textAlignment = .left
+        label.isUserInteractionEnabled = true
         return label
     }()
     private var sexLabel: BPLabel = {
         let label = BPLabel()
         label.text          = ""
-        label.textColor     = UIColor.gray0
+        label.textColor     = UIColor.black2
         label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
         label.textAlignment = .left
+        label.isUserInteractionEnabled = true
         return label
     }()
     private var addressLabel: BPLabel = {
         let label = BPLabel()
         label.text          = ""
-        label.textColor     = UIColor.gray0
+        label.textColor     = UIColor.black2
         label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
         label.textAlignment = .left
+        label.isUserInteractionEnabled = true
         return label
     }()
     private var remarkLabel: BPLabel = {
@@ -48,6 +52,7 @@ class KFSettingHeaderView: BPView {
         label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
         label.textAlignment = .left
         label.numberOfLines = 0
+        label.isUserInteractionEnabled = true
         return label
     }()
     
@@ -73,6 +78,17 @@ class KFSettingHeaderView: BPView {
     
     override func bindProperty() {
         super.bindProperty()
+        let tapAvatarGes = UITapGestureRecognizer(target: self, action: #selector(clickAvatarAction))
+        let tapNameGes = UITapGestureRecognizer(target: self, action: #selector(clickNameAction))
+        let tapSexGes = UITapGestureRecognizer(target: self, action: #selector(clickSexAction))
+        let tapAddressGes = UITapGestureRecognizer(target: self, action: #selector(clickAddressAction))
+        let tapRemarkGes = UITapGestureRecognizer(target: self, action: #selector(clickRemarkAction))
+        
+        self.avatarImageView.addGestureRecognizer(tapAvatarGes)
+        self.nameLabel.addGestureRecognizer(tapNameGes)
+        self.sexLabel.addGestureRecognizer(tapSexGes)
+        self.addressLabel.addGestureRecognizer(tapAddressGes)
+        self.remarkLabel.addGestureRecognizer(tapRemarkGes)
     }
     
     override func updateConstraints() {
@@ -96,7 +112,7 @@ class KFSettingHeaderView: BPView {
         remarkLabel.snp.makeConstraints { make in
             make.left.equalTo(avatarImageView)
             make.right.equalTo(nameLabel)
-            make.top.equalTo(avatarImageView.snp.bottom).offset(AdaptSize(10))
+            make.top.equalTo(avatarImageView.snp.bottom).offset(AdaptSize(20))
             make.bottom.equalToSuperview().offset(AdaptSize(-10))
         }
         super.updateConstraints()
@@ -107,8 +123,53 @@ class KFSettingHeaderView: BPView {
         self.avatarImageView.setImage(with: model.avatar)
         self.nameLabel.text    = model.name
         self.sexLabel.text     = model.sex.str
-        self.addressLabel.text = model.address
+        self.addressLabel.text = "地址：\(model.address)"
         self.remarkLabel.text  = model.remark
+    }
+    
+    @objc
+    private func clickAvatarAction() {
+        BPSystemPhotoManager.share.show { modelList in
+            guard let imageModel = modelList.first as? BPMediaImageModel else {
+                return
+            }
+            self.avatarImageView.image = imageModel.image
+        }
+    }
+    
+    @objc
+    private func clickNameAction() {
+        let vc = KFSettingRenameViewController()
+        vc.type = .name
+        UIViewController.currentNavigationController?.push(vc: vc)
+    }
+    
+    @objc
+    private func clickSexAction() {
+        BPActionSheet(title: "选择性别").addItem(title: "男") {
+            KFUserModel.share.sex = .man
+            self.sexLabel.text = KFUserModel.share.sex.str
+        }.addItem(title: "女") {
+            KFUserModel.share.sex = .woman
+            self.sexLabel.text = KFUserModel.share.sex.str
+        }.addItem(title: "保密") {
+            KFUserModel.share.sex = .unknown
+            self.sexLabel.text = KFUserModel.share.sex.str
+        }.show()
+    }
+    
+    @objc
+    private func clickAddressAction() {
+        let vc = KFSettingRenameViewController()
+        vc.type = .address
+        UIViewController.currentNavigationController?.push(vc: vc)
+    }
+    
+    @objc
+    private func clickRemarkAction() {
+        let vc = KFSettingRenameViewController()
+        vc.type = .remark
+        UIViewController.currentNavigationController?.push(vc: vc)
     }
 }
 

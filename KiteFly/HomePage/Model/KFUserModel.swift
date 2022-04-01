@@ -17,16 +17,24 @@ enum KFSex: Int {
     var str: String {
         switch self {
         case .man:
-            return "男"
+            return "性别：男"
         case .woman:
-            return "女"
+            return "性别：女"
         case .unknown:
-            return "保密"
+            return "性别：保密"
         }
     }
 }
 
-struct KFUserModel: Mappable {
+class KFUserModel: Mappable {
+    
+    static let share: KFUserModel = {
+        if let model = BPFileManager.share.getJsonModel(file: "UserModel", type: KFUserModel.self) as? KFUserModel {
+            return model
+        } else {
+            return KFUserModel()
+        }
+    }()
     
     var id: String      = ""
     var avatar: String  = ""
@@ -37,9 +45,9 @@ struct KFUserModel: Mappable {
     var address: String = ""
     
     init() {}
-    init?(map: Map) {}
+    required init?(map: Map) {}
     
-    mutating func mapping(map: Map) {
+    func mapping(map: Map) {
         id      <- map["id"]
         avatar  <- map["avatar"]
         name    <- map["name"]

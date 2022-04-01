@@ -9,6 +9,12 @@
 import UIKit
 
 class BPAlertViewOneButton: BPBaseAlertView {
+    
+    private var partitionContentLineView: BPView = {
+        let view = BPView()
+        view.backgroundColor = UIColor.gray4
+        return view
+    }()
 
     init(title: String?, description: String, buttonName: String, closure: (() -> Void)?) {
         super.init(frame: .zero)
@@ -29,46 +35,46 @@ class BPAlertViewOneButton: BPBaseAlertView {
         mainView.addSubview(titleLabel)
         mainView.addSubview(descriptionLabel)
         mainView.addSubview(rightButton)
-//        mainView.addSubview(partitionContentLineView)
-//        // 是否显示标题
-//        if let title = titleLabel.text, title.isNotEmpty {
-//            titleLabel.snp.makeConstraints { (make) in
-//                make.top.equalToSuperview().offset(topPadding)
-//                make.left.equalToSuperview().offset(leftPadding)
-//                make.right.equalToSuperview().offset(-rightPadding)
-//                make.height.equalTo(titleHeight)
-//            }
-//            descriptionLabel.snp.makeConstraints { (make) in
-//                make.top.equalTo(titleLabel.snp.bottom).offset(defaultSpace)
-//                make.left.right.equalTo(titleLabel)
-//                make.height.equalTo(descriptionHeight)
-//            }
-//            mainViewHeight += topPadding + titleHeight + defaultSpace + descriptionHeight
-//        } else {
-//            descriptionLabel.snp.makeConstraints { (make) in
-//                make.top.equalToSuperview().offset(topPadding)
-//                make.left.equalToSuperview().offset(leftPadding)
-//                make.right.equalTo(-rightPadding)
-//                make.height.equalTo(descriptionHeight)
-//            }
-//            mainViewHeight += topPadding + descriptionHeight
-//        }
-//        partitionContentLineView.snp.makeConstraints { (make) in
-//            make.left.right.top.equalTo(rightButton)
-//            make.height.equalTo(AdaptSize(0.6))
-//        }
-//        rightButton.snp.makeConstraints { (make) in
-//            make.top.equalTo(descriptionLabel.snp.bottom).offset(defaultSpace)
-//            make.left.right.equalToSuperview()
-//            make.height.equalTo(buttonHeight)
-//        }
-//        mainViewHeight += defaultSpace + buttonHeight
-//
-//        mainView.snp.makeConstraints { (make) in
-//            make.center.equalToSuperview()
-//            make.width.equalTo(mainViewWidth)
-//            make.height.equalTo(mainViewHeight)
-//        }
+        mainView.addSubview(partitionContentLineView)
+        // 是否显示标题
+        if let title = titleLabel.text, title.isNotEmpty {
+            titleLabel.snp.makeConstraints { (make) in
+                make.top.equalToSuperview().offset(topPadding)
+                make.left.equalToSuperview().offset(leftPadding)
+                make.right.equalToSuperview().offset(-rightPadding)
+                make.height.equalTo(titleHeight)
+            }
+            descriptionLabel.snp.makeConstraints { (make) in
+                make.top.equalTo(titleLabel.snp.bottom).offset(defaultSpace)
+                make.left.right.equalTo(titleLabel)
+                make.height.equalTo(descriptionHeight)
+            }
+            mainViewHeight += topPadding + titleHeight + defaultSpace + descriptionHeight
+        } else {
+            descriptionLabel.snp.makeConstraints { (make) in
+                make.top.equalToSuperview().offset(topPadding)
+                make.left.equalToSuperview().offset(leftPadding)
+                make.right.equalTo(-rightPadding)
+                make.height.equalTo(descriptionHeight)
+            }
+            mainViewHeight += topPadding + descriptionHeight
+        }
+        partitionContentLineView.snp.makeConstraints { (make) in
+            make.left.right.top.equalTo(rightButton)
+            make.height.equalTo(AdaptSize(0.6))
+        }
+        rightButton.snp.makeConstraints { (make) in
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(defaultSpace)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(closeBtnSize.height)
+        }
+        mainViewHeight += defaultSpace + closeBtnSize.height
+
+        mainView.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.width.equalTo(mainViewWidth)
+            make.height.equalTo(mainViewHeight)
+        }
     }
     
     override func bindProperty() {
