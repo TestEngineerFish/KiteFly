@@ -7,6 +7,7 @@
 
 import Foundation
 import IQKeyboardManager
+import UIKit
 
 class KFCommunityPublishViewController: KFViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -59,11 +60,17 @@ class KFCommunityPublishViewController: KFViewController, UICollectionViewDelega
     override func bindProperty() {
         super.bindProperty()
         self.customNavigationBar?.title = "发布动态"
+        self.customNavigationBar?.rightTitle = "?"
         self.collectionView.delegate    = self
         self.collectionView.dataSource  = self
         self.collectionView.register(KFCommunityImageCell.classForCoder(), forCellWithReuseIdentifier: cellID)
         self.submitButton.addTarget(self, action: #selector(submitAction), for: .touchUpInside)
         self.view.backgroundColor = UIColor.gray0
+    }
+    
+    override func rightAction() {
+        super.rightAction()
+        KFAlertManager.share.oneButton(title: "提示", description: "发布内容必须遵守法律法规，否则将被移除，且追究法律责任。\n1、禁止发布传达、传送破坏社会的违法信息。\n2、不得侵犯他人隐私权。\n3、不得发布恶意虚构事实，欺骗他人的信息。\n4、不得涉及黄、赌、毒。\n5、不得发布政治敏感内容。\n6、禁止发布其他违法行为。", buttonName: "知道了", closure: nil).show()
     }
     
     override func bindData() {

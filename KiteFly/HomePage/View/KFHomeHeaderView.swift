@@ -110,7 +110,7 @@ class KFHomeHeaderView: KFView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSo
     }
     
     func numberOfItems(in pageView: TYCyclePagerView) -> Int {
-        return 3
+        return self.pageUrlList.count
     }
     
     func pagerView(_ pagerView: TYCyclePagerView, cellForItemAt index: Int) -> UICollectionViewCell {

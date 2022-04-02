@@ -89,7 +89,8 @@ class KFSettingHeaderView: KFView {
     override func updateConstraints() {
         avatarImageView.snp.makeConstraints { make in
             make.size.equalTo(avatarImageView.size)
-            make.left.top.equalToSuperview().offset(AdaptSize(15))
+            make.left.equalToSuperview().offset(AdaptSize(15))
+            make.top.equalToSuperview().offset(AdaptSize(30))
         }
         nameLabel.snp.makeConstraints { make in
             make.left.equalTo(avatarImageView.snp.right).offset(AdaptSize(10))
@@ -107,7 +108,7 @@ class KFSettingHeaderView: KFView {
         remarkLabel.snp.makeConstraints { make in
             make.left.equalTo(avatarImageView)
             make.right.equalTo(nameLabel)
-            make.top.equalTo(avatarImageView.snp.bottom).offset(AdaptSize(20))
+            make.top.equalTo(avatarImageView.snp.bottom).offset(AdaptSize(30))
         }
         lineView.snp.makeConstraints { make in
             make.top.equalTo(remarkLabel.snp.bottom).offset(AdaptSize(15))
@@ -123,7 +124,7 @@ class KFSettingHeaderView: KFView {
         self.nameLabel.text    = model.name
         self.sexLabel.text     = model.sex.str
         self.addressLabel.text = "地址：\(model.address)"
-        self.remarkLabel.text  = model.remark
+        self.remarkLabel.text  = "个性签名：\(model.remark)"
     }
 }
 
