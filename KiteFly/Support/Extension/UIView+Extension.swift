@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Lottie
 /**
  *  ViewGeometry
  */
@@ -159,23 +159,26 @@ public extension UIView {
     
     /// 显示loading图
     func showLoading() {
-        self.loadingView.startAnimating()
+        self.loadingView.isHidden = false
+        self.loadingView.play()
     }
 
     /// 隐藏loading图
     func hideLoading() {
-        self.loadingView.stopAnimating()
+        self.loadingView.stop()
+        self.loadingView.isHidden = true
     }
     
     /// Loading 视图
-    private var loadingView: UIActivityIndicatorView {
+    private var loadingView: AnimationView {
         get {
-            if let animationView = objc_getAssociatedObject(self, &AssociatedKeys.loadingView) as? UIActivityIndicatorView {
+            if let animationView = objc_getAssociatedObject(self, &AssociatedKeys.loadingView) as? AnimationView {
                 return animationView
             } else {
-                let view = UIActivityIndicatorView()
-                view.size = CGSize(width: AdaptSize(40), height: AdaptSize(40))
-                view.hidesWhenStopped = true
+                let view = AnimationView(name: "fly")
+                view.loopMode = .loop
+                view.size = CGSize(width: AdaptSize(140), height: AdaptSize(140))
+//                view.hidesWhenStopped = true
                 self.addSubview(view)
                 view.snp.makeConstraints { make in
                     make.size.equalTo(view.size)
