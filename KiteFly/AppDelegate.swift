@@ -16,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.registerModule()
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        if false {
-            let vc = KFLoginViewController()
-            let nvc = BPNavigationController(rootViewController: vc)
-            self.window?.rootViewController = nvc
-        } else {
+        if !KFUserModel.share.isLogin {
             let tbc = BPTabBarController()
             let nvc = BPNavigationController(rootViewController: tbc)
+            self.window?.rootViewController = nvc
+        } else {
+            let vc  = KFLoginViewController()
+            let nvc = BPNavigationController(rootViewController: vc)
             self.window?.rootViewController = nvc
         }
         self.window?.makeKeyAndVisible()

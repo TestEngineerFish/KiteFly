@@ -95,7 +95,7 @@ class KFNoticeDetailViewController: BPViewController {
         self.titleLabel.text = model.title
         self.imageView.setImage(with: model.icon)
         self.byLabel.text      = model.name
-        self.contentLabel.text = model.content
+        self.contentLabel.text = model.content + "\n\n\n联系方式：\(model.contact)\n\n详细地址：\(model.address)\n\n\n\n"
     }
     
     override func updateViewConstraints() {
@@ -132,8 +132,12 @@ class KFNoticeDetailViewController: BPViewController {
     // MARK: ==== Event ====
     @objc
     private func registerAction() {
-        self.view.toast("报名成功")
-        let vc = KFRegisterListViewController()
-        self.navigationController?.push(vc: vc)
+        kWindow.showLoading()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            kWindow.hideLoading()
+            kWindow.toast("已报名，请等待对方审核")
+            let vc = KFRegisterListViewController()
+            self.navigationController?.push(vc: vc)
+        }
     }
 }

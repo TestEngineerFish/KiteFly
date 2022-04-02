@@ -27,6 +27,7 @@ class KFLoginViewController: BPViewController {
         textField.showBorder  = true
         textField.showLeftView = true
         textField.clearButtonMode = .whileEditing
+        textField.maxLengthBP = 11
         return textField
     }()
     private let passwordTextField: BPTextField = {
@@ -34,11 +35,11 @@ class KFLoginViewController: BPViewController {
         textField.placeholder = "请输入密码"
         textField.font        = UIFont.regularFont(ofSize: AdaptSize(16))
         textField.textColor   = UIColor.black0
-        textField.keyboardType = .numberPad
         textField.isSecureTextEntry = true
         textField.showBorder  = true
         textField.showLeftView = true
         textField.clearButtonMode = .whileEditing
+        textField.maxLengthBP = 8
         return textField
     }()
     
@@ -104,6 +105,7 @@ class KFLoginViewController: BPViewController {
     
     override func bindData() {
         super.bindData()
+        KFUserModel.share.isLogin = false
     }
     
     override func updateViewConstraints() {
@@ -120,8 +122,22 @@ class KFLoginViewController: BPViewController {
     
     @objc
     private func loginEvent() {
-        let tbc = BPTabBarController()
-        let nvc = BPNavigationController(rootViewController: tbc)
-        kWindow.rootViewController = nvc
+        guard let account = accountTextField.text, let password = passwordTextField.text else {
+            kWindow.toast("请输入账号或密码")
+            return
+        }
+        guard account == "13641665211", password == "abc123" else {
+            kWindow.toast("账号或密码错误")
+            return
+        }
+        KFUserModel.share.isLogin = true
+        kWindow.showLoading()
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 1) {
+            kWindow.hideLoading()
+            let tbc = BPTabBarController()
+            let nvc = BPNavigationController(rootViewController: tbc)
+            kWindow.rootViewController = nvc
+        }
+        
     }
 }

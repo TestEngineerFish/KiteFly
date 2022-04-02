@@ -24,6 +24,6 @@ struct KFCommunityRemarkModel: Mappable {
         id          <- map["id"]
         content     <- map["content"]
         byUser      <- map["byUser"]
-        createTime  <- map["createTime"]
+        createTime  <- (map["createTime"], DateTransform())
     }
 }

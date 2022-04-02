@@ -15,7 +15,7 @@ protocol KFCommunityCellDelegate: NSObject {
     func reportAction(model: KFCommunityModel)
 }
 
-class KFCommunityCell: BPTableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+class KFCommunityCell: BPTableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private let cellID: String = "kKFCommunityImageCell"
     private var imageList = [String]()
@@ -59,6 +59,7 @@ class KFCommunityCell: BPTableViewCell, UICollectionViewDelegate, UICollectionVi
         label.textColor     = UIColor.black0
         label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
         label.textAlignment = .left
+        label.numberOfLines = 0
         return label
     }()
     private var collectionView: UICollectionView = {
@@ -152,6 +153,8 @@ class KFCommunityCell: BPTableViewCell, UICollectionViewDelegate, UICollectionVi
             make.top.equalTo(contentLabel.snp.bottom).offset(AdaptSize(15))
             if imageList.isEmpty {
                 make.height.equalTo(0)
+            } else if imageList.count == 1 {
+                make.height.equalTo(kScreenWidth - AdaptSize(80))
             } else {
                 let isRound = imageList.count % 3 > 0
                 var line    = imageList.count/3
@@ -183,7 +186,8 @@ class KFCommunityCell: BPTableViewCell, UICollectionViewDelegate, UICollectionVi
             self.addressLabel.text = userModel.address
         }
         self.contentLabel.text = model.content
-        self.imageList = model.imageList
+        self.imageList         = model.imageList
+        self.remarkButton.setTitle("评价(\(model.remarkList.count))", for: .normal)
         self.updateConstraints()
         self.collectionView.reloadData()
     }
@@ -217,5 +221,14 @@ class KFCommunityCell: BPTableViewCell, UICollectionViewDelegate, UICollectionVi
         let url = self.imageList[indexPath.row]
         cell.setData(image: url)
         return cell
+    }
+    
+    // MARK: ==== UICollectionViewDelegateFlowLayout ====
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if self.imageList.count == 1 {
+            return CGSize(width: kScreenWidth - AdaptSize(80), height: kScreenWidth - AdaptSize(80))
+        } else {
+            return CGSize(width: AdaptSize(80), height: AdaptSize(80))
+        }
     }
 }

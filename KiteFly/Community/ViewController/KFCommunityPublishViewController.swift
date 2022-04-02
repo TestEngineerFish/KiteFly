@@ -26,6 +26,7 @@ class KFCommunityPublishViewController: BPViewController, UICollectionViewDelega
         layout.itemSize                 = CGSize(width: AdaptSize(60), height: AdaptSize(60))
         layout.minimumLineSpacing       = AdaptSize(10)
         layout.minimumInteritemSpacing  = AdaptSize(10)
+        layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator   = false
@@ -103,7 +104,7 @@ class KFCommunityPublishViewController: BPViewController, UICollectionViewDelega
             kWindow.toast("请输入内容")
             return
         }
-        kWindow.toast("发布成功")
+        kWindow.toast("发布成功，审核通过后可展示在社区～")
         self.navigationController?.pop()
     }
     
@@ -127,6 +128,6 @@ class KFCommunityPublishViewController: BPViewController, UICollectionViewDelega
             self.modelList += modelList as? [BPMediaImageModel] ?? []
             self.modelList.append(nil)
             self.collectionView.reloadData()
-        }, maxCount: 1)
+        }, maxCount: 9)
     }
 }

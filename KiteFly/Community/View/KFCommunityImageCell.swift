@@ -13,7 +13,8 @@ class KFCommunityImageCell: BPCollectionViewCell {
     private var imageView: BPImageView = {
         let imageView = BPImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.masksToBounds = true
+        imageView.layer.masksToBounds      = true
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
 
@@ -35,6 +36,8 @@ class KFCommunityImageCell: BPCollectionViewCell {
     
     override func bindProperty() {
         super.bindProperty()
+        let tapGes = UITapGestureRecognizer(target: self, action: #selector(clickImage))
+        self.imageView.addGestureRecognizer(tapGes)
     }
     
     override func updateConstraints() {
@@ -55,5 +58,15 @@ class KFCommunityImageCell: BPCollectionViewCell {
         } else {
             self.imageView.image = UIImage(named: "emptyImage")
         }
+    }
+    
+    @objc
+    private func clickImage() {
+        guard let _image = self.imageView.image else {
+            return
+        }
+        let model = BPMediaImageModel()
+        model.image = _image
+        BPBrowserView(type: .custom(modelList: [model]), current: 0).show(animationView: self.imageView)
     }
 }

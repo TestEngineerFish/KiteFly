@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1807470A27F7F86500D4902D /* KFCommunityReplyRemarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807470927F7F86500D4902D /* KFCommunityReplyRemarkViewController.swift */; };
 		185F5E5A27F41CD100AFBA3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E5927F41CD100AFBA3F /* AppDelegate.swift */; };
 		185F5E6127F41CD100AFBA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E5F27F41CD100AFBA3F /* Main.storyboard */; };
 		185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E6227F41CD200AFBA3F /* Assets.xcassets */; };
@@ -152,6 +153,7 @@
 
 /* Begin PBXFileReference section */
 		1206E9800750F747AF76704B /* Pods_KiteFly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiteFly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1807470927F7F86500D4902D /* KFCommunityReplyRemarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityReplyRemarkViewController.swift; sourceTree = "<group>"; };
 		185F5E5627F41CD100AFBA3F /* KiteFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiteFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185F5E5927F41CD100AFBA3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185F5E6027F41CD100AFBA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 				185F5EFE27F595C200AFBA3F /* KFCommunityRemarkViewController.swift */,
 				185F5F0027F598BD00AFBA3F /* KFCommunityPublishViewController.swift */,
 				185F5F4327F5B2AD00AFBA3F /* KFCommunityReportViewController.swift */,
+				1807470927F7F86500D4902D /* KFCommunityReplyRemarkViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1081,6 +1084,7 @@
 				185F5F1527F5A18300AFBA3F /* BPPhotoAlbumModel.swift in Sources */,
 				185F5EEE27F5780400AFBA3F /* KFCommunityCell.swift in Sources */,
 				185F5FB027F6D03000AFBA3F /* BPEmojiToolView.swift in Sources */,
+				1807470A27F7F86500D4902D /* KFCommunityReplyRemarkViewController.swift in Sources */,
 				185F5EDD27F54EFE00AFBA3F /* UIView+Toast.swift in Sources */,
 				185F5F3127F5A59F00AFBA3F /* BPAlertManager.swift in Sources */,
 				185F5F5A27F6AA1000AFBA3F /* KFSettingNoticeViewController.swift in Sources */,

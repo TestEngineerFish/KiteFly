@@ -44,6 +44,7 @@ class KFUserModel: Mappable {
     var remark: String  = ""
     var address: String = ""
     var isShowSettingAlert = false
+    var isLogin         = false
     
     init() {}
     required init?(map: Map) {}
@@ -56,5 +57,6 @@ class KFUserModel: Mappable {
         sex     <- (map["sex"], EnumTransform<KFSex>())
         remark  <- map["remark"]
         address <- map["address"]
+        isLogin <- map["isLogin"]
     }
 }

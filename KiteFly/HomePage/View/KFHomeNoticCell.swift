@@ -12,7 +12,7 @@ class KFHomeNoticCell: BPTableViewCell {
     private var customContentView: BPView = {
         let view = BPView()
         view.backgroundColor = UIColor.white
-        view.layer.cornerRadius = AdaptSize(10)
+        view.layer.cornerRadius = AdaptSize(5)
         view.layer.setDefaultShadow()
         return view
     }()
@@ -21,7 +21,7 @@ class KFHomeNoticCell: BPTableViewCell {
         let imageView = BPImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.size = CGSize(width: kScreenWidth - AdaptSize(20), height: AdaptSize(180))
-        imageView.clipRectCorner(directionList: [.topLeft, .topRight], cornerRadius: AdaptSize(10))
+        imageView.clipRectCorner(directionList: [.topLeft, .topRight], cornerRadius: AdaptSize(5))
         return imageView
     }()
     

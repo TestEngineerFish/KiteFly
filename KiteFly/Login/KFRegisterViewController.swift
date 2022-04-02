@@ -17,6 +17,7 @@ class KFRegisterViewController: BPViewController {
         textField.showBorder  = true
         textField.showLeftView = true
         textField.clearButtonMode = .whileEditing
+        textField.maxLengthBP = 11
         return textField
     }()
     private let passwordTextField: BPTextField = {
@@ -29,6 +30,7 @@ class KFRegisterViewController: BPViewController {
         textField.showBorder  = true
         textField.showLeftView = true
         textField.clearButtonMode = .whileEditing
+        textField.maxLengthBP = 8
         return textField
     }()
     private let confirmTextField: BPTextField = {
@@ -41,6 +43,7 @@ class KFRegisterViewController: BPViewController {
         textField.showBorder  = true
         textField.showLeftView = true
         textField.clearButtonMode = .whileEditing
+        textField.maxLengthBP = 8
         return textField
     }()
     
@@ -64,6 +67,20 @@ class KFRegisterViewController: BPViewController {
         self.view.addSubview(passwordTextField)
         self.view.addSubview(confirmTextField)
         self.view.addSubview(registerButton)
+    }
+    
+    override func bindProperty() {
+        super.bindProperty()
+        self.customNavigationBar?.title = "注册"
+        self.customNavigationBar?.hideLeftView()
+        self.registerButton.addTarget(self, action: #selector(registerAction), for: .touchUpInside)
+    }
+    
+    override func bindData() {
+        super.bindData()
+    }
+    
+    override func updateViewConstraints() {
         accountTextField.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: AdaptSize(250), height: AdaptSize(44)))
             make.centerX.equalToSuperview()
@@ -82,22 +99,27 @@ class KFRegisterViewController: BPViewController {
             make.centerX.equalToSuperview()
             make.top.equalTo(confirmTextField.snp.bottom).offset(AdaptSize(40))
         }
-    }
-    
-    override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title = "注册"
-    }
-    
-    override func bindData() {
-        super.bindData()
-    }
-    
-    override func updateViewConstraints() {
-        
         super.updateViewConstraints()
     }
     
     // MARK: ==== Event ====
+    @objc
+    private func registerAction() {
+        guard let account = accountTextField.text, let password0 = passwordTextField.text, let password1 = confirmTextField.text, account.isNotEmpty, password0.isNotEmpty, password1.isNotEmpty else {
+            kWindow.toast("账号密码不能为空")
+            return
+        }
+        guard password0 == password1 else {
+            kWindow.toast("密码不一致")
+            return
+        }
+        kWindow.showLoading()
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 0.5) {
+            kWindow.hideLoading()
+            BPAlertManager.share.oneButton(title: "提示", description: "账号已存在，请直接登录", buttonName: "知道了") {
+                self.dismiss(animated: true)
+            }.show()
+        }
+    }
     
 }

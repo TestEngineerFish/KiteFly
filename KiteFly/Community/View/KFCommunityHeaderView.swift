@@ -12,7 +12,7 @@ protocol KFCommunityHeaderViewDelegate: NSObject {
     func clickAvatarAction(model: KFUserModel)
 }
 
-class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewDataSource {
+class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private let cellID: String = "kKFCommunityImageCell"
     private var imageList = [String]()
@@ -41,6 +41,7 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
         label.textColor     = UIColor.black0
         label.font          = UIFont.semiboldFont(ofSize: AdaptSize(15))
         label.textAlignment = .left
+        label.numberOfLines = 0
         return label
     }()
     private var addressLabel: BPLabel = {
@@ -57,6 +58,7 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
         label.textColor     = UIColor.black0
         label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
         label.textAlignment = .left
+        label.numberOfLines = 0
         return label
     }()
     private var collectionView: UICollectionView = {
@@ -151,7 +153,9 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
             make.top.equalTo(contentLabel.snp.bottom).offset(AdaptSize(15))
             if imageList.isEmpty {
                 make.height.equalTo(0)
-            } else {
+            } else if imageList.count == 1 {
+                make.height.equalTo(kScreenWidth - AdaptSize(80))
+            }  else {
                 let isRound = imageList.count % 3 > 0
                 var line    = imageList.count/3
                 line        = isRound ? line + 1 : line
@@ -207,6 +211,15 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
         let url = self.imageList[indexPath.row]
         cell.setData(image: url)
         return cell
+    }
+    
+    // MARK: ==== UICollectionViewDelegateFlowLayout ====
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if self.imageList.count == 1 {
+            return CGSize(width: kScreenWidth - AdaptSize(80), height: kScreenWidth - AdaptSize(80))
+        } else {
+            return CGSize(width: AdaptSize(80), height: AdaptSize(80))
+        }
     }
 }
 

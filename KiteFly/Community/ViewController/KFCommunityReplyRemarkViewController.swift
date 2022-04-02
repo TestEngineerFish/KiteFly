@@ -1,5 +1,5 @@
 //
-//  KFCommunityReportViewController.swift
+//  KFCommunityReplyRemarkViewController.swift
 //  KiteFly
 //
 //  Created by apple on 2022/3/31.
@@ -8,13 +8,13 @@
 import Foundation
 import IQKeyboardManager
 
-class KFCommunityReportViewController: BPViewController {
+class KFCommunityReplyRemarkViewController: BPViewController {
     
-    var id: String?
+    var model: KFCommunityRemarkModel?
     
     private let textView: IQTextView = {
         let textView = IQTextView()
-        textView.placeholder = "请描述举报内容"
+        textView.placeholder = "回复评论"
         textView.font        = UIFont.regularFont(ofSize: AdaptSize(15))
         textView.textColor   = UIColor.black0
         return textView
@@ -32,7 +32,6 @@ class KFCommunityReportViewController: BPViewController {
         self.createSubviews()
         self.bindProperty()
         self.bindData()
-        self.updateUI()
     }
     
     override func createSubviews() {
@@ -43,16 +42,15 @@ class KFCommunityReportViewController: BPViewController {
     
     override func bindProperty() {
         super.bindProperty()
-        self.customNavigationBar?.title = "举报"
+        self.customNavigationBar?.title = "发布评论"
         self.submitButton.addTarget(self, action: #selector(submitAction), for: .touchUpInside)
+        if let _name = self.model?.byUser?.name {
+            self.textView.placeholder = "回复\(_name)的评论"
+        }
     }
     
     override func bindData() {
         super.bindData()
-    }
-    
-    override func updateUI() {
-        super.updateUI()
         self.view.backgroundColor = UIColor.gray0
     }
     
@@ -78,8 +76,7 @@ class KFCommunityReportViewController: BPViewController {
             kWindow.toast("请输入内容")
             return
         }
-        kWindow.toast("举报成功，我们将尽快处理！")
+        kWindow.toast("回复成功，审核通过后可展示～")
         self.dismiss(animated: true)
     }
-    
 }

@@ -176,7 +176,7 @@ public class BPBrowserView:
     /// 显示入场动画
     /// - Parameter animationView: 动画参考对象
     public func show(animationView: UIImageView?) {
-        UIViewController.currentViewController?.view.addSubview(self)
+        kWindow.addSubview(self)
         self.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
