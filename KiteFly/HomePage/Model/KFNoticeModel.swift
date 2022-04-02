@@ -31,9 +31,9 @@ struct KFNoticeModel: Mappable {
     var isRegister: Bool = false
     /// 备注
     var remark: String = ""
-    
-    
-    
+    /// 是否有效
+    var isValid        = true
+    var userModelList: [KFUserModel] = []
     init() {}
     init?(map: Map) {}
     
@@ -49,6 +49,8 @@ struct KFNoticeModel: Mappable {
         isRegister <- map["isRegister"]
         remark <- map["remark"]
         name <- map["name"]
+        isValid <- map["isValid"]
+        userModelList <- map["userModelList"]
     }
 }
 

@@ -43,7 +43,7 @@ class KFHomeViewController: BPViewController, UITableViewDelegate, UITableViewDa
     
     override func bindProperty() {
         super.bindProperty()
-        self.customNavigationBar?.title = "风筝"
+        self.customNavigationBar?.title = "风筝汇"
         self.customNavigationBar?.hideLeftView()
         self.tableView.register(KFHomeNoticCell.classForCoder(), forCellReuseIdentifier: noticCellID)
         self.tableView.delegate        = self

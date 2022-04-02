@@ -44,7 +44,7 @@ class KFRegisterListViewController: BPViewController, UITableViewDelegate, UITab
     
     override func bindData() {
         super.bindData()
-        self.modelList = BPFileManager.share.getJsonModelList(file: "UserModelList", type: KFUserModel.self) as? [KFUserModel] ?? []
+//        self.modelList = BPFileManager.share.getJsonModelList(file: "UserModelList", type: KFUserModel.self) as? [KFUserModel] ?? []
         self.tableView.reloadData()
     }
     
@@ -71,5 +71,12 @@ class KFRegisterListViewController: BPViewController, UITableViewDelegate, UITab
         let model = self.modelList[indexPath.row]
         cell.setData(model: model)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = self.modelList[indexPath.row]
+        let vc = KFSettingUserDetailViewController()
+        vc.model = model
+        self.navigationController?.push(vc: vc)
     }
 }

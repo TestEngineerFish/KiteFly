@@ -83,7 +83,12 @@ class KFNoticeDetailViewController: BPViewController {
     
     override func rightAction() {
         super.rightAction()
+        guard let _model = model, _model.isValid == true else {
+            BPAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
+            return
+        }
         let vc = KFRegisterListViewController()
+        vc.modelList = _model.userModelList
         self.navigationController?.push(vc: vc)
     }
     
@@ -96,6 +101,9 @@ class KFNoticeDetailViewController: BPViewController {
         self.imageView.setImage(with: model.icon)
         self.byLabel.text      = model.name
         self.contentLabel.text = model.content + "\n\n\n联系方式：\(model.contact)\n\n详细地址：\(model.address)\n\n\n\n"
+        if !model.isValid {
+            BPAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
+        }
     }
     
     override func updateViewConstraints() {
@@ -132,6 +140,10 @@ class KFNoticeDetailViewController: BPViewController {
     // MARK: ==== Event ====
     @objc
     private func registerAction() {
+        guard let _model = model, _model.isValid == true else {
+            BPAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
+            return
+        }
         kWindow.showLoading()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             kWindow.hideLoading()

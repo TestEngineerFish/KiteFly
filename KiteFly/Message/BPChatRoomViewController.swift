@@ -164,8 +164,15 @@ open class BPChatRoomViewController:
     /// 更新导航栏
     private func updateCustomNavigationBar() {
         self.customNavigationBar?.title = userModel?.name
+        self.customNavigationBar?.rightTitle = "详情"
     }
     
+    open override func rightAction() {
+        super.rightAction()
+        let vc = KFSettingUserDetailViewController()
+        vc.model = self.userModel
+        self.navigationController?.push(vc: vc)
+    }
     
     @objc
     private func playFinishedNotification(sender: Notification) {

@@ -63,7 +63,6 @@
 		185F5EE127F5561C00AFBA3F /* KFRegisterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EE027F5561C00AFBA3F /* KFRegisterListViewController.swift */; };
 		185F5EE327F556EF00AFBA3F /* KFHomeMemberListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EE227F556EF00AFBA3F /* KFHomeMemberListCell.swift */; };
 		185F5EE527F5595600AFBA3F /* KFUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EE427F5595600AFBA3F /* KFUserModel.swift */; };
-		185F5EE727F562D900AFBA3F /* UserModelList.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5EE627F562D900AFBA3F /* UserModelList.json */; };
 		185F5EEC27F5708800AFBA3F /* KFCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EEB27F5708800AFBA3F /* KFCommunityViewController.swift */; };
 		185F5EEE27F5780400AFBA3F /* KFCommunityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EED27F5780400AFBA3F /* KFCommunityCell.swift */; };
 		185F5EF027F578BE00AFBA3F /* KFCommunityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EEF27F578BE00AFBA3F /* KFCommunityModel.swift */; };
@@ -215,7 +214,6 @@
 		185F5EE027F5561C00AFBA3F /* KFRegisterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFRegisterListViewController.swift; sourceTree = "<group>"; };
 		185F5EE227F556EF00AFBA3F /* KFHomeMemberListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomeMemberListCell.swift; sourceTree = "<group>"; };
 		185F5EE427F5595600AFBA3F /* KFUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFUserModel.swift; sourceTree = "<group>"; };
-		185F5EE627F562D900AFBA3F /* UserModelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserModelList.json; sourceTree = "<group>"; };
 		185F5EEB27F5708800AFBA3F /* KFCommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityViewController.swift; sourceTree = "<group>"; };
 		185F5EED27F5780400AFBA3F /* KFCommunityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityCell.swift; sourceTree = "<group>"; };
 		185F5EEF27F578BE00AFBA3F /* KFCommunityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityModel.swift; sourceTree = "<group>"; };
@@ -514,7 +512,6 @@
 		185F5EC927F44C3300AFBA3F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				185F5EE627F562D900AFBA3F /* UserModelList.json */,
 				185F5ED427F47A6A00AFBA3F /* PageUrl.json */,
 				185F5ECE27F45B9D00AFBA3F /* NoticModelList.json */,
 				185F5ECC27F44DD900AFBA3F /* NewsModelList.json */,
@@ -914,7 +911,6 @@
 				185F5ED527F47A6A00AFBA3F /* PageUrl.json in Resources */,
 				185F5ECF27F45B9E00AFBA3F /* NoticModelList.json in Resources */,
 				185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */,
-				185F5EE727F562D900AFBA3F /* UserModelList.json in Resources */,
 				185F5F5027F5CCFE00AFBA3F /* UserModel.json in Resources */,
 				185F5E6127F41CD100AFBA3F /* Main.storyboard in Resources */,
 			);

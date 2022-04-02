@@ -142,7 +142,7 @@ class KFHomeNoticCell: BPTableViewCell {
     // MARK: ==== Event ====
     func setData(model: KFNoticeModel) {
         self.logoImageView.setImage(with: model.icon)
-        self.amountLabel.text  = "报名人数: \(model.amount) 人"
+        self.amountLabel.text  = "报名人数: \(model.userModelList.count) 人"
         self.contactLabel.text = "联系电话: \(model.contact)"
         self.addressLabel.text = "地址: \(model.address)"
         self.titleLabel.text   = model.title

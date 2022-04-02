@@ -84,6 +84,9 @@ class KFSettingUserDetailViewController: BPViewController, UITableViewDelegate, 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let _model = self.model, _model.id == KFUserModel.share.id else {
+            return
+        }
         let type = self.typeList[indexPath.row]
         switch type {
         case .name:
