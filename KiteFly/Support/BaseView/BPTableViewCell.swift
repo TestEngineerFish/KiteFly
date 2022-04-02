@@ -67,7 +67,7 @@ open class BPTableViewCell: UITableViewCell {
             lineView.isHidden = isHide
         } else {
             let lineView = BPView()
-            lineView.backgroundColor = UIColor.gray
+            lineView.backgroundColor = UIColor.gray4
             contentView.addSubview(lineView)
             lineView.snp.makeConstraints { make in
                 make.left.equalToSuperview().offset(left)

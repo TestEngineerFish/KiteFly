@@ -196,7 +196,8 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
     
     @objc
     private func clickAvatarAction() {
-        kWindow.toast("进入个人中心")
+        guard let _model = self.model?.userModel else { return }
+        self.delegate?.clickAvatarAction(model: _model)
     }
     
     // MARK: ==== UICollectionViewDelegate, UICollectionViewDataSource ====

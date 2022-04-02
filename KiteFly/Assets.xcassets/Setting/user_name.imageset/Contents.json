@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ID，姓名，证件.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1807470A27F7F86500D4902D /* KFCommunityReplyRemarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807470927F7F86500D4902D /* KFCommunityReplyRemarkViewController.swift */; };
+		1807470C27F820F300D4902D /* KFSettingUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807470B27F820F300D4902D /* KFSettingUserDetailViewController.swift */; };
+		1807470E27F8253300D4902D /* KFSettingUserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807470D27F8253300D4902D /* KFSettingUserDetailCell.swift */; };
+		1807471027F827E800D4902D /* KFSettingUserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807470F27F827E800D4902D /* KFSettingUserHeaderView.swift */; };
 		185F5E5A27F41CD100AFBA3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E5927F41CD100AFBA3F /* AppDelegate.swift */; };
 		185F5E6127F41CD100AFBA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E5F27F41CD100AFBA3F /* Main.storyboard */; };
 		185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E6227F41CD200AFBA3F /* Assets.xcassets */; };
@@ -154,6 +157,9 @@
 /* Begin PBXFileReference section */
 		1206E9800750F747AF76704B /* Pods_KiteFly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiteFly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1807470927F7F86500D4902D /* KFCommunityReplyRemarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityReplyRemarkViewController.swift; sourceTree = "<group>"; };
+		1807470B27F820F300D4902D /* KFSettingUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingUserDetailViewController.swift; sourceTree = "<group>"; };
+		1807470D27F8253300D4902D /* KFSettingUserDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingUserDetailCell.swift; sourceTree = "<group>"; };
+		1807470F27F827E800D4902D /* KFSettingUserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingUserHeaderView.swift; sourceTree = "<group>"; };
 		185F5E5627F41CD100AFBA3F /* KiteFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiteFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185F5E5927F41CD100AFBA3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185F5E6027F41CD100AFBA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -672,6 +678,7 @@
 				185F5F5927F6AA1000AFBA3F /* KFSettingNoticeViewController.swift */,
 				185F5F5D27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift */,
 				185F5F6127F6BFAB00AFBA3F /* KFSettingRenameViewController.swift */,
+				1807470B27F820F300D4902D /* KFSettingUserDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -690,6 +697,8 @@
 				185F5F4D27F5CA0200AFBA3F /* KFSettingCell.swift */,
 				185F5F5B27F6AABB00AFBA3F /* KFSettingNoticeCell.swift */,
 				185F5F5F27F6ACD600AFBA3F /* KFSettingRegisterCell.swift */,
+				1807470D27F8253300D4902D /* KFSettingUserDetailCell.swift */,
+				1807470F27F827E800D4902D /* KFSettingUserHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1007,6 +1016,7 @@
 				185F5F3427F5A59F00AFBA3F /* BPAlertViewOneButton.swift in Sources */,
 				185F5F2127F5A43B00AFBA3F /* BPBrowserVideoCell.swift in Sources */,
 				185F5FA827F6D03000AFBA3F /* BPChatRoomBaseMessageBubble.swift in Sources */,
+				1807470E27F8253300D4902D /* KFSettingUserDetailCell.swift in Sources */,
 				185F5FA427F6D03000AFBA3F /* BPChatRoomMessageTextCell.swift in Sources */,
 				185F5FCE27F6D70000AFBA3F /* BPSQLManager.swift in Sources */,
 				185F5EC227F4433800AFBA3F /* KFHomeNewsItem.swift in Sources */,
@@ -1066,6 +1076,7 @@
 				185F5F3F27F5A69A00AFBA3F /* PHAsset+Extension.swift in Sources */,
 				185F5F3727F5A5D200AFBA3F /* BPProgressView.swift in Sources */,
 				185F5F5E27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift in Sources */,
+				1807471027F827E800D4902D /* KFSettingUserHeaderView.swift in Sources */,
 				185F5E8A27F4207700AFBA3F /* UIView+Extension.swift in Sources */,
 				185F5FA027F6D03000AFBA3F /* BPChatRoomBaseCell.swift in Sources */,
 				185F5F2527F5A48200AFBA3F /* BPMediaVideoModel.swift in Sources */,
@@ -1097,6 +1108,7 @@
 				185F5EE127F5561C00AFBA3F /* KFRegisterListViewController.swift in Sources */,
 				185F5E7227F41DE200AFBA3F /* KFLoginViewController.swift in Sources */,
 				185F5FCF27F6D70000AFBA3F /* BPDatabaseManager.swift in Sources */,
+				1807470C27F820F300D4902D /* KFSettingUserDetailViewController.swift in Sources */,
 				185F5EAB27F4289C00AFBA3F /* UIImage+Extension.swift in Sources */,
 				185F5FAA27F6D03000AFBA3F /* BPChatInputView.swift in Sources */,
 				185F5E7C27F41E9800AFBA3F /* BPButton.swift in Sources */,

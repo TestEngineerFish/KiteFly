@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "225默认头像.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

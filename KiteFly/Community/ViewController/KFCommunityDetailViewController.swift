@@ -7,7 +7,7 @@
 
 import Foundation
 
-class KFCommunityDetailViewController: BPViewController, UITableViewDelegate, UITableViewDataSource, KFCommunityRemarkCellDelegate {
+class KFCommunityDetailViewController: BPViewController, UITableViewDelegate, UITableViewDataSource, KFCommunityRemarkCellDelegate, KFCommunityHeaderViewDelegate {
     
     var model: KFCommunityModel?
     private let cellID = "kKFCommunityRemarkCell"
@@ -86,6 +86,7 @@ class KFCommunityDetailViewController: BPViewController, UITableViewDelegate, UI
         if let model = self.model {
             headerView.setData(model: model)
         }
+        headerView.delegate = self
         return headerView
     }
     
@@ -106,9 +107,21 @@ class KFCommunityDetailViewController: BPViewController, UITableViewDelegate, UI
         self.navigationController?.present(vc, animated: true)
     }
     
-    func reportAction(model: KFCommunityRemarkModel) {
+    func reportRemarkAction(model: KFCommunityRemarkModel) {
         let vc = KFCommunityReportViewController()
         vc.id = model.id
         self.navigationController?.present(vc, animated: true)
+    }
+    
+    // MARK: ==== KFCommunityHeaderViewDelegate ====
+    func reportAction(model: KFCommunityModel) {
+        let vc = KFCommunityReportViewController()
+        self.navigationController?.present(vc, animated: true)
+    }
+    
+    func clickAvatarAction(model: KFUserModel) {
+        let vc = KFSettingUserDetailViewController()
+        vc.model = self.model?.userModel
+        self.navigationController?.push(vc: vc)
     }
 }

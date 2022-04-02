@@ -9,6 +9,11 @@ import Foundation
 import StoreKit
 
 enum KFSettingType: String {
+    case name       = "姓名"
+    case avatar     = "头像"
+    case sex        = "性别"
+    case address    = "地址"
+    case remark     = "个性签名"
     /// 我的帖子
     case notice     = "我的动态"
     /// 已报名
@@ -25,6 +30,16 @@ enum KFSettingType: String {
     case more       = "更多"
     var icon: UIImage? {
         switch self {
+        case .name:
+            return UIImage(named: "user_name")
+        case .avatar:
+            return UIImage(named: "user_avatar")
+        case .sex:
+            return UIImage(named: "user_sex")
+        case .address:
+            return UIImage(named: "user_address")
+        case .remark:
+            return UIImage(named: "user_remark")
         case .notice:
             return UIImage(named: "dynamic")
         case .register:
@@ -71,15 +86,6 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
         self.bindData()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if !KFUserModel.share.isShowSettingAlert {
-            BPAlertManager.share.oneButton(title: "提示", description: "点击个人信息可修改", buttonName: "知道了", closure: {
-                KFUserModel.share.isShowSettingAlert = true
-            }).show()
-        }
-    }
-    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(tableView)
@@ -109,7 +115,12 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
     }
     
     // MARK: ==== Event ====
-
+    @objc
+    private func clickUserInfo() {
+        let vc = KFSettingUserDetailViewController()
+        vc.model = self.model
+        self.navigationController?.push(vc: vc)
+    }
     
     // MARK: ==== UITableViewDelegate, UITableViewDataSource ====
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -121,6 +132,8 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
         if let _model = self.model {
             headerView.setData(model: _model)
         }
+        let tapGes = UITapGestureRecognizer(target: self, action: #selector(clickUserInfo))
+        headerView.addGestureRecognizer(tapGes)
         return headerView
     }
     
@@ -165,6 +178,8 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
         case .more:
             let vc = KFSettingMoreViewController()
             self.navigationController?.push(vc: vc)
+        default:
+            break
         }
     }
 }

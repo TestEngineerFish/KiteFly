@@ -11,7 +11,7 @@ protocol KFCommunityRemarkCellDelegate: NSObjectProtocol {
     /// 回复评论
     func replyRemarkAction(model: KFCommunityRemarkModel)
     /// 举报评论
-    func reportAction(model: KFCommunityRemarkModel)
+    func reportRemarkAction(model: KFCommunityRemarkModel)
 }
 
 class KFCommunityRemarkCell: BPTableViewCell {
@@ -139,7 +139,7 @@ class KFCommunityRemarkCell: BPTableViewCell {
         BPActionSheet().addItem(title: "回复") {
             self.delegate?.replyRemarkAction(model: _model)
         }.addItem(title: "举报") {
-            self.delegate?.reportAction(model: _model)
+            self.delegate?.reportRemarkAction(model: _model)
         }.show()
     }
 }
