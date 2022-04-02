@@ -8,6 +8,7 @@
 import UIKit
 import IQKeyboardManager
 
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -32,6 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func registerModule() {
         IQKeyboardManager.shared().shouldResignOnTouchOutside = true
     }
-
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        JPUSHService.registerDeviceToken(deviceToken)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        completionHandler(.newData)
+    }
 }
-

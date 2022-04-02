@@ -104,8 +104,12 @@ class KFCommunityPublishViewController: BPViewController, UICollectionViewDelega
             kWindow.toast("请输入内容")
             return
         }
-        kWindow.toast("发布成功，审核通过后可展示在社区～")
-        self.navigationController?.pop()
+        kWindow.showLoading()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            kWindow.hideLoading()
+            kWindow.toast("发布成功，审核通过后可展示在社区～")
+            self.navigationController?.pop()
+        }
     }
     
     // MARK: ==== UICollectionViewDelegate, UICollectionViewDataSource ====

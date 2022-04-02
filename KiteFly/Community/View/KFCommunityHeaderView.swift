@@ -120,6 +120,7 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
         self.collectionView.register(KFCommunityImageCell.classForCoder(), forCellWithReuseIdentifier: cellID)
         let tapGes = UITapGestureRecognizer(target: self, action: #selector(clickAvatarAction))
         self.avatarImageView.addGestureRecognizer(tapGes)
+        self.reportButton.addTarget(self, action: #selector(reportAction), for: .touchUpInside)
     }
     
     override func updateConstraints() {

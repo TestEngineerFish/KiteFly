@@ -51,7 +51,7 @@ class KFSettingNoticeViewController: BPViewController, UITableViewDelegate, UITa
     
     override func bindData() {
         super.bindData()
-        self.modelList = BPFileManager.share.getJsonModelList(file: "CommunityList", type: KFCommunityModel.self) as? [KFCommunityModel] ?? []
+        self.modelList = []
         self.tableView.reloadData()
     }
     

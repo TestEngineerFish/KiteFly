@@ -49,7 +49,7 @@ class KFSettingMyRegisterViewController: BPViewController, UITableViewDelegate, 
     
     override func bindData() {
         super.bindData()
-        self.noticeModelList = BPFileManager.share.getJsonModelList(file: "NoticModelList", type: KFNoticeModel.self) as? [KFNoticeModel] ?? []
+        self.noticeModelList = []
         self.tableView.reloadData()
     }
     

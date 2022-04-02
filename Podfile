@@ -22,4 +22,6 @@ target 'KiteFly' do
   pod 'RongCloudIM/IMLib', '~> 5.1.3.4'
   # 数据库
   pod "FMDB", '2.7.5'
+  # 极光推送 无IDFA
+  pod 'JPush', '4.3.6'
 end
