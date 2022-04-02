@@ -7,10 +7,10 @@
 
 import Foundation
 
-class KFSettingMoreViewController: BPViewController {
+class KFSettingMoreViewController: KFViewController {
     
-    private var logout: BPButton = {
-        let button = BPButton(.second)
+    private var logout: KFButton = {
+        let button = KFButton(.second)
         button.setTitle("退出登录", for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(15))
         return button
@@ -54,7 +54,7 @@ class KFSettingMoreViewController: BPViewController {
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             kWindow.hideLoading()
             let vc = KFLoginViewController()
-            let nvc = BPNavigationController(rootViewController: vc)
+            let nvc = KFNavigationController(rootViewController: vc)
             kWindow.rootViewController = nvc
         }
     }

@@ -18,12 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.registerModule()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         if !KFUserModel.share.isLogin {
-            let tbc = BPTabBarController()
-            let nvc = BPNavigationController(rootViewController: tbc)
+            let tbc = KFTabBarController()
+            let nvc = KFNavigationController(rootViewController: tbc)
             self.window?.rootViewController = nvc
         } else {
             let vc  = KFLoginViewController()
-            let nvc = BPNavigationController(rootViewController: vc)
+            let nvc = KFNavigationController(rootViewController: vc)
             self.window?.rootViewController = nvc
         }
         self.window?.makeKeyAndVisible()

@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-class KFHomePageCell: BPCollectionViewCell {
+class KFHomePageCell: KFCollectionViewCell {
     
-    private var titleLabel: BPLabel = {
-        let label = BPLabel()
+    private var titleLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.white
         label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
@@ -19,8 +19,8 @@ class KFHomePageCell: BPCollectionViewCell {
         label.layer.setDefaultShadow()
         return label
     }()
-    private var imageView: BPImageView = {
-        let imageView = BPImageView()
+    private var imageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()

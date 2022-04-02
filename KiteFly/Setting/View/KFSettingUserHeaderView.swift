@@ -7,12 +7,12 @@
 
 import Foundation
 
-class KFSettingUserHeaderView: BPView {
+class KFSettingUserHeaderView: KFView {
     
     private var model: KFUserModel?
     
-    private var avatarImageView: BPImageView = {
-        let imageView = BPImageView()
+    private var avatarImageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode         = .scaleAspectFill
         imageView.size                = CGSize(width: AdaptSize(80), height: AdaptSize(80))
         imageView.layer.cornerRadius  = AdaptSize(40)
@@ -64,7 +64,7 @@ class KFSettingUserHeaderView: BPView {
         guard let _model = self.model, _model.id == KFUserModel.share.id else {
             return
         }
-        BPSystemPhotoManager.share.show { modelList in
+        KFSystemPhotoManager.share.show { modelList in
             guard let imageModel = modelList.first as? BPMediaImageModel else {
                 return
             }

@@ -12,22 +12,22 @@ protocol KFCommunityHeaderViewDelegate: NSObject {
     func clickAvatarAction(model: KFUserModel)
 }
 
-class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class KFCommunityHeaderView: KFView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private let cellID: String = "kKFCommunityImageCell"
     private var imageList = [String]()
     private var model: KFCommunityModel?
     weak var delegate: KFCommunityHeaderViewDelegate?
     
-    private var customContentView: BPView = {
-        let view = BPView()
+    private var customContentView: KFView = {
+        let view = KFView()
         view.backgroundColor    = UIColor.white
         view.layer.cornerRadius = AdaptSize(8)
         view.layer.setDefaultShadow()
         return view
     }()
-    private var avatarImageView: BPImageView = {
-        let imageView = BPImageView()
+    private var avatarImageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.size = CGSize(width: AdaptSize(60), height: AdaptSize(60))
         imageView.layer.masksToBounds       = true
@@ -35,8 +35,8 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
         imageView.isUserInteractionEnabled  = true
         return imageView
     }()
-    private var nameLabel: BPLabel = {
-        let label = BPLabel()
+    private var nameLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.semiboldFont(ofSize: AdaptSize(15))
@@ -44,16 +44,16 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
         label.numberOfLines = 0
         return label
     }()
-    private var addressLabel: BPLabel = {
-        let label = BPLabel()
+    private var addressLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black1
         label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
         label.textAlignment = .left
         return label
     }()
-    private var contentLabel: BPLabel = {
-        let label = BPLabel()
+    private var contentLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
@@ -73,16 +73,16 @@ class KFCommunityHeaderView: BPView, UICollectionViewDelegate, UICollectionViewD
         collectionView.backgroundColor = .clear
         return collectionView
     }()
-    private var reportButton: BPButton = {
-        let button = BPButton()
+    private var reportButton: KFButton = {
+        let button = KFButton()
         button.setImage(UIImage(named: "report"), for: .normal)
         button.setTitle("举报", for: .normal)
         button.setTitleColor(UIColor.black0, for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(13))
         return button
     }()
-    private var remarkButton: BPButton = {
-        let button = BPButton()
+    private var remarkButton: KFButton = {
+        let button = KFButton()
 //        button.setImage(UIImage(named: "remark"), for: .normal)
         button.setTitle("评论", for: .normal)
         button.setTitleColor(UIColor.black0, for: .normal)

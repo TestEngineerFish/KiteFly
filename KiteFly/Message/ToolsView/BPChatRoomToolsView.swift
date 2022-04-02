@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum BPChatToolsItemType: Int {
+enum KFChatToolsItemType: Int {
     /// 空
     case normal
     /// 录音
@@ -31,7 +31,7 @@ enum BPChatToolsItemType: Int {
 
 protocol BPChatRoomToolsViewDelegate: NSObjectProtocol {
     /// 点击事件
-    func clickToolsBarAction(type: BPChatToolsItemType)
+    func clickToolsBarAction(type: KFChatToolsItemType)
     /// 开始位移
     func transformOffsetY(y: CGFloat, duration: TimeInterval)
     /// 还原位移
@@ -49,10 +49,10 @@ protocol BPChatRoomToolsViewDelegate: NSObjectProtocol {
 
 /// 工具栏视图
 class BPChatRoomToolsView:
-    BPView,
-    BPChatInputViewDelegate,
-    BPChatMoreViewDelegate,
-    BPEmojiToolViewDelegate
+    KFView,
+    KFChatInputViewDelegate,
+    KFChatMoreViewDelegate,
+    KFEmojiToolViewDelegate
     {
  
     /// 当前总高度（返回最大高度）
@@ -76,7 +76,7 @@ class BPChatRoomToolsView:
     weak var delegate: BPChatRoomToolsViewDelegate?
     
     /// 当前选中的Item
-    private var currentItemType: BPChatToolsItemType = .normal {
+    private var currentItemType: KFChatToolsItemType = .normal {
         willSet {
             var isRecover = true
             var offsetY   = CGFloat.zero
@@ -124,13 +124,13 @@ class BPChatRoomToolsView:
     }
     
     /// 输入栏页面
-    private var inputBarView = BPChatInputView()
+    private var inputBarView = KFChatInputView()
     /// 更多功能页面
-    private var moreView     = BPChatMoreView()
+    private var moreView     = KFChatMoreView()
     
     /// 表情
-    private var emojiView: BPEmojiToolView = {
-        let view = BPEmojiToolView()
+    private var emojiView: KFEmojiToolView = {
+        let view = KFEmojiToolView()
         view.hide()
         return view
     }()
@@ -225,7 +225,7 @@ class BPChatRoomToolsView:
     }
     
     // MARK: ==== BPChatInputViewDelegate ====
-    func clickItemAction(type: BPChatToolsItemType, isSelected: Bool) {
+    func clickItemAction(type: KFChatToolsItemType, isSelected: Bool) {
         if isSelected {
             self.currentItemType = type
         } else {
@@ -276,7 +276,7 @@ class BPChatRoomToolsView:
     }
     
     // MARK: ==== BPEmojiToolViewDelegate ====
-    func selectedEmoji(model: BPEmojiModel) {
+    func selectedEmoji(model: KFEmojiModel) {
         guard let emojiStr = model.name else { return }
         self.inputBarView.inputText(text: emojiStr)
         // 保存草稿

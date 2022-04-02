@@ -7,13 +7,13 @@
 
 import Foundation
 
-class KFCommunityViewController: BPViewController, UITableViewDelegate, UITableViewDataSource, KFCommunityCellDelegate {
+class KFCommunityViewController: KFViewController, UITableViewDelegate, UITableViewDataSource, KFCommunityCellDelegate {
     
     private let cellID = "kKFCommunityCell"
     private var modelList: [KFCommunityModel] = []
     
-    private var tableView: BPTableView = {
-        let tableView = BPTableView()
+    private var tableView: KFTableView = {
+        let tableView = KFTableView()
         tableView.estimatedRowHeight             = AdaptSize(56)
         tableView.backgroundColor                = UIColor.gray0
         tableView.separatorStyle                 = .none
@@ -52,7 +52,7 @@ class KFCommunityViewController: BPViewController, UITableViewDelegate, UITableV
     
     override func bindData() {
         super.bindData()
-        self.modelList = BPFileManager.share.getJsonModelList(file: "CommunityList", type: KFCommunityModel.self) as? [KFCommunityModel] ?? []
+        self.modelList = KFFileManager.share.getJsonModelList(file: "CommunityList", type: KFCommunityModel.self) as? [KFCommunityModel] ?? []
         self.tableView.reloadData()
     }
     

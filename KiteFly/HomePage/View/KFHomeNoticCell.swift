@@ -7,58 +7,58 @@
 
 import Foundation
 
-class KFHomeNoticCell: BPTableViewCell {
+class KFHomeNoticCell: KFTableViewCell {
     
-    private var customContentView: BPView = {
-        let view = BPView()
+    private var customContentView: KFView = {
+        let view = KFView()
         view.backgroundColor = UIColor.white
         view.layer.cornerRadius = AdaptSize(5)
         view.layer.setDefaultShadow()
         return view
     }()
     
-    private var logoImageView: BPImageView = {
-        let imageView = BPImageView()
+    private var logoImageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.size = CGSize(width: kScreenWidth - AdaptSize(20), height: AdaptSize(180))
         imageView.clipRectCorner(directionList: [.topLeft, .topRight], cornerRadius: AdaptSize(5))
         return imageView
     }()
     
-    private var titleLabel: BPLabel = {
-        let label = BPLabel()
+    private var titleLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.white
         label.font          = UIFont.DINAlternateBold(ofSize: AdaptSize(20))
         label.textAlignment = .left
         return label
     }()
-    private var amountLabel: BPLabel = {
-        let label = BPLabel()
+    private var amountLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.white
         label.font          = UIFont.regularFont(ofSize: 15)
         label.textAlignment = .left
         return label
     }()
-    private var contactLabel: BPLabel = {
-        let label = BPLabel()
+    private var contactLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.white
         label.font          = UIFont.regularFont(ofSize: 15)
         label.textAlignment = .left
         return label
     }()
-    private var addressLabel: BPLabel = {
-        let label = BPLabel()
+    private var addressLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black
         label.font          = UIFont.mediumFont(ofSize: AdaptSize(16))
         label.textAlignment = .left
         return label
     }()
-    private var registerButton: BPButton = {
-        let button = BPButton(.second)
+    private var registerButton: KFButton = {
+        let button = KFButton(.second)
         button.setTitle("去报名", for: .normal)
         button.isUserInteractionEnabled = false
         button.backgroundColor = .clear

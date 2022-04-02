@@ -14,49 +14,49 @@ protocol KFCommunityRemarkCellDelegate: NSObjectProtocol {
     func reportRemarkAction(model: KFCommunityRemarkModel)
 }
 
-class KFCommunityRemarkCell: BPTableViewCell {
+class KFCommunityRemarkCell: KFTableViewCell {
     
     private var model: KFCommunityRemarkModel?
     weak var delegate: KFCommunityRemarkCellDelegate?
     
-    private var customContentView: BPView = {
-        let view = BPView()
+    private var customContentView: KFView = {
+        let view = KFView()
         view.backgroundColor = UIColor.white
         view.layer.cornerRadius = AdaptSize(5)
         view.layer.setDefaultShadow()
         return view
     }()
-    private var avatarImageView: BPImageView = {
-        let imageView = BPImageView()
+    private var avatarImageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.size = CGSize(width: AdaptSize(30), height: AdaptSize(30))
         imageView.layer.cornerRadius  = AdaptSize(15)
         imageView.layer.masksToBounds = true
         return imageView
     }()
-    private var moreButton: BPButton = {
-        let button = BPButton()
+    private var moreButton: KFButton = {
+        let button = KFButton()
         button.setImage(UIImage(named: "more_remark"), for: .normal)
         return button
     }()
-    private var nameLabel: BPLabel = {
-        let label = BPLabel()
+    private var nameLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.semiboldFont(ofSize: AdaptSize(15))
         label.textAlignment = .left
         return label
     }()
-    private var timeLabel: BPLabel = {
-        let label = BPLabel()
+    private var timeLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black1
         label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
         label.textAlignment = .right
         return label
     }()
-    private var contentLabel: BPLabel = {
-        let label = BPLabel()
+    private var contentLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
@@ -136,7 +136,7 @@ class KFCommunityRemarkCell: BPTableViewCell {
     @objc
     private func moreAction() {
         guard let _model = model else { return }
-        BPActionSheet().addItem(title: "回复") {
+        KFActionSheet().addItem(title: "回复") {
             self.delegate?.replyRemarkAction(model: _model)
         }.addItem(title: "举报") {
             self.delegate?.reportRemarkAction(model: _model)

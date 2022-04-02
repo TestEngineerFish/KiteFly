@@ -7,14 +7,14 @@
 
 import Foundation
 
-class KFSettingMyRegisterViewController: BPViewController, UITableViewDelegate, UITableViewDataSource {
+class KFSettingMyRegisterViewController: KFViewController, UITableViewDelegate, UITableViewDataSource {
     
     private let noticCellID = "kKFSettingRegisterCell"
     
     private var noticeModelList = [KFNoticeModel]()
     
-    private var tableView: BPTableView = {
-        let tableView = BPTableView()
+    private var tableView: KFTableView = {
+        let tableView = KFTableView()
         tableView.estimatedRowHeight             = AdaptSize(56)
         tableView.backgroundColor                = UIColor.clear
         tableView.separatorStyle                 = .none

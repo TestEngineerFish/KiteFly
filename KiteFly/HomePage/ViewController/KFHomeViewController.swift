@@ -8,14 +8,14 @@
 import Foundation
 
 
-class KFHomeViewController: BPViewController, UITableViewDelegate, UITableViewDataSource {
+class KFHomeViewController: KFViewController, UITableViewDelegate, UITableViewDataSource {
     
     private let noticCellID = "kKFHomeNoticCell"
     
     private var noticeModelList = [KFNoticeModel]()
     
-    private var tableView: BPTableView = {
-        let tableView = BPTableView(frame: .zero, style: .grouped)
+    private var tableView: KFTableView = {
+        let tableView = KFTableView(frame: .zero, style: .grouped)
         tableView.estimatedRowHeight             = AdaptSize(56)
         tableView.backgroundColor                = UIColor.clear
         tableView.separatorStyle                 = .none
@@ -52,7 +52,7 @@ class KFHomeViewController: BPViewController, UITableViewDelegate, UITableViewDa
     
     override func bindData() {
         super.bindData()
-        self.noticeModelList = BPFileManager.share.getJsonModelList(file: "NoticModelList", type: KFNoticeModel.self) as? [KFNoticeModel] ?? []
+        self.noticeModelList = KFFileManager.share.getJsonModelList(file: "NoticModelList", type: KFNoticeModel.self) as? [KFNoticeModel] ?? []
         self.tableView.reloadData()
     }
     

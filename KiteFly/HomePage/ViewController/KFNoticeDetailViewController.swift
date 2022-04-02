@@ -7,7 +7,7 @@
 
 import Foundation
 
-class KFNoticeDetailViewController: BPViewController {
+class KFNoticeDetailViewController: KFViewController {
     
     var model:KFNoticeModel?
     
@@ -17,8 +17,8 @@ class KFNoticeDetailViewController: BPViewController {
         scrollView.showsHorizontalScrollIndicator = false
         return scrollView
     }()
-    private var titleLabel: BPLabel = {
-        let label = BPLabel()
+    private var titleLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.DINAlternateBold(ofSize: AdaptSize(20))
@@ -26,23 +26,23 @@ class KFNoticeDetailViewController: BPViewController {
         label.numberOfLines = 0
         return label
     }()
-    private var imageView: BPImageView = {
-        let imageView = BPImageView()
+    private var imageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode         = .scaleAspectFill
         imageView.layer.cornerRadius  = AdaptSize(10)
         imageView.layer.masksToBounds = true
         return imageView
     }()
-    private var byLabel: BPLabel = {
-        let label = BPLabel()
+    private var byLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.regularFont(ofSize: AdaptSize(16))
         label.textAlignment = .right
         return label
     }()
-    private var contentLabel: BPLabel = {
-        let label = BPLabel()
+    private var contentLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.regularFont(ofSize: AdaptSize(16))
@@ -50,8 +50,8 @@ class KFNoticeDetailViewController: BPViewController {
         label.numberOfLines = 0
         return label
     }()
-    private var registerButton: BPButton = {
-        let button = BPButton(.theme)
+    private var registerButton: KFButton = {
+        let button = KFButton(.theme)
         button.setTitle("马上报名", for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(16))
         return button
@@ -84,7 +84,7 @@ class KFNoticeDetailViewController: BPViewController {
     override func rightAction() {
         super.rightAction()
         guard let _model = model, _model.isValid == true else {
-            BPAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
+            KFAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
             return
         }
         let vc = KFRegisterListViewController()
@@ -102,7 +102,7 @@ class KFNoticeDetailViewController: BPViewController {
         self.byLabel.text      = model.name
         self.contentLabel.text = model.content + "\n\n\n联系方式：\(model.contact)\n\n详细地址：\(model.address)\n\n\n\n"
         if !model.isValid {
-            BPAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
+            KFAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
         }
     }
     
@@ -141,7 +141,7 @@ class KFNoticeDetailViewController: BPViewController {
     @objc
     private func registerAction() {
         guard let _model = model, _model.isValid == true else {
-            BPAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
+            KFAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
             return
         }
         kWindow.showLoading()

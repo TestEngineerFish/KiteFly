@@ -16,11 +16,11 @@
 		185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E6227F41CD200AFBA3F /* Assets.xcassets */; };
 		185F5E6627F41CD200AFBA3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185F5E6427F41CD200AFBA3F /* LaunchScreen.storyboard */; };
 		185F5E7227F41DE200AFBA3F /* KFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7127F41DE200AFBA3F /* KFLoginViewController.swift */; };
-		185F5E7627F41E3D00AFBA3F /* BPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7527F41E3D00AFBA3F /* BPViewController.swift */; };
-		185F5E7827F41E7D00AFBA3F /* BPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7727F41E7D00AFBA3F /* BPView.swift */; };
-		185F5E7A27F41E8D00AFBA3F /* BPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7927F41E8D00AFBA3F /* BPLabel.swift */; };
-		185F5E7C27F41E9800AFBA3F /* BPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7B27F41E9800AFBA3F /* BPButton.swift */; };
-		185F5E7E27F41ED800AFBA3F /* BPNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7D27F41ED800AFBA3F /* BPNavigationBar.swift */; };
+		185F5E7627F41E3D00AFBA3F /* KFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7527F41E3D00AFBA3F /* KFViewController.swift */; };
+		185F5E7827F41E7D00AFBA3F /* KFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7727F41E7D00AFBA3F /* KFView.swift */; };
+		185F5E7A27F41E8D00AFBA3F /* KFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7927F41E8D00AFBA3F /* KFLabel.swift */; };
+		185F5E7C27F41E9800AFBA3F /* KFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7B27F41E9800AFBA3F /* KFButton.swift */; };
+		185F5E7E27F41ED800AFBA3F /* KFNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E7D27F41ED800AFBA3F /* KFNavigationBar.swift */; };
 		185F5E8127F41F2600AFBA3F /* CommonGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8027F41F2600AFBA3F /* CommonGlobal.swift */; };
 		185F5E8427F41FC300AFBA3F /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8327F41FC300AFBA3F /* UIFont+Extension.swift */; };
 		185F5E8627F4201D00AFBA3F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8527F4201D00AFBA3F /* UIColor+Extension.swift */; };
@@ -29,28 +29,28 @@
 		185F5E8C27F4219C00AFBA3F /* Iconfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8B27F4219C00AFBA3F /* Iconfont.swift */; };
 		185F5E8E27F421D300AFBA3F /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8D27F421D300AFBA3F /* UINavigationController+Extension.swift */; };
 		185F5E9027F4223F00AFBA3F /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E8F27F4223F00AFBA3F /* CALayer+Extension.swift */; };
-		185F5E9227F4226200AFBA3F /* BPTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9127F4226200AFBA3F /* BPTableView.swift */; };
-		185F5E9427F4228100AFBA3F /* BPTableViewEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9327F4228100AFBA3F /* BPTableViewEmptyView.swift */; };
-		185F5E9627F4229100AFBA3F /* BPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9527F4229100AFBA3F /* BPImageView.swift */; };
+		185F5E9227F4226200AFBA3F /* KFTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9127F4226200AFBA3F /* KFTableView.swift */; };
+		185F5E9427F4228100AFBA3F /* KFTableViewEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9327F4228100AFBA3F /* KFTableViewEmptyView.swift */; };
+		185F5E9627F4229100AFBA3F /* KFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9527F4229100AFBA3F /* KFImageView.swift */; };
 		185F5E9927F422E200AFBA3F /* BPMediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9827F422E200AFBA3F /* BPMediaModel.swift */; };
 		185F5E9B27F4231400AFBA3F /* BPMediaImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9A27F4231400AFBA3F /* BPMediaImageModel.swift */; };
 		185F5E9D27F423E700AFBA3F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9C27F423E700AFBA3F /* String+Extension.swift */; };
 		185F5E9F27F4242200AFBA3F /* NSTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5E9E27F4242200AFBA3F /* NSTextAttachment.swift */; };
 		185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA027F4244100AFBA3F /* BPFileManager.swift */; };
 		185F5EA327F424F700AFBA3F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA227F424F700AFBA3F /* Date+Extension.swift */; };
-		185F5EA527F425E100AFBA3F /* BPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA427F425E100AFBA3F /* BPTextField.swift */; };
-		185F5EA927F4285C00AFBA3F /* BPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA827F4285C00AFBA3F /* BPTabBarController.swift */; };
+		185F5EA527F425E100AFBA3F /* KFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA427F425E100AFBA3F /* KFTextField.swift */; };
+		185F5EA927F4285C00AFBA3F /* KFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EA827F4285C00AFBA3F /* KFTabBarController.swift */; };
 		185F5EAB27F4289C00AFBA3F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EAA27F4289C00AFBA3F /* UIImage+Extension.swift */; };
 		185F5EB027F42B8800AFBA3F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EAF27F42B8800AFBA3F /* Data+Extension.swift */; };
-		185F5EB627F433F500AFBA3F /* BPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EB527F433F500AFBA3F /* BPNavigationController.swift */; };
+		185F5EB627F433F500AFBA3F /* KFNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EB527F433F500AFBA3F /* KFNavigationController.swift */; };
 		185F5EB827F438F100AFBA3F /* KFRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EB727F438F100AFBA3F /* KFRegisterViewController.swift */; };
 		185F5EBA27F43E1700AFBA3F /* KFHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EB927F43E1700AFBA3F /* KFHomeViewController.swift */; };
 		185F5EBD27F43F1900AFBA3F /* KFNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EBC27F43F1900AFBA3F /* KFNewsModel.swift */; };
 		185F5EBF27F440D300AFBA3F /* KFNoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EBE27F440D300AFBA3F /* KFNoticeModel.swift */; };
 		185F5EC227F4433800AFBA3F /* KFHomeNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EC127F4433800AFBA3F /* KFHomeNewsItem.swift */; };
 		185F5EC427F4442700AFBA3F /* KFHomeNoticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EC327F4442700AFBA3F /* KFHomeNoticCell.swift */; };
-		185F5EC627F4445D00AFBA3F /* BPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EC527F4445D00AFBA3F /* BPTableViewCell.swift */; };
-		185F5EC827F445C500AFBA3F /* BPCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EC727F445C500AFBA3F /* BPCollectionViewCell.swift */; };
+		185F5EC627F4445D00AFBA3F /* KFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EC527F4445D00AFBA3F /* KFTableViewCell.swift */; };
+		185F5EC827F445C500AFBA3F /* KFCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EC727F445C500AFBA3F /* KFCollectionViewCell.swift */; };
 		185F5ECD27F44DD900AFBA3F /* NewsModelList.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5ECC27F44DD900AFBA3F /* NewsModelList.json */; };
 		185F5ECF27F45B9E00AFBA3F /* NoticModelList.json in Resources */ = {isa = PBXBuildFile; fileRef = 185F5ECE27F45B9D00AFBA3F /* NoticModelList.json */; };
 		185F5ED127F4729300AFBA3F /* KFHomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5ED027F4729300AFBA3F /* KFHomePageCell.swift */; };
@@ -74,34 +74,34 @@
 		185F5EFD27F58E9900AFBA3F /* KFCommunityRemarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EFC27F58E9900AFBA3F /* KFCommunityRemarkCell.swift */; };
 		185F5EFF27F595C200AFBA3F /* KFCommunityRemarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5EFE27F595C200AFBA3F /* KFCommunityRemarkViewController.swift */; };
 		185F5F0127F598BD00AFBA3F /* KFCommunityPublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0027F598BD00AFBA3F /* KFCommunityPublishViewController.swift */; };
-		185F5F0927F5A15200AFBA3F /* BPSystemPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0327F5A15100AFBA3F /* BPSystemPhotoManager.swift */; };
-		185F5F0A27F5A15200AFBA3F /* BPSystemPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0427F5A15100AFBA3F /* BPSystemPhotoViewController.swift */; };
-		185F5F0B27F5A15200AFBA3F /* BPSystemAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0627F5A15100AFBA3F /* BPSystemAlbumCell.swift */; };
-		185F5F0C27F5A15200AFBA3F /* BPSystemAlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0727F5A15100AFBA3F /* BPSystemAlbumListView.swift */; };
-		185F5F0D27F5A15200AFBA3F /* BPSystemPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0827F5A15200AFBA3F /* BPSystemPhotoView.swift */; };
-		185F5F1327F5A18300AFBA3F /* BPMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0F27F5A18300AFBA3F /* BPMediaCell.swift */; };
-		185F5F1427F5A18300AFBA3F /* BPPhotoAlbumToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1027F5A18300AFBA3F /* BPPhotoAlbumToolsView.swift */; };
-		185F5F1527F5A18300AFBA3F /* BPPhotoAlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1127F5A18300AFBA3F /* BPPhotoAlbumModel.swift */; };
-		185F5F1627F5A18300AFBA3F /* BPPhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1227F5A18300AFBA3F /* BPPhotoAlbumViewController.swift */; };
-		185F5F1927F5A1AA00AFBA3F /* BPActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1827F5A1AA00AFBA3F /* BPActionSheet.swift */; };
+		185F5F0927F5A15200AFBA3F /* KFSystemPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0327F5A15100AFBA3F /* KFSystemPhotoManager.swift */; };
+		185F5F0A27F5A15200AFBA3F /* KFSystemPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0427F5A15100AFBA3F /* KFSystemPhotoViewController.swift */; };
+		185F5F0B27F5A15200AFBA3F /* KFSystemAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0627F5A15100AFBA3F /* KFSystemAlbumCell.swift */; };
+		185F5F0C27F5A15200AFBA3F /* KFSystemAlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0727F5A15100AFBA3F /* KFSystemAlbumListView.swift */; };
+		185F5F0D27F5A15200AFBA3F /* KFSystemPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0827F5A15200AFBA3F /* KFSystemPhotoView.swift */; };
+		185F5F1327F5A18300AFBA3F /* KFMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F0F27F5A18300AFBA3F /* KFMediaCell.swift */; };
+		185F5F1427F5A18300AFBA3F /* KFPhotoAlbumToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1027F5A18300AFBA3F /* KFPhotoAlbumToolsView.swift */; };
+		185F5F1527F5A18300AFBA3F /* KFPhotoAlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1127F5A18300AFBA3F /* KFPhotoAlbumModel.swift */; };
+		185F5F1627F5A18300AFBA3F /* KFPhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1227F5A18300AFBA3F /* KFPhotoAlbumViewController.swift */; };
+		185F5F1927F5A1AA00AFBA3F /* KFActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1827F5A1AA00AFBA3F /* KFActionSheet.swift */; };
 		185F5F1C27F5A1DD00AFBA3F /* BPAuthoriationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1B27F5A1DD00AFBA3F /* BPAuthoriationManager.swift */; };
-		185F5F2127F5A43B00AFBA3F /* BPBrowserVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1E27F5A43B00AFBA3F /* BPBrowserVideoCell.swift */; };
-		185F5F2227F5A43B00AFBA3F /* BPBrowserImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1F27F5A43B00AFBA3F /* BPBrowserImageCell.swift */; };
-		185F5F2327F5A43B00AFBA3F /* BPBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2027F5A43B00AFBA3F /* BPBrowserView.swift */; };
+		185F5F2127F5A43B00AFBA3F /* KFBrowserVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1E27F5A43B00AFBA3F /* KFBrowserVideoCell.swift */; };
+		185F5F2227F5A43B00AFBA3F /* KFBrowserImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F1F27F5A43B00AFBA3F /* KFBrowserImageCell.swift */; };
+		185F5F2327F5A43B00AFBA3F /* KFBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2027F5A43B00AFBA3F /* KFBrowserView.swift */; };
 		185F5F2527F5A48200AFBA3F /* BPMediaVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2427F5A48200AFBA3F /* BPMediaVideoModel.swift */; };
-		185F5F2827F5A4BB00AFBA3F /* BPVideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2727F5A4BB00AFBA3F /* BPVideoManager.swift */; };
-		185F5F3027F5A59F00AFBA3F /* BPToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2A27F5A59E00AFBA3F /* BPToastView.swift */; };
-		185F5F3127F5A59F00AFBA3F /* BPAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2B27F5A59E00AFBA3F /* BPAlertManager.swift */; };
-		185F5F3227F5A59F00AFBA3F /* BPTopWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2C27F5A59E00AFBA3F /* BPTopWindowView.swift */; };
-		185F5F3327F5A59F00AFBA3F /* BPBaseAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2D27F5A59E00AFBA3F /* BPBaseAlertView.swift */; };
-		185F5F3427F5A59F00AFBA3F /* BPAlertViewOneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2E27F5A59E00AFBA3F /* BPAlertViewOneButton.swift */; };
-		185F5F3527F5A59F00AFBA3F /* BPAlertViewTwoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2F27F5A59E00AFBA3F /* BPAlertViewTwoButton.swift */; };
-		185F5F3727F5A5D200AFBA3F /* BPProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F3627F5A5D200AFBA3F /* BPProgressView.swift */; };
+		185F5F2827F5A4BB00AFBA3F /* KFVideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2727F5A4BB00AFBA3F /* KFVideoManager.swift */; };
+		185F5F3027F5A59F00AFBA3F /* KFToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2A27F5A59E00AFBA3F /* KFToastView.swift */; };
+		185F5F3127F5A59F00AFBA3F /* KFAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2B27F5A59E00AFBA3F /* KFAlertManager.swift */; };
+		185F5F3227F5A59F00AFBA3F /* KFTopWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2C27F5A59E00AFBA3F /* KFTopWindowView.swift */; };
+		185F5F3327F5A59F00AFBA3F /* KFBaseAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2D27F5A59E00AFBA3F /* KFBaseAlertView.swift */; };
+		185F5F3427F5A59F00AFBA3F /* KFAlertViewOneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2E27F5A59E00AFBA3F /* KFAlertViewOneButton.swift */; };
+		185F5F3527F5A59F00AFBA3F /* KFAlertViewTwoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F2F27F5A59E00AFBA3F /* KFAlertViewTwoButton.swift */; };
+		185F5F3727F5A5D200AFBA3F /* KFProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F3627F5A5D200AFBA3F /* KFProgressView.swift */; };
 		185F5F3927F5A5F700AFBA3F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F3827F5A5F700AFBA3F /* Double+Extension.swift */; };
-		185F5F3B27F5A62F00AFBA3F /* BPAttributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F3A27F5A62F00AFBA3F /* BPAttributionView.swift */; };
+		185F5F3B27F5A62F00AFBA3F /* KFAttributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F3A27F5A62F00AFBA3F /* KFAttributionView.swift */; };
 		185F5F3D27F5A65C00AFBA3F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F3C27F5A65C00AFBA3F /* UILabel+Extension.swift */; };
 		185F5F3F27F5A69A00AFBA3F /* PHAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F3E27F5A69A00AFBA3F /* PHAsset+Extension.swift */; };
-		185F5F4227F5A70400AFBA3F /* BPDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4127F5A70400AFBA3F /* BPDownloadManager.swift */; };
+		185F5F4227F5A70400AFBA3F /* KFDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4127F5A70400AFBA3F /* KFDownloadManager.swift */; };
 		185F5F4427F5B2AD00AFBA3F /* KFCommunityReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4327F5B2AD00AFBA3F /* KFCommunityReportViewController.swift */; };
 		185F5F4A27F5C55F00AFBA3F /* KFSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4927F5C55F00AFBA3F /* KFSettingViewController.swift */; };
 		185F5F4C27F5C5CD00AFBA3F /* KFSettingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F4B27F5C5CD00AFBA3F /* KFSettingHeaderView.swift */; };
@@ -116,39 +116,39 @@
 		185F5F5E27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F5D27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift */; };
 		185F5F6027F6ACD600AFBA3F /* KFSettingRegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F5F27F6ACD600AFBA3F /* KFSettingRegisterCell.swift */; };
 		185F5F6227F6BFAB00AFBA3F /* KFSettingRenameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F6127F6BFAB00AFBA3F /* KFSettingRenameViewController.swift */; };
-		185F5F9627F6D03000AFBA3F /* BPChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F6E27F6D03000AFBA3F /* BPChatRoomViewController.swift */; };
-		185F5F9E27F6D03000AFBA3F /* BPChatRoomMessageImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7927F6D03000AFBA3F /* BPChatRoomMessageImageCell.swift */; };
-		185F5F9F27F6D03000AFBA3F /* BPChatRoomMessageAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7A27F6D03000AFBA3F /* BPChatRoomMessageAudioCell.swift */; };
-		185F5FA027F6D03000AFBA3F /* BPChatRoomBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7B27F6D03000AFBA3F /* BPChatRoomBaseCell.swift */; };
-		185F5FA327F6D03000AFBA3F /* BPChatRoomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7E27F6D03000AFBA3F /* BPChatRoomMessageCell.swift */; };
-		185F5FA427F6D03000AFBA3F /* BPChatRoomMessageTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7F27F6D03000AFBA3F /* BPChatRoomMessageTextCell.swift */; };
-		185F5FA527F6D03000AFBA3F /* BPChatRoomMessageCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8027F6D03000AFBA3F /* BPChatRoomMessageCellFactory.swift */; };
-		185F5FA627F6D03000AFBA3F /* BPChatRoomMessageCellStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8227F6D03000AFBA3F /* BPChatRoomMessageCellStatusView.swift */; };
-		185F5FA727F6D03000AFBA3F /* BPChatRoomEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8327F6D03000AFBA3F /* BPChatRoomEmptyCell.swift */; };
-		185F5FA827F6D03000AFBA3F /* BPChatRoomBaseMessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8527F6D03000AFBA3F /* BPChatRoomBaseMessageBubble.swift */; };
+		185F5F9627F6D03000AFBA3F /* KFChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F6E27F6D03000AFBA3F /* KFChatRoomViewController.swift */; };
+		185F5F9E27F6D03000AFBA3F /* KFChatRoomMessageImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7927F6D03000AFBA3F /* KFChatRoomMessageImageCell.swift */; };
+		185F5F9F27F6D03000AFBA3F /* KFChatRoomMessageAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7A27F6D03000AFBA3F /* KFChatRoomMessageAudioCell.swift */; };
+		185F5FA027F6D03000AFBA3F /* KFChatRoomBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7B27F6D03000AFBA3F /* KFChatRoomBaseCell.swift */; };
+		185F5FA327F6D03000AFBA3F /* KFChatRoomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7E27F6D03000AFBA3F /* KFChatRoomMessageCell.swift */; };
+		185F5FA427F6D03000AFBA3F /* KFChatRoomMessageTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F7F27F6D03000AFBA3F /* KFChatRoomMessageTextCell.swift */; };
+		185F5FA527F6D03000AFBA3F /* KFChatRoomMessageCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8027F6D03000AFBA3F /* KFChatRoomMessageCellFactory.swift */; };
+		185F5FA627F6D03000AFBA3F /* KFChatRoomMessageCellStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8227F6D03000AFBA3F /* KFChatRoomMessageCellStatusView.swift */; };
+		185F5FA727F6D03000AFBA3F /* KFChatRoomEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8327F6D03000AFBA3F /* KFChatRoomEmptyCell.swift */; };
+		185F5FA827F6D03000AFBA3F /* KFChatRoomBaseMessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8527F6D03000AFBA3F /* KFChatRoomBaseMessageBubble.swift */; };
 		185F5FA927F6D03000AFBA3F /* BPChatRoomToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8727F6D03000AFBA3F /* BPChatRoomToolsView.swift */; };
-		185F5FAA27F6D03000AFBA3F /* BPChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8927F6D03000AFBA3F /* BPChatInputView.swift */; };
-		185F5FAB27F6D03000AFBA3F /* BPRecordToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8B27F6D03000AFBA3F /* BPRecordToolView.swift */; };
-		185F5FAC27F6D03000AFBA3F /* BPRecordAnimationItemLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8C27F6D03000AFBA3F /* BPRecordAnimationItemLayer.swift */; };
-		185F5FAD27F6D03000AFBA3F /* BPRecordVoiceAnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8D27F6D03000AFBA3F /* BPRecordVoiceAnimationLayer.swift */; };
-		185F5FAE27F6D03000AFBA3F /* BPEmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8F27F6D03000AFBA3F /* BPEmojiModel.swift */; };
-		185F5FAF27F6D03000AFBA3F /* BPEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F9027F6D03000AFBA3F /* BPEmojiCell.swift */; };
-		185F5FB027F6D03000AFBA3F /* BPEmojiToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F9127F6D03000AFBA3F /* BPEmojiToolView.swift */; };
-		185F5FB127F6D03000AFBA3F /* BPChatMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F9227F6D03000AFBA3F /* BPChatMoreView.swift */; };
+		185F5FAA27F6D03000AFBA3F /* KFChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8927F6D03000AFBA3F /* KFChatInputView.swift */; };
+		185F5FAB27F6D03000AFBA3F /* KFRecordToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8B27F6D03000AFBA3F /* KFRecordToolView.swift */; };
+		185F5FAC27F6D03000AFBA3F /* KFRecordAnimationItemLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8C27F6D03000AFBA3F /* KFRecordAnimationItemLayer.swift */; };
+		185F5FAD27F6D03000AFBA3F /* KFRecordVoiceAnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8D27F6D03000AFBA3F /* KFRecordVoiceAnimationLayer.swift */; };
+		185F5FAE27F6D03000AFBA3F /* KFEmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F8F27F6D03000AFBA3F /* KFEmojiModel.swift */; };
+		185F5FAF27F6D03000AFBA3F /* KFEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F9027F6D03000AFBA3F /* KFEmojiCell.swift */; };
+		185F5FB027F6D03000AFBA3F /* KFEmojiToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F9127F6D03000AFBA3F /* KFEmojiToolView.swift */; };
+		185F5FB127F6D03000AFBA3F /* KFChatMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5F9227F6D03000AFBA3F /* KFChatMoreView.swift */; };
 		185F5FB527F6D15300AFBA3F /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FB427F6D15300AFBA3F /* UITextView+Extension.swift */; };
 		185F5FB727F6D23E00AFBA3F /* BPRedDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FB627F6D23E00AFBA3F /* BPRedDotView.swift */; };
 		185F5FBA27F6D34500AFBA3F /* RCMessag+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FB927F6D34500AFBA3F /* RCMessag+Extension.swift */; };
-		185F5FBE27F6D40400AFBA3F /* BPAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FBC27F6D40400AFBA3F /* BPAudioManager.swift */; };
-		185F5FBF27F6D40400AFBA3F /* BPPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FBD27F6D40400AFBA3F /* BPPlayerManager.swift */; };
-		185F5FC127F6D42A00AFBA3F /* BPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC027F6D42A00AFBA3F /* BPStackView.swift */; };
+		185F5FBE27F6D40400AFBA3F /* KFAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FBC27F6D40400AFBA3F /* KFAudioManager.swift */; };
+		185F5FBF27F6D40400AFBA3F /* KFPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FBD27F6D40400AFBA3F /* KFPlayerManager.swift */; };
+		185F5FC127F6D42A00AFBA3F /* KFStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC027F6D42A00AFBA3F /* KFStackView.swift */; };
 		185F5FC327F6D4AF00AFBA3F /* RCHQVoiceMessage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC227F6D4AF00AFBA3F /* RCHQVoiceMessage+Extension.swift */; };
 		185F5FC527F6D66D00AFBA3F /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC427F6D66D00AFBA3F /* Dictionary+Extension.swift */; };
-		185F5FCC27F6D70000AFBA3F /* BPDBCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC727F6D70000AFBA3F /* BPDBCenter.swift */; };
-		185F5FCD27F6D70000AFBA3F /* BPDatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC827F6D70000AFBA3F /* BPDatabaseProtocol.swift */; };
-		185F5FCE27F6D70000AFBA3F /* BPSQLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC927F6D70000AFBA3F /* BPSQLManager.swift */; };
-		185F5FCF27F6D70000AFBA3F /* BPDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FCA27F6D70000AFBA3F /* BPDatabaseManager.swift */; };
-		185F5FD027F6D70000AFBA3F /* BPIMDBOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FCB27F6D70000AFBA3F /* BPIMDBOperator.swift */; };
-		185F5FD227F6D8E900AFBA3F /* BPChatRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FD127F6D8E900AFBA3F /* BPChatRequestManager.swift */; };
+		185F5FCC27F6D70000AFBA3F /* KFDBCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC727F6D70000AFBA3F /* KFDBCenter.swift */; };
+		185F5FCD27F6D70000AFBA3F /* KFDatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC827F6D70000AFBA3F /* KFDatabaseProtocol.swift */; };
+		185F5FCE27F6D70000AFBA3F /* KFSQLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FC927F6D70000AFBA3F /* KFSQLManager.swift */; };
+		185F5FCF27F6D70000AFBA3F /* KFDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FCA27F6D70000AFBA3F /* KFDatabaseManager.swift */; };
+		185F5FD027F6D70000AFBA3F /* KFIMDBOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FCB27F6D70000AFBA3F /* KFIMDBOperator.swift */; };
+		185F5FD227F6D8E900AFBA3F /* KFChatRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F5FD127F6D8E900AFBA3F /* KFChatRequestManager.swift */; };
 		185F5FD427F6E1DF00AFBA3F /* emoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185F5FD327F6E1DF00AFBA3F /* emoji.bundle */; };
 		3A80DF929CFD9A1BD514450A /* Pods_KiteFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206E9800750F747AF76704B /* Pods_KiteFly.framework */; };
 /* End PBXBuildFile section */
@@ -166,11 +166,11 @@
 		185F5E6527F41CD200AFBA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185F5E6727F41CD200AFBA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185F5E7127F41DE200AFBA3F /* KFLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFLoginViewController.swift; sourceTree = "<group>"; };
-		185F5E7527F41E3D00AFBA3F /* BPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPViewController.swift; sourceTree = "<group>"; };
-		185F5E7727F41E7D00AFBA3F /* BPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPView.swift; sourceTree = "<group>"; };
-		185F5E7927F41E8D00AFBA3F /* BPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPLabel.swift; sourceTree = "<group>"; };
-		185F5E7B27F41E9800AFBA3F /* BPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPButton.swift; sourceTree = "<group>"; };
-		185F5E7D27F41ED800AFBA3F /* BPNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPNavigationBar.swift; sourceTree = "<group>"; };
+		185F5E7527F41E3D00AFBA3F /* KFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFViewController.swift; sourceTree = "<group>"; };
+		185F5E7727F41E7D00AFBA3F /* KFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFView.swift; sourceTree = "<group>"; };
+		185F5E7927F41E8D00AFBA3F /* KFLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFLabel.swift; sourceTree = "<group>"; };
+		185F5E7B27F41E9800AFBA3F /* KFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFButton.swift; sourceTree = "<group>"; };
+		185F5E7D27F41ED800AFBA3F /* KFNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFNavigationBar.swift; sourceTree = "<group>"; };
 		185F5E8027F41F2600AFBA3F /* CommonGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonGlobal.swift; sourceTree = "<group>"; };
 		185F5E8327F41FC300AFBA3F /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		185F5E8527F4201D00AFBA3F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -179,29 +179,29 @@
 		185F5E8B27F4219C00AFBA3F /* Iconfont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iconfont.swift; sourceTree = "<group>"; };
 		185F5E8D27F421D300AFBA3F /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		185F5E8F27F4223F00AFBA3F /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
-		185F5E9127F4226200AFBA3F /* BPTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPTableView.swift; sourceTree = "<group>"; };
-		185F5E9327F4228100AFBA3F /* BPTableViewEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPTableViewEmptyView.swift; sourceTree = "<group>"; };
-		185F5E9527F4229100AFBA3F /* BPImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPImageView.swift; sourceTree = "<group>"; };
+		185F5E9127F4226200AFBA3F /* KFTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFTableView.swift; sourceTree = "<group>"; };
+		185F5E9327F4228100AFBA3F /* KFTableViewEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFTableViewEmptyView.swift; sourceTree = "<group>"; };
+		185F5E9527F4229100AFBA3F /* KFImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFImageView.swift; sourceTree = "<group>"; };
 		185F5E9827F422E200AFBA3F /* BPMediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMediaModel.swift; sourceTree = "<group>"; };
 		185F5E9A27F4231400AFBA3F /* BPMediaImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMediaImageModel.swift; sourceTree = "<group>"; };
 		185F5E9C27F423E700AFBA3F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		185F5E9E27F4242200AFBA3F /* NSTextAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextAttachment.swift; sourceTree = "<group>"; };
 		185F5EA027F4244100AFBA3F /* BPFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPFileManager.swift; sourceTree = "<group>"; };
 		185F5EA227F424F700AFBA3F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		185F5EA427F425E100AFBA3F /* BPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPTextField.swift; sourceTree = "<group>"; };
-		185F5EA827F4285C00AFBA3F /* BPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPTabBarController.swift; sourceTree = "<group>"; };
+		185F5EA427F425E100AFBA3F /* KFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFTextField.swift; sourceTree = "<group>"; };
+		185F5EA827F4285C00AFBA3F /* KFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFTabBarController.swift; sourceTree = "<group>"; };
 		185F5EAA27F4289C00AFBA3F /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		185F5EAF27F42B8800AFBA3F /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		185F5EB127F42C1A00AFBA3F /* KiteFly-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KiteFly-Bridging-Header.h"; sourceTree = "<group>"; };
-		185F5EB527F433F500AFBA3F /* BPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPNavigationController.swift; sourceTree = "<group>"; };
+		185F5EB527F433F500AFBA3F /* KFNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFNavigationController.swift; sourceTree = "<group>"; };
 		185F5EB727F438F100AFBA3F /* KFRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFRegisterViewController.swift; sourceTree = "<group>"; };
 		185F5EB927F43E1700AFBA3F /* KFHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomeViewController.swift; sourceTree = "<group>"; };
 		185F5EBC27F43F1900AFBA3F /* KFNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFNewsModel.swift; sourceTree = "<group>"; };
 		185F5EBE27F440D300AFBA3F /* KFNoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFNoticeModel.swift; sourceTree = "<group>"; };
 		185F5EC127F4433800AFBA3F /* KFHomeNewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomeNewsItem.swift; sourceTree = "<group>"; };
 		185F5EC327F4442700AFBA3F /* KFHomeNoticCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomeNoticCell.swift; sourceTree = "<group>"; };
-		185F5EC527F4445D00AFBA3F /* BPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPTableViewCell.swift; sourceTree = "<group>"; };
-		185F5EC727F445C500AFBA3F /* BPCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPCollectionViewCell.swift; sourceTree = "<group>"; };
+		185F5EC527F4445D00AFBA3F /* KFTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFTableViewCell.swift; sourceTree = "<group>"; };
+		185F5EC727F445C500AFBA3F /* KFCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCollectionViewCell.swift; sourceTree = "<group>"; };
 		185F5ECC27F44DD900AFBA3F /* NewsModelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NewsModelList.json; sourceTree = "<group>"; };
 		185F5ECE27F45B9D00AFBA3F /* NoticModelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NoticModelList.json; sourceTree = "<group>"; };
 		185F5ED027F4729300AFBA3F /* KFHomePageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFHomePageCell.swift; sourceTree = "<group>"; };
@@ -225,34 +225,34 @@
 		185F5EFC27F58E9900AFBA3F /* KFCommunityRemarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityRemarkCell.swift; sourceTree = "<group>"; };
 		185F5EFE27F595C200AFBA3F /* KFCommunityRemarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityRemarkViewController.swift; sourceTree = "<group>"; };
 		185F5F0027F598BD00AFBA3F /* KFCommunityPublishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityPublishViewController.swift; sourceTree = "<group>"; };
-		185F5F0327F5A15100AFBA3F /* BPSystemPhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPSystemPhotoManager.swift; sourceTree = "<group>"; };
-		185F5F0427F5A15100AFBA3F /* BPSystemPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPSystemPhotoViewController.swift; sourceTree = "<group>"; };
-		185F5F0627F5A15100AFBA3F /* BPSystemAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPSystemAlbumCell.swift; sourceTree = "<group>"; };
-		185F5F0727F5A15100AFBA3F /* BPSystemAlbumListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPSystemAlbumListView.swift; sourceTree = "<group>"; };
-		185F5F0827F5A15200AFBA3F /* BPSystemPhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPSystemPhotoView.swift; sourceTree = "<group>"; };
-		185F5F0F27F5A18300AFBA3F /* BPMediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPMediaCell.swift; sourceTree = "<group>"; };
-		185F5F1027F5A18300AFBA3F /* BPPhotoAlbumToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPPhotoAlbumToolsView.swift; sourceTree = "<group>"; };
-		185F5F1127F5A18300AFBA3F /* BPPhotoAlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPPhotoAlbumModel.swift; sourceTree = "<group>"; };
-		185F5F1227F5A18300AFBA3F /* BPPhotoAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPPhotoAlbumViewController.swift; sourceTree = "<group>"; };
-		185F5F1827F5A1AA00AFBA3F /* BPActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPActionSheet.swift; sourceTree = "<group>"; };
+		185F5F0327F5A15100AFBA3F /* KFSystemPhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFSystemPhotoManager.swift; sourceTree = "<group>"; };
+		185F5F0427F5A15100AFBA3F /* KFSystemPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFSystemPhotoViewController.swift; sourceTree = "<group>"; };
+		185F5F0627F5A15100AFBA3F /* KFSystemAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFSystemAlbumCell.swift; sourceTree = "<group>"; };
+		185F5F0727F5A15100AFBA3F /* KFSystemAlbumListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFSystemAlbumListView.swift; sourceTree = "<group>"; };
+		185F5F0827F5A15200AFBA3F /* KFSystemPhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFSystemPhotoView.swift; sourceTree = "<group>"; };
+		185F5F0F27F5A18300AFBA3F /* KFMediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFMediaCell.swift; sourceTree = "<group>"; };
+		185F5F1027F5A18300AFBA3F /* KFPhotoAlbumToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFPhotoAlbumToolsView.swift; sourceTree = "<group>"; };
+		185F5F1127F5A18300AFBA3F /* KFPhotoAlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFPhotoAlbumModel.swift; sourceTree = "<group>"; };
+		185F5F1227F5A18300AFBA3F /* KFPhotoAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFPhotoAlbumViewController.swift; sourceTree = "<group>"; };
+		185F5F1827F5A1AA00AFBA3F /* KFActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFActionSheet.swift; sourceTree = "<group>"; };
 		185F5F1B27F5A1DD00AFBA3F /* BPAuthoriationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPAuthoriationManager.swift; sourceTree = "<group>"; };
-		185F5F1E27F5A43B00AFBA3F /* BPBrowserVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPBrowserVideoCell.swift; sourceTree = "<group>"; };
-		185F5F1F27F5A43B00AFBA3F /* BPBrowserImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPBrowserImageCell.swift; sourceTree = "<group>"; };
-		185F5F2027F5A43B00AFBA3F /* BPBrowserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPBrowserView.swift; sourceTree = "<group>"; };
+		185F5F1E27F5A43B00AFBA3F /* KFBrowserVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFBrowserVideoCell.swift; sourceTree = "<group>"; };
+		185F5F1F27F5A43B00AFBA3F /* KFBrowserImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFBrowserImageCell.swift; sourceTree = "<group>"; };
+		185F5F2027F5A43B00AFBA3F /* KFBrowserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFBrowserView.swift; sourceTree = "<group>"; };
 		185F5F2427F5A48200AFBA3F /* BPMediaVideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPMediaVideoModel.swift; sourceTree = "<group>"; };
-		185F5F2727F5A4BB00AFBA3F /* BPVideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPVideoManager.swift; sourceTree = "<group>"; };
-		185F5F2A27F5A59E00AFBA3F /* BPToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPToastView.swift; sourceTree = "<group>"; };
-		185F5F2B27F5A59E00AFBA3F /* BPAlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPAlertManager.swift; sourceTree = "<group>"; };
-		185F5F2C27F5A59E00AFBA3F /* BPTopWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPTopWindowView.swift; sourceTree = "<group>"; };
-		185F5F2D27F5A59E00AFBA3F /* BPBaseAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPBaseAlertView.swift; sourceTree = "<group>"; };
-		185F5F2E27F5A59E00AFBA3F /* BPAlertViewOneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPAlertViewOneButton.swift; sourceTree = "<group>"; };
-		185F5F2F27F5A59E00AFBA3F /* BPAlertViewTwoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPAlertViewTwoButton.swift; sourceTree = "<group>"; };
-		185F5F3627F5A5D200AFBA3F /* BPProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPProgressView.swift; sourceTree = "<group>"; };
+		185F5F2727F5A4BB00AFBA3F /* KFVideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFVideoManager.swift; sourceTree = "<group>"; };
+		185F5F2A27F5A59E00AFBA3F /* KFToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFToastView.swift; sourceTree = "<group>"; };
+		185F5F2B27F5A59E00AFBA3F /* KFAlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAlertManager.swift; sourceTree = "<group>"; };
+		185F5F2C27F5A59E00AFBA3F /* KFTopWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFTopWindowView.swift; sourceTree = "<group>"; };
+		185F5F2D27F5A59E00AFBA3F /* KFBaseAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFBaseAlertView.swift; sourceTree = "<group>"; };
+		185F5F2E27F5A59E00AFBA3F /* KFAlertViewOneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAlertViewOneButton.swift; sourceTree = "<group>"; };
+		185F5F2F27F5A59E00AFBA3F /* KFAlertViewTwoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAlertViewTwoButton.swift; sourceTree = "<group>"; };
+		185F5F3627F5A5D200AFBA3F /* KFProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFProgressView.swift; sourceTree = "<group>"; };
 		185F5F3827F5A5F700AFBA3F /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
-		185F5F3A27F5A62F00AFBA3F /* BPAttributionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPAttributionView.swift; sourceTree = "<group>"; };
+		185F5F3A27F5A62F00AFBA3F /* KFAttributionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAttributionView.swift; sourceTree = "<group>"; };
 		185F5F3C27F5A65C00AFBA3F /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		185F5F3E27F5A69A00AFBA3F /* PHAsset+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHAsset+Extension.swift"; sourceTree = "<group>"; };
-		185F5F4127F5A70400AFBA3F /* BPDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPDownloadManager.swift; sourceTree = "<group>"; };
+		185F5F4127F5A70400AFBA3F /* KFDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFDownloadManager.swift; sourceTree = "<group>"; };
 		185F5F4327F5B2AD00AFBA3F /* KFCommunityReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFCommunityReportViewController.swift; sourceTree = "<group>"; };
 		185F5F4927F5C55F00AFBA3F /* KFSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingViewController.swift; sourceTree = "<group>"; };
 		185F5F4B27F5C5CD00AFBA3F /* KFSettingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingHeaderView.swift; sourceTree = "<group>"; };
@@ -267,39 +267,39 @@
 		185F5F5D27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingMyRegisterViewController.swift; sourceTree = "<group>"; };
 		185F5F5F27F6ACD600AFBA3F /* KFSettingRegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingRegisterCell.swift; sourceTree = "<group>"; };
 		185F5F6127F6BFAB00AFBA3F /* KFSettingRenameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingRenameViewController.swift; sourceTree = "<group>"; };
-		185F5F6E27F6D03000AFBA3F /* BPChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomViewController.swift; sourceTree = "<group>"; };
-		185F5F7927F6D03000AFBA3F /* BPChatRoomMessageImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageImageCell.swift; sourceTree = "<group>"; };
-		185F5F7A27F6D03000AFBA3F /* BPChatRoomMessageAudioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageAudioCell.swift; sourceTree = "<group>"; };
-		185F5F7B27F6D03000AFBA3F /* BPChatRoomBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomBaseCell.swift; sourceTree = "<group>"; };
-		185F5F7E27F6D03000AFBA3F /* BPChatRoomMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageCell.swift; sourceTree = "<group>"; };
-		185F5F7F27F6D03000AFBA3F /* BPChatRoomMessageTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageTextCell.swift; sourceTree = "<group>"; };
-		185F5F8027F6D03000AFBA3F /* BPChatRoomMessageCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageCellFactory.swift; sourceTree = "<group>"; };
-		185F5F8227F6D03000AFBA3F /* BPChatRoomMessageCellStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomMessageCellStatusView.swift; sourceTree = "<group>"; };
-		185F5F8327F6D03000AFBA3F /* BPChatRoomEmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomEmptyCell.swift; sourceTree = "<group>"; };
-		185F5F8527F6D03000AFBA3F /* BPChatRoomBaseMessageBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomBaseMessageBubble.swift; sourceTree = "<group>"; };
+		185F5F6E27F6D03000AFBA3F /* KFChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatRoomViewController.swift; sourceTree = "<group>"; };
+		185F5F7927F6D03000AFBA3F /* KFChatRoomMessageImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatRoomMessageImageCell.swift; sourceTree = "<group>"; };
+		185F5F7A27F6D03000AFBA3F /* KFChatRoomMessageAudioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatRoomMessageAudioCell.swift; sourceTree = "<group>"; };
+		185F5F7B27F6D03000AFBA3F /* KFChatRoomBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatRoomBaseCell.swift; sourceTree = "<group>"; };
+		185F5F7E27F6D03000AFBA3F /* KFChatRoomMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatRoomMessageCell.swift; sourceTree = "<group>"; };
+		185F5F7F27F6D03000AFBA3F /* KFChatRoomMessageTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatRoomMessageTextCell.swift; sourceTree = "<group>"; };
+		185F5F8027F6D03000AFBA3F /* KFChatRoomMessageCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatRoomMessageCellFactory.swift; sourceTree = "<group>"; };
+		185F5F8227F6D03000AFBA3F /* KFChatRoomMessageCellStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatRoomMessageCellStatusView.swift; sourceTree = "<group>"; };
+		185F5F8327F6D03000AFBA3F /* KFChatRoomEmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatRoomEmptyCell.swift; sourceTree = "<group>"; };
+		185F5F8527F6D03000AFBA3F /* KFChatRoomBaseMessageBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatRoomBaseMessageBubble.swift; sourceTree = "<group>"; };
 		185F5F8727F6D03000AFBA3F /* BPChatRoomToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRoomToolsView.swift; sourceTree = "<group>"; };
-		185F5F8927F6D03000AFBA3F /* BPChatInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatInputView.swift; sourceTree = "<group>"; };
-		185F5F8B27F6D03000AFBA3F /* BPRecordToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPRecordToolView.swift; sourceTree = "<group>"; };
-		185F5F8C27F6D03000AFBA3F /* BPRecordAnimationItemLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPRecordAnimationItemLayer.swift; sourceTree = "<group>"; };
-		185F5F8D27F6D03000AFBA3F /* BPRecordVoiceAnimationLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPRecordVoiceAnimationLayer.swift; sourceTree = "<group>"; };
-		185F5F8F27F6D03000AFBA3F /* BPEmojiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPEmojiModel.swift; sourceTree = "<group>"; };
-		185F5F9027F6D03000AFBA3F /* BPEmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPEmojiCell.swift; sourceTree = "<group>"; };
-		185F5F9127F6D03000AFBA3F /* BPEmojiToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPEmojiToolView.swift; sourceTree = "<group>"; };
-		185F5F9227F6D03000AFBA3F /* BPChatMoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatMoreView.swift; sourceTree = "<group>"; };
+		185F5F8927F6D03000AFBA3F /* KFChatInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatInputView.swift; sourceTree = "<group>"; };
+		185F5F8B27F6D03000AFBA3F /* KFRecordToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFRecordToolView.swift; sourceTree = "<group>"; };
+		185F5F8C27F6D03000AFBA3F /* KFRecordAnimationItemLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFRecordAnimationItemLayer.swift; sourceTree = "<group>"; };
+		185F5F8D27F6D03000AFBA3F /* KFRecordVoiceAnimationLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFRecordVoiceAnimationLayer.swift; sourceTree = "<group>"; };
+		185F5F8F27F6D03000AFBA3F /* KFEmojiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEmojiModel.swift; sourceTree = "<group>"; };
+		185F5F9027F6D03000AFBA3F /* KFEmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEmojiCell.swift; sourceTree = "<group>"; };
+		185F5F9127F6D03000AFBA3F /* KFEmojiToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEmojiToolView.swift; sourceTree = "<group>"; };
+		185F5F9227F6D03000AFBA3F /* KFChatMoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatMoreView.swift; sourceTree = "<group>"; };
 		185F5FB427F6D15300AFBA3F /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		185F5FB627F6D23E00AFBA3F /* BPRedDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPRedDotView.swift; sourceTree = "<group>"; };
 		185F5FB927F6D34500AFBA3F /* RCMessag+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RCMessag+Extension.swift"; sourceTree = "<group>"; };
-		185F5FBC27F6D40400AFBA3F /* BPAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPAudioManager.swift; sourceTree = "<group>"; };
-		185F5FBD27F6D40400AFBA3F /* BPPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPPlayerManager.swift; sourceTree = "<group>"; };
-		185F5FC027F6D42A00AFBA3F /* BPStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPStackView.swift; sourceTree = "<group>"; };
+		185F5FBC27F6D40400AFBA3F /* KFAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAudioManager.swift; sourceTree = "<group>"; };
+		185F5FBD27F6D40400AFBA3F /* KFPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFPlayerManager.swift; sourceTree = "<group>"; };
+		185F5FC027F6D42A00AFBA3F /* KFStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFStackView.swift; sourceTree = "<group>"; };
 		185F5FC227F6D4AF00AFBA3F /* RCHQVoiceMessage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RCHQVoiceMessage+Extension.swift"; sourceTree = "<group>"; };
 		185F5FC427F6D66D00AFBA3F /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
-		185F5FC727F6D70000AFBA3F /* BPDBCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPDBCenter.swift; sourceTree = "<group>"; };
-		185F5FC827F6D70000AFBA3F /* BPDatabaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPDatabaseProtocol.swift; sourceTree = "<group>"; };
-		185F5FC927F6D70000AFBA3F /* BPSQLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPSQLManager.swift; sourceTree = "<group>"; };
-		185F5FCA27F6D70000AFBA3F /* BPDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPDatabaseManager.swift; sourceTree = "<group>"; };
-		185F5FCB27F6D70000AFBA3F /* BPIMDBOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPIMDBOperator.swift; sourceTree = "<group>"; };
-		185F5FD127F6D8E900AFBA3F /* BPChatRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPChatRequestManager.swift; sourceTree = "<group>"; };
+		185F5FC727F6D70000AFBA3F /* KFDBCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFDBCenter.swift; sourceTree = "<group>"; };
+		185F5FC827F6D70000AFBA3F /* KFDatabaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFDatabaseProtocol.swift; sourceTree = "<group>"; };
+		185F5FC927F6D70000AFBA3F /* KFSQLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFSQLManager.swift; sourceTree = "<group>"; };
+		185F5FCA27F6D70000AFBA3F /* KFDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFDatabaseManager.swift; sourceTree = "<group>"; };
+		185F5FCB27F6D70000AFBA3F /* KFIMDBOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFIMDBOperator.swift; sourceTree = "<group>"; };
+		185F5FD127F6D8E900AFBA3F /* KFChatRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFChatRequestManager.swift; sourceTree = "<group>"; };
 		185F5FD327F6E1DF00AFBA3F /* emoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = emoji.bundle; sourceTree = "<group>"; };
 		1AB23870E5DE126CCB6F1B5C /* Pods-KiteFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.release.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.release.xcconfig"; sourceTree = "<group>"; };
 		D03606DFC8CBFF24D4CB6109 /* Pods-KiteFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiteFly.debug.xcconfig"; path = "Target Support Files/Pods-KiteFly/Pods-KiteFly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -411,22 +411,22 @@
 		185F5E7427F41E2400AFBA3F /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
-				185F5FC027F6D42A00AFBA3F /* BPStackView.swift */,
-				185F5F3A27F5A62F00AFBA3F /* BPAttributionView.swift */,
-				185F5F3627F5A5D200AFBA3F /* BPProgressView.swift */,
-				185F5EA827F4285C00AFBA3F /* BPTabBarController.swift */,
-				185F5EA427F425E100AFBA3F /* BPTextField.swift */,
-				185F5E7527F41E3D00AFBA3F /* BPViewController.swift */,
-				185F5E7727F41E7D00AFBA3F /* BPView.swift */,
-				185F5E7927F41E8D00AFBA3F /* BPLabel.swift */,
-				185F5E7B27F41E9800AFBA3F /* BPButton.swift */,
-				185F5E7D27F41ED800AFBA3F /* BPNavigationBar.swift */,
-				185F5E9127F4226200AFBA3F /* BPTableView.swift */,
-				185F5E9327F4228100AFBA3F /* BPTableViewEmptyView.swift */,
-				185F5E9527F4229100AFBA3F /* BPImageView.swift */,
-				185F5EB527F433F500AFBA3F /* BPNavigationController.swift */,
-				185F5EC527F4445D00AFBA3F /* BPTableViewCell.swift */,
-				185F5EC727F445C500AFBA3F /* BPCollectionViewCell.swift */,
+				185F5FC027F6D42A00AFBA3F /* KFStackView.swift */,
+				185F5F3A27F5A62F00AFBA3F /* KFAttributionView.swift */,
+				185F5F3627F5A5D200AFBA3F /* KFProgressView.swift */,
+				185F5EA827F4285C00AFBA3F /* KFTabBarController.swift */,
+				185F5EA427F425E100AFBA3F /* KFTextField.swift */,
+				185F5E7527F41E3D00AFBA3F /* KFViewController.swift */,
+				185F5E7727F41E7D00AFBA3F /* KFView.swift */,
+				185F5E7927F41E8D00AFBA3F /* KFLabel.swift */,
+				185F5E7B27F41E9800AFBA3F /* KFButton.swift */,
+				185F5E7D27F41ED800AFBA3F /* KFNavigationBar.swift */,
+				185F5E9127F4226200AFBA3F /* KFTableView.swift */,
+				185F5E9327F4228100AFBA3F /* KFTableViewEmptyView.swift */,
+				185F5E9527F4229100AFBA3F /* KFImageView.swift */,
+				185F5EB527F433F500AFBA3F /* KFNavigationController.swift */,
+				185F5EC527F4445D00AFBA3F /* KFTableViewCell.swift */,
+				185F5EC727F445C500AFBA3F /* KFCollectionViewCell.swift */,
 				185F5FB627F6D23E00AFBA3F /* BPRedDotView.swift */,
 			);
 			path = BaseView;
@@ -583,8 +583,8 @@
 		185F5F0227F5A15100AFBA3F /* SystemAlbum */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F0327F5A15100AFBA3F /* BPSystemPhotoManager.swift */,
-				185F5F0427F5A15100AFBA3F /* BPSystemPhotoViewController.swift */,
+				185F5F0327F5A15100AFBA3F /* KFSystemPhotoManager.swift */,
+				185F5F0427F5A15100AFBA3F /* KFSystemPhotoViewController.swift */,
 				185F5F0527F5A15100AFBA3F /* View */,
 			);
 			path = SystemAlbum;
@@ -593,9 +593,9 @@
 		185F5F0527F5A15100AFBA3F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F0627F5A15100AFBA3F /* BPSystemAlbumCell.swift */,
-				185F5F0727F5A15100AFBA3F /* BPSystemAlbumListView.swift */,
-				185F5F0827F5A15200AFBA3F /* BPSystemPhotoView.swift */,
+				185F5F0627F5A15100AFBA3F /* KFSystemAlbumCell.swift */,
+				185F5F0727F5A15100AFBA3F /* KFSystemAlbumListView.swift */,
+				185F5F0827F5A15200AFBA3F /* KFSystemPhotoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -603,10 +603,10 @@
 		185F5F0E27F5A18300AFBA3F /* HistoryMedia */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F0F27F5A18300AFBA3F /* BPMediaCell.swift */,
-				185F5F1027F5A18300AFBA3F /* BPPhotoAlbumToolsView.swift */,
-				185F5F1127F5A18300AFBA3F /* BPPhotoAlbumModel.swift */,
-				185F5F1227F5A18300AFBA3F /* BPPhotoAlbumViewController.swift */,
+				185F5F0F27F5A18300AFBA3F /* KFMediaCell.swift */,
+				185F5F1027F5A18300AFBA3F /* KFPhotoAlbumToolsView.swift */,
+				185F5F1127F5A18300AFBA3F /* KFPhotoAlbumModel.swift */,
+				185F5F1227F5A18300AFBA3F /* KFPhotoAlbumViewController.swift */,
 			);
 			path = HistoryMedia;
 			sourceTree = "<group>";
@@ -614,7 +614,7 @@
 		185F5F1727F5A1AA00AFBA3F /* ActionSheet */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F1827F5A1AA00AFBA3F /* BPActionSheet.swift */,
+				185F5F1827F5A1AA00AFBA3F /* KFActionSheet.swift */,
 			);
 			path = ActionSheet;
 			sourceTree = "<group>";
@@ -630,9 +630,9 @@
 		185F5F1D27F5A43B00AFBA3F /* ImageBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F1E27F5A43B00AFBA3F /* BPBrowserVideoCell.swift */,
-				185F5F1F27F5A43B00AFBA3F /* BPBrowserImageCell.swift */,
-				185F5F2027F5A43B00AFBA3F /* BPBrowserView.swift */,
+				185F5F1E27F5A43B00AFBA3F /* KFBrowserVideoCell.swift */,
+				185F5F1F27F5A43B00AFBA3F /* KFBrowserImageCell.swift */,
+				185F5F2027F5A43B00AFBA3F /* KFBrowserView.swift */,
 			);
 			path = ImageBrowser;
 			sourceTree = "<group>";
@@ -640,7 +640,7 @@
 		185F5F2627F5A4BB00AFBA3F /* AVPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F2727F5A4BB00AFBA3F /* BPVideoManager.swift */,
+				185F5F2727F5A4BB00AFBA3F /* KFVideoManager.swift */,
 			);
 			path = AVPlayer;
 			sourceTree = "<group>";
@@ -648,12 +648,12 @@
 		185F5F2927F5A59E00AFBA3F /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F2A27F5A59E00AFBA3F /* BPToastView.swift */,
-				185F5F2B27F5A59E00AFBA3F /* BPAlertManager.swift */,
-				185F5F2C27F5A59E00AFBA3F /* BPTopWindowView.swift */,
-				185F5F2D27F5A59E00AFBA3F /* BPBaseAlertView.swift */,
-				185F5F2E27F5A59E00AFBA3F /* BPAlertViewOneButton.swift */,
-				185F5F2F27F5A59E00AFBA3F /* BPAlertViewTwoButton.swift */,
+				185F5F2A27F5A59E00AFBA3F /* KFToastView.swift */,
+				185F5F2B27F5A59E00AFBA3F /* KFAlertManager.swift */,
+				185F5F2C27F5A59E00AFBA3F /* KFTopWindowView.swift */,
+				185F5F2D27F5A59E00AFBA3F /* KFBaseAlertView.swift */,
+				185F5F2E27F5A59E00AFBA3F /* KFAlertViewOneButton.swift */,
+				185F5F2F27F5A59E00AFBA3F /* KFAlertViewTwoButton.swift */,
 			);
 			path = AlertView;
 			sourceTree = "<group>";
@@ -661,7 +661,7 @@
 		185F5F4027F5A70400AFBA3F /* Download */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F4127F5A70400AFBA3F /* BPDownloadManager.swift */,
+				185F5F4127F5A70400AFBA3F /* KFDownloadManager.swift */,
 			);
 			path = Download;
 			sourceTree = "<group>";
@@ -713,7 +713,7 @@
 			isa = PBXGroup;
 			children = (
 				185F5FB827F6D33400AFBA3F /* RongCloud */,
-				185F5F6E27F6D03000AFBA3F /* BPChatRoomViewController.swift */,
+				185F5F6E27F6D03000AFBA3F /* KFChatRoomViewController.swift */,
 				185F5F7627F6D03000AFBA3F /* MessageCell */,
 				185F5F8627F6D03000AFBA3F /* ToolsView */,
 			);
@@ -723,14 +723,14 @@
 		185F5F7627F6D03000AFBA3F /* MessageCell */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F7927F6D03000AFBA3F /* BPChatRoomMessageImageCell.swift */,
-				185F5F7A27F6D03000AFBA3F /* BPChatRoomMessageAudioCell.swift */,
-				185F5F7B27F6D03000AFBA3F /* BPChatRoomBaseCell.swift */,
-				185F5F7E27F6D03000AFBA3F /* BPChatRoomMessageCell.swift */,
-				185F5F7F27F6D03000AFBA3F /* BPChatRoomMessageTextCell.swift */,
-				185F5F8027F6D03000AFBA3F /* BPChatRoomMessageCellFactory.swift */,
+				185F5F7927F6D03000AFBA3F /* KFChatRoomMessageImageCell.swift */,
+				185F5F7A27F6D03000AFBA3F /* KFChatRoomMessageAudioCell.swift */,
+				185F5F7B27F6D03000AFBA3F /* KFChatRoomBaseCell.swift */,
+				185F5F7E27F6D03000AFBA3F /* KFChatRoomMessageCell.swift */,
+				185F5F7F27F6D03000AFBA3F /* KFChatRoomMessageTextCell.swift */,
+				185F5F8027F6D03000AFBA3F /* KFChatRoomMessageCellFactory.swift */,
 				185F5F8127F6D03000AFBA3F /* MessageCellStatus */,
-				185F5F8327F6D03000AFBA3F /* BPChatRoomEmptyCell.swift */,
+				185F5F8327F6D03000AFBA3F /* KFChatRoomEmptyCell.swift */,
 				185F5F8427F6D03000AFBA3F /* MessageCellBubble */,
 			);
 			path = MessageCell;
@@ -739,7 +739,7 @@
 		185F5F8127F6D03000AFBA3F /* MessageCellStatus */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F8227F6D03000AFBA3F /* BPChatRoomMessageCellStatusView.swift */,
+				185F5F8227F6D03000AFBA3F /* KFChatRoomMessageCellStatusView.swift */,
 			);
 			path = MessageCellStatus;
 			sourceTree = "<group>";
@@ -747,7 +747,7 @@
 		185F5F8427F6D03000AFBA3F /* MessageCellBubble */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F8527F6D03000AFBA3F /* BPChatRoomBaseMessageBubble.swift */,
+				185F5F8527F6D03000AFBA3F /* KFChatRoomBaseMessageBubble.swift */,
 			);
 			path = MessageCellBubble;
 			sourceTree = "<group>";
@@ -764,10 +764,10 @@
 		185F5F8827F6D03000AFBA3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F8927F6D03000AFBA3F /* BPChatInputView.swift */,
+				185F5F8927F6D03000AFBA3F /* KFChatInputView.swift */,
 				185F5F8A27F6D03000AFBA3F /* RecordVoice */,
 				185F5F8E27F6D03000AFBA3F /* Emoji */,
-				185F5F9227F6D03000AFBA3F /* BPChatMoreView.swift */,
+				185F5F9227F6D03000AFBA3F /* KFChatMoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -775,9 +775,9 @@
 		185F5F8A27F6D03000AFBA3F /* RecordVoice */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F8B27F6D03000AFBA3F /* BPRecordToolView.swift */,
-				185F5F8C27F6D03000AFBA3F /* BPRecordAnimationItemLayer.swift */,
-				185F5F8D27F6D03000AFBA3F /* BPRecordVoiceAnimationLayer.swift */,
+				185F5F8B27F6D03000AFBA3F /* KFRecordToolView.swift */,
+				185F5F8C27F6D03000AFBA3F /* KFRecordAnimationItemLayer.swift */,
+				185F5F8D27F6D03000AFBA3F /* KFRecordVoiceAnimationLayer.swift */,
 			);
 			path = RecordVoice;
 			sourceTree = "<group>";
@@ -785,9 +785,9 @@
 		185F5F8E27F6D03000AFBA3F /* Emoji */ = {
 			isa = PBXGroup;
 			children = (
-				185F5F8F27F6D03000AFBA3F /* BPEmojiModel.swift */,
-				185F5F9027F6D03000AFBA3F /* BPEmojiCell.swift */,
-				185F5F9127F6D03000AFBA3F /* BPEmojiToolView.swift */,
+				185F5F8F27F6D03000AFBA3F /* KFEmojiModel.swift */,
+				185F5F9027F6D03000AFBA3F /* KFEmojiCell.swift */,
+				185F5F9127F6D03000AFBA3F /* KFEmojiToolView.swift */,
 			);
 			path = Emoji;
 			sourceTree = "<group>";
@@ -795,7 +795,7 @@
 		185F5FB827F6D33400AFBA3F /* RongCloud */ = {
 			isa = PBXGroup;
 			children = (
-				185F5FD127F6D8E900AFBA3F /* BPChatRequestManager.swift */,
+				185F5FD127F6D8E900AFBA3F /* KFChatRequestManager.swift */,
 				185F5FC227F6D4AF00AFBA3F /* RCHQVoiceMessage+Extension.swift */,
 				185F5FB927F6D34500AFBA3F /* RCMessag+Extension.swift */,
 			);
@@ -805,8 +805,8 @@
 		185F5FBB27F6D40400AFBA3F /* AVFAudio */ = {
 			isa = PBXGroup;
 			children = (
-				185F5FBC27F6D40400AFBA3F /* BPAudioManager.swift */,
-				185F5FBD27F6D40400AFBA3F /* BPPlayerManager.swift */,
+				185F5FBC27F6D40400AFBA3F /* KFAudioManager.swift */,
+				185F5FBD27F6D40400AFBA3F /* KFPlayerManager.swift */,
 			);
 			path = AVFAudio;
 			sourceTree = "<group>";
@@ -814,11 +814,11 @@
 		185F5FC627F6D70000AFBA3F /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				185F5FC727F6D70000AFBA3F /* BPDBCenter.swift */,
-				185F5FC827F6D70000AFBA3F /* BPDatabaseProtocol.swift */,
-				185F5FC927F6D70000AFBA3F /* BPSQLManager.swift */,
-				185F5FCA27F6D70000AFBA3F /* BPDatabaseManager.swift */,
-				185F5FCB27F6D70000AFBA3F /* BPIMDBOperator.swift */,
+				185F5FC727F6D70000AFBA3F /* KFDBCenter.swift */,
+				185F5FC827F6D70000AFBA3F /* KFDatabaseProtocol.swift */,
+				185F5FC927F6D70000AFBA3F /* KFSQLManager.swift */,
+				185F5FCA27F6D70000AFBA3F /* KFDatabaseManager.swift */,
+				185F5FCB27F6D70000AFBA3F /* KFIMDBOperator.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -982,137 +982,137 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185F5EC827F445C500AFBA3F /* BPCollectionViewCell.swift in Sources */,
+				185F5EC827F445C500AFBA3F /* KFCollectionViewCell.swift in Sources */,
 				185F5EFD27F58E9900AFBA3F /* KFCommunityRemarkCell.swift in Sources */,
 				185F5EBD27F43F1900AFBA3F /* KFNewsModel.swift in Sources */,
-				185F5FA727F6D03000AFBA3F /* BPChatRoomEmptyCell.swift in Sources */,
-				185F5FBE27F6D40400AFBA3F /* BPAudioManager.swift in Sources */,
+				185F5FA727F6D03000AFBA3F /* KFChatRoomEmptyCell.swift in Sources */,
+				185F5FBE27F6D40400AFBA3F /* KFAudioManager.swift in Sources */,
 				185F5FB727F6D23E00AFBA3F /* BPRedDotView.swift in Sources */,
 				185F5E8827F4205500AFBA3F /* UIViewController+Extension.swift in Sources */,
-				185F5F1927F5A1AA00AFBA3F /* BPActionSheet.swift in Sources */,
+				185F5F1927F5A1AA00AFBA3F /* KFActionSheet.swift in Sources */,
 				185F5EF927F58C6500AFBA3F /* KFCommunityDetailViewController.swift in Sources */,
-				185F5E9427F4228100AFBA3F /* BPTableViewEmptyView.swift in Sources */,
-				185F5FA327F6D03000AFBA3F /* BPChatRoomMessageCell.swift in Sources */,
-				185F5F1327F5A18300AFBA3F /* BPMediaCell.swift in Sources */,
+				185F5E9427F4228100AFBA3F /* KFTableViewEmptyView.swift in Sources */,
+				185F5FA327F6D03000AFBA3F /* KFChatRoomMessageCell.swift in Sources */,
+				185F5F1327F5A18300AFBA3F /* KFMediaCell.swift in Sources */,
 				185F5EF427F5816E00AFBA3F /* KFCommunityImageCell.swift in Sources */,
 				185F5F5627F6A4CA00AFBA3F /* KFHomeHeaderView.swift in Sources */,
 				185F5ED327F4791F00AFBA3F /* KFHomePageModel.swift in Sources */,
-				185F5F0B27F5A15200AFBA3F /* BPSystemAlbumCell.swift in Sources */,
-				185F5F0A27F5A15200AFBA3F /* BPSystemPhotoViewController.swift in Sources */,
+				185F5F0B27F5A15200AFBA3F /* KFSystemAlbumCell.swift in Sources */,
+				185F5F0A27F5A15200AFBA3F /* KFSystemPhotoViewController.swift in Sources */,
 				185F5EB827F438F100AFBA3F /* KFRegisterViewController.swift in Sources */,
-				185F5FAB27F6D03000AFBA3F /* BPRecordToolView.swift in Sources */,
+				185F5FAB27F6D03000AFBA3F /* KFRecordToolView.swift in Sources */,
 				185F5ED827F47B6300AFBA3F /* KFNewsDetailViewController.swift in Sources */,
-				185F5E7E27F41ED800AFBA3F /* BPNavigationBar.swift in Sources */,
-				185F5F1627F5A18300AFBA3F /* BPPhotoAlbumViewController.swift in Sources */,
-				185F5FA627F6D03000AFBA3F /* BPChatRoomMessageCellStatusView.swift in Sources */,
-				185F5F3527F5A59F00AFBA3F /* BPAlertViewTwoButton.swift in Sources */,
+				185F5E7E27F41ED800AFBA3F /* KFNavigationBar.swift in Sources */,
+				185F5F1627F5A18300AFBA3F /* KFPhotoAlbumViewController.swift in Sources */,
+				185F5FA627F6D03000AFBA3F /* KFChatRoomMessageCellStatusView.swift in Sources */,
+				185F5F3527F5A59F00AFBA3F /* KFAlertViewTwoButton.swift in Sources */,
 				185F5F3D27F5A65C00AFBA3F /* UILabel+Extension.swift in Sources */,
 				185F5F5227F69BB600AFBA3F /* KFWebViewController.swift in Sources */,
-				185F5F9E27F6D03000AFBA3F /* BPChatRoomMessageImageCell.swift in Sources */,
-				185F5F3427F5A59F00AFBA3F /* BPAlertViewOneButton.swift in Sources */,
-				185F5F2127F5A43B00AFBA3F /* BPBrowserVideoCell.swift in Sources */,
-				185F5FA827F6D03000AFBA3F /* BPChatRoomBaseMessageBubble.swift in Sources */,
+				185F5F9E27F6D03000AFBA3F /* KFChatRoomMessageImageCell.swift in Sources */,
+				185F5F3427F5A59F00AFBA3F /* KFAlertViewOneButton.swift in Sources */,
+				185F5F2127F5A43B00AFBA3F /* KFBrowserVideoCell.swift in Sources */,
+				185F5FA827F6D03000AFBA3F /* KFChatRoomBaseMessageBubble.swift in Sources */,
 				1807470E27F8253300D4902D /* KFSettingUserDetailCell.swift in Sources */,
-				185F5FA427F6D03000AFBA3F /* BPChatRoomMessageTextCell.swift in Sources */,
-				185F5FCE27F6D70000AFBA3F /* BPSQLManager.swift in Sources */,
+				185F5FA427F6D03000AFBA3F /* KFChatRoomMessageTextCell.swift in Sources */,
+				185F5FCE27F6D70000AFBA3F /* KFSQLManager.swift in Sources */,
 				185F5EC227F4433800AFBA3F /* KFHomeNewsItem.swift in Sources */,
 				185F5F4C27F5C5CD00AFBA3F /* KFSettingHeaderView.swift in Sources */,
-				185F5F3B27F5A62F00AFBA3F /* BPAttributionView.swift in Sources */,
+				185F5F3B27F5A62F00AFBA3F /* KFAttributionView.swift in Sources */,
 				185F5E9B27F4231400AFBA3F /* BPMediaImageModel.swift in Sources */,
-				185F5F9F27F6D03000AFBA3F /* BPChatRoomMessageAudioCell.swift in Sources */,
+				185F5F9F27F6D03000AFBA3F /* KFChatRoomMessageAudioCell.swift in Sources */,
 				185F5E8C27F4219C00AFBA3F /* Iconfont.swift in Sources */,
 				185F5EC427F4442700AFBA3F /* KFHomeNoticCell.swift in Sources */,
 				185F5EBF27F440D300AFBA3F /* KFNoticeModel.swift in Sources */,
-				185F5F1427F5A18300AFBA3F /* BPPhotoAlbumToolsView.swift in Sources */,
+				185F5F1427F5A18300AFBA3F /* KFPhotoAlbumToolsView.swift in Sources */,
 				185F5F6227F6BFAB00AFBA3F /* KFSettingRenameViewController.swift in Sources */,
 				185F5E5A27F41CD100AFBA3F /* AppDelegate.swift in Sources */,
-				185F5FD227F6D8E900AFBA3F /* BPChatRequestManager.swift in Sources */,
-				185F5F0927F5A15200AFBA3F /* BPSystemPhotoManager.swift in Sources */,
+				185F5FD227F6D8E900AFBA3F /* KFChatRequestManager.swift in Sources */,
+				185F5F0927F5A15200AFBA3F /* KFSystemPhotoManager.swift in Sources */,
 				185F5EBA27F43E1700AFBA3F /* KFHomeViewController.swift in Sources */,
 				185F5FBA27F6D34500AFBA3F /* RCMessag+Extension.swift in Sources */,
 				185F5E8627F4201D00AFBA3F /* UIColor+Extension.swift in Sources */,
-				185F5FAD27F6D03000AFBA3F /* BPRecordVoiceAnimationLayer.swift in Sources */,
+				185F5FAD27F6D03000AFBA3F /* KFRecordVoiceAnimationLayer.swift in Sources */,
 				185F5EE327F556EF00AFBA3F /* KFHomeMemberListCell.swift in Sources */,
-				185F5EC627F4445D00AFBA3F /* BPTableViewCell.swift in Sources */,
+				185F5EC627F4445D00AFBA3F /* KFTableViewCell.swift in Sources */,
 				185F5E8127F41F2600AFBA3F /* CommonGlobal.swift in Sources */,
-				185F5E9627F4229100AFBA3F /* BPImageView.swift in Sources */,
-				185F5FCC27F6D70000AFBA3F /* BPDBCenter.swift in Sources */,
-				185F5FAE27F6D03000AFBA3F /* BPEmojiModel.swift in Sources */,
+				185F5E9627F4229100AFBA3F /* KFImageView.swift in Sources */,
+				185F5FCC27F6D70000AFBA3F /* KFDBCenter.swift in Sources */,
+				185F5FAE27F6D03000AFBA3F /* KFEmojiModel.swift in Sources */,
 				185F5E9927F422E200AFBA3F /* BPMediaModel.swift in Sources */,
-				185F5FAC27F6D03000AFBA3F /* BPRecordAnimationItemLayer.swift in Sources */,
-				185F5E7827F41E7D00AFBA3F /* BPView.swift in Sources */,
+				185F5FAC27F6D03000AFBA3F /* KFRecordAnimationItemLayer.swift in Sources */,
+				185F5E7827F41E7D00AFBA3F /* KFView.swift in Sources */,
 				185F5F0127F598BD00AFBA3F /* KFCommunityPublishViewController.swift in Sources */,
 				185F5EFB27F58D7C00AFBA3F /* KFCommunityHeaderView.swift in Sources */,
 				185F5E9D27F423E700AFBA3F /* String+Extension.swift in Sources */,
 				185F5FC327F6D4AF00AFBA3F /* RCHQVoiceMessage+Extension.swift in Sources */,
-				185F5F2827F5A4BB00AFBA3F /* BPVideoManager.swift in Sources */,
-				185F5EA927F4285C00AFBA3F /* BPTabBarController.swift in Sources */,
+				185F5F2827F5A4BB00AFBA3F /* KFVideoManager.swift in Sources */,
+				185F5EA927F4285C00AFBA3F /* KFTabBarController.swift in Sources */,
 				185F5FC527F6D66D00AFBA3F /* Dictionary+Extension.swift in Sources */,
-				185F5E9227F4226200AFBA3F /* BPTableView.swift in Sources */,
-				185F5EA527F425E100AFBA3F /* BPTextField.swift in Sources */,
+				185F5E9227F4226200AFBA3F /* KFTableView.swift in Sources */,
+				185F5EA527F425E100AFBA3F /* KFTextField.swift in Sources */,
 				185F5F5827F6A7DB00AFBA3F /* KFSettingMoreViewController.swift in Sources */,
 				185F5EB027F42B8800AFBA3F /* Data+Extension.swift in Sources */,
 				185F5EA327F424F700AFBA3F /* Date+Extension.swift in Sources */,
-				185F5FCD27F6D70000AFBA3F /* BPDatabaseProtocol.swift in Sources */,
+				185F5FCD27F6D70000AFBA3F /* KFDatabaseProtocol.swift in Sources */,
 				185F5EA127F4244100AFBA3F /* BPFileManager.swift in Sources */,
 				185F5EFF27F595C200AFBA3F /* KFCommunityRemarkViewController.swift in Sources */,
-				185F5EB627F433F500AFBA3F /* BPNavigationController.swift in Sources */,
-				185F5FC127F6D42A00AFBA3F /* BPStackView.swift in Sources */,
-				185F5FAF27F6D03000AFBA3F /* BPEmojiCell.swift in Sources */,
+				185F5EB627F433F500AFBA3F /* KFNavigationController.swift in Sources */,
+				185F5FC127F6D42A00AFBA3F /* KFStackView.swift in Sources */,
+				185F5FAF27F6D03000AFBA3F /* KFEmojiCell.swift in Sources */,
 				185F5F4E27F5CA0200AFBA3F /* KFSettingCell.swift in Sources */,
-				185F5F2227F5A43B00AFBA3F /* BPBrowserImageCell.swift in Sources */,
+				185F5F2227F5A43B00AFBA3F /* KFBrowserImageCell.swift in Sources */,
 				185F5EF227F5792200AFBA3F /* KFCommunityRemarkModel.swift in Sources */,
-				185F5FB127F6D03000AFBA3F /* BPChatMoreView.swift in Sources */,
+				185F5FB127F6D03000AFBA3F /* KFChatMoreView.swift in Sources */,
 				185F5F3927F5A5F700AFBA3F /* Double+Extension.swift in Sources */,
 				185F5ED127F4729300AFBA3F /* KFHomePageCell.swift in Sources */,
 				185F5F6027F6ACD600AFBA3F /* KFSettingRegisterCell.swift in Sources */,
-				185F5F3227F5A59F00AFBA3F /* BPTopWindowView.swift in Sources */,
+				185F5F3227F5A59F00AFBA3F /* KFTopWindowView.swift in Sources */,
 				185F5EDF27F54FC100AFBA3F /* KFNoticeDetailViewController.swift in Sources */,
-				185F5F0D27F5A15200AFBA3F /* BPSystemPhotoView.swift in Sources */,
+				185F5F0D27F5A15200AFBA3F /* KFSystemPhotoView.swift in Sources */,
 				185F5F3F27F5A69A00AFBA3F /* PHAsset+Extension.swift in Sources */,
-				185F5F3727F5A5D200AFBA3F /* BPProgressView.swift in Sources */,
+				185F5F3727F5A5D200AFBA3F /* KFProgressView.swift in Sources */,
 				185F5F5E27F6ABC100AFBA3F /* KFSettingMyRegisterViewController.swift in Sources */,
 				1807471027F827E800D4902D /* KFSettingUserHeaderView.swift in Sources */,
 				185F5E8A27F4207700AFBA3F /* UIView+Extension.swift in Sources */,
-				185F5FA027F6D03000AFBA3F /* BPChatRoomBaseCell.swift in Sources */,
+				185F5FA027F6D03000AFBA3F /* KFChatRoomBaseCell.swift in Sources */,
 				185F5F2527F5A48200AFBA3F /* BPMediaVideoModel.swift in Sources */,
-				185F5F3027F5A59F00AFBA3F /* BPToastView.swift in Sources */,
+				185F5F3027F5A59F00AFBA3F /* KFToastView.swift in Sources */,
 				185F5F4427F5B2AD00AFBA3F /* KFCommunityReportViewController.swift in Sources */,
 				185F5E9F27F4242200AFBA3F /* NSTextAttachment.swift in Sources */,
-				185F5F9627F6D03000AFBA3F /* BPChatRoomViewController.swift in Sources */,
-				185F5F3327F5A59F00AFBA3F /* BPBaseAlertView.swift in Sources */,
-				185F5FD027F6D70000AFBA3F /* BPIMDBOperator.swift in Sources */,
+				185F5F9627F6D03000AFBA3F /* KFChatRoomViewController.swift in Sources */,
+				185F5F3327F5A59F00AFBA3F /* KFBaseAlertView.swift in Sources */,
+				185F5FD027F6D70000AFBA3F /* KFIMDBOperator.swift in Sources */,
 				185F5F5C27F6AABB00AFBA3F /* KFSettingNoticeCell.swift in Sources */,
-				185F5FA527F6D03000AFBA3F /* BPChatRoomMessageCellFactory.swift in Sources */,
+				185F5FA527F6D03000AFBA3F /* KFChatRoomMessageCellFactory.swift in Sources */,
 				185F5E9027F4223F00AFBA3F /* CALayer+Extension.swift in Sources */,
-				185F5E7627F41E3D00AFBA3F /* BPViewController.swift in Sources */,
+				185F5E7627F41E3D00AFBA3F /* KFViewController.swift in Sources */,
 				185F5E8E27F421D300AFBA3F /* UINavigationController+Extension.swift in Sources */,
-				185F5E7A27F41E8D00AFBA3F /* BPLabel.swift in Sources */,
-				185F5F1527F5A18300AFBA3F /* BPPhotoAlbumModel.swift in Sources */,
+				185F5E7A27F41E8D00AFBA3F /* KFLabel.swift in Sources */,
+				185F5F1527F5A18300AFBA3F /* KFPhotoAlbumModel.swift in Sources */,
 				185F5EEE27F5780400AFBA3F /* KFCommunityCell.swift in Sources */,
-				185F5FB027F6D03000AFBA3F /* BPEmojiToolView.swift in Sources */,
+				185F5FB027F6D03000AFBA3F /* KFEmojiToolView.swift in Sources */,
 				1807470A27F7F86500D4902D /* KFCommunityReplyRemarkViewController.swift in Sources */,
 				185F5EDD27F54EFE00AFBA3F /* UIView+Toast.swift in Sources */,
-				185F5F3127F5A59F00AFBA3F /* BPAlertManager.swift in Sources */,
+				185F5F3127F5A59F00AFBA3F /* KFAlertManager.swift in Sources */,
 				185F5F5A27F6AA1000AFBA3F /* KFSettingNoticeViewController.swift in Sources */,
 				185F5FB527F6D15300AFBA3F /* UITextView+Extension.swift in Sources */,
 				185F5EF027F578BE00AFBA3F /* KFCommunityModel.swift in Sources */,
 				185F5EEC27F5708800AFBA3F /* KFCommunityViewController.swift in Sources */,
 				185F5FA927F6D03000AFBA3F /* BPChatRoomToolsView.swift in Sources */,
 				185F5F1C27F5A1DD00AFBA3F /* BPAuthoriationManager.swift in Sources */,
-				185F5F2327F5A43B00AFBA3F /* BPBrowserView.swift in Sources */,
+				185F5F2327F5A43B00AFBA3F /* KFBrowserView.swift in Sources */,
 				185F5EE127F5561C00AFBA3F /* KFRegisterListViewController.swift in Sources */,
 				185F5E7227F41DE200AFBA3F /* KFLoginViewController.swift in Sources */,
-				185F5FCF27F6D70000AFBA3F /* BPDatabaseManager.swift in Sources */,
+				185F5FCF27F6D70000AFBA3F /* KFDatabaseManager.swift in Sources */,
 				1807470C27F820F300D4902D /* KFSettingUserDetailViewController.swift in Sources */,
 				185F5EAB27F4289C00AFBA3F /* UIImage+Extension.swift in Sources */,
-				185F5FAA27F6D03000AFBA3F /* BPChatInputView.swift in Sources */,
-				185F5E7C27F41E9800AFBA3F /* BPButton.swift in Sources */,
+				185F5FAA27F6D03000AFBA3F /* KFChatInputView.swift in Sources */,
+				185F5E7C27F41E9800AFBA3F /* KFButton.swift in Sources */,
 				185F5EE527F5595600AFBA3F /* KFUserModel.swift in Sources */,
-				185F5FBF27F6D40400AFBA3F /* BPPlayerManager.swift in Sources */,
+				185F5FBF27F6D40400AFBA3F /* KFPlayerManager.swift in Sources */,
 				185F5F4A27F5C55F00AFBA3F /* KFSettingViewController.swift in Sources */,
-				185F5F4227F5A70400AFBA3F /* BPDownloadManager.swift in Sources */,
-				185F5F0C27F5A15200AFBA3F /* BPSystemAlbumListView.swift in Sources */,
+				185F5F4227F5A70400AFBA3F /* KFDownloadManager.swift in Sources */,
+				185F5F0C27F5A15200AFBA3F /* KFSystemAlbumListView.swift in Sources */,
 				185F5E8427F41FC300AFBA3F /* UIFont+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

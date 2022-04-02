@@ -7,7 +7,7 @@
 
 import UIKit
 
-public enum BPRedDotViewEnum {
+public enum KFRedDotViewEnum {
     /// 红色背景
     case red
     /// 灰色背景
@@ -32,15 +32,15 @@ public enum BPRedDotViewEnum {
     }
 }
 
-public class BPRedDotView: BPView {
+public class BPRedDotView: KFView {
 
     private var showNumber: Bool
     private let maxNumber: Int   = 99
     private var defaultH:CGFloat = .zero
-    private var colorType: BPRedDotViewEnum = .red
+    private var colorType: KFRedDotViewEnum = .red
     
-    private let numLabel: BPLabel = {
-        let label = BPLabel()
+    private let numLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.font          = UIFont.regularFont(ofSize: AdaptSize(10))
         label.textAlignment = .center
@@ -49,7 +49,7 @@ public class BPRedDotView: BPView {
     
     /// 是否显示未读数，false则显示红点
     /// - Parameter showNumber: 未读数量
-    public init(showNumber: Bool = false, colorType: BPRedDotViewEnum = .red) {
+    public init(showNumber: Bool = false, colorType: KFRedDotViewEnum = .red) {
         self.colorType  = colorType
         self.showNumber = showNumber
         super.init(frame: .zero)

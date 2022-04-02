@@ -7,13 +7,13 @@
 
 import Foundation
 
-class KFSettingNoticeViewController: BPViewController, UITableViewDelegate, UITableViewDataSource, KFSettingNoticeCellDelegate {
+class KFSettingNoticeViewController: KFViewController, UITableViewDelegate, UITableViewDataSource, KFSettingNoticeCellDelegate {
     
     private let cellID = "kKFSettingNoticeCell"
     private var modelList: [KFCommunityModel] = []
     
-    private var tableView: BPTableView = {
-        let tableView = BPTableView()
+    private var tableView: KFTableView = {
+        let tableView = KFTableView()
         tableView.estimatedRowHeight             = AdaptSize(56)
         tableView.backgroundColor                = UIColor.gray0
         tableView.separatorStyle                 = .none

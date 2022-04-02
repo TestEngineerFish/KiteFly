@@ -7,13 +7,13 @@
 
 import Foundation
 
-class KFCommunityDetailViewController: BPViewController, UITableViewDelegate, UITableViewDataSource, KFCommunityRemarkCellDelegate, KFCommunityHeaderViewDelegate {
+class KFCommunityDetailViewController: KFViewController, UITableViewDelegate, UITableViewDataSource, KFCommunityRemarkCellDelegate, KFCommunityHeaderViewDelegate {
     
     var model: KFCommunityModel?
     private let cellID = "kKFCommunityRemarkCell"
     
-    private var tableView: BPTableView = {
-        let tableView = BPTableView(frame: .zero, style: .grouped)
+    private var tableView: KFTableView = {
+        let tableView = KFTableView(frame: .zero, style: .grouped)
         tableView.estimatedRowHeight             = AdaptSize(56)
         tableView.backgroundColor                = UIColor.gray0
         tableView.separatorStyle                 = .none
@@ -22,8 +22,8 @@ class KFCommunityDetailViewController: BPViewController, UITableViewDelegate, UI
         return tableView
     }()
     
-    private var remarkButton: BPButton = {
-        let button = BPButton(.theme)
+    private var remarkButton: KFButton = {
+        let button = KFButton(.theme)
         button.setTitle("评论", for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(15))
         button.layer.setDefaultShadow()

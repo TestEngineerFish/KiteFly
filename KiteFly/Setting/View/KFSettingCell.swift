@@ -7,23 +7,23 @@
 
 import Foundation
 
-class KFSettingCell: BPTableViewCell {
+class KFSettingCell: KFTableViewCell {
     
-    private var iconImageView: BPImageView = {
-        let imageView = BPImageView()
+    private var iconImageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-    private var titleLabel: BPLabel = {
-        let label = BPLabel()
+    private var titleLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
         label.textAlignment = .left
         return label
     }()
-    private var arrowImageView: BPImageView = {
-        let imageView = BPImageView()
+    private var arrowImageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()

@@ -8,7 +8,7 @@
 import Foundation
 import IQKeyboardManager
 
-class KFCommunityPublishViewController: BPViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class KFCommunityPublishViewController: KFViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     private let cellID = "kKFCommunityImageCell"
     private var modelList: [BPMediaImageModel?] = []
@@ -35,8 +35,8 @@ class KFCommunityPublishViewController: BPViewController, UICollectionViewDelega
     }()
     
     
-    private var submitButton: BPButton = {
-        let button = BPButton(.theme)
+    private var submitButton: KFButton = {
+        let button = KFButton(.theme)
         button.setTitle("提交", for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(15))
         return button
@@ -127,7 +127,7 @@ class KFCommunityPublishViewController: BPViewController, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        BPSystemPhotoManager.share.show(complete: { modelList in
+        KFSystemPhotoManager.share.show(complete: { modelList in
             self.modelList.removeLast()
             self.modelList += modelList as? [BPMediaImageModel] ?? []
             self.modelList.append(nil)

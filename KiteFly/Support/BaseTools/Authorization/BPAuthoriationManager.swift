@@ -11,7 +11,7 @@ import UserNotifications
 import UIKit
 import Contacts
 
-public enum BPAuthorizationType: String {
+public enum KFAuthorizationType: String {
     /// 相册
     case photo        = "相册"
     /// 照相机
@@ -133,12 +133,12 @@ public class BPAuthorizationManager: NSObject, CLLocationManagerDelegate {
     // MARK: ==== CLLocationManagerDelegate ====
     
     // TODO: ==== Tools ====
-    private func showAlert(type: BPAuthorizationType) {
+    private func showAlert(type: KFAuthorizationType) {
         let projectName  = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? ""
         let title        = String(format: "无法访问你的%@", type.rawValue)
         let description  = String(format: "请到设置 -> %@ -> %@，打开访问权限", projectName, type.rawValue)
 
-        BPAlertManager.share.twoButton(title: title, description: description, leftBtnName: "取消", leftBtnClosure: nil, rightBtnName: "打开") {
+        KFAlertManager.share.twoButton(title: title, description: description, leftBtnName: "取消", leftBtnClosure: nil, rightBtnName: "打开") {
             self.jumpToAppSetting()
         }.show()
     }

@@ -8,7 +8,7 @@
 import Foundation
 import TYCyclePagerView
 
-class KFHomeHeaderView: BPView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
+class KFHomeHeaderView: KFView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     
     private let pageCellID  = "kKFHomeBannerCell"
     private let newsCellID  = "kKFHomeNewsItem"
@@ -73,8 +73,8 @@ class KFHomeHeaderView: BPView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSo
     
     override func bindData() {
         super.bindData()
-        self.pageUrlList   = BPFileManager.share.getJsonModelList(file: "PageUrl", type: KFHomePageModel.self) as? [KFHomePageModel] ?? []
-        self.newsModelList = BPFileManager.share.getJsonModelList(file: "NewsModelList", type: KFNewsModel.self) as? [KFNewsModel] ?? []
+        self.pageUrlList   = KFFileManager.share.getJsonModelList(file: "PageUrl", type: KFHomePageModel.self) as? [KFHomePageModel] ?? []
+        self.newsModelList = KFFileManager.share.getJsonModelList(file: "NewsModelList", type: KFNewsModel.self) as? [KFNewsModel] ?? []
         self.pageControl.numberOfPages = self.pageUrlList.count
         self.collectionView.reloadData()
     }

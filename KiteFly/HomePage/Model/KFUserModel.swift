@@ -29,7 +29,7 @@ enum KFSex: Int {
 class KFUserModel: Mappable {
     
     static let share: KFUserModel = {
-        if let model = BPFileManager.share.getJsonModel(file: "UserModel", type: KFUserModel.self) as? KFUserModel {
+        if let model = KFFileManager.share.getJsonModel(file: "UserModel", type: KFUserModel.self) as? KFUserModel {
             return model
         } else {
             return KFUserModel()

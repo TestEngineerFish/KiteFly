@@ -8,7 +8,7 @@
 import Foundation
 import IQKeyboardManager
 
-class KFCommunityReportViewController: BPViewController {
+class KFCommunityReportViewController: KFViewController {
     
     var id: String?
     
@@ -20,8 +20,8 @@ class KFCommunityReportViewController: BPViewController {
         return textView
     }()
     
-    private var submitButton: BPButton = {
-        let button = BPButton(.theme)
+    private var submitButton: KFButton = {
+        let button = KFButton(.theme)
         button.setTitle("提交", for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(15))
         return button

@@ -7,13 +7,13 @@
 
 import Foundation
 
-class KFRegisterListViewController: BPViewController, UITableViewDelegate, UITableViewDataSource {
+class KFRegisterListViewController: KFViewController, UITableViewDelegate, UITableViewDataSource {
     
     private let cellID = "kKFHomeMemberListCell"
     var modelList: [KFUserModel] = []
     
-    private var tableView: BPTableView = {
-        let tableView = BPTableView()
+    private var tableView: KFTableView = {
+        let tableView = KFTableView()
         tableView.estimatedRowHeight             = AdaptSize(56)
         tableView.backgroundColor                = UIColor.gray0
         tableView.separatorStyle                 = .none
@@ -44,7 +44,7 @@ class KFRegisterListViewController: BPViewController, UITableViewDelegate, UITab
     
     override func bindData() {
         super.bindData()
-//        self.modelList = BPFileManager.share.getJsonModelList(file: "UserModelList", type: KFUserModel.self) as? [KFUserModel] ?? []
+//        self.modelList = KFFileManager.share.getJsonModelList(file: "UserModelList", type: KFUserModel.self) as? [KFUserModel] ?? []
         self.tableView.reloadData()
     }
     

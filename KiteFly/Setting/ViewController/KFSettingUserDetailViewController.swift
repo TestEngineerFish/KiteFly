@@ -7,14 +7,14 @@
 
 import Foundation
 
-class KFSettingUserDetailViewController: BPViewController, UITableViewDelegate, UITableViewDataSource {
+class KFSettingUserDetailViewController: KFViewController, UITableViewDelegate, UITableViewDataSource {
     
     private let cellID = "kKFSettingUserDetailCell"
     private var typeList: [KFSettingType] = [.name, .sex, .address, .remark]
     var model: KFUserModel?
     
-    private var tableView: BPTableView = {
-        let tableView = BPTableView(frame: .zero, style: .grouped)
+    private var tableView: KFTableView = {
+        let tableView = KFTableView(frame: .zero, style: .grouped)
         tableView.estimatedRowHeight             = AdaptSize(56)
         tableView.backgroundColor                = UIColor.gray0
         tableView.separatorStyle                 = .none
@@ -94,7 +94,7 @@ class KFSettingUserDetailViewController: BPViewController, UITableViewDelegate, 
             vc.type = .name
             UIViewController.currentNavigationController?.push(vc: vc)
         case .sex:
-            BPActionSheet(title: "选择性别").addItem(title: "男") {
+            KFActionSheet(title: "选择性别").addItem(title: "男") {
                 KFUserModel.share.sex   = .man
                 self.model?.sex         = .man
                 tableView.reloadData()

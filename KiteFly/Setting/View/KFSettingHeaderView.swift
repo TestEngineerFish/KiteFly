@@ -7,10 +7,10 @@
 
 import Foundation
 
-class KFSettingHeaderView: BPView {
+class KFSettingHeaderView: KFView {
     
-    private var avatarImageView: BPImageView = {
-        let imageView = BPImageView()
+    private var avatarImageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode         = .scaleAspectFill
         imageView.size                = CGSize(width: AdaptSize(60), height: AdaptSize(60))
         imageView.layer.cornerRadius  = AdaptSize(30)
@@ -18,8 +18,8 @@ class KFSettingHeaderView: BPView {
         imageView.isUserInteractionEnabled = true
         return imageView
     }()
-    private var nameLabel: BPLabel = {
-        let label = BPLabel()
+    private var nameLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.semiboldFont(ofSize: AdaptSize(15))
@@ -27,8 +27,8 @@ class KFSettingHeaderView: BPView {
         label.isUserInteractionEnabled = true
         return label
     }()
-    private var sexLabel: BPLabel = {
-        let label = BPLabel()
+    private var sexLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black2
         label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
@@ -36,8 +36,8 @@ class KFSettingHeaderView: BPView {
         label.isUserInteractionEnabled = true
         return label
     }()
-    private var addressLabel: BPLabel = {
-        let label = BPLabel()
+    private var addressLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black2
         label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
@@ -45,8 +45,8 @@ class KFSettingHeaderView: BPView {
         label.isUserInteractionEnabled = true
         return label
     }()
-    private var remarkLabel: BPLabel = {
-        let label = BPLabel()
+    private var remarkLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
@@ -55,8 +55,8 @@ class KFSettingHeaderView: BPView {
         label.isUserInteractionEnabled = true
         return label
     }()
-    private var lineView: BPView = {
-        let view = BPView()
+    private var lineView: KFView = {
+        let view = KFView()
         view.backgroundColor = UIColor.gray4
         return view
     }()

@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-open class KFWebViewController: BPViewController, WKNavigationDelegate, WKUIDelegate {
+open class KFWebViewController: KFViewController, WKNavigationDelegate, WKUIDelegate {
     
     /// 请求地址
     public var urlStr: String?

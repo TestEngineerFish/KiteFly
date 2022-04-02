@@ -8,10 +8,10 @@
 import Foundation
 //import UIKit
 
-class KFLoginViewController: BPViewController {
+class KFLoginViewController: KFViewController {
     
-    private var logoImageView: BPImageView = {
-        let imageView = BPImageView()
+    private var logoImageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.image = UIImage(named: "logo")
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = AdaptSize(10)
@@ -19,8 +19,8 @@ class KFLoginViewController: BPViewController {
         return imageView
     }()
     
-    private let accountTextField: BPTextField = {
-        let textField = BPTextField()
+    private let accountTextField: KFTextField = {
+        let textField = KFTextField()
         textField.placeholder = "请输入账号"
         textField.font        = UIFont.regularFont(ofSize: AdaptSize(16))
         textField.textColor   = UIColor.black0
@@ -30,8 +30,8 @@ class KFLoginViewController: BPViewController {
         textField.maxLengthBP = 11
         return textField
     }()
-    private let passwordTextField: BPTextField = {
-        let textField = BPTextField()
+    private let passwordTextField: KFTextField = {
+        let textField = KFTextField()
         textField.placeholder = "请输入密码"
         textField.font        = UIFont.regularFont(ofSize: AdaptSize(16))
         textField.textColor   = UIColor.black0
@@ -43,14 +43,14 @@ class KFLoginViewController: BPViewController {
         return textField
     }()
     
-    private var loginButton: BPButton = {
-        let button = BPButton(.theme)
+    private var loginButton: KFButton = {
+        let button = KFButton(.theme)
         button.setTitle("登录", for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(16))
         return button
     }()
-    private var registerButton: BPButton = {
-        let button = BPButton(.second)
+    private var registerButton: KFButton = {
+        let button = KFButton(.second)
         button.setTitle("注册", for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(16))
         return button
@@ -134,8 +134,8 @@ class KFLoginViewController: BPViewController {
         kWindow.showLoading()
         DispatchQueue.main.asyncAfter(wallDeadline: .now() + 1) {
             kWindow.hideLoading()
-            let tbc = BPTabBarController()
-            let nvc = BPNavigationController(rootViewController: tbc)
+            let tbc = KFTabBarController()
+            let nvc = KFNavigationController(rootViewController: tbc)
             kWindow.rootViewController = nvc
         }
         

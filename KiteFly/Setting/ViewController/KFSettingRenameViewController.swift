@@ -14,12 +14,12 @@ enum KFUserInfoType: String {
     case remark  = "签名"
 }
 
-class KFSettingRenameViewController: BPViewController {
+class KFSettingRenameViewController: KFViewController {
     
     var type: KFUserInfoType = .name
     
-    private let textField: BPTextField = {
-        let textField = BPTextField()
+    private let textField: KFTextField = {
+        let textField = KFTextField()
         textField.font          = UIFont.regularFont(ofSize: AdaptSize(15))
         textField.textColor     = UIColor.black0
         textField.showLeftView  = true
@@ -28,8 +28,8 @@ class KFSettingRenameViewController: BPViewController {
         return textField
     }()
     
-    private var submitButton: BPButton = {
-        let button = BPButton(.theme)
+    private var submitButton: KFButton = {
+        let button = KFButton(.theme)
         button.setTitle("确定修改", for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(15))
         return button

@@ -58,14 +58,14 @@ enum KFSettingType: String {
     }
 }
 
-class KFSettingViewController: BPViewController, UITableViewDelegate, UITableViewDataSource {
+class KFSettingViewController: KFViewController, UITableViewDelegate, UITableViewDataSource {
     
     private let cellID = "kKFSettingCell"
     private var model: KFUserModel?
     private let typeList: [KFSettingType] = [.notice, .register, .clear, .contact, .appraise, .agreement, .more]
     
-    private var tableView: BPTableView = {
-        let tableView = BPTableView(frame: .zero, style: .grouped)
+    private var tableView: KFTableView = {
+        let tableView = KFTableView(frame: .zero, style: .grouped)
         tableView.estimatedRowHeight             = AdaptSize(56)
         tableView.backgroundColor                = UIColor.white
         tableView.separatorStyle                 = .none
@@ -162,7 +162,7 @@ class KFSettingViewController: BPViewController, UITableViewDelegate, UITableVie
                 kWindow.toast("清理完成")
             }
         case .contact:
-            BPActionSheet(title: "联系我们").addItem(title: "邮箱：report@kangkanghui.com") {
+            KFActionSheet(title: "联系我们").addItem(title: "邮箱：report@kangkanghui.com") {
                 let email = "report@kangkanghui.com"
                 if let url = URL(string: "mailto:\(email)") {
                    UIApplication.shared.open(url, options: [:], completionHandler: nil)

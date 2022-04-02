@@ -1,5 +1,5 @@
 //
-//  BPFileManager.swift
+//  KFFileManager.swift
 //  BaseProject
 //
 //  Created by 沙庭宇 on 2020/11/7.
@@ -9,9 +9,9 @@
 import Foundation
 import ObjectMapper
 
-public struct BPFileManager {
+public struct KFFileManager {
     
-    public static let share = BPFileManager()
+    public static let share = KFFileManager()
     
     /// 保存资源文件
     /// - Parameters:

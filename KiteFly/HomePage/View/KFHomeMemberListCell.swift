@@ -8,35 +8,35 @@
 import Foundation
 import UIKit
 
-class KFHomeMemberListCell: BPTableViewCell {
+class KFHomeMemberListCell: KFTableViewCell {
     
     private var model: KFUserModel?
     
-    private var avatarImageView: BPImageView = {
-        let imageView = BPImageView()
+    private var avatarImageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius  = AdaptSize(5)
         imageView.layer.masksToBounds = true
         return imageView
     }()
-    private var nameLabel: BPLabel = {
-        let label = BPLabel()
+    private var nameLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.semiboldFont(ofSize: AdaptSize(15))
         label.textAlignment = .left
         return label
     }()
-    private var sexLabel: BPLabel = {
-        let label = BPLabel()
+    private var sexLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black1
         label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
         label.textAlignment = .left
         return label
     }()
-    private var remarkLabel: BPLabel = {
-        let label = BPLabel()
+    private var remarkLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black1
         label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
@@ -44,8 +44,8 @@ class KFHomeMemberListCell: BPTableViewCell {
         label.numberOfLines = 0
         return label
     }()
-    private var chatButton: BPButton = {
-        let button = BPButton(.second)
+    private var chatButton: KFButton = {
+        let button = KFButton(.second)
         button.setTitle("去聊天", for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(13))
         return button
@@ -117,7 +117,7 @@ class KFHomeMemberListCell: BPTableViewCell {
     
     @objc
     private func chatAction() {
-        let vc = BPChatRoomViewController()
+        let vc = KFChatRoomViewController()
         vc.userModel = model
         UIViewController.currentNavigationController?.push(vc: vc)
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class KFNewsDetailViewController: BPViewController {
+class KFNewsDetailViewController: KFViewController {
     
     var model: KFNewsModel?
     
@@ -17,8 +17,8 @@ class KFNewsDetailViewController: BPViewController {
         scrollView.showsHorizontalScrollIndicator = false
         return scrollView
     }()
-    private var titleLabel: BPLabel = {
-        let label = BPLabel()
+    private var titleLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.DINAlternateBold(ofSize: AdaptSize(20))
@@ -26,23 +26,23 @@ class KFNewsDetailViewController: BPViewController {
         label.numberOfLines = 0
         return label
     }()
-    private var timeLabel: BPLabel = {
-        let label = BPLabel()
+    private var timeLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
         label.textAlignment = .right
         return label
     }()
-    private var imageView: BPImageView = {
-        let imageView = BPImageView()
+    private var imageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius  = AdaptSize(10)
         return imageView
     }()
-    private var contentLabel: BPLabel = {
-        let label = BPLabel()
+    private var contentLabel: KFLabel = {
+        let label = KFLabel()
         label.text          = ""
         label.textColor     = UIColor.black0
         label.font          = UIFont.regularFont(ofSize: AdaptSize(15))

@@ -8,10 +8,10 @@
 import Foundation
 
 
-class KFCommunityImageCell: BPCollectionViewCell {
+class KFCommunityImageCell: KFCollectionViewCell {
     
-    private var imageView: BPImageView = {
-        let imageView = BPImageView()
+    private var imageView: KFImageView = {
+        let imageView = KFImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds      = true
         imageView.isUserInteractionEnabled = true
@@ -67,6 +67,6 @@ class KFCommunityImageCell: BPCollectionViewCell {
         }
         let model = BPMediaImageModel()
         model.image = _image
-        BPBrowserView(type: .custom(modelList: [model]), current: 0).show(animationView: self.imageView)
+        KFBrowserView(type: .custom(modelList: [model]), current: 0).show(animationView: self.imageView)
     }
 }

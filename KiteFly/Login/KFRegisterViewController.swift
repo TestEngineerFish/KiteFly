@@ -7,10 +7,10 @@
 
 import Foundation
 
-class KFRegisterViewController: BPViewController {
+class KFRegisterViewController: KFViewController {
     
-    private let accountTextField: BPTextField = {
-        let textField = BPTextField()
+    private let accountTextField: KFTextField = {
+        let textField = KFTextField()
         textField.placeholder = "请输入账号"
         textField.font        = UIFont.regularFont(ofSize: AdaptSize(16))
         textField.textColor   = UIColor.black0
@@ -20,8 +20,8 @@ class KFRegisterViewController: BPViewController {
         textField.maxLengthBP = 11
         return textField
     }()
-    private let passwordTextField: BPTextField = {
-        let textField = BPTextField()
+    private let passwordTextField: KFTextField = {
+        let textField = KFTextField()
         textField.placeholder = "请输入密码"
         textField.font        = UIFont.regularFont(ofSize: AdaptSize(16))
         textField.textColor   = UIColor.black0
@@ -33,8 +33,8 @@ class KFRegisterViewController: BPViewController {
         textField.maxLengthBP = 8
         return textField
     }()
-    private let confirmTextField: BPTextField = {
-        let textField = BPTextField()
+    private let confirmTextField: KFTextField = {
+        let textField = KFTextField()
         textField.placeholder = "请再次输入密码"
         textField.font        = UIFont.regularFont(ofSize: AdaptSize(16))
         textField.textColor   = UIColor.black0
@@ -47,8 +47,8 @@ class KFRegisterViewController: BPViewController {
         return textField
     }()
     
-    private var registerButton: BPButton = {
-        let button = BPButton(.theme)
+    private var registerButton: KFButton = {
+        let button = KFButton(.theme)
         button.setTitle("注册", for: .normal)
         button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(16))
         return button
@@ -116,7 +116,7 @@ class KFRegisterViewController: BPViewController {
         kWindow.showLoading()
         DispatchQueue.main.asyncAfter(wallDeadline: .now() + 0.5) {
             kWindow.hideLoading()
-            BPAlertManager.share.oneButton(title: "提示", description: "账号已存在，请直接登录", buttonName: "知道了") {
+            KFAlertManager.share.oneButton(title: "提示", description: "账号已存在，请直接登录", buttonName: "知道了") {
                 self.dismiss(animated: true)
             }.show()
         }
