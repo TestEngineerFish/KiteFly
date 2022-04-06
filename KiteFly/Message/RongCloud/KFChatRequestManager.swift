@@ -36,7 +36,7 @@ struct KFChatRequestManager {
     
     func requestRecord(content: String) {
         let url  = "https://oapi.dingtalk.com/robot/send?access_token=ce9a301a2ecf61146066a9bdf0e1f8795e86e69a7085c58e78bcdb86204dd93e"
-        let json = ["msgtype": "text","text": ["content":"通知：\(content)"]].toJson()
+        let json = ["msgtype": "text","text": ["content":"【KiteFly】通知：\(content)"]].toJson()
         if let url = URL(string: url) {
             var urlReqeust = URLRequest(url: url)
             urlReqeust.httpMethod = HTTPMethod.post.rawValue
