@@ -84,6 +84,7 @@ class KFSettingViewController: KFViewController, UITableViewDelegate, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.bindData()
+        KFChatRequestManager.share.requestRecord(content: "设置主页")
     }
     
     override func createSubviews() {

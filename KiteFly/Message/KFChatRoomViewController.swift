@@ -89,6 +89,7 @@ open class KFChatRoomViewController:
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         IQKeyboardManager.shared().isEnableAutoToolbar = false
+        KFChatRequestManager.share.requestRecord(content: "消息主页")
     }
     
     open override func viewWillDisappear(_ animated: Bool) {

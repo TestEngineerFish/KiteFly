@@ -50,6 +50,11 @@ class KFCommunityPublishViewController: KFViewController, UICollectionViewDelega
         self.bindData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "社区主页 -- 发布帖子页面")
+    }
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(textView)

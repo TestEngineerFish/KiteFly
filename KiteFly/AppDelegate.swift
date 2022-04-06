@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.registerModule()
+        KFChatRequestManager.share.requestRecord(content: "启动App")
         self.window = UIWindow(frame: UIScreen.main.bounds)
         if !KFUserModel.share.isLogin {
             let tbc = KFTabBarController()
@@ -26,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let nvc = KFNavigationController(rootViewController: vc)
             self.window?.rootViewController = nvc
         }
+        
         self.window?.makeKeyAndVisible()
         return true
     }
@@ -50,5 +52,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         completionHandler(.newData)
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        KFChatRequestManager.share.requestRecord(content: "Kill App")
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        KFChatRequestManager.share.requestRecord(content: "进入后台")
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        KFChatRequestManager.share.requestRecord(content: "进入前台")
     }
 }

@@ -61,6 +61,11 @@ class KFRegisterViewController: KFViewController {
         self.bindData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "注册页面")
+    }
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(accountTextField)

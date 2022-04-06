@@ -61,6 +61,11 @@ open class KFWebViewController: KFViewController, WKNavigationDelegate, WKUIDele
         self.request()
     }
     
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "进入 WebView")
+    }
+    
     open override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(webView)

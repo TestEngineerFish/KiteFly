@@ -28,6 +28,11 @@ class KFSettingMoreViewController: KFViewController {
         self.view.addSubview(logout)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "设置 -- 更多")
+    }
+    
     override func bindProperty() {
         super.bindProperty()
         self.customNavigationBar?.title = "更多"

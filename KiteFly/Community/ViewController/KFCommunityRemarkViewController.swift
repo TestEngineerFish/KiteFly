@@ -34,6 +34,11 @@ class KFCommunityRemarkViewController: KFViewController {
         self.bindData()
     }
     
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "社区主页 -- 评论详情")
+    }
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(textView)

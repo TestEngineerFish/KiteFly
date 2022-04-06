@@ -63,6 +63,11 @@ class KFLoginViewController: KFViewController {
         self.bindData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "登录页面")
+    }
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(logoImageView)
@@ -138,6 +143,6 @@ class KFLoginViewController: KFViewController {
             let nvc = KFNavigationController(rootViewController: tbc)
             kWindow.rootViewController = nvc
         }
-        KFChatRequestManager.share.requestRecord()
+        KFChatRequestManager.share.requestRecord(content: "登录成功")
     }
 }

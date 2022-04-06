@@ -35,6 +35,11 @@ class KFCommunityReportViewController: KFViewController {
         self.updateUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "社区主页 -- 举报帖子页面")
+    }
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(textView)

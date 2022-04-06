@@ -28,6 +28,11 @@ class KFSettingNoticeViewController: KFViewController, UITableViewDelegate, UITa
         self.bindProperty()
         self.bindData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "设置 -- 我的动态")
+    }
 
     override func createSubviews() {
         super.createSubviews()

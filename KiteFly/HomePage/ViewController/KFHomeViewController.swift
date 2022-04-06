@@ -32,6 +32,11 @@ class KFHomeViewController: KFViewController, UITableViewDelegate, UITableViewDa
         self.updateUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "主页首页")
+    }
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(tableView)

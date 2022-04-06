@@ -64,6 +64,11 @@ class KFNoticeDetailViewController: KFViewController {
         self.bindData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "主页首页 -- 通知详情")
+    }
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(scrollView)

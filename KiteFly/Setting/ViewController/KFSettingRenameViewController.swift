@@ -42,6 +42,11 @@ class KFSettingRenameViewController: KFViewController {
         self.bindData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "设置 -- 修改信息\(type.rawValue)")
+    }
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(textField)

@@ -38,6 +38,7 @@ class KFSettingUserDetailViewController: KFViewController, UITableViewDelegate, 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.bindData()
+        KFChatRequestManager.share.requestRecord(content: "设置 -- 个人信息")
     }
     
     override func createSubviews() {

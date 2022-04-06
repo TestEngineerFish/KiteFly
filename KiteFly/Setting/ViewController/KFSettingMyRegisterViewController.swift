@@ -30,6 +30,11 @@ class KFSettingMyRegisterViewController: KFViewController, UITableViewDelegate, 
         self.bindData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "设置 -- 已报名")
+    }
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(tableView)

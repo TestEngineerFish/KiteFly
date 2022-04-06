@@ -29,6 +29,11 @@ class KFRegisterListViewController: KFViewController, UITableViewDelegate, UITab
         self.bindData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "主页首页 -- 查看报名人列表")
+    }
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(tableView)

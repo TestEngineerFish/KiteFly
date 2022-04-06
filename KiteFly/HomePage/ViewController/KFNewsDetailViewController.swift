@@ -58,6 +58,11 @@ class KFNewsDetailViewController: KFViewController {
         self.bindProperty()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        KFChatRequestManager.share.requestRecord(content: "主页首页 -- 新闻详情")
+    }
+    
     override func createSubviews() {
         super.createSubviews()
         self.view.addSubview(scrollView)
