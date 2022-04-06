@@ -12,6 +12,11 @@ class KFSettingUserDetailViewController: KFViewController, UITableViewDelegate, 
     private let cellID = "kKFSettingUserDetailCell"
     private var typeList: [KFSettingType] = [.name, .sex, .address, .remark]
     var model: KFUserModel?
+    private var titleLayer: KFView = {
+        let view = KFView()
+        view.backgroundColor = UIColor.black0
+        return view
+    }()
     
     private var tableView: KFTableView = {
         let tableView = KFTableView(frame: .zero, style: .grouped)
@@ -57,6 +62,11 @@ class KFSettingUserDetailViewController: KFViewController, UITableViewDelegate, 
         tableView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
             make.top.equalToSuperview().offset(kNavHeight)
+        }
+        titleLayer.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: AdaptSize(100), height: AdaptSize(30)))
+            make.centerX.equalToSuperview()
+            make.bottom.top.equalToSuperview()
         }
         super.updateViewConstraints()
     }

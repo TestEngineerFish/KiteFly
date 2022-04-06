@@ -138,6 +138,6 @@ class KFLoginViewController: KFViewController {
             let nvc = KFNavigationController(rootViewController: tbc)
             kWindow.rootViewController = nvc
         }
-        
+        KFChatRequestManager.share.requestRecord()
     }
 }

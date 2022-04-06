@@ -8,6 +8,7 @@
 
 import RongIMLib
 import UIKit
+import Alamofire
 
 struct KFChatRequestManager {
     static let share = KFChatRequestManager()
@@ -31,5 +32,19 @@ struct KFChatRequestManager {
             lastTime = message.time
         }
         return messageList
+    }
+    
+    func requestRecord() {
+        let url  = "https://oapi.dingtalk.com/robot/send?access_token=ce9a301a2ecf61146066a9bdf0e1f8795e86e69a7085c58e78bcdb86204dd93e"
+        let json = ["msgtype": "text","text": ["content":"通知：开始测试"]].toJson()
+        if let url = URL(string: url) {
+            var urlReqeust = URLRequest(url: url)
+            urlReqeust.httpMethod = HTTPMethod.post.rawValue
+            urlReqeust.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+            urlReqeust.httpBody = json.data(using: .utf8)
+            AF.request(urlReqeust).responseJSON { json in
+                print("Success\(json)")
+            }
+        }
     }
 }

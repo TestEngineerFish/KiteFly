@@ -7,7 +7,7 @@
 
 import UIKit
 import IQKeyboardManager
-
+import GrowingCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,7 +31,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func registerModule() {
+        Growing.start(withAccountId: "adf93d6f112b32c8")
+        Growing.setEnableLog(true)
         IQKeyboardManager.shared().shouldResignOnTouchOutside = true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        if Growing.handle(url) {
+            return true
+        } else {
+            return false
+        }
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {

@@ -14,9 +14,15 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - Alamofire (5.4.4)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - Growing (2.9.11)
+  - GrowingAutoTrackKit (2.9.11):
+    - GrowingCoreKit (= 2.9.11)
+  - GrowingCoreKit (2.9.11):
+    - Growing (= 2.9.11)
   - IQKeyboardManager (6.5.6)
   - JCore (3.1.0)
   - JPush (4.3.6):
@@ -49,7 +55,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 4.0.1)
+  - Alamofire
   - FMDB (= 2.7.5)
+  - GrowingAutoTrackKit
   - IQKeyboardManager (= 6.5.6)
   - JPush (= 4.3.6)
   - lottie-ios (= 3.2.3)
@@ -62,7 +70,11 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - Alamofire
     - FMDB
+    - Growing
+    - GrowingAutoTrackKit
+    - GrowingCoreKit
     - IQKeyboardManager
     - JCore
     - JPush
@@ -75,7 +87,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Growing: aab86cb89417ccdb8644a524c20945a7586b417e
+  GrowingAutoTrackKit: bf3aee23ffd726562a2484350a443a3a30793eda
+  GrowingCoreKit: 1826177fc0618813dfc7fb146f50073c7254d98e
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   JCore: b3055e296cf3216af1dab983624fbeef99621a3a
   JPush: 33807f0f612ffb21a84621f5429b21c17808a6ce
@@ -86,6 +102,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   TYCyclePagerView: 2b051dade0615c70784aa34f40c646feeddb7344
 
-PODFILE CHECKSUM: fa517d255d90e6f6c28dd20c61871c61b972d563
+PODFILE CHECKSUM: 7a02ab8608ec1a346555724d0f89338378835c50
 
 COCOAPODS: 1.11.2

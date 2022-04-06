@@ -24,4 +24,7 @@ target 'KiteFly' do
   pod "FMDB", '2.7.5'
   # 极光推送 无IDFA
   pod 'JPush', '4.3.6'
+  # 统计
+  pod 'GrowingAutoTrackKit'
+  pod 'Alamofire'
 end
