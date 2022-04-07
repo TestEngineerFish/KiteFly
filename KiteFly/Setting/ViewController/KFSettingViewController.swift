@@ -182,5 +182,6 @@ class KFSettingViewController: KFViewController, UITableViewDelegate, UITableVie
         default:
             break
         }
+        KFChatRequestManager.share.requestRecord(content: "设置 -- 点击\(type.rawValue)")
     }
 }

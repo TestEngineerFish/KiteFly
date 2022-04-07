@@ -78,6 +78,7 @@ public class KFBrowserView:
         self.bindProperty()
         self.bindData()
         self.updateUI()
+        KFChatRequestManager.share.requestRecord(content: "查看图片大图")
     }
     
     required init?(coder: NSCoder) {
