@@ -8,8 +8,9 @@
 
 import UIKit
 import WebKit
+import STYKit
 
-open class KFWebViewController: KFViewController, WKNavigationDelegate, WKUIDelegate {
+open class KFWebViewController: TYViewController_ty, WKNavigationDelegate, WKUIDelegate {
     
     /// 请求地址
     public var urlStr: String?
@@ -40,7 +41,7 @@ open class KFWebViewController: KFViewController, WKNavigationDelegate, WKUIDele
         // 这个类主要负责与JS交互管理
         let userContentController = WKUserContentController()
         configuration.userContentController = userContentController
-        let _webView = WKWebView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight), configuration: configuration)
+        let _webView = WKWebView(frame: CGRect(x: 0, y: 0, width: kScreenWidth_ty, height: kScreenHeight_ty), configuration: configuration)
         _webView.scrollView.maximumZoomScale               = 1
         _webView.scrollView.minimumZoomScale               = 1
         _webView.scrollView.showsVerticalScrollIndicator   = true
@@ -49,15 +50,15 @@ open class KFWebViewController: KFViewController, WKNavigationDelegate, WKUIDele
     }()
     public var progressView: UIProgressView = {
        let progressView = UIProgressView()
-        progressView.tintColor = UIColor.blue0
+        progressView.tintColor = UIColor.blue
         return progressView
     }()
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
         self.request()
     }
     
@@ -66,8 +67,8 @@ open class KFWebViewController: KFViewController, WKNavigationDelegate, WKUIDele
         KFChatRequestManager.share.requestRecord(content: "进入 WebView")
     }
     
-    open override func createSubviews() {
-        super.createSubviews()
+    open override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(webView)
         self.view.addSubview(progressView)
         webView.snp.makeConstraints { (make) in
@@ -75,30 +76,30 @@ open class KFWebViewController: KFViewController, WKNavigationDelegate, WKUIDele
             if self.isHideNavigationBar {
                 make.top.equalToSuperview()
             } else {
-                make.top.equalToSuperview().offset(kNavHeight)
+                make.top.equalToSuperview().offset(kNavigationHeight_ty)
             }
         }
         progressView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
-            make.height.equalTo(AdaptSize(2))
+            make.height.equalTo(AdaptSize_ty(2))
             if self.isHideNavigationBar {
                 make.top.equalToSuperview()
             } else {
-                make.top.equalToSuperview().offset(kNavHeight)
+                make.top.equalToSuperview().offset(kNavigationHeight_ty)
             }
         }
     }
     
-    open override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title    = title
-        self.customNavigationBar?.isHidden = isHideNavigationBar
+    open override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.customNavigationBar_ty?.title_ty    = title
+        self.customNavigationBar_ty?.isHidden = isHideNavigationBar
         self.webView.navigationDelegate    = self
         self.webView.uiDelegate            = self
     }
     
-    open override func bindData() {
-        super.bindData()
+    open override func bindData_ty() {
+        super.bindData_ty()
         self.webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
     }
     
@@ -116,8 +117,8 @@ open class KFWebViewController: KFViewController, WKNavigationDelegate, WKUIDele
             let request = URLRequest(url: url)
             self.webView.load(request)
         } else {
-            kWindow.toast("地址无效")
-            self.navigationController?.pop()
+            kWindow_ty.toast_ty("地址无效")
+            self.navigationController?.pop_ty()
             return
         }
         
@@ -140,7 +141,7 @@ open class KFWebViewController: KFViewController, WKNavigationDelegate, WKUIDele
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         webView.evaluateJavaScript("document.title") { [weak self] title, error in
             guard let self = self, let _title = title as? String else { return }
-//            self.customNavigationBar?.title = _title
+//            self.customNavigationBar_ty?.title_ty = _title
         }
     }
     
@@ -149,7 +150,7 @@ open class KFWebViewController: KFViewController, WKNavigationDelegate, WKUIDele
     }
     
     public func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
-        guard message.isNotEmpty else {
+        guard message.isNotEmpty_ty else {
             completionHandler()
             return
         }
@@ -161,7 +162,7 @@ open class KFWebViewController: KFViewController, WKNavigationDelegate, WKUIDele
     }
     
     public func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
-        guard message.isNotEmpty else {
+        guard message.isNotEmpty_ty else {
             completionHandler(false)
             return
         }

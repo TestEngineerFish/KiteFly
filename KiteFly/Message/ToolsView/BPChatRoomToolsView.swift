@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import STYKit
 
 enum KFChatToolsItemType: Int {
     /// 空
@@ -49,7 +50,7 @@ protocol BPChatRoomToolsViewDelegate: NSObjectProtocol {
 
 /// 工具栏视图
 class BPChatRoomToolsView:
-    KFView,
+    TYView_ty,
     KFChatInputViewDelegate,
     KFChatMoreViewDelegate,
     KFEmojiToolViewDelegate
@@ -63,15 +64,15 @@ class BPChatRoomToolsView:
         self.inputBarView.getCurrentHeight()
     }
     /// 软键盘高度
-    private var keyboardHeight   = AdaptSize(0)
+    private var keyboardHeight   = AdaptSize_ty(0)
     /// 软键盘弹起收起的时常
     private var keyboardDuration = TimeInterval(0.25)
     /// 工具栏高度
-    private let moreViewHeight   = AdaptSize(76)
+    private let moreViewHeight   = AdaptSize_ty(76)
     /// Emoji表情列表高度
-    private let emojiViewHeight  = AdaptSize(300)
+    private let emojiViewHeight  = AdaptSize_ty(300)
     /// 常用语高度
-    private let commonViewHeight = AdaptSize(244)
+    private let commonViewHeight = AdaptSize_ty(244)
     /// 回调协议
     weak var delegate: BPChatRoomToolsViewDelegate?
     
@@ -83,7 +84,7 @@ class BPChatRoomToolsView:
             var duration  = TimeInterval(0.25)
             switch newValue {
             case .textView:
-                offsetY   = -(self.keyboardHeight - kSafeBottomMargin)
+                offsetY   = -(self.keyboardHeight - kSafeBottomMargin_ty)
                 isRecover = false
                 duration  = self.keyboardDuration
                 self.hideMoreView()
@@ -113,7 +114,7 @@ class BPChatRoomToolsView:
             if newValue != .textView {
                 self.inputBarView.endEdit()
             }
-            self.currentHeight = -offsetY + self.inputBarHeight + kSafeBottomMargin
+            self.currentHeight = -offsetY + self.inputBarHeight + kSafeBottomMargin_ty
             if isRecover {
                 self.delegate?.recover(duration: duration)
                 self.hideMoreView()
@@ -137,17 +138,17 @@ class BPChatRoomToolsView:
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.createSubviews()
-        self.bindProperty()
-        self.registerNotification()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.registerNotification_ty()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.addSubview(inputBarView)
         self.addSubview(moreView)
         self.addSubview(emojiView)
@@ -159,7 +160,7 @@ class BPChatRoomToolsView:
         moreView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(inputBarView.snp.bottom)
-            make.height.equalTo(AdaptSize(76))
+            make.height.equalTo(AdaptSize_ty(76))
         }
         emojiView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
@@ -168,8 +169,8 @@ class BPChatRoomToolsView:
         }
     }
     
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
         self.inputBarView.delegate    = self
         self.moreView.delegate        = self
         self.emojiView.delegate       = self
@@ -177,7 +178,7 @@ class BPChatRoomToolsView:
         self.currentItemType = .normal
     }
     
-    override func registerNotification() {
+    override func registerNotification_ty() {
     }
 
     // MARK: ==== Event ====

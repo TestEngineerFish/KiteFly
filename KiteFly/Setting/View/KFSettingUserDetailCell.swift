@@ -6,33 +6,34 @@
 //
 
 import Foundation
+import STYKit
 
-class KFSettingUserDetailCell: KFTableViewCell {
+class KFSettingUserDetailCell: TYTableViewCell_ty {
     
-    private var iconImageView: KFImageView = {
-        let imageView = KFImageView()
+    private var iconImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-    private var titleLabel: KFLabel = {
-        let label = KFLabel()
+    private var titleLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(15))
         label.textAlignment = .left
         return label
     }()
-    private var contentLabel: KFLabel = {
-        let label = KFLabel()
+    private var contentLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(15))
         label.textAlignment = .right
         label.numberOfLines = 0
         return label
     }()
-    private var arrowImageView: KFImageView = {
-        let imageView = KFImageView()
+    private var arrowImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode = .scaleAspectFill
         imageView.image       = UIImage(named: "arrow_right")
         return imageView
@@ -40,8 +41,8 @@ class KFSettingUserDetailCell: KFTableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.createSubviews()
-        self.bindProperty()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
         self.updateConstraints()
     }
     
@@ -49,39 +50,39 @@ class KFSettingUserDetailCell: KFTableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.contentView.addSubview(iconImageView)
         self.contentView.addSubview(titleLabel)
         self.contentView.addSubview(contentLabel)
         self.contentView.addSubview(arrowImageView)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
-        self.setLine()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.setLine_ty()
     }
     
     override func updateConstraints() {
         iconImageView.snp.makeConstraints { make in
-            make.width.height.equalTo(AdaptSize(25))
-            make.left.equalToSuperview().offset(AdaptSize(15))
+            make.width.height.equalTo(AdaptSize_ty(25))
+            make.left.equalToSuperview().offset(AdaptSize_ty(15))
             make.centerY.equalToSuperview()
         }
         titleLabel.snp.makeConstraints { make in
-            make.left.equalTo(iconImageView.snp.right).offset(AdaptSize(10))
+            make.left.equalTo(iconImageView.snp.right).offset(AdaptSize_ty(10))
             make.centerY.equalTo(iconImageView)
-            make.width.equalTo(AdaptSize(100))
+            make.width.equalTo(AdaptSize_ty(100))
         }
         contentLabel.snp.makeConstraints { make in
-            make.left.greaterThanOrEqualTo(titleLabel.snp.right).offset(AdaptSize(5))
-            make.right.equalTo(arrowImageView.snp.left).offset(AdaptSize(-5))
-            make.top.equalToSuperview().offset(AdaptSize(15))
-            make.bottom.equalToSuperview().offset(AdaptSize(-15))
+            make.left.greaterThanOrEqualTo(titleLabel.snp.right).offset(AdaptSize_ty(5))
+            make.right.equalTo(arrowImageView.snp.left).offset(AdaptSize_ty(-5))
+            make.top.equalToSuperview().offset(AdaptSize_ty(15))
+            make.bottom.equalToSuperview().offset(AdaptSize_ty(-15))
         }
         arrowImageView.snp.makeConstraints { make in
-            make.width.height.equalTo(AdaptSize(15))
-            make.right.equalToSuperview().offset(AdaptSize(-15))
+            make.width.height.equalTo(AdaptSize_ty(15))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
             make.centerY.equalTo(iconImageView)
         }
         super.updateConstraints()

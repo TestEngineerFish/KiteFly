@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
 import ObjectMapper
+import STYKit
 
 enum KFSex: Int {
     case man     = 0
@@ -29,7 +29,7 @@ enum KFSex: Int {
 class KFUserModel: Mappable {
     
     static let share: KFUserModel = {
-        if let model = KFFileManager.share.getJsonModel(file: "UserModel", type: KFUserModel.self) as? KFUserModel {
+        if let model = TYFileManager_ty.share_ty.getJsonModel_ty(file_ty: "UserModel", type_ty: KFUserModel.self) as? KFUserModel {
             return model
         } else {
             return KFUserModel()

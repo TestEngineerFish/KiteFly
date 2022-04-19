@@ -13,7 +13,7 @@ open class KFTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.updateUI()
+        self.updateUI_ty()
     }
     
     open override func viewDidLoad() {
@@ -46,13 +46,13 @@ open class KFTabBarController: UITabBarController, UITabBarControllerDelegate {
         settingVC.tabBarItem.setTitleTextAttributes([.foregroundColor:UIColor.theme], for: .selected)
         
         self.viewControllers = [homeVC, taskVC, settingVC]
-        self.updateUI()
+        self.updateUI_ty()
         self.selectedIndex = 0
     }
     
-    open func updateUI() {
+    open func updateUI_ty() {
         self.view.backgroundColor             = .white
-        UITabBar.appearance().backgroundImage = UIImage.imageWithColor(.white)
+        UITabBar.appearance().backgroundImage = UIImage.imageWithColor_ty(.white)
         UITabBar.appearance().isTranslucent   = false
     }
 }

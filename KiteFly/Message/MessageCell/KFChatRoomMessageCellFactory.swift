@@ -7,6 +7,7 @@
 
 import UIKit
 import RongIMLib
+import STYKit
 
 /// 消息工厂
 struct KFChatRoomMessageCellFactory {

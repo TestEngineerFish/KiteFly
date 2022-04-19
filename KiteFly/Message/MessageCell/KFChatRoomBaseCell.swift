@@ -8,6 +8,7 @@
 
 import UIKit
 import RongIMLib
+import STYKit
 
 protocol KFChatRoomCellDelegate: NSObjectProtocol {
     /// 点击消息
@@ -19,7 +20,7 @@ protocol KFChatRoomCellDelegate: NSObjectProtocol {
     /// 点击头像
     func clickAvatarAction(model: RCMessage, indexPath: IndexPath)
     /// 删除消息
-    func deleteMessageAction(model: RCMessage, indexPath: IndexPath, complete block: BoolBlock?, isReload: Bool)
+    func deleteMessageAction(model: RCMessage, indexPath: IndexPath, complete block: BoolBlock_ty?, isReload: Bool)
     /// 重发消息
     func resendMessage(model: RCMessage, indexPath: IndexPath)
     /// 更新大小（小灰条宽度，cell高度）
@@ -27,33 +28,33 @@ protocol KFChatRoomCellDelegate: NSObjectProtocol {
 }
 
 /// 聊天室所有类型消息的基类
-class KFChatRoomBaseCell: KFTableViewCell {
+class KFChatRoomBaseCell: TYTableViewCell_ty {
     
-    let topSpace    = AdaptSize(10)
-    let bottomSpace = AdaptSize(-10)
-    let timeHeight  = AdaptSize(36)
+    let topSpace    = AdaptSize_ty(10)
+    let bottomSpace = AdaptSize_ty(-10)
+    let timeHeight  = AdaptSize_ty(36)
     var messageModel: RCMessage?
     
     weak var delegate: KFChatRoomCellDelegate?
     
-    var timeLabel: KFLabel = {
-        let label = KFLabel()
+    var timeLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.gray1
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(11))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(11))
         label.textAlignment = .center
         label.isHidden      = true
         return label
     }()
     
-    var customContentView: KFView = {
-        let view = KFView()
+    var customContentView: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor = UIColor.clear
         return view
     }()
 
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.contentView.addSubview(timeLabel)
         self.contentView.addSubview(customContentView)
         timeLabel.snp.remakeConstraints { make in
@@ -68,7 +69,7 @@ class KFChatRoomBaseCell: KFTableViewCell {
         }
     }
 
-    override func bindProperty() {
+    override func bindProperty_ty() {
         self.selectionStyle  = .none
         self.backgroundColor = .clear
     }

@@ -8,6 +8,7 @@
 
 import UIKit
 import RongIMLib
+import STYKit
 
 protocol KFChatRoomBubbleDelegate: NSObjectProtocol {
     /// 点击气泡
@@ -19,40 +20,40 @@ protocol KFChatRoomBubbleDelegate: NSObjectProtocol {
 }
 
 /// 所有消息气泡的基类
-class KFChatRoomBaseMessageBubble: KFView {
+class KFChatRoomBaseMessageBubble: TYView_ty {
 
     var messageModel: RCMessage?
     /// 最大长度
-    var maxWidth: CGFloat = AdaptSize(250)
+    var maxWidth: CGFloat = AdaptSize_ty(250)
     weak var delegate: KFChatRoomBubbleDelegate?
     
-    internal var backgroundImageView: KFImageView = {
-        let imageView = KFImageView()
+    internal var backgroundImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius  = AdaptSize(10)
+        imageView.layer.cornerRadius  = AdaptSize_ty(10)
         return imageView
     }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.createSubviews()
-        self.bindProperty()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.addSubview(backgroundImageView)
         backgroundImageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
 
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
         self.isUserInteractionEnabled = true
         self.backgroundColor          = .clear
         
@@ -73,15 +74,15 @@ class KFChatRoomBaseMessageBubble: KFView {
     // MARK: ==== Event ====
     
     func setLeftWhiteBackground() {
-        self.backgroundImageView.image = UIImage.imageWithColor(.white)
+        self.backgroundImageView.image = UIImage.imageWithColor_ty(.white)
     }
     
     func setRightGreenBackground() {
-        self.backgroundImageView.image = UIImage.imageWithColor(.theme)
+        self.backgroundImageView.image = UIImage.imageWithColor_ty(.theme)
     }
     
     func setRightWhiteBackground() {
-        self.backgroundImageView.image = UIImage.imageWithColor(.white)
+        self.backgroundImageView.image = UIImage.imageWithColor_ty(.white)
     }
 
     /// 点击bubble区域事件
@@ -96,11 +97,11 @@ class KFChatRoomBaseMessageBubble: KFView {
         }
         
         if sender.state == .began {
-            UIViewController.currentViewController?.view.endEditing(true)
-            let actionSheet = KFActionSheet()
-            actionSheet.addItem(icon: UIImage(named: "dynamic_comment_delete"), title: "删除", isDestroy: true) {
+            currentVC_ty?.view.endEditing(true)
+            let actionSheet = TYActionSheet_ty()
+            actionSheet.addItem_ty(icon_ty: UIImage(named: "dynamic_comment_delete"), title_ty: "删除", isDestroy_ty: true) {
                 self.delegate?.deleteMessage()
-            }.show()
+            }.show_ty()
         }
     }
 

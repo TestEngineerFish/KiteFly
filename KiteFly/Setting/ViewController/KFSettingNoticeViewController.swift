@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import STYKit
 
-class KFSettingNoticeViewController: KFViewController, UITableViewDelegate, UITableViewDataSource, KFSettingNoticeCellDelegate {
+class KFSettingNoticeViewController: TYViewController_ty, UITableViewDelegate, UITableViewDataSource, KFSettingNoticeCellDelegate {
     
     private let cellID = "kKFSettingNoticeCell"
     private var modelList: [KFCommunityModel] = []
     
-    private var tableView: KFTableView = {
-        let tableView = KFTableView()
-        tableView.estimatedRowHeight             = AdaptSize(56)
+    private var tableView: TYTableView_ty = {
+        let tableView = TYTableView_ty()
+        tableView.estimatedRowHeight             = AdaptSize_ty(56)
         tableView.backgroundColor                = UIColor.gray0
         tableView.separatorStyle                 = .none
         tableView.showsVerticalScrollIndicator   = false
@@ -24,9 +25,9 @@ class KFSettingNoticeViewController: KFViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,28 +35,28 @@ class KFSettingNoticeViewController: KFViewController, UITableViewDelegate, UITa
         KFChatRequestManager.share.requestRecord(content: "设置 -- 我的动态")
     }
 
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(tableView)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title      = "我的动态"
-        self.customNavigationBar?.rightTitle = "发布"
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.customNavigationBar_ty?.title_ty      = "我的动态"
+        self.customNavigationBar_ty?.setRightTitle_ty(text_ty: "发布")
         self.tableView.delegate              = self
         self.tableView.dataSource            = self
         self.tableView.register(KFSettingNoticeCell.classForCoder(), forCellReuseIdentifier: cellID)
     }
     
-    override func rightAction() {
-        super.rightAction()
+    override func rightAction_ty() {
+        super.rightAction_ty()
         let vc = KFCommunityPublishViewController()
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
     
-    override func bindData() {
-        super.bindData()
+    override func bindData_ty() {
+        super.bindData_ty()
         self.modelList = []
         self.tableView.reloadData()
     }
@@ -63,7 +64,7 @@ class KFSettingNoticeViewController: KFViewController, UITableViewDelegate, UITa
     override func updateViewConstraints() {
         tableView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalToSuperview().offset(kNavHeight)
+            make.top.equalToSuperview().offset(kNavigationHeight_ty)
         }
         super.updateViewConstraints()
     }
@@ -90,13 +91,13 @@ class KFSettingNoticeViewController: KFViewController, UITableViewDelegate, UITa
         let vc = KFCommunityDetailViewController()
         let model = self.modelList[indexPath.row]
         vc.model = model
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
     
     // MARK: ==== KFSettingNoticeCellDelegate ====
     func remarkAction(model: KFCommunityModel) {
         let vc = KFCommunityRemarkViewController()
         vc.model = model
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
 }

@@ -66,7 +66,7 @@ open class KFTableViewCell: UITableViewCell {
             }
             lineView.isHidden = isHide
         } else {
-            let lineView = KFView()
+            let lineView = TYView_ty()
             lineView.backgroundColor = UIColor.gray4
             contentView.addSubview(lineView)
             lineView.snp.makeConstraints { make in

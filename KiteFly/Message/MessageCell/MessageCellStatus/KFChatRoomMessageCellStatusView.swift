@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import STYKit
 
 enum KFMessageStatusType: Int {
     case normal  = 0
@@ -16,23 +17,23 @@ enum KFMessageStatusType: Int {
     case loading = 3
 }
 
-class KFChatRoomMessageCellStatusView: KFView {
+class KFChatRoomMessageCellStatusView: TYView_ty {
     
     var type: KFMessageStatusType = .normal
     
     /// 未读
-    private var redDotView: BPRedDotView = {
-        let view = BPRedDotView(showNumber: false, colorType: .red)
+    private var redDotView: TYRedDotView_ty = {
+        let view = TYRedDotView_ty(showNumber_ty: false, colorType_ty: .red_ty)
         view.isHidden = true
         return view
     }()
     /// 发送失败
-    private var failImageView: KFImageView = {
-        let imageView = KFImageView()
+    private var failImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode = .scaleAspectFill
         imageView.image       = UIImage(named: "message_sendfail")
         imageView.isHidden    = true
-        imageView.size        = CGSize(width: AdaptSize(18), height: AdaptSize(18))
+        imageView.size_ty        = CGSize(width: AdaptSize_ty(18), height: AdaptSize_ty(18))
         return imageView
     }()
     private var loadingView: UIActivityIndicatorView = {
@@ -43,38 +44,38 @@ class KFChatRoomMessageCellStatusView: KFView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.createSubviews()
-        self.bindProperty()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.addSubview(redDotView)
         self.addSubview(failImageView)
         self.addSubview(loadingView)
         redDotView.snp.makeConstraints { make in
-            make.size.equalTo(redDotView.size)
+            make.size.equalTo(redDotView.size_ty)
             make.centerY.equalToSuperview()
             make.left.equalToSuperview()
         }
         failImageView.snp.makeConstraints { make in
-            make.size.equalTo(failImageView.size)
+            make.size.equalTo(failImageView.size_ty)
             make.centerY.equalToSuperview()
             make.left.equalToSuperview()
         }
         loadingView.snp.makeConstraints { make in
-            make.size.equalTo(loadingView.size)
+            make.size.equalTo(loadingView.size_ty)
             make.centerY.equalToSuperview()
             make.left.equalToSuperview()
         }
     }
     
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
     }
     
     // MARK: ==== Event ====

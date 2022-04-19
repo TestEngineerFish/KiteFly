@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import STYKit
 
 open class KFCollectionViewCell: UICollectionViewCell, KFViewDelegate {
     

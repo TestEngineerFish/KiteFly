@@ -13,7 +13,7 @@ public protocol KFNavigationBarDelegate: NSObjectProtocol {
     func rightAction()
 }
 
-open class KFNavigationBar: KFView {
+open class KFNavigationBar: TYView_ty {
     
     public var leftViewList: [UIView]  = []
     public var rightViewList: [UIView] = []

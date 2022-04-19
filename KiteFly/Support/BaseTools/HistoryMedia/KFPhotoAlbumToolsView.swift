@@ -14,7 +14,7 @@ public protocol KFPhotoAlbumToolsDelegate: NSObjectProtocol {
     func clickDeleteAction()
 }
 
-class KFPhotoAlbumToolsView: KFView {
+class KFPhotoAlbumToolsView: TYView_ty {
 
     weak var delegate: KFPhotoAlbumToolsDelegate?
 

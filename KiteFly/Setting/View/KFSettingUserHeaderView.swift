@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import STYKit
 
-class KFSettingUserHeaderView: KFView {
+class KFSettingUserHeaderView: TYView_ty {
     
     private var model: KFUserModel?
     
-    private var avatarImageView: KFImageView = {
-        let imageView = KFImageView()
+    private var avatarImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode         = .scaleAspectFill
-        imageView.size                = CGSize(width: AdaptSize(80), height: AdaptSize(80))
-        imageView.layer.cornerRadius  = AdaptSize(40)
+        imageView.size_ty                = CGSize(width: AdaptSize_ty(80), height: AdaptSize_ty(80))
+        imageView.layer.cornerRadius  = AdaptSize_ty(40)
         imageView.layer.masksToBounds = true
         imageView.isUserInteractionEnabled = true
         return imageView
@@ -23,8 +24,8 @@ class KFSettingUserHeaderView: KFView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.createSubviews()
-        self.bindProperty()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
         self.updateConstraints()
     }
     
@@ -32,23 +33,23 @@ class KFSettingUserHeaderView: KFView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.addSubview(avatarImageView)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
         let tapGes = UITapGestureRecognizer(target: self, action: #selector(clickAvatarAction))
         self.avatarImageView.addGestureRecognizer(tapGes)
     }
     
     override func updateConstraints() {
         avatarImageView.snp.makeConstraints { make in
-            make.size.equalTo(avatarImageView.size)
-            make.top.equalToSuperview().offset(AdaptSize(20))
+            make.size.equalTo(avatarImageView.size_ty)
+            make.top.equalToSuperview().offset(AdaptSize_ty(20))
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().offset(AdaptSize(-10))
+            make.bottom.equalToSuperview().offset(AdaptSize_ty(-10))
         }
         super.updateConstraints()
     }
@@ -56,7 +57,7 @@ class KFSettingUserHeaderView: KFView {
     // MARK: ==== Event ====
     func setData(model: KFUserModel?) {
         self.model = model
-        self.avatarImageView.setImage(with: model?.avatar)
+        self.avatarImageView.setImage_ty(imageStr_ty: model?.avatar)
     }
     
     @objc
@@ -64,11 +65,12 @@ class KFSettingUserHeaderView: KFView {
         guard let _model = self.model, _model.id == KFUserModel.share.id else {
             return
         }
-        KFSystemPhotoManager.share.show { modelList in
-            guard let imageModel = modelList.first as? BPMediaImageModel else {
+        
+        TYPhotoManager_ty.share_ty.show_ty { modelList in
+            guard let imageModel = modelList.first as? TYMediaImageModel_ty else {
                 return
             }
-            self.avatarImageView.image = imageModel.image
+            self.avatarImageView.image = imageModel.image_ty
         }
     }
 }

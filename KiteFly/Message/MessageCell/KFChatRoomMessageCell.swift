@@ -8,14 +8,15 @@
 
 import UIKit
 import RongIMLib
+import STYKit
 
 /// 聊天室消息类型Cell
 class KFChatRoomMessageCell: KFChatRoomBaseCell, KFChatRoomBubbleDelegate {
     
     /// 头像
-    private var avatarImageView: KFImageView = {
-        let imageView = KFImageView()
-        imageView.size = CGSize(width: AdaptSize(40), height: AdaptSize(40))
+    private var avatarImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
+        imageView.size_ty = CGSize(width: AdaptSize_ty(40), height: AdaptSize_ty(40))
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
         return imageView
@@ -27,26 +28,26 @@ class KFChatRoomMessageCell: KFChatRoomBaseCell, KFChatRoomBubbleDelegate {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.createSubviews()
-        self.bindProperty()
-        self.updateUI()
-        self.registerNotification()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.updateUI_ty()
+        self.registerNotification_ty()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.customContentView.addSubview(avatarImageView)
         self.customContentView.addSubview(bubbleView)
         self.customContentView.addSubview(statusView)
-        self.avatarImageView.layer.cornerRadius = AdaptSize(20)
+        self.avatarImageView.layer.cornerRadius = AdaptSize_ty(20)
     }
 
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
         self.bubbleView.delegate = self
         let tapGes = UITapGestureRecognizer(target: self, action: #selector(clickAvatarAction))
         self.avatarImageView.isUserInteractionEnabled = true
@@ -55,19 +56,19 @@ class KFChatRoomMessageCell: KFChatRoomBaseCell, KFChatRoomBubbleDelegate {
         self.statusView.addGestureRecognizer(tapStatusGes)
     }
     
-    override func updateUI() {
-        super.updateUI()
+    override func updateUI_ty() {
+        super.updateUI_ty()
         self.backgroundColor = UIColor.clear
     }
     
-    override func registerNotification() {
-        super.registerNotification()
+    override func registerNotification_ty() {
+        super.registerNotification_ty()
     }
 
     // MARK: ==== Evnet ====
     override func bindData(message model: RCMessage, indexPath: IndexPath) {
         super.bindData(message: model, indexPath: indexPath)
-        self.updateUI()
+        self.updateUI_ty()
         // 设置头像
         self.setAvatar()
         // 设置内容展示视图
@@ -113,18 +114,18 @@ class KFChatRoomMessageCell: KFChatRoomBaseCell, KFChatRoomBubbleDelegate {
     private func setAvatar() {
         guard let model = self.messageModel else { return }
         if model.messageDirection == .MessageDirection_SEND {
-            self.avatarImageView.setImage(with: KFUserModel.share.avatar)
+            self.avatarImageView.setImage_ty(imageStr_ty: KFUserModel.share.avatar)
             self.avatarImageView.snp.remakeConstraints { (make) in
                 make.top.equalToSuperview().offset(topSpace)
-                make.right.equalToSuperview().offset(AdaptSize(-16))
-                make.size.equalTo(CGSize(width: AdaptSize(40), height: AdaptSize(40)))
+                make.right.equalToSuperview().offset(AdaptSize_ty(-16))
+                make.size.equalTo(CGSize(width: AdaptSize_ty(40), height: AdaptSize_ty(40)))
                 make.bottom.lessThanOrEqualToSuperview().offset(bottomSpace)
             }
         } else {
             self.avatarImageView.snp.remakeConstraints { (make) in
                 make.top.equalToSuperview().offset(topSpace)
-                make.left.equalToSuperview().offset(AdaptSize(16))
-                make.size.equalTo(CGSize(width: AdaptSize(40), height: AdaptSize(40)))
+                make.left.equalToSuperview().offset(AdaptSize_ty(16))
+                make.size.equalTo(CGSize(width: AdaptSize_ty(40), height: AdaptSize_ty(40)))
                 make.bottom.lessThanOrEqualToSuperview().offset(bottomSpace)
             }
         }
@@ -136,13 +137,13 @@ class KFChatRoomMessageCell: KFChatRoomBaseCell, KFChatRoomBubbleDelegate {
         guard let model = self.messageModel else { return }
         if model.messageDirection == .MessageDirection_SEND {
             self.bubbleView.snp.remakeConstraints { (make) in
-                make.right.equalTo(avatarImageView.snp.left).offset(AdaptSize(-10))
+                make.right.equalTo(avatarImageView.snp.left).offset(AdaptSize_ty(-10))
                 make.top.equalTo(avatarImageView)
                 make.bottom.equalToSuperview().offset(bottomSpace)
             }
         } else {
             self.bubbleView.snp.remakeConstraints { (make) in
-                make.left.equalTo(avatarImageView.snp.right).offset(AdaptSize(10))
+                make.left.equalTo(avatarImageView.snp.right).offset(AdaptSize_ty(10))
                 make.top.equalTo(avatarImageView)
                 make.bottom.equalToSuperview().offset(bottomSpace)
             }
@@ -161,21 +162,21 @@ class KFChatRoomMessageCell: KFChatRoomBaseCell, KFChatRoomBubbleDelegate {
 
         if model.messageDirection == .MessageDirection_SEND {
             statusView.snp.remakeConstraints { make in
-                make.size.equalTo(CGSize(width: AdaptSize(20), height: AdaptSize(20)))
-                make.right.equalTo(bubbleView.snp.left).offset(AdaptSize(-10))
+                make.size.equalTo(CGSize(width: AdaptSize_ty(20), height: AdaptSize_ty(20)))
+                make.right.equalTo(bubbleView.snp.left).offset(AdaptSize_ty(-10))
                 make.centerY.equalTo(bubbleView)
             }
         } else {
             statusView.snp.remakeConstraints { make in
-                make.size.equalTo(CGSize(width: AdaptSize(20), height: AdaptSize(20)))
-                make.left.equalTo(bubbleView.snp.right).offset(AdaptSize(10))
+                make.size.equalTo(CGSize(width: AdaptSize_ty(20), height: AdaptSize_ty(20)))
+                make.left.equalTo(bubbleView.snp.right).offset(AdaptSize_ty(10))
                 make.centerY.equalTo(bubbleView)
             }
         }
         
         if model.messageDirection == .MessageDirection_SEND {
             // 风控修改的本地失败状态
-            if let exDic = model.expansionDic, let statusStr = exDic["sendStatus"], let status = RCSentStatus(rawValue: UInt(statusStr.intValue)) {
+            if let exDic = model.expansionDic, let statusStr = exDic["sendStatus"], let status = RCSentStatus(rawValue: UInt(statusStr.intValue_ty)) {
                 model.sentStatus = status
             }
             switch model.sentStatus {
@@ -237,9 +238,9 @@ class KFChatRoomMessageCell: KFChatRoomBaseCell, KFChatRoomBubbleDelegate {
         }
         self.delegate?.deleteMessageAction(model: _messageModel, indexPath: _indexPath, complete: { result in
             if result {
-                kWindow.toast("删除成功")
+                kWindow_ty.toast_ty("删除成功")
             } else {
-                kWindow.toast("删除失败")
+                kWindow_ty.toast_ty("删除失败")
             }
         }, isReload: true)
     }

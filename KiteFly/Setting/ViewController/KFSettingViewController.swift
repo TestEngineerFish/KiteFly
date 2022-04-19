@@ -7,6 +7,7 @@
 
 import Foundation
 import StoreKit
+import STYKit
 
 enum KFSettingType: String {
     case name       = "姓名"
@@ -58,15 +59,15 @@ enum KFSettingType: String {
     }
 }
 
-class KFSettingViewController: KFViewController, UITableViewDelegate, UITableViewDataSource {
+class KFSettingViewController: TYViewController_ty, UITableViewDelegate, UITableViewDataSource {
     
     private let cellID = "kKFSettingCell"
     private var model: KFUserModel?
     private let typeList: [KFSettingType] = [.notice, .register, .clear, .contact, .appraise, .agreement, .more]
     
-    private var tableView: KFTableView = {
-        let tableView = KFTableView(frame: .zero, style: .grouped)
-        tableView.estimatedRowHeight             = AdaptSize(56)
+    private var tableView: TYTableView_ty = {
+        let tableView = TYTableView_ty(frame: .zero, style: .grouped)
+        tableView.estimatedRowHeight             = AdaptSize_ty(56)
         tableView.backgroundColor                = UIColor.white
         tableView.separatorStyle                 = .none
         tableView.showsVerticalScrollIndicator   = false
@@ -76,33 +77,33 @@ class KFSettingViewController: KFViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.bindData()
+        self.bindData_ty()
         KFChatRequestManager.share.requestRecord(content: "设置主页")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(tableView)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title = "设置"
-        self.customNavigationBar?.hideLeftView()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.customNavigationBar_ty?.title_ty = "设置"
+        self.customNavigationBar_ty?.leftButton_ty.isHidden = true
         self.tableView.delegate   = self
         self.tableView.dataSource = self
         self.tableView.register(KFSettingCell.classForCoder(), forCellReuseIdentifier: cellID)
     }
     
-    override func bindData() {
-        super.bindData()
+    override func bindData_ty() {
+        super.bindData_ty()
         self.model = KFUserModel.share
         self.tableView.reloadData()
     }
@@ -110,7 +111,7 @@ class KFSettingViewController: KFViewController, UITableViewDelegate, UITableVie
     override func updateViewConstraints() {
         tableView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalToSuperview().offset(kNavHeight)
+            make.top.equalToSuperview().offset(kNavigationHeight_ty)
         }
         super.updateViewConstraints()
     }
@@ -120,7 +121,7 @@ class KFSettingViewController: KFViewController, UITableViewDelegate, UITableVie
     private func clickUserInfo() {
         let vc = KFSettingUserDetailViewController()
         vc.model = self.model
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
     
     // MARK: ==== UITableViewDelegate, UITableViewDataSource ====
@@ -152,33 +153,33 @@ class KFSettingViewController: KFViewController, UITableViewDelegate, UITableVie
         switch type {
         case .notice:
             let vc = KFSettingNoticeViewController()
-            self.navigationController?.push(vc: vc)
+            self.navigationController?.push_ty(vc_ty: vc)
         case .register:
             let vc = KFSettingMyRegisterViewController()
-            self.navigationController?.push(vc: vc)
+            self.navigationController?.push_ty(vc_ty: vc)
         case .clear:
-            kWindow.showLoading()
+            kWindow_ty.showLoading_ty()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                kWindow.hideLoading()
-                kWindow.toast("清理完成")
+                kWindow_ty.hideLoading_ty()
+                kWindow_ty.toast_ty("清理完成")
             }
         case .contact:
-            KFActionSheet(title: "联系我们").addItem(title: "邮箱：report@kangkanghui.com") {
+            TYActionSheet_ty(title_ty: "联系我们").addItem_ty(title_ty: "邮箱：report@kangkanghui.com") {
                 let email = "report@kangkanghui.com"
                 if let url = URL(string: "mailto:\(email)") {
                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
-            }.show()
+            }.show_ty()
         case .appraise:
             SKStoreReviewController.requestReview()
         case .agreement:
             let vc = KFWebViewController()
             let path = Bundle.main.path(forResource: "Agreement", ofType: "html")
             vc.localHtml = path
-            self.navigationController?.push(vc: vc)
+            self.navigationController?.push_ty(vc_ty: vc)
         case .more:
             let vc = KFSettingMoreViewController()
-            self.navigationController?.push(vc: vc)
+            self.navigationController?.push_ty(vc_ty: vc)
         default:
             break
         }

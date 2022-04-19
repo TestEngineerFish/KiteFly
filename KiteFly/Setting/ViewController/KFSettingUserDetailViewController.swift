@@ -6,21 +6,22 @@
 //
 
 import Foundation
+import STYKit
 
-class KFSettingUserDetailViewController: KFViewController, UITableViewDelegate, UITableViewDataSource {
+class KFSettingUserDetailViewController: TYViewController_ty, UITableViewDelegate, UITableViewDataSource {
     
     private let cellID = "kKFSettingUserDetailCell"
     private var typeList: [KFSettingType] = [.name, .sex, .address, .remark]
     var model: KFUserModel?
-    private var titleLayer: KFView = {
-        let view = KFView()
+    private var titleLayer: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor = UIColor.black0
         return view
     }()
     
-    private var tableView: KFTableView = {
-        let tableView = KFTableView(frame: .zero, style: .grouped)
-        tableView.estimatedRowHeight             = AdaptSize(56)
+    private var tableView: TYTableView_ty = {
+        let tableView = TYTableView_ty(frame: .zero, style: .grouped)
+        tableView.estimatedRowHeight             = AdaptSize_ty(56)
         tableView.backgroundColor                = UIColor.gray0
         tableView.separatorStyle                 = .none
         tableView.showsVerticalScrollIndicator   = false
@@ -30,42 +31,42 @@ class KFSettingUserDetailViewController: KFViewController, UITableViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.bindData()
+        self.bindData_ty()
         KFChatRequestManager.share.requestRecord(content: "设置 -- 个人信息")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(tableView)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title = "个人主页"
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.customNavigationBar_ty?.title_ty = "个人主页"
         self.tableView.delegate   = self
         self.tableView.dataSource = self
         self.tableView.register(KFSettingUserDetailCell.classForCoder(), forCellReuseIdentifier: cellID)
     }
     
-    override func bindData() {
-        super.bindData()
+    override func bindData_ty() {
+        super.bindData_ty()
         self.tableView.reloadData()
     }
     
     override func updateViewConstraints() {
         tableView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalToSuperview().offset(kNavHeight)
+            make.top.equalToSuperview().offset(kNavigationHeight_ty)
         }
         titleLayer.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: AdaptSize(100), height: AdaptSize(30)))
+            make.size.equalTo(CGSize(width: AdaptSize_ty(100), height: AdaptSize_ty(30)))
             make.centerX.equalToSuperview()
             make.bottom.top.equalToSuperview()
         }
@@ -103,29 +104,29 @@ class KFSettingUserDetailViewController: KFViewController, UITableViewDelegate, 
         case .name:
             let vc = KFSettingRenameViewController()
             vc.type = .name
-            UIViewController.currentNavigationController?.push(vc: vc)
+            currentNVC_ty?.push_ty(vc_ty: vc)
         case .sex:
-            KFActionSheet(title: "选择性别").addItem(title: "男") {
+            TYActionSheet_ty(title_ty: "选择性别").addItem_ty(title_ty: "男") {
                 KFUserModel.share.sex   = .man
                 self.model?.sex         = .man
                 tableView.reloadData()
-            }.addItem(title: "女") {
+            }.addItem_ty(title_ty: "女") {
                 KFUserModel.share.sex   = .woman
                 self.model?.sex         = .woman
                 tableView.reloadData()
-            }.addItem(title: "保密") {
+            }.addItem_ty(title_ty: "保密") {
                 KFUserModel.share.sex   = .unknown
                 self.model?.sex         = .unknown
                 tableView.reloadData()
-            }.show()
+            }.show_ty()
         case .address:
             let vc = KFSettingRenameViewController()
             vc.type = .address
-            UIViewController.currentNavigationController?.push(vc: vc)
+            currentNVC_ty?.push_ty(vc_ty: vc)
         case .remark:
             let vc = KFSettingRenameViewController()
             vc.type = .remark
-            UIViewController.currentNavigationController?.push(vc: vc)
+            currentNVC_ty?.push_ty(vc_ty: vc)
         default:
             break
         }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 public protocol KFViewDelegate: NSObjectProtocol {
     /// 初始化子视图

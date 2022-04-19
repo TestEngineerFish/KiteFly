@@ -6,17 +6,18 @@
 //
 
 import Foundation
+import STYKit
 
 
-class KFHomeViewController: KFViewController, UITableViewDelegate, UITableViewDataSource {
+class KFHomeViewController: TYViewController_ty, UITableViewDelegate, UITableViewDataSource {
     
     private let noticCellID = "kKFHomeNoticCell"
     
     private var noticeModelList = [KFNoticeModel]()
     
-    private var tableView: KFTableView = {
-        let tableView = KFTableView(frame: .zero, style: .grouped)
-        tableView.estimatedRowHeight             = AdaptSize(56)
+    private var tableView: TYTableView_ty = {
+        let tableView = TYTableView_ty(frame: .zero, style: .grouped)
+        tableView.estimatedRowHeight             = AdaptSize_ty(56)
         tableView.backgroundColor                = UIColor.clear
         tableView.separatorStyle                 = .none
         tableView.showsVerticalScrollIndicator   = false
@@ -26,10 +27,10 @@ class KFHomeViewController: KFViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
-        self.updateUI()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
+        self.updateUI_ty()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,27 +38,27 @@ class KFHomeViewController: KFViewController, UITableViewDelegate, UITableViewDa
         KFChatRequestManager.share.requestRecord(content: "主页首页")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalToSuperview().offset(kNavHeight)
+            make.top.equalToSuperview().offset(kNavigationHeight_ty)
         }
     }
     
-    override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title = "风筝汇"
-        self.customNavigationBar?.hideLeftView()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.customNavigationBar_ty?.title_ty = "风筝汇"
+        self.customNavigationBar_ty?.leftButton_ty.isHidden = true
         self.tableView.register(KFHomeNoticCell.classForCoder(), forCellReuseIdentifier: noticCellID)
         self.tableView.delegate        = self
         self.tableView.dataSource      = self
     }
     
-    override func bindData() {
-        super.bindData()
-        self.noticeModelList = KFFileManager.share.getJsonModelList(file: "NoticModelList", type: KFNoticeModel.self) as? [KFNoticeModel] ?? []
+    override func bindData_ty() {
+        super.bindData_ty()
+        self.noticeModelList = TYFileManager_ty.share_ty.getJsonModelList_ty(file_ty: "NoticModelList", type_ty: KFNoticeModel.self) as? [KFNoticeModel] ?? []
         self.tableView.reloadData()
     }
     
@@ -65,8 +66,8 @@ class KFHomeViewController: KFViewController, UITableViewDelegate, UITableViewDa
         super.updateViewConstraints()
     }
     
-    override func updateUI() {
-        super.updateUI()
+    override func updateUI_ty() {
+        super.updateUI_ty()
         self.view.backgroundColor = .white
         
     }
@@ -96,6 +97,6 @@ class KFHomeViewController: KFViewController, UITableViewDelegate, UITableViewDa
         let model = self.noticeModelList[indexPath.row]
         let vc = KFNoticeDetailViewController()
         vc.model = model
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
 }

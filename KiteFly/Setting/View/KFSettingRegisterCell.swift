@@ -6,71 +6,73 @@
 //
 
 import Foundation
+import STYKit
+import UIKit
 
-class KFSettingRegisterCell: KFTableViewCell {
+class KFSettingRegisterCell: TYTableViewCell_ty {
     
-    private var customContentView: KFView = {
-        let view = KFView()
+    private var customContentView: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor = UIColor.white
-        view.layer.cornerRadius = AdaptSize(10)
-        view.layer.setDefaultShadow()
+        view.layer.cornerRadius = AdaptSize_ty(10)
+        view.layer.setDefaultShadow_ty()
         return view
     }()
     
-    private var logoImageView: KFImageView = {
-        let imageView = KFImageView()
+    private var logoImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode = .scaleAspectFill
-        imageView.size = CGSize(width: kScreenWidth - AdaptSize(20), height: AdaptSize(180))
-        imageView.clipRectCorner(directionList: [.topLeft, .topRight], cornerRadius: AdaptSize(10))
+        imageView.size_ty = CGSize(width: kScreenWidth_ty - AdaptSize_ty(20), height: AdaptSize_ty(180))
+        imageView.clipRectCorner_ty(directionList_ty: [.topLeft, .topRight], cornerRadius_ty: AdaptSize_ty(10))
         return imageView
     }()
     
-    private var titleLabel: KFLabel = {
-        let label = KFLabel()
+    private var titleLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.white
-        label.font          = UIFont.DINAlternateBold(ofSize: AdaptSize(20))
+        label.font          = UIFont.DIN_ty(AdaptSize_ty(20))
         label.textAlignment = .left
         return label
     }()
-    private var amountLabel: KFLabel = {
-        let label = KFLabel()
+    private var amountLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.white
-        label.font          = UIFont.regularFont(ofSize: 15)
+        label.font          = UIFont.regular_ty(15)
         label.textAlignment = .left
         return label
     }()
-    private var contactLabel: KFLabel = {
-        let label = KFLabel()
+    private var contactLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.white
-        label.font          = UIFont.regularFont(ofSize: 15)
+        label.font          = UIFont.regular_ty(15)
         label.textAlignment = .left
         return label
     }()
-    private var addressLabel: KFLabel = {
-        let label = KFLabel()
+    private var addressLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black
-        label.font          = UIFont.mediumFont(ofSize: AdaptSize(16))
+        label.font          = UIFont.medium_ty(AdaptSize_ty(16))
         label.textAlignment = .left
         return label
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.createSubviews()
-        self.bindProperty()
-        self.updateUI()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.updateUI_ty()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.contentView.addSubview(customContentView)
         customContentView.addSubview(logoImageView)
         customContentView.addSubview(titleLabel)
@@ -79,55 +81,55 @@ class KFSettingRegisterCell: KFTableViewCell {
         customContentView.addSubview(addressLabel)
         
         customContentView.snp.makeConstraints { make in
-            make.left.top.equalToSuperview().offset(AdaptSize(10))
-            make.right.bottom.equalToSuperview().offset(AdaptSize(-10))
+            make.left.top.equalToSuperview().offset(AdaptSize_ty(10))
+            make.right.bottom.equalToSuperview().offset(AdaptSize_ty(-10))
         }
         logoImageView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.centerX.equalToSuperview()
-            make.size.equalTo(logoImageView.size)
+            make.size.equalTo(logoImageView.size_ty)
         }
         addressLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(AdaptSize(15))
-            make.right.equalToSuperview().offset(AdaptSize(-15))
+            make.left.equalToSuperview().offset(AdaptSize_ty(15))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
             make.bottom.equalToSuperview()
-            make.height.equalTo(AdaptSize(40))
+            make.height.equalTo(AdaptSize_ty(40))
             make.top.equalTo(logoImageView.snp.bottom)
         }
         contactLabel.snp.makeConstraints { make in
             make.left.right.equalTo(addressLabel)
             make.height.equalTo(contactLabel.font.lineHeight)
-            make.bottom.equalTo(addressLabel.snp.top).offset(AdaptSize(-15))
+            make.bottom.equalTo(addressLabel.snp.top).offset(AdaptSize_ty(-15))
         }
         amountLabel.snp.makeConstraints { make in
             make.left.right.equalTo(addressLabel)
             make.height.equalTo(amountLabel.font.lineHeight)
-            make.bottom.equalTo(contactLabel.snp.top).offset(AdaptSize(-10))
+            make.bottom.equalTo(contactLabel.snp.top).offset(AdaptSize_ty(-10))
         }
         titleLabel.snp.makeConstraints { make in
             make.height.equalTo(titleLabel.font.lineHeight)
-            make.top.left.equalToSuperview().offset(AdaptSize(15))
-            make.right.equalToSuperview().offset(AdaptSize(-15))
+            make.top.left.equalToSuperview().offset(AdaptSize_ty(15))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
         }
     }
     
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
     }
     
     override func updateConstraints() {
         super.updateConstraints()
     }
     
-    override func updateUI() {
-        super.updateUI()
+    override func updateUI_ty() {
+        super.updateUI_ty()
         self.backgroundColor = .clear
         self.contentView.backgroundColor = .clear
     }
     
     // MARK: ==== Event ====
     func setData(model: KFNoticeModel) {
-        self.logoImageView.setImage(with: model.icon)
+        self.logoImageView.setImage_ty(imageStr_ty: model.icon)
         self.amountLabel.text  = "报名人数: \(model.amount) 人"
         self.contactLabel.text = "联系电话: \(model.contact)"
         self.addressLabel.text = "地址: \(model.address)"

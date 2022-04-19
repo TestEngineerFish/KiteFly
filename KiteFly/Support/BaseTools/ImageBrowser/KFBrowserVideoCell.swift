@@ -34,7 +34,7 @@ class KFBrowserVideoCell:
     /// 拖动最小缩放比例
     private let drawMinScale: CGFloat   = 0.5
     
-    private var customContentView = KFView()
+    private var customContentView = TYView_ty()
     
     private var playButton: KFButton = {
         let button = KFButton()

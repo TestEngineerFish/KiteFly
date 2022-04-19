@@ -15,7 +15,7 @@ protocol KFSystemAlbumListViewDelegate: NSObjectProtocol {
     func hideAlbumAction()
 }
 
-class KFSystemAlbumListView: KFView, UITableViewDelegate, UITableViewDataSource {
+class KFSystemAlbumListView: TYView_ty, UITableViewDelegate, UITableViewDataSource {
 
     private let cellID = "kBPSystemAlbumCell"
     private var albumList: [KFPhotoAlbumModel] = []

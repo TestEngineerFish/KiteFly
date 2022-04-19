@@ -14,7 +14,7 @@ public enum KFProgressType: Int {
     case round
 }
 
-public class KFProgressView: KFView {
+public class KFProgressView: TYView_ty {
     private var type: KFProgressType
     private var lineWidth: CGFloat
     

@@ -6,30 +6,31 @@
 //
 
 import Foundation
+import STYKit
 
-class KFHomeNewsItem: KFCollectionViewCell {
+class KFHomeNewsItem: TYCollectionViewCell_ty {
     
-    private var customContentView: KFView = {
-        let view = KFView()
+    private var customContentView: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor = UIColor.white
-        view.layer.cornerRadius = AdaptSize(5)
-        view.layer.setDefaultShadow()
+        view.layer.cornerRadius = AdaptSize_ty(5)
+        view.layer.setDefaultShadow_ty()
         return view
     }()
     
-    private var iconImageView: KFImageView = {
-        let imageView = KFImageView()
+    private var iconImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = AdaptSize(10)
+        imageView.layer.cornerRadius = AdaptSize_ty(10)
         imageView.layer.masksToBounds = true
         return imageView
     }()
     
-    private var titleLabel: KFLabel = {
-        let label = KFLabel()
+    private var titleLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(14))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(14))
         label.textAlignment = .left
         label.numberOfLines = 2
         return label
@@ -37,50 +38,50 @@ class KFHomeNewsItem: KFCollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.createSubviews()
-        self.bindProperty()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.contentView.addSubview(customContentView)
         customContentView.addSubview(iconImageView)
         customContentView.addSubview(titleLabel)
         customContentView.snp.makeConstraints { make in
-            make.left.top.equalToSuperview().offset(AdaptSize(10))
-            make.bottom.right.equalToSuperview().offset(AdaptSize(-10))
+            make.left.top.equalToSuperview().offset(AdaptSize_ty(10))
+            make.bottom.right.equalToSuperview().offset(AdaptSize_ty(-10))
         }
         iconImageView.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: AdaptSize(60), height: AdaptSize(60)))
+            make.size.equalTo(CGSize(width: AdaptSize_ty(60), height: AdaptSize_ty(60)))
             make.centerY.equalToSuperview()
-            make.left.equalToSuperview().offset(AdaptSize(15))
+            make.left.equalToSuperview().offset(AdaptSize_ty(15))
         }
         titleLabel.snp.makeConstraints { make in
-            make.left.equalTo(iconImageView.snp.right).offset(AdaptSize(10))
-            make.right.equalToSuperview().offset(AdaptSize(-10))
+            make.left.equalTo(iconImageView.snp.right).offset(AdaptSize_ty(10))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-10))
             make.top.bottom.equalTo(iconImageView)
         }
     }
     
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
     }
     
     override func updateConstraints() {
         super.updateConstraints()
     }
     
-    override func updateUI() {
-        super.updateUI()
+    override func updateUI_ty() {
+        super.updateUI_ty()
     }
     
     // MARK: ==== Event ====
     func setData(model: KFNewsModel) {
-        self.iconImageView.setImage(with: model.icon)
+        self.iconImageView.setImage_ty(imageStr_ty: model.icon)
         self.titleLabel.text = model.title
     }
 }

@@ -9,17 +9,18 @@
 import Foundation
 import UIKit
 import RongIMLib
+import STYKit
 
 class KFChatRoomMessageAudioCell: KFChatRoomMessageCell {
     
     /// 语音最大长度
-    private let maxW = kScreenWidth / 2
-    private let minW = AdaptSize(47)
+    private let maxW = kScreenWidth_ty / 2
+    private let minW = AdaptSize_ty(47)
     /// 最大语音时长
     private let maxAudioLength: CGFloat = 60
 
-    private var animationImageView: KFImageView = {
-        let imageView = KFImageView()
+    private var animationImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode          = .scaleAspectFill
         imageView.animationDuration    = 1.5
         imageView.animationRepeatCount = 0
@@ -29,7 +30,7 @@ class KFChatRoomMessageAudioCell: KFChatRoomMessageCell {
     private var durationLabel: UILabel = {
         let label = UILabel()
         label.text          = ""
-        label.font          = UIFont.semiboldFont(ofSize: AdaptSize(15))
+        label.font          = UIFont.semibold_ty(AdaptSize_ty(15))
         label.numberOfLines = 0
         return label
     }()
@@ -66,28 +67,28 @@ class KFChatRoomMessageAudioCell: KFChatRoomMessageCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.createSubviews()
-        self.bindProperty()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.bubbleView.addSubview(animationImageView)
         self.bubbleView.addSubview(durationLabel)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
         self.bubbleView.backgroundImageView.isHidden = false
     }
     
     // MARK: ==== Event ====
-    override func registerNotification() {
-        super.registerNotification()
+    override func registerNotification_ty() {
+        super.registerNotification_ty()
     }
     
     override func setBubbleView() {
@@ -102,15 +103,15 @@ class KFChatRoomMessageAudioCell: KFChatRoomMessageCell {
             
             self.durationLabel.snp.remakeConstraints { (make) in
                 make.top.bottom.equalToSuperview()
-                make.left.equalToSuperview().offset(AdaptSize(10))
-                make.right.equalTo(animationImageView.snp.left).offset(AdaptSize(-7))
-                make.height.equalTo(AdaptSize(40))
+                make.left.equalToSuperview().offset(AdaptSize_ty(10))
+                make.right.equalTo(animationImageView.snp.left).offset(AdaptSize_ty(-7))
+                make.height.equalTo(AdaptSize_ty(40))
                 make.width.equalTo(minW)
             }
             self.animationImageView.snp.remakeConstraints { make in
                 make.centerY.equalToSuperview()
-                make.size.equalTo(CGSize(width: AdaptSize(20), height: AdaptSize(20)))
-                make.right.equalToSuperview().offset(AdaptSize(-10))
+                make.size.equalTo(CGSize(width: AdaptSize_ty(20), height: AdaptSize_ty(20)))
+                make.right.equalToSuperview().offset(AdaptSize_ty(-10))
             }
         } else {
             self.bubbleView.setLeftWhiteBackground()
@@ -119,15 +120,15 @@ class KFChatRoomMessageAudioCell: KFChatRoomMessageCell {
             self.animationImageView.image    = UIImage(named: "chat_audio_play_receive_2")
             self.animationImageView.animationImages = receiveAnimationImages
             self.animationImageView.snp.remakeConstraints { make in
-                make.left.equalToSuperview().offset(AdaptSize(10))
-                make.size.equalTo(CGSize(width: AdaptSize(20), height: AdaptSize(20)))
+                make.left.equalToSuperview().offset(AdaptSize_ty(10))
+                make.size.equalTo(CGSize(width: AdaptSize_ty(20), height: AdaptSize_ty(20)))
                 make.centerY.equalToSuperview()
             }
             self.durationLabel.snp.remakeConstraints { (make) in
-                make.left.equalTo(animationImageView.snp.right).offset(AdaptSize(7))
+                make.left.equalTo(animationImageView.snp.right).offset(AdaptSize_ty(7))
                 make.bottom.top.equalToSuperview()
-                make.right.equalToSuperview().offset(AdaptSize(-10))
-                make.height.equalTo(AdaptSize(40))
+                make.right.equalToSuperview().offset(AdaptSize_ty(-10))
+                make.height.equalTo(AdaptSize_ty(40))
                 make.width.equalTo(minW)
             }
         }
@@ -156,7 +157,7 @@ class KFChatRoomMessageAudioCell: KFChatRoomMessageCell {
             return
         }
         if audioContent.isPlaying {
-            KFPlayerManager.share.stop()
+            TYPlayAudioManager_ty.share_ty.stop_ty()
             self.stopPlayAnimation()
             audioContent.isPlaying = false
         } else {
@@ -164,11 +165,12 @@ class KFChatRoomMessageAudioCell: KFChatRoomMessageCell {
             // 播放
             if let _url = URL(string: audioContent.remoteUrl) {
                 audioContent.isPlaying = true
-                KFPlayerManager.share.playAudio(url: _url) { [weak self] in
-                    guard let self = self else { return }
-                    print("播放完成")
-                    self.stopPlayAnimation()
-                    audioContent.isPlaying = false
+                TYPlayAudioManager_ty.share_ty.playAudio_ty(url_ty: _url) {
+                    [weak self] in
+                        guard let self = self else { return }
+                        print("播放完成")
+                        self.stopPlayAnimation()
+                        audioContent.isPlaying = false
                 }
             }
         }

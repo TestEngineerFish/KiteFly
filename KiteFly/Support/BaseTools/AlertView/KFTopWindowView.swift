@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import STYKit
 
 /// 所有需要现在在顶部Window的视图,都需要继承该类
-open class KFTopWindowView: KFView {
+open class KFTopWindowView: TYView_ty {
 
     /// 全屏透明背景
     open var backgroundView: UIView = {
@@ -29,25 +30,25 @@ open class KFTopWindowView: KFView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    open override func createSubviews() {
-        super.createSubviews()
+    open override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.addSubview(backgroundView)
         backgroundView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
     }
 
-    open override func bindProperty() {
-        super.bindProperty()
+    open override func bindProperty_ty() {
+        super.bindProperty_ty()
         let tap = UITapGestureRecognizer(target: self, action: #selector(hide))
         self.backgroundView.addGestureRecognizer(tap)
     }
     
-    open override func registerNotification() {
-        super.registerNotification()
+    open override func registerNotification_ty() {
+        super.registerNotification_ty()
     }
     
-    open override func updateUI() {}
+    open override func updateUI_ty() {}
 
     // MARK: ==== Event ===
     /// 显示弹框

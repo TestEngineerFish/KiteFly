@@ -7,8 +7,9 @@
 
 import Foundation
 import TYCyclePagerView
+import STYKit
 
-class KFHomeHeaderView: KFView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
+class KFHomeHeaderView: TYView_ty, TYCyclePagerViewDelegate, TYCyclePagerViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     
     private let pageCellID  = "kKFHomeBannerCell"
     private let newsCellID  = "kKFHomeNewsItem"
@@ -24,16 +25,16 @@ class KFHomeHeaderView: KFView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSo
     }()
     private var pageControl: TYPageControl = {
         let control = TYPageControl()
-        control.currentPageIndicatorSize = CGSize(width: AdaptSize(5), height: AdaptSize(5))
-        control.pageIndicatorSize = CGSize(width: AdaptSize(5), height: AdaptSize(5))
+        control.currentPageIndicatorSize = CGSize(width: AdaptSize_ty(5), height: AdaptSize_ty(5))
+        control.pageIndicatorSize = CGSize(width: AdaptSize_ty(5), height: AdaptSize_ty(5))
         control.currentPageIndicatorTintColor = UIColor.white
-        control.pageIndicatorTintColor = UIColor.hex(0xffffff).withAlphaComponent(0.5)
+        control.pageIndicatorTintColor = UIColor.hex_ty(0xffffff).withAlphaComponent(0.5)
         return control
     }()
     
     private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: AdaptSize(200), height: AdaptSize(100))
+        layout.itemSize = CGSize(width: AdaptSize_ty(200), height: AdaptSize_ty(100))
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
@@ -44,9 +45,9 @@ class KFHomeHeaderView: KFView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSo
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
         self.updateConstraints()
     }
     
@@ -54,15 +55,15 @@ class KFHomeHeaderView: KFView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSo
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.addSubview(pageView)
         self.addSubview(pageControl)
         self.addSubview(collectionView)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
         self.pageView.register(KFHomePageCell.classForCoder(), forCellWithReuseIdentifier: pageCellID)
         self.collectionView.register(KFHomeNewsItem.classForCoder(), forCellWithReuseIdentifier: newsCellID)
         self.pageView.delegate         = self
@@ -71,10 +72,10 @@ class KFHomeHeaderView: KFView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSo
         self.collectionView.dataSource = self
     }
     
-    override func bindData() {
-        super.bindData()
-        self.pageUrlList   = KFFileManager.share.getJsonModelList(file: "PageUrl", type: KFHomePageModel.self) as? [KFHomePageModel] ?? []
-        self.newsModelList = KFFileManager.share.getJsonModelList(file: "NewsModelList", type: KFNewsModel.self) as? [KFNewsModel] ?? []
+    override func bindData_ty() {
+        super.bindData_ty()
+        self.pageUrlList   = TYFileManager_ty.share_ty.getJsonModelList_ty(file_ty: "PageUrl", type_ty: KFHomePageModel.self) as? [KFHomePageModel] ?? []
+        self.newsModelList = TYFileManager_ty.share_ty.getJsonModelList_ty(file_ty: "NewsModelList", type_ty: KFNewsModel.self) as? [KFNewsModel] ?? []
         self.pageControl.numberOfPages = self.pageUrlList.count
         self.collectionView.reloadData()
     }
@@ -83,17 +84,17 @@ class KFHomeHeaderView: KFView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSo
         pageView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalToSuperview()
-            make.height.equalTo(AdaptSize(120))
+            make.height.equalTo(AdaptSize_ty(120))
         }
         pageControl.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
-            make.bottom.equalTo(pageView).offset(AdaptSize(-5))
-            make.height.equalTo(AdaptSize(10))
+            make.bottom.equalTo(pageView).offset(AdaptSize_ty(-5))
+            make.height.equalTo(AdaptSize_ty(10))
         }
         collectionView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
-            make.top.equalTo(pageView.snp.bottom).offset(AdaptSize(10))
-            make.height.equalTo(AdaptSize(100))
+            make.top.equalTo(pageView.snp.bottom).offset(AdaptSize_ty(10))
+            make.height.equalTo(AdaptSize_ty(100))
             make.bottom.equalToSuperview()
         }
         super.updateConstraints()
@@ -104,7 +105,7 @@ class KFHomeHeaderView: KFView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSo
     // MARK: ==== TYCyclePagerViewDelegate, TYCyclePagerViewDataSource ====
     func layout(for pageView: TYCyclePagerView) -> TYCyclePagerViewLayout {
         let layout = TYCyclePagerViewLayout()
-        layout.itemSize = CGSize(width: kScreenWidth, height: AdaptSize(120))
+        layout.itemSize = CGSize(width: kScreenWidth_ty, height: AdaptSize_ty(120))
         layout.itemSpacing = .zero
         return layout
     }
@@ -131,7 +132,7 @@ class KFHomeHeaderView: KFView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSo
         let vc = KFWebViewController()
         vc.urlStr = model.url
         vc.title  = "详情"
-        UIViewController.currentNavigationController?.push(vc: vc)
+        currentNVC_ty?.push_ty(vc_ty: vc)
     }
     
     // MARK: ==== UICollectionViewDelegate, UICollectionViewDataSource ====
@@ -152,7 +153,7 @@ class KFHomeHeaderView: KFView, TYCyclePagerViewDelegate, TYCyclePagerViewDataSo
         let model = self.newsModelList[indexPath.row]
         let vc = KFNewsDetailViewController()
         vc.model = model
-        UIViewController.currentNavigationController?.push(vc: vc)
+        currentNVC_ty?.push_ty(vc_ty: vc)
     }
     
 }

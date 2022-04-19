@@ -24,8 +24,8 @@ class KFMediaCell: KFCollectionViewCell {
 
     weak var delegate: KFPhotoAlbumCellDelegate?
 
-    private var disableShadowView: KFView = {
-        let view = KFView()
+    private var disableShadowView: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor = UIColor.white.withAlphaComponent(0.7)
         view.isHidden        = true
         return view

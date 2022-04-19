@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KFToastView: KFView {
+class KFToastView: TYView_ty {
     
     private let maxWidth     = AdaptSize(230)
     private let defaultWidth = AdaptSize(120)

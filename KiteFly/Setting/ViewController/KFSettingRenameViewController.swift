@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import STYKit
 
 enum KFUserInfoType: String {
     case name    = "姓名"
@@ -14,32 +15,32 @@ enum KFUserInfoType: String {
     case remark  = "签名"
 }
 
-class KFSettingRenameViewController: KFViewController {
+class KFSettingRenameViewController: TYViewController_ty {
     
     var type: KFUserInfoType = .name
     
-    private let textField: KFTextField = {
-        let textField = KFTextField()
-        textField.font          = UIFont.regularFont(ofSize: AdaptSize(15))
+    private let textField: TYTextField_ty = {
+        let textField = TYTextField_ty(type_ty: .normal_ty)
+        textField.font          = UIFont.regular_ty(AdaptSize_ty(15))
         textField.textColor     = UIColor.black0
-        textField.showLeftView  = true
-        textField.showRightView = true
-        textField.showBorder    = true
+        textField.showLeftView_ty  = true
+        textField.showRightView_ty = true
+        textField.showBorder_ty    = true
         return textField
     }()
     
-    private var submitButton: KFButton = {
-        let button = KFButton(.theme)
+    private var submitButton: TYButton_ty = {
+        let button = TYButton_ty(.theme_ty)
         button.setTitle("确定修改", for: .normal)
-        button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(15))
+        button.titleLabel?.font = UIFont.regular_ty(AdaptSize_ty(15))
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,21 +48,21 @@ class KFSettingRenameViewController: KFViewController {
         KFChatRequestManager.share.requestRecord(content: "设置 -- 修改信息\(type.rawValue)")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(textField)
         self.view.addSubview(submitButton)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title = "修改\(self.type.rawValue)"
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.customNavigationBar_ty?.title_ty = "修改\(self.type.rawValue)"
         self.submitButton.addTarget(self, action: #selector(renameAction), for: .touchUpInside)
         self.textField.placeholder = "请输入\(self.type.rawValue)"
     }
     
-    override func bindData() {
-        super.bindData()
+    override func bindData_ty() {
+        super.bindData_ty()
         switch type {
         case .name:
             self.textField.text = KFUserModel.share.name
@@ -76,14 +77,14 @@ class KFSettingRenameViewController: KFViewController {
     
     override func updateViewConstraints() {
         textField.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(AdaptSize(15))
-            make.right.equalToSuperview().offset(AdaptSize(-15))
-            make.top.equalToSuperview().offset(AdaptSize(20) + kNavHeight)
-            make.height.equalTo(AdaptSize(40))
+            make.left.equalToSuperview().offset(AdaptSize_ty(15))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
+            make.top.equalToSuperview().offset(AdaptSize_ty(20) + kNavigationHeight_ty)
+            make.height.equalTo(AdaptSize_ty(40))
         }
         submitButton.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: AdaptSize(100), height: AdaptSize(35)))
-            make.top.equalTo(textField.snp.bottom).offset(AdaptSize(20))
+            make.size.equalTo(CGSize(width: AdaptSize_ty(100), height: AdaptSize_ty(35)))
+            make.top.equalTo(textField.snp.bottom).offset(AdaptSize_ty(20))
             make.centerX.equalToSuperview()
         }
         super.updateViewConstraints()
@@ -93,7 +94,7 @@ class KFSettingRenameViewController: KFViewController {
     
     @objc
     private func renameAction() {
-        guard let value = textField.text, value.isNotEmpty else {
+        guard let value = textField.text, value.isNotEmpty_ty else {
             return
         }
         switch type {
@@ -106,11 +107,11 @@ class KFSettingRenameViewController: KFViewController {
         default:
             break
         }
-        kWindow.showLoading()
+        kWindow_ty.showLoading_ty()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            kWindow.hideLoading()
-            kWindow.toast("修改成功")
-            self.navigationController?.pop()
+            kWindow_ty.hideLoading_ty()
+            kWindow_ty.toast_ty("修改成功")
+            self.navigationController?.pop_ty()
         }
         
     }

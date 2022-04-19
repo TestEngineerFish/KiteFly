@@ -17,7 +17,7 @@ public enum KFDirectionType: Int {
 
 import Foundation
 
-open class KFStackView: KFView {
+open class KFStackView: TYView_ty {
     public var offsetX: CGFloat = .zero
     public var offsetY: CGFloat = .zero
     public var spacing: CGFloat

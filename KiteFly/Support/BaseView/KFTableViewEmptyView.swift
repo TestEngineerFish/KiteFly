@@ -7,10 +7,10 @@
 
 import UIKit
 
-class KFTableViewEmptyView: KFView {
+class KFTableViewEmptyView: TYView_ty {
         
-    private var contentView: KFView = {
-        let view = KFView()
+    private var contentView: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor = UIColor.clear
         return view
     }()

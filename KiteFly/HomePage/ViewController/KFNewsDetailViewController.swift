@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import STYKit
+import UIKit
 
-class KFNewsDetailViewController: KFViewController {
+class KFNewsDetailViewController: TYViewController_ty {
     
     var model: KFNewsModel?
     
@@ -17,35 +19,35 @@ class KFNewsDetailViewController: KFViewController {
         scrollView.showsHorizontalScrollIndicator = false
         return scrollView
     }()
-    private var titleLabel: KFLabel = {
-        let label = KFLabel()
+    private var titleLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.DINAlternateBold(ofSize: AdaptSize(20))
+        label.font          = UIFont.DIN_ty(AdaptSize_ty(20))
         label.textAlignment = .center
         label.numberOfLines = 0
         return label
     }()
-    private var timeLabel: KFLabel = {
-        let label = KFLabel()
+    private var timeLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(13))
         label.textAlignment = .right
         return label
     }()
-    private var imageView: KFImageView = {
-        let imageView = KFImageView()
+    private var imageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius  = AdaptSize(10)
+        imageView.layer.cornerRadius  = AdaptSize_ty(10)
         return imageView
     }()
-    private var contentLabel: KFLabel = {
-        let label = KFLabel()
+    private var contentLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(15))
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
@@ -53,9 +55,9 @@ class KFNewsDetailViewController: KFViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bindData()
-        self.createSubviews()
-        self.bindProperty()
+        self.bindData_ty()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,8 +65,8 @@ class KFNewsDetailViewController: KFViewController {
         KFChatRequestManager.share.requestRecord(content: "主页首页 -- 新闻详情")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(scrollView)
         scrollView.addSubview(titleLabel)
         scrollView.addSubview(timeLabel)
@@ -72,52 +74,52 @@ class KFNewsDetailViewController: KFViewController {
         scrollView.addSubview(contentLabel)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title      = "详情"
-        self.customNavigationBar?.rightTitle = "收藏"
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.customNavigationBar_ty?.title_ty      = "详情"
+        self.customNavigationBar_ty?.setRightTitle_ty(text_ty: "收藏")
     }
     
-    override func rightAction() {
-        super.rightAction()
-        self.view.toast("收藏成功")
+    override func rightAction_ty() {
+        super.rightAction_ty()
+        self.view.toast_ty("收藏成功")
     }
     
-    override func bindData() {
-        super.bindData()
+    override func bindData_ty() {
+        super.bindData_ty()
         guard let model = self.model else {
             return
         }
         self.titleLabel.text   = model.title
-        self.timeLabel.text    = model.time?.timeStr()
+        self.timeLabel.text    = model.time?.timeStr_ty()
         self.contentLabel.text = model.content
-        self.imageView.setImage(with: model.icon)
+        self.imageView.setImage_ty(imageStr_ty: model.icon)
     }
     
     override func updateViewConstraints() {
-        scrollView.frame = CGRect(x: 0, y: kNavHeight, width: kScreenWidth, height: kScreenHeight - kNavHeight)
-        scrollView.contentSize = scrollView.size
+        scrollView.frame = CGRect(x: 0, y: kNavigationHeight_ty, width: kScreenWidth_ty, height: kScreenHeight_ty - kNavigationHeight_ty)
+        scrollView.contentSize = scrollView.size_ty
         titleLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(AdaptSize(15))
-            make.right.equalToSuperview().offset(AdaptSize(-15))
-            make.top.equalToSuperview().offset(AdaptSize(15))
+            make.left.equalToSuperview().offset(AdaptSize_ty(15))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
+            make.top.equalToSuperview().offset(AdaptSize_ty(15))
             make.centerX.equalToSuperview()
         }
         timeLabel.snp.makeConstraints { make in
             make.left.right.equalTo(titleLabel)
-            make.top.equalTo(titleLabel.snp.bottom).offset(AdaptSize(5))
+            make.top.equalTo(titleLabel.snp.bottom).offset(AdaptSize_ty(5))
             make.height.equalTo(timeLabel.font.lineHeight)
         }
         imageView.snp.makeConstraints { make in
-            make.width.equalTo(kScreenWidth - AdaptSize(30))
+            make.width.equalTo(kScreenWidth_ty - AdaptSize_ty(30))
             make.centerX.equalToSuperview()
-            make.top.equalTo(timeLabel.snp.bottom).offset(AdaptSize(20))
-            make.height.equalTo(AdaptSize(120))
+            make.top.equalTo(timeLabel.snp.bottom).offset(AdaptSize_ty(20))
+            make.height.equalTo(AdaptSize_ty(120))
         }
         contentLabel.snp.makeConstraints { make in
             make.left.right.equalTo(imageView)
-            make.top.equalTo(imageView.snp.bottom).offset(AdaptSize(20))
-            make.bottom.equalToSuperview().offset(AdaptSize(-20))
+            make.top.equalTo(imageView.snp.bottom).offset(AdaptSize_ty(20))
+            make.bottom.equalToSuperview().offset(AdaptSize_ty(-20))
         }
         super.updateViewConstraints()
     }

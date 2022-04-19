@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import STYKit
 
 open class KFViewController: UIViewController, KFNavigationBarDelegate {
     

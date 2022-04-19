@@ -8,7 +8,7 @@
 import UIKit
 import CoreText
 
-open class KFAttributionView: KFView {
+open class KFAttributionView: TYView_ty {
     // 可配置的属性
     public var text: String {
         set {

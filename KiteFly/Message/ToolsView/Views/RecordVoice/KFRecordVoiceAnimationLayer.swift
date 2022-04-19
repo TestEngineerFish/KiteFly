@@ -9,6 +9,8 @@
 import Foundation
 import QuartzCore
 import UIKit
+import STYKit
+
 
 class KFRecordVoiceAnimationLayer: CALayer {
     
@@ -24,7 +26,7 @@ class KFRecordVoiceAnimationLayer: CALayer {
         super.init()
         self.frame = CGRect(x: 0, y: 0, width: 0, height: height)
         self.createSublayer()
-        self.bindProperty()
+        self.bindProperty_ty()
     }
     
     required init?(coder: NSCoder) {
@@ -37,19 +39,19 @@ class KFRecordVoiceAnimationLayer: CALayer {
             let itemLayer = KFRecordAnimationItemLayer()
             itemLayer.bindProperty(maxScale: _maxScale, width: sublayerWidth, height: self.frame.height)
             if isCancel {
-                itemLayer.backgroundColor = UIColor.hex(0x963030).cgColor
+                itemLayer.backgroundColor = UIColor.hex_ty(0x963030).cgColor
             } else {
-                itemLayer.backgroundColor = UIColor.hex(0x598D3F).cgColor
+                itemLayer.backgroundColor = UIColor.hex_ty(0x598D3F).cgColor
             }
             let _itemLayerH = self.frame.height * 0.2
             itemLayer.frame = CGRect(x: CGFloat(index) * (sublayerWidth + space), y: (self.frame.height - _itemLayerH)/2, width: sublayerWidth, height: _itemLayerH)
             self.itemList.append(itemLayer)
             self.addSublayer(itemLayer)
         }
-        self.width = self.itemList.last?.right ?? 0
+        self.width_ty = self.itemList.last?.right_ty ?? 0
     }
     
-    private func bindProperty() {
+    private func bindProperty_ty() {
         self.backgroundColor = UIColor.clear.cgColor
     }
     

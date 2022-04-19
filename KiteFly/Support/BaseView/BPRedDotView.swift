@@ -32,7 +32,7 @@ public enum KFRedDotViewEnum {
     }
 }
 
-public class BPRedDotView: KFView {
+public class BPRedDotView: TYView_ty {
 
     private var showNumber: Bool
     private let maxNumber: Int   = 99

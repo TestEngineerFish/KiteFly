@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import STYKit
 
 protocol KFCommunityRemarkCellDelegate: NSObjectProtocol {
     /// 回复评论
@@ -14,52 +15,52 @@ protocol KFCommunityRemarkCellDelegate: NSObjectProtocol {
     func reportRemarkAction(model: KFCommunityRemarkModel)
 }
 
-class KFCommunityRemarkCell: KFTableViewCell {
+class KFCommunityRemarkCell: TYTableViewCell_ty {
     
     private var model: KFCommunityRemarkModel?
     weak var delegate: KFCommunityRemarkCellDelegate?
     
-    private var customContentView: KFView = {
-        let view = KFView()
+    private var customContentView: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor = UIColor.white
-        view.layer.cornerRadius = AdaptSize(5)
-        view.layer.setDefaultShadow()
+        view.layer.cornerRadius = AdaptSize_ty(5)
+        view.layer.setDefaultShadow_ty()
         return view
     }()
-    private var avatarImageView: KFImageView = {
-        let imageView = KFImageView()
+    private var avatarImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode = .scaleAspectFill
-        imageView.size = CGSize(width: AdaptSize(30), height: AdaptSize(30))
-        imageView.layer.cornerRadius  = AdaptSize(15)
+        imageView.size_ty = CGSize(width: AdaptSize_ty(30), height: AdaptSize_ty(30))
+        imageView.layer.cornerRadius  = AdaptSize_ty(15)
         imageView.layer.masksToBounds = true
         return imageView
     }()
-    private var moreButton: KFButton = {
-        let button = KFButton()
+    private var moreButton: TYButton_ty = {
+        let button = TYButton_ty()
         button.setImage(UIImage(named: "more_remark"), for: .normal)
         return button
     }()
-    private var nameLabel: KFLabel = {
-        let label = KFLabel()
+    private var nameLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.semiboldFont(ofSize: AdaptSize(15))
+        label.font          = UIFont.semibold_ty(AdaptSize_ty(15))
         label.textAlignment = .left
         return label
     }()
-    private var timeLabel: KFLabel = {
-        let label = KFLabel()
+    private var timeLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black1
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(13))
         label.textAlignment = .right
         return label
     }()
-    private var contentLabel: KFLabel = {
-        let label = KFLabel()
+    private var contentLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(15))
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
@@ -67,8 +68,8 @@ class KFCommunityRemarkCell: KFTableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.createSubviews()
-        self.bindProperty()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
         self.updateConstraints()
     }
     
@@ -76,8 +77,8 @@ class KFCommunityRemarkCell: KFTableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.contentView.addSubview(customContentView)
         customContentView.addSubview(avatarImageView)
         customContentView.addSubview(moreButton)
@@ -86,40 +87,40 @@ class KFCommunityRemarkCell: KFTableViewCell {
         customContentView.addSubview(contentLabel)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
         self.backgroundColor = .clear
         self.moreButton.addTarget(self, action: #selector(moreAction), for: .touchUpInside)
     }
     
     override func updateConstraints() {
         customContentView.snp.makeConstraints { make in
-            make.left.top.equalToSuperview().offset(AdaptSize(15))
-            make.right.bottom.equalToSuperview().offset(AdaptSize(-15))
+            make.left.top.equalToSuperview().offset(AdaptSize_ty(15))
+            make.right.bottom.equalToSuperview().offset(AdaptSize_ty(-15))
         }
         avatarImageView.snp.makeConstraints { make in
-            make.size.equalTo(avatarImageView.size)
-            make.left.top.equalTo(AdaptSize(15))
+            make.size.equalTo(avatarImageView.size_ty)
+            make.left.top.equalTo(AdaptSize_ty(15))
         }
         moreButton.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: AdaptSize(50), height: AdaptSize(40)))
-            make.right.equalToSuperview().offset(AdaptSize(-5))
+            make.size.equalTo(CGSize(width: AdaptSize_ty(50), height: AdaptSize_ty(40)))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-5))
             make.top.equalToSuperview().offset(5)
         }
         nameLabel.snp.makeConstraints { make in
-            make.left.equalTo(avatarImageView.snp.right).offset(AdaptSize(10))
+            make.left.equalTo(avatarImageView.snp.right).offset(AdaptSize_ty(10))
             make.centerY.equalTo(avatarImageView)
-            make.right.equalToSuperview().offset(AdaptSize(-15))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
         }
         contentLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(AdaptSize(15))
-            make.right.equalToSuperview().offset(AdaptSize(-15))
-            make.top.equalTo(avatarImageView.snp.bottom).offset(AdaptSize(10))
+            make.left.equalToSuperview().offset(AdaptSize_ty(15))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
+            make.top.equalTo(avatarImageView.snp.bottom).offset(AdaptSize_ty(10))
         }
         timeLabel.snp.makeConstraints { make in
-            make.top.equalTo(contentLabel.snp.bottom).offset(AdaptSize(15))
+            make.top.equalTo(contentLabel.snp.bottom).offset(AdaptSize_ty(15))
             make.left.right.equalTo(contentLabel)
-            make.bottom.equalToSuperview().offset(AdaptSize(-15))
+            make.bottom.equalToSuperview().offset(AdaptSize_ty(-15))
         }
         super.updateConstraints()
     }
@@ -127,19 +128,19 @@ class KFCommunityRemarkCell: KFTableViewCell {
     // MARK: ==== Event ====
     func setData(model: KFCommunityRemarkModel) {
         self.model = model
-        self.avatarImageView.setImage(with: model.byUser?.avatar)
+        self.avatarImageView.setImage_ty(imageStr_ty: model.byUser?.avatar)
         self.nameLabel.text     = model.byUser?.name
         self.contentLabel.text  = model.content
-        self.timeLabel.text     = model.createTime?.timeStr()
+        self.timeLabel.text     = model.createTime?.timeStr_ty()
     }
     
     @objc
     private func moreAction() {
         guard let _model = model else { return }
-        KFActionSheet().addItem(title: "回复") {
+        TYActionSheet_ty().addItem_ty(title_ty: "回复") {
             self.delegate?.replyRemarkAction(model: _model)
-        }.addItem(title: "举报") {
+        }.addItem_ty(title_ty: "举报") {
             self.delegate?.reportRemarkAction(model: _model)
-        }.show()
+        }.show_ty()
     }
 }

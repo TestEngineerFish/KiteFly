@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import STYKit
 
 
-class KFCommunityImageCell: KFCollectionViewCell {
+class KFCommunityImageCell: TYCollectionViewCell_ty {
     
-    private var imageView: KFImageView = {
-        let imageView = KFImageView()
+    private var imageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds      = true
         imageView.isUserInteractionEnabled = true
@@ -20,8 +21,8 @@ class KFCommunityImageCell: KFCollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.createSubviews()
-        self.bindProperty()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
         self.updateConstraints()
     }
     
@@ -29,13 +30,13 @@ class KFCommunityImageCell: KFCollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.contentView.addSubview(imageView)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
         let tapGes = UITapGestureRecognizer(target: self, action: #selector(clickImage))
         self.imageView.addGestureRecognizer(tapGes)
     }
@@ -49,7 +50,7 @@ class KFCommunityImageCell: KFCollectionViewCell {
     
     // MARK: ==== Event ====
     func setData(image url: String) {
-        self.imageView.setImage(with: url)
+        self.imageView.setImage_ty(imageStr_ty: url)
     }
     
     func setImage(image: UIImage?) {
@@ -65,8 +66,8 @@ class KFCommunityImageCell: KFCollectionViewCell {
         guard let _image = self.imageView.image else {
             return
         }
-        let model = BPMediaImageModel()
-        model.image = _image
-        KFBrowserView(type: .custom(modelList: [model]), current: 0).show(animationView: self.imageView)
+        let model = TYMediaImageModel_ty()
+        model.image_ty = _image
+        TYBrowserView_ty(type_ty: .custom_ty(modelList_ty: [model]), current_ty: 0).show_ty(animationView_ty: self.imageView)
     }
 }

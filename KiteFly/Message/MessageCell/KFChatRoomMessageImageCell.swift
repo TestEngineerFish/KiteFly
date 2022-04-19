@@ -8,39 +8,40 @@
 
 import Foundation
 import RongIMLib
+import STYKit
 
 class KFChatRoomMessageImageCell: KFChatRoomMessageCell {
     
-    private let maxImageHeight = AdaptSize(240)
-    private let maxImageWidth  = AdaptSize(195)
+    private let maxImageHeight = AdaptSize_ty(240)
+    private let maxImageWidth  = AdaptSize_ty(195)
     private var imageSize: CGSize = .zero
     
-    var contentImageView: KFImageView = {
-        let imageView = KFImageView()
+    var contentImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.isUserInteractionEnabled = true
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius  = AdaptSize(8)
+        imageView.layer.cornerRadius  = AdaptSize_ty(8)
         imageView.layer.masksToBounds = true
         return imageView
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.createSubviews()
-        self.bindProperty()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.bubbleView.addSubview(contentImageView)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
         self.bubbleView.backgroundImageView.isHidden = true
     }
     
@@ -60,12 +61,12 @@ class KFChatRoomMessageImageCell: KFChatRoomMessageCell {
         } else {
             cacheName = imageMessage.remoteUrl
         }
-        if let imageData = KFFileManager.share.getSessionMedia(type: .sessionImage, name: imageMessage.localPath, sessionId: messageModel.targetId, userId: messageModel.targetId) {
+        if let imageData = TYFileManager_ty.share_ty.getSessionMedia_ty(type_ty: .sessionImage_ty, name_ty: imageMessage.localPath, sessionId_ty: messageModel.targetId, userId_ty: messageModel.targetId) {
             self.contentImageView.image = UIImage(data: imageData)
             self.updateImageSize()
         }
         
-//        self.contentImageView.setImage(with: imageMessage.remoteUrl, cacheName: cacheName, sessionId: self.messageModel?.targetId) {  [weak self] (image: UIImage?) in
+//        self.contentImageView.setImage_ty(imageStr_ty: imageMessage.remoteUrl, cacheName: cacheName, sessionId: self.messageModel?.targetId) {  [weak self] (image: UIImage?) in
 //            guard let self = self else { return }
 //            if self.imageSize == .zero {
 //                self.updateImageSize()

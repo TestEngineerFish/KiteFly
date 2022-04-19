@@ -9,6 +9,7 @@
 import UIKit
 import RongIMLib
 import IQKeyboardManager
+import STYKit
 
 /// 发送消息类型
 public enum KFSendMessageType: Int {
@@ -29,7 +30,7 @@ public enum KFSendMessageType: Int {
 
 @objc(BPChatRoomViewController)
 open class KFChatRoomViewController:
-    KFViewController,
+    TYViewController_ty,
     UITableViewDelegate,
     UITableViewDataSource,
     BPChatRoomToolsViewDelegate,
@@ -54,17 +55,16 @@ open class KFChatRoomViewController:
     /// 当前聊天过程中，其他用户发来的未读消息总数
     private var otherChatUnreadMessageCount: Int = 0
     
-    private var tableView: KFTableView = {
-        let tableView = KFTableView()
+    private var tableView: TYTableView_ty = {
+        let tableView = TYTableView_ty()
         tableView.backgroundColor                = .white
         tableView.showsVerticalScrollIndicator   = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.separatorStyle                 = .none
-        tableView.isHideEmptyView                = true
         return tableView
     }()
 
-    private var contentView = KFView(frame: CGRect(x: 0, y: kNavHeight, width: kScreenWidth, height: kScreenHeight - kNavHeight))
+    private var contentView = TYView_ty(frame: CGRect(x: 0, y: kNavigationHeight_ty, width: kScreenWidth_ty, height: kScreenHeight_ty - kNavigationHeight_ty))
     private var toolsView:BPChatRoomToolsView = {
         let view = BPChatRoomToolsView()
         view.backgroundColor = UIColor.white
@@ -72,18 +72,18 @@ open class KFChatRoomViewController:
     }()
     
     deinit {
-        KFPlayerManager.share.stop()
+        TYPlayAudioManager_ty.share_ty.stop_ty()
         self.updateTimer?.invalidate()
         self.updateTimer = nil
     }
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
-        self.updateUI()
-        self.registerNotification()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
+        self.updateUI_ty()
+        self.registerNotification_ty()
     }
     
     open override func viewWillAppear(_ animated: Bool) {
@@ -94,7 +94,7 @@ open class KFChatRoomViewController:
     
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        KFPlayerManager.share.stop()
+        TYPlayAudioManager_ty.share_ty.stop_ty()
         self.view.endEditing(true)
     }
     
@@ -106,22 +106,22 @@ open class KFChatRoomViewController:
         return .default
     }
     
-    open override func createSubviews() {
-        super.createSubviews()
+    open override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(contentView)
         contentView.addSubview(tableView)
         contentView.addSubview(toolsView)
         
-        contentView.frame = CGRect(x: 0, y: kNavHeight, width: kScreenWidth, height: kScreenHeight - kNavHeight)
-        tableView.frame   = CGRect(x: 0, y: 0, width: kScreenWidth, height: contentView.height - toolsView.currentHeight)
-        toolsView.frame   = CGRect(x: 0, y: tableView.height, width: tableView.width, height: toolsView.currentHeight)
+        contentView.frame = CGRect(x: 0, y: kNavigationHeight_ty, width: kScreenWidth_ty, height: kScreenHeight_ty - kNavigationHeight_ty)
+        tableView.frame   = CGRect(x: 0, y: 0, width: kScreenWidth_ty, height: contentView.height_ty - toolsView.currentHeight)
+        toolsView.frame   = CGRect(x: 0, y: tableView.height_ty, width: tableView.width_ty, height: toolsView.currentHeight)
         
-        toolsView.clipRectCorner(directionList: [.topLeft, .topRight], cornerRadius: AdaptSize(16))
+        toolsView.clipRectCorner_ty(directionList_ty: [.topLeft, .topRight], cornerRadius_ty: AdaptSize_ty(16))
         self.view.sendSubviewToBack(contentView)
     }
 
-    open override func bindProperty() {
-        super.bindProperty()
+    open override func bindProperty_ty() {
+        super.bindProperty_ty()
         self.tableView.delegate         = self
         self.tableView.dataSource       = self
         self.toolsView.delegate         = self
@@ -135,11 +135,11 @@ open class KFChatRoomViewController:
         self.tableView.register(KFChatRoomMessageImageCell.classForCoder(), forCellReuseIdentifier: KFChatRoomMessageCellFactory.imageCellID)
         self.tableView.register(KFChatRoomEmptyCell.classForCoder(), forCellReuseIdentifier: KFChatRoomMessageCellFactory.emptyCellID)
         
-        self.updateCustomNavigationBar()
+        self.updatecustomNavigationBar_ty()
     }
 
-    open override func bindData() {
-        super.bindData()
+    open override func bindData_ty() {
+        super.bindData_ty()
         // 加载消息
         self.loadMoreMessage()
         // 填充草稿
@@ -153,26 +153,26 @@ open class KFChatRoomViewController:
         }
     }
     
-    open override func updateUI() {
-        super.updateUI()
+    open override func updateUI_ty() {
+        super.updateUI_ty()
         self.view.backgroundColor                   = .white
     }
     
-    open override func registerNotification() {
-        super.registerNotification()
+    open override func registerNotification_ty() {
+        super.registerNotification_ty()
     }
     
     /// 更新导航栏
-    private func updateCustomNavigationBar() {
-        self.customNavigationBar?.title = userModel?.name
-        self.customNavigationBar?.rightTitle = "详情"
+    private func updatecustomNavigationBar_ty() {
+        self.customNavigationBar_ty?.title_ty = userModel?.name
+        self.customNavigationBar_ty?.setRightTitle_ty(text_ty: "详情")
     }
     
-    open override func rightAction() {
-        super.rightAction()
+    open override func rightAction_ty() {
+        super.rightAction_ty()
         let vc = KFSettingUserDetailViewController()
         vc.model = self.userModel
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
     
     @objc
@@ -192,7 +192,7 @@ open class KFChatRoomViewController:
     /// 进入桌面
     @objc
     private func didEnterBackground() {
-        KFPlayerManager.share.stop()
+        TYPlayAudioManager_ty.share_ty.stop_ty()
     }
     
     // MARK: ==== Gesture ====
@@ -226,7 +226,7 @@ open class KFChatRoomViewController:
     // MARK: ==== Event ====
     
     @objc
-    private func reload(loadMore: Bool = false, complete block: DefaultBlock? = nil) {
+    private func reload(loadMore: Bool = false, complete block: DefaultBlock_ty? = nil) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             let oldContentHeight = self.tableView.contentSize.height
@@ -255,28 +255,28 @@ open class KFChatRoomViewController:
 
     /// 发送文本消息
     private func sendTextMessage(text: String) {
-        guard text.isNotEmpty else { return }
+        guard text.isNotEmpty_ty else { return }
         let content = RCTextMessage(content: text)
         self.sendMessage(content, name: RCTextMessage.getObjectName())
     }
 
     /// 发送图片消息
     private func sendImageMessage(image: UIImage, id: Int) {
-        guard let _imageData = image.compressSize(kb: 1024), let _sessionId = self.userModel?.id else { return }
+        guard let _imageData = image.compressSize_ty(kb_ty: 1024), let _sessionId = self.userModel?.id else { return }
         // 本地缓存
         let imageMessage = RCImageMessage(image: image)
-        let timeStr = "\(Date().timeIntervalSince1970 * 1000000)".md5()
+        let timeStr = "\(Date().timeIntervalSince1970 * 1000000)".md5_ty()
         let imageName = "\(_sessionId)_\(id)_\(timeStr)"
         imageMessage?.localPath = imageName
-        KFFileManager.share.saveSessionMedia(type: .sessionImage, name: imageName, sessionId: _sessionId, data: _imageData, userId: _sessionId)
+        TYFileManager_ty.share_ty.saveSessionMedia_ty(type_ty: .sessionImage_ty, name_ty: imageName, sessionId_ty: _sessionId, data_ty: _imageData, userId_ty: _sessionId)
         self.sendMediaMessage(imageMessage, data: _imageData, objectName: RCImageMessage.getObjectName())
     }
     
     func sendAudioMessage(data: Data, local path: String, duration: TimeInterval) {
         guard let _sessionId = self.userModel?.id else { return }
         let audioName  = "\(Date().timeIntervalSince1970)"
-        let _localPath = KFFileManager.share.saveSessionAudio(audioData: data, sessionId: _sessionId, name: audioName, userId: "")
-        let messageContext = RCHQVoiceMessage(path: path, duration: duration.second())
+        let _localPath = TYFileManager_ty.share_ty.saveSessionAudio_ty(audioData_ty: data, sessionId_ty: _sessionId, name_ty: audioName, userId_ty: "")
+        let messageContext = RCHQVoiceMessage(path: path, duration: duration.second_ty())
         messageContext.localPath = _localPath
         messageContext.name      = audioName
         messageContext.remoteUrl = path
@@ -377,16 +377,16 @@ open class KFChatRoomViewController:
     
     /// 获取图片、视频资源数组
     /// - Parameter lastMessage: 是否有最后一条消息，如果有则从最后一条开始查
-    private func getMediaModelList(lastMessage: RCMessage?, complete block: (([BPMediaModel])->Void)?) {
-        var mediaList: [BPMediaModel] = []
+    private func getMediaModelList(lastMessage: RCMessage?, complete block: (([TYMediaModel_ty])->Void)?) {
+        var mediaList: [TYMediaModel_ty] = []
         self.messageModelList.forEach { message in
             if message.objectName == RCImageMessage.getObjectName() {
                 if let imageContent = message.content as? RCImageMessage {
-                    let imageModel = BPMediaImageModel()
-                    imageModel.messageId        = "\(message.messageId)"
-                    imageModel.originLocalPath  = imageContent.localPath
-                    imageModel.image            = imageContent.originalImage
-                    imageModel.originRemotePath = imageContent.imageUrl
+                    let imageModel = TYMediaImageModel_ty()
+                    imageModel.messageId_ty        = "\(message.messageId)"
+                    imageModel.originLocalPath_ty  = imageContent.localPath
+                    imageModel.image_ty            = imageContent.originalImage
+                    imageModel.originRemotePath_ty = imageContent.imageUrl
                     mediaList.append(imageModel)
                 }
             }
@@ -464,11 +464,11 @@ open class KFChatRoomViewController:
         cell.bindData(message: messageModel, indexPath: indexPath)
         // 高度缓存（小灰条异步更新高度缓存）
         if messageModel.bubbleHeight == nil && messageModel.objectName != RCInformationNotificationMessage.getObjectName() {
-            var _cellHeight = cell.contentView.systemLayoutSizeFitting(CGSize(width: tableView.width, height: 0), withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel).height
+            var _cellHeight = cell.contentView.systemLayoutSizeFitting(CGSize(width: tableView.width_ty, height: 0), withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel).height
             if messageModel.isShowTime {
                 _cellHeight = _cellHeight - cell.timeHeight
             }
-            _cellHeight -= AdaptSize(20)
+            _cellHeight -= AdaptSize_ty(20)
             messageModel.bubbleHeight = _cellHeight
         }
         return cell
@@ -499,12 +499,12 @@ open class KFChatRoomViewController:
         let model = self.messageModelList[indexPath.row]
         var cellHeight: CGFloat?
         if var bubbleHeight = model.bubbleHeight {
-            bubbleHeight += AdaptSize(20)
+            bubbleHeight += AdaptSize_ty(20)
             // 如果内容小于最低高度
-            if bubbleHeight < AdaptSize(60) {
-                bubbleHeight = AdaptSize(60)
+            if bubbleHeight < AdaptSize_ty(60) {
+                bubbleHeight = AdaptSize_ty(60)
             }
-            cellHeight = model.isShowTime ? bubbleHeight + AdaptSize(36) : bubbleHeight
+            cellHeight = model.isShowTime ? bubbleHeight + AdaptSize_ty(36) : bubbleHeight
         }
         return cellHeight ?? UITableView.automaticDimension
     }
@@ -524,7 +524,7 @@ open class KFChatRoomViewController:
     func clickToolsBarAction(type: KFChatToolsItemType) {
         switch type {
         case .record:
-            BPAuthorizationManager.share.authorizeMicrophoneWith { result in
+            TYAuthorizationManager_ty.share_ty.authorizeMicrophoneWith_ty { result in
                 print("麦克风授权：\(result)")
             }
         case .commonWords, .textView, .more, .normal:
@@ -532,10 +532,10 @@ open class KFChatRoomViewController:
         case .videoAndAudio:
             break
 //            guard let _id = self.sessionID?.intValue else { return }
-//            self.view.showLoading()
+//            self.view.showLoading_ty()
 //            BPChatRequestManager.share.requestCallPrice(userId: _id) { [weak self] model in
 //                guard let self = self else { return }
-//                self.view.hideLoading()
+//                self.view.hideLoading_ty()
 //                // 音视频
 //                BPCallActionSheet().showVideoAndAudio(model: model, videoBlock: {
 //                    let parameters = ["userId": NSNumber(integerLiteral: self.sessionID?.intValue ?? 0), "isVideo" : NSNumber(booleanLiteral: true)]
@@ -546,25 +546,25 @@ open class KFChatRoomViewController:
 //                })
 //            }
         case .image:
-            KFActionSheet().addItem(icon: UIImage(named: "chat_tools_icon_video"), title: " 拍摄照片") { [weak self] in
+            TYActionSheet_ty().addItem_ty(icon_ty: UIImage(named: "chat_tools_icon_video"), title_ty: " 拍摄照片") { [weak self] in
                 guard let self = self else { return }
-                KFSystemPhotoManager.share.showCamera { [weak self] (models: [BPMediaModel]) in
-                    guard let self = self, let imageModel = models.last as? BPMediaImageModel, let image = imageModel.image else { return }
+                TYPhotoManager_ty.share_ty.showCamera_ty { [weak self] (models: [TYMediaModel_ty]) in
+                    guard let self = self, let imageModel = models.last as? TYMediaImageModel_ty, let image = imageModel.image_ty else { return }
                     self.sendImageMessage(image: image, id: 0)
                 }
-            }.addItem(icon: UIImage(named: "select_camera_icon"), title: " 从手机相册选择") { [weak self] in
+            }.addItem_ty(icon_ty: UIImage(named: "select_camera_icon"), title_ty: " 从手机相册选择") { [weak self] in
                 guard let self = self else { return }
-                KFSystemPhotoManager.share.showPhoto(complete: { [weak self] (models: [BPMediaModel]) in
+                TYPhotoManager_ty.share_ty.showPhoto_ty(complete_ty: { [weak self] (models: [TYMediaModel_ty]) in
                     guard let self = self else { return }
                     for (index, mediaModel) in models.enumerated() {
-                        if let imageModel = mediaModel as? BPMediaImageModel {
-                            if let image = imageModel.image {
+                        if let imageModel = mediaModel as? TYMediaImageModel_ty {
+                            if let image = imageModel.image_ty {
                                 self.sendImageMessage(image: image, id: index)
                             }
                         }
                     }
-                }, maxCount: 9)
-            }.show()
+                }, maxCount_ty: 9)
+            }.show_ty()
         case .emoji:
             break
         case .gift:
@@ -573,18 +573,18 @@ open class KFChatRoomViewController:
     }
     
     func updateToolsViewHeight() {
-        self.toolsView.height = self.toolsView.currentHeight
-        self.tableView.height = self.contentView.height - self.toolsView.currentHeight
-        self.toolsView.top    = self.tableView.height
+        self.toolsView.height_ty = self.toolsView.currentHeight
+        self.tableView.height_ty = self.contentView.height_ty - self.toolsView.currentHeight
+        self.toolsView.top_ty    = self.tableView.height_ty
     }
     
     func transformOffsetY(y: CGFloat, duration: TimeInterval) {
         guard self.toolsView.transform.ty != y else { return }
-        self.toolsView.height    = self.toolsView.currentHeight
-        toolsView.clipRectCorner(directionList: [.topLeft, .topRight], cornerRadius: AdaptSize(16))
+        self.toolsView.height_ty    = self.toolsView.currentHeight
+        toolsView.clipRectCorner_ty(directionList_ty: [.topLeft, .topRight], cornerRadius_ty: AdaptSize_ty(16))
         UIView.animate(withDuration: duration) { [weak self] in
             guard let self = self else { return }
-            self.tableView.height    = self.contentView.height - self.toolsView.currentHeight
+            self.tableView.height_ty = self.contentView.height_ty - self.toolsView.currentHeight
             self.toolsView.transform = CGAffineTransform(translationX: 0, y: y)
         }
         // 编辑状态默认滑动到底部
@@ -594,14 +594,14 @@ open class KFChatRoomViewController:
     func recover(duration: TimeInterval = 0.25) {
         UIView.animate(withDuration: duration) { [weak self] in
             guard let self = self else { return }
-            self.tableView.height    = self.contentView.height - self.toolsView.currentHeight
+            self.tableView.height_ty = self.contentView.height_ty - self.toolsView.currentHeight
             self.toolsView.transform = .identity
         } completion: { [weak self] result in
             guard let self = self, result else {
                 return
             }
-            self.toolsView.height = self.toolsView.currentHeight
-            self.toolsView.clipRectCorner(directionList: [.topLeft, .topRight], cornerRadius: AdaptSize(16))
+            self.toolsView.height_ty = self.toolsView.currentHeight
+            self.toolsView.clipRectCorner_ty(directionList_ty: [.topLeft, .topRight], cornerRadius_ty: AdaptSize_ty(16))
         }
     }
     
@@ -624,17 +624,17 @@ open class KFChatRoomViewController:
                 return
             }
             // 获取动画起始位置
-            let _imageView: KFImageView = cell.contentImageView
+            let _imageView: TYImageView_ty = cell.contentImageView
             self.getMediaModelList(lastMessage: nil) { mediaModelList in
                 // 计算下标
                 var index = mediaModelList.count - 1
                 for (_index, _mediaModel) in mediaModelList.enumerated() {
-                    _mediaModel.sessionId = self.userModel?.id
-                    if _mediaModel.messageId == "\(model.messageId)" {
+                    _mediaModel.sessionId_ty = self.userModel?.id
+                    if _mediaModel.messageId_ty == "\(model.messageId)" {
                         index = _index
                     }
                 }
-                KFBrowserView(type: .custom(modelList: mediaModelList), current: index).show(animationView: _imageView)
+                TYBrowserView_ty(type_ty: .custom_ty(modelList_ty: mediaModelList), current_ty: index).show_ty(animationView_ty: _imageView)
             }
         case RCHQVoiceMessage.getObjectName():
             // 更新未读状态
@@ -670,7 +670,7 @@ open class KFChatRoomViewController:
        
     }
     
-    func deleteMessageAction(model: RCMessage, indexPath: IndexPath, complete block: BoolBlock?, isReload: Bool) {
+    func deleteMessageAction(model: RCMessage, indexPath: IndexPath, complete block: BoolBlock_ty?, isReload: Bool) {
         guard RCIMClient.shared().deleteMessages([NSNumber(integerLiteral: model.messageId)]) else {
             block?(false)
             return

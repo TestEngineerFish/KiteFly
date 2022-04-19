@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import STYKit
 
 class KFAlertViewOneButton: KFBaseAlertView {
     
-    private var partitionContentLineView: KFView = {
-        let view = KFView()
+    private var partitionContentLineView: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor = UIColor.gray4
         return view
     }()

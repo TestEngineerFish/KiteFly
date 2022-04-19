@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import STYKit
 
-class KFCommunityViewController: KFViewController, UITableViewDelegate, UITableViewDataSource, KFCommunityCellDelegate {
+class KFCommunityViewController: TYViewController_ty, UITableViewDelegate, UITableViewDataSource, KFCommunityCellDelegate {
     
     private let cellID = "kKFCommunityCell"
     private var modelList: [KFCommunityModel] = []
     
-    private var tableView: KFTableView = {
-        let tableView = KFTableView()
-        tableView.estimatedRowHeight             = AdaptSize(56)
+    private var tableView: TYTableView_ty = {
+        let tableView = TYTableView_ty()
+        tableView.estimatedRowHeight             = AdaptSize_ty(56)
         tableView.backgroundColor                = UIColor.gray0
         tableView.separatorStyle                 = .none
         tableView.showsVerticalScrollIndicator   = false
@@ -24,9 +25,9 @@ class KFCommunityViewController: KFViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
     }
     
     open override func viewWillAppear(_ animated: Bool) {
@@ -34,37 +35,37 @@ class KFCommunityViewController: KFViewController, UITableViewDelegate, UITableV
         KFChatRequestManager.share.requestRecord(content: "社区主页")
     }
 
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(tableView)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title      = "社区"
-        self.customNavigationBar?.rightTitle = "发布"
-        self.customNavigationBar?.hideLeftView()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.customNavigationBar_ty?.title_ty      = "社区"
+        self.customNavigationBar_ty?.setRightTitle_ty(text_ty: "发布")
+        self.customNavigationBar_ty?.leftButton_ty.isHidden = true
         self.tableView.delegate              = self
         self.tableView.dataSource            = self
         self.tableView.register(KFCommunityCell.classForCoder(), forCellReuseIdentifier: cellID)
     }
     
-    override func rightAction() {
-        super.rightAction()
+    override func rightAction_ty() {
+        super.rightAction_ty()
         let vc = KFCommunityPublishViewController()
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
     
-    override func bindData() {
-        super.bindData()
-        self.modelList = KFFileManager.share.getJsonModelList(file: "CommunityList", type: KFCommunityModel.self) as? [KFCommunityModel] ?? []
+    override func bindData_ty() {
+        super.bindData_ty()
+        self.modelList = TYFileManager_ty.share_ty.getJsonModelList_ty(file_ty: "CommunityList", type_ty: KFCommunityModel.self) as? [KFCommunityModel] ?? []
         self.tableView.reloadData()
     }
     
     override func updateViewConstraints() {
         tableView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalToSuperview().offset(kNavHeight)
+            make.top.equalToSuperview().offset(kNavigationHeight_ty)
         }
         super.updateViewConstraints()
     }
@@ -91,7 +92,7 @@ class KFCommunityViewController: KFViewController, UITableViewDelegate, UITableV
         let vc = KFCommunityDetailViewController()
         let model = self.modelList[indexPath.row]
         vc.model = model
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
     
     // MARK: ==== KFCommunityCellDelegate ====
@@ -103,6 +104,6 @@ class KFCommunityViewController: KFViewController, UITableViewDelegate, UITableV
     func remarkAction(model: KFCommunityModel) {
         let vc = KFCommunityRemarkViewController()
         vc.model = model
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
 }

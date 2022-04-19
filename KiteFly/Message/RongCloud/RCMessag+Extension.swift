@@ -31,7 +31,7 @@ extension RCMessage {
     
     // 用户扩展字段
     var userInfo: KFUserModel? {
-        guard let _id = self.senderUserId?.intValue else {
+        guard let _id = Int(self.senderUserId ?? "0") else {
             return nil
         }
         self.sentStatus = .SentStatus_FAILED
@@ -54,9 +54,9 @@ extension RCMessage {
         set {
             guard let _newValue = newValue else { return }
 //            objc_setAssociatedObject(self, &RCMessage.cellHeight, NSNumber(value: Float(_newValue)), .OBJC_ASSOCIATION_COPY)
-            var dict = extra?.convertToDictionary() ?? [:]
+            var dict = extra?.toDictionary_ty() ?? [:]
             dict["bubbleHeight"] = _newValue
-            let dictStr = dict.toJson()
+            let dictStr = dict.toJson_ty()
             extra = dictStr
             RCIMClient.shared().setMessageExtra(self.messageId, value: dictStr)
         }
@@ -67,7 +67,7 @@ extension RCMessage {
 //            }
 //            return CGFloat(heightFloat)
             
-            guard let _heightFloat = extra?.convertToDictionary()["bubbleHeight"] as?  CGFloat else {
+            guard let _heightFloat = extra?.toDictionary_ty()["bubbleHeight"] as?  CGFloat else {
                 return nil
             }
             return CGFloat(_heightFloat)
@@ -79,9 +79,9 @@ extension RCMessage {
         set {
             guard let _newValue = newValue else { return }
 //            objc_setAssociatedObject(self, &RCMessage.cellWidth, NSNumber(value: Float(_newValue)), .OBJC_ASSOCIATION_COPY)
-            var dict = extra?.convertToDictionary() ?? [:]
+            var dict = extra?.toDictionary_ty() ?? [:]
             dict["bubbleWidth"] = _newValue
-            let dictStr = dict.toJson()
+            let dictStr = dict.toJson_ty()
             extra = dictStr
             RCIMClient.shared().setMessageExtra(self.messageId, value: dictStr)
         }
@@ -91,7 +91,7 @@ extension RCMessage {
 //                return nil
 //            }
 //            return CGFloat(widthFloat)
-            guard let _widthFloat = extra?.convertToDictionary()["bubbleWidth"] as?  CGFloat else {
+            guard let _widthFloat = extra?.toDictionary_ty()["bubbleWidth"] as?  CGFloat else {
                 return nil
             }
             return CGFloat(_widthFloat)
@@ -112,7 +112,7 @@ extension RCMessage {
     /// 更新是否显示时间戳状态
     func updateShowTimeStatus(lastMessageTime: Date?) {
         if let _lastTime = lastMessageTime {
-            if (time?.timeIntervalSince(_lastTime).minute() ?? 0) >= 3 {
+            if (time?.timeIntervalSince(_lastTime).minute_ty() ?? 0) >= 3 {
                 self.isShowTime = true
             } else {
                 self.isShowTime = false

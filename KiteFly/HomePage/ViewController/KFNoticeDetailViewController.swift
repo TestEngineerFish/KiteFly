@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import STYKit
 
-class KFNoticeDetailViewController: KFViewController {
+class KFNoticeDetailViewController: TYViewController_ty {
     
     var model:KFNoticeModel?
     
@@ -17,51 +18,51 @@ class KFNoticeDetailViewController: KFViewController {
         scrollView.showsHorizontalScrollIndicator = false
         return scrollView
     }()
-    private var titleLabel: KFLabel = {
-        let label = KFLabel()
+    private var titleLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.DINAlternateBold(ofSize: AdaptSize(20))
+        label.font          = UIFont.DIN_ty(AdaptSize_ty(20))
         label.textAlignment = .center
         label.numberOfLines = 0
         return label
     }()
-    private var imageView: KFImageView = {
-        let imageView = KFImageView()
+    private var imageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode         = .scaleAspectFill
-        imageView.layer.cornerRadius  = AdaptSize(10)
+        imageView.layer.cornerRadius  = AdaptSize_ty(10)
         imageView.layer.masksToBounds = true
         return imageView
     }()
-    private var byLabel: KFLabel = {
-        let label = KFLabel()
+    private var byLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(16))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(16))
         label.textAlignment = .right
         return label
     }()
-    private var contentLabel: KFLabel = {
-        let label = KFLabel()
+    private var contentLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(16))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(16))
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
     }()
-    private var registerButton: KFButton = {
-        let button = KFButton(.theme)
+    private var registerButton: TYButton_ty = {
+        let button = TYButton_ty(.theme_ty)
         button.setTitle("马上报名", for: .normal)
-        button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(16))
+        button.titleLabel?.font = UIFont.regular_ty(AdaptSize_ty(16))
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,8 +70,8 @@ class KFNoticeDetailViewController: KFViewController {
         KFChatRequestManager.share.requestRecord(content: "主页首页 -- 通知详情")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(scrollView)
         self.view.addSubview(registerButton)
         scrollView.addSubview(titleLabel)
@@ -79,64 +80,65 @@ class KFNoticeDetailViewController: KFViewController {
         scrollView.addSubview(contentLabel)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title      = "详情"
-        self.customNavigationBar?.rightTitle = "参与列表"
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.customNavigationBar_ty?.title_ty      = "详情"
+        self.customNavigationBar_ty?.setRightTitle_ty(text_ty: "参与列表")
         self.registerButton.addTarget(self, action: #selector(registerAction), for: .touchUpInside)
     }
     
-    override func rightAction() {
-        super.rightAction()
+    override func rightAction_ty() {
+        super.rightAction_ty()
+        
         guard let _model = model, _model.isValid == true else {
-            KFAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
+            TYAlertManager_ty.share_ty.oneButton_ty(title_ty: "提示", description_ty: "当前活动已过期", buttonName_ty: "知道了", closure_ty: nil).show_ty()
             return
         }
         let vc = KFRegisterListViewController()
         vc.modelList = _model.userModelList
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
     
-    override func bindData() {
-        super.bindData()
+    override func bindData_ty() {
+        super.bindData_ty()
         guard let model = self.model else {
             return
         }
         self.titleLabel.text = model.title
-        self.imageView.setImage(with: model.icon)
+        self.imageView.setImage_ty(imageStr_ty: model.icon)
         self.byLabel.text      = model.name
         self.contentLabel.text = model.content + "\n\n\n联系方式：\(model.contact)\n\n详细地址：\(model.address)\n\n\n\n"
         if !model.isValid {
-            KFAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
+            TYAlertManager_ty.share_ty.oneButton_ty(title_ty: "提示", description_ty: "当前活动已过期", buttonName_ty: "知道了", closure_ty: nil).show_ty()
         }
     }
     
     override func updateViewConstraints() {
-        scrollView.frame = CGRect(x: 0, y: kNavHeight, width: kScreenWidth, height: kScreenHeight - kNavHeight)
-        scrollView.contentSize = scrollView.size
+        scrollView.frame = CGRect(x: 0, y: kNavigationHeight_ty, width: kScreenWidth_ty, height: kScreenHeight_ty - kNavigationHeight_ty)
+        scrollView.contentSize = scrollView.size_ty
         titleLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(AdaptSize(15))
-            make.right.equalToSuperview().offset(AdaptSize(-15))
-            make.top.equalToSuperview().offset(AdaptSize(15))
+            make.left.equalToSuperview().offset(AdaptSize_ty(15))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
+            make.top.equalToSuperview().offset(AdaptSize_ty(15))
             make.centerX.equalToSuperview()
         }
         byLabel.snp.makeConstraints { make in
             make.left.right.equalTo(titleLabel)
-            make.top.equalTo(titleLabel.snp.bottom).offset(AdaptSize(15))
+            make.top.equalTo(titleLabel.snp.bottom).offset(AdaptSize_ty(15))
         }
         imageView.snp.makeConstraints { make in
             make.left.right.equalTo(titleLabel)
-            make.height.equalTo(AdaptSize(120))
-            make.top.equalTo(byLabel.snp.bottom).offset(AdaptSize(20))
+            make.height.equalTo(AdaptSize_ty(120))
+            make.top.equalTo(byLabel.snp.bottom).offset(AdaptSize_ty(20))
         }
         contentLabel.snp.makeConstraints { make in
             make.left.right.equalTo(titleLabel)
-            make.top.equalTo(imageView.snp.bottom).offset(AdaptSize(20))
-            make.bottom.equalToSuperview().offset(AdaptSize(-20))
+            make.top.equalTo(imageView.snp.bottom).offset(AdaptSize_ty(20))
+            make.bottom.equalToSuperview().offset(AdaptSize_ty(-20))
         }
         registerButton.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: AdaptSize(100), height: AdaptSize(40)))
-            make.bottom.equalToSuperview().offset(AdaptSize(-20) - kSafeBottomMargin)
+            make.size.equalTo(CGSize(width: AdaptSize_ty(100), height: AdaptSize_ty(40)))
+            make.bottom.equalToSuperview().offset(AdaptSize_ty(-20) - kSafeBottomMargin_ty)
             make.centerX.equalToSuperview()
         }
         super.updateViewConstraints()
@@ -146,15 +148,15 @@ class KFNoticeDetailViewController: KFViewController {
     @objc
     private func registerAction() {
         guard let _model = model, _model.isValid == true else {
-            KFAlertManager.share.oneButton(title: "提示", description: "当前活动已过期", buttonName: "知道了", closure: nil).show()
+            TYAlertManager_ty.share_ty.oneButton_ty(title_ty: "提示", description_ty: "当前活动已过期", buttonName_ty: "知道了", closure_ty: nil).show_ty()
             return
         }
-        kWindow.showLoading()
+        kWindow_ty.showLoading_ty()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            kWindow.hideLoading()
-            kWindow.toast("已报名，请等待对方审核")
+            kWindow_ty.hideLoading_ty()
+            kWindow_ty.toast_ty("已报名，请等待对方审核")
             let vc = KFRegisterListViewController()
-            self.navigationController?.push(vc: vc)
+            self.navigationController?.push_ty(vc_ty: vc)
         }
     }
 }

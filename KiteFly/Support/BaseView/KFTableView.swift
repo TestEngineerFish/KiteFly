@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import STYKit
 
 public protocol KFTableViewIndexViewDelegate: NSObjectProtocol {
     func indexTitle(section: Int) -> String
@@ -42,8 +43,8 @@ open class KFTableView: UITableView {
     private let indexSelectedColor = UIColor.blue
     /// 索引回调代理
     public weak var indexDelegate: KFTableViewIndexViewDelegate?
-    private var indexView: KFView = {
-        let view = KFView()
+    private var indexView: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor = UIColor.clear
         return view
     }()

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import STYKit
 
 protocol KFCommunityCellDelegate: NSObject {
     // 评论
@@ -15,85 +16,85 @@ protocol KFCommunityCellDelegate: NSObject {
     func reportAction(model: KFCommunityModel)
 }
 
-class KFCommunityCell: KFTableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class KFCommunityCell: TYTableViewCell_ty, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private let cellID: String = "kKFCommunityImageCell"
     private var imageList = [String]()
     private var model: KFCommunityModel?
     weak var delegate: KFCommunityCellDelegate?
     
-    private var customContentView: KFView = {
-        let view = KFView()
+    private var customContentView: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor    = UIColor.white
-        view.layer.cornerRadius = AdaptSize(8)
-        view.layer.setDefaultShadow()
+        view.layer.cornerRadius = AdaptSize_ty(8)
+        view.layer.setDefaultShadow_ty()
         return view
     }()
-    private var avatarImageView: KFImageView = {
-        let imageView = KFImageView()
+    private var avatarImageView: TYImageView_ty = {
+        let imageView = TYImageView_ty()
         imageView.contentMode = .scaleAspectFill
-        imageView.size = CGSize(width: AdaptSize(60), height: AdaptSize(60))
+        imageView.size_ty = CGSize(width: AdaptSize_ty(60), height: AdaptSize_ty(60))
         imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = AdaptSize(30)
+        imageView.layer.cornerRadius = AdaptSize_ty(30)
         return imageView
     }()
-    private var nameLabel: KFLabel = {
-        let label = KFLabel()
+    private var nameLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.semiboldFont(ofSize: AdaptSize(15))
+        label.font          = UIFont.semibold_ty(AdaptSize_ty(15))
         label.textAlignment = .left
         return label
     }()
-    private var addressLabel: KFLabel = {
-        let label = KFLabel()
+    private var addressLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black1
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(13))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(13))
         label.textAlignment = .left
         return label
     }()
-    private var contentLabel: KFLabel = {
-        let label = KFLabel()
+    private var contentLabel: TYLabel_ty = {
+        let label = TYLabel_ty()
         label.text          = ""
         label.textColor     = UIColor.black0
-        label.font          = UIFont.regularFont(ofSize: AdaptSize(15))
+        label.font          = UIFont.regular_ty(AdaptSize_ty(15))
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
     }()
     private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize                 = CGSize(width: AdaptSize(80), height: AdaptSize(80))
+        layout.itemSize                 = CGSize(width: AdaptSize_ty(80), height: AdaptSize_ty(80))
         layout.scrollDirection          = .vertical
-        layout.minimumLineSpacing       = AdaptSize(10)
-        layout.minimumInteritemSpacing  = AdaptSize(10)
+        layout.minimumLineSpacing       = AdaptSize_ty(10)
+        layout.minimumInteritemSpacing  = AdaptSize_ty(10)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator   = false
         collectionView.backgroundColor = .clear
         return collectionView
     }()
-    private var reportButton: KFButton = {
-        let button = KFButton()
+    private var reportButton: TYButton_ty = {
+        let button = TYButton_ty()
         button.setImage(UIImage(named: "report"), for: .normal)
         button.setTitle("举报", for: .normal)
         button.setTitleColor(UIColor.black0, for: .normal)
-        button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(13))
+        button.titleLabel?.font = UIFont.regular_ty(AdaptSize_ty(13))
         return button
     }()
-    private var remarkButton: KFButton = {
-        let button = KFButton()
+    private var remarkButton: TYButton_ty = {
+        let button = TYButton_ty()
         button.setTitle("评论", for: .normal)
         button.setTitleColor(UIColor.black0, for: .normal)
-        button.titleLabel?.font = UIFont.regularFont(ofSize: AdaptSize(13))
+        button.titleLabel?.font = UIFont.regular_ty(AdaptSize_ty(13))
         return button
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.createSubviews()
-        self.bindProperty()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
         self.updateConstraints()
     }
     
@@ -101,8 +102,8 @@ class KFCommunityCell: KFTableViewCell, UICollectionViewDelegate, UICollectionVi
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.contentView.addSubview(customContentView)
         customContentView.addSubview(avatarImageView)
         customContentView.addSubview(nameLabel)
@@ -113,8 +114,8 @@ class KFCommunityCell: KFTableViewCell, UICollectionViewDelegate, UICollectionVi
         customContentView.addSubview(collectionView)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
         self.collectionView.delegate   = self
         self.collectionView.dataSource = self
         self.collectionView.register(KFCommunityImageCell.classForCoder(), forCellWithReuseIdentifier: cellID)
@@ -124,55 +125,55 @@ class KFCommunityCell: KFTableViewCell, UICollectionViewDelegate, UICollectionVi
     
     override func updateConstraints() {
         customContentView.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(AdaptSize(15))
-            make.top.equalToSuperview().offset(AdaptSize(15))
-            make.right.equalToSuperview().offset(AdaptSize(-15))
-            make.bottom.equalToSuperview().offset(AdaptSize(-15))
+            make.left.equalToSuperview().offset(AdaptSize_ty(15))
+            make.top.equalToSuperview().offset(AdaptSize_ty(15))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
+            make.bottom.equalToSuperview().offset(AdaptSize_ty(-15))
         }
         avatarImageView.snp.makeConstraints { make in
-            make.size.equalTo(avatarImageView.size)
-            make.top.left.equalToSuperview().offset(AdaptSize(15))
+            make.size.equalTo(avatarImageView.size_ty)
+            make.top.left.equalToSuperview().offset(AdaptSize_ty(15))
         }
         nameLabel.snp.makeConstraints { make in
-            make.left.equalTo(avatarImageView.snp.right).offset(AdaptSize(10))
+            make.left.equalTo(avatarImageView.snp.right).offset(AdaptSize_ty(10))
             make.top.equalTo(avatarImageView)
-            make.right.equalTo(reportButton.snp.left).offset(AdaptSize(-10))
+            make.right.equalTo(reportButton.snp.left).offset(AdaptSize_ty(-10))
         }
         addressLabel.snp.makeConstraints { make in
             make.left.equalTo(nameLabel)
-            make.right.equalToSuperview().offset(AdaptSize(-15))
-            make.top.equalTo(nameLabel.snp.bottom).offset(AdaptSize(5))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
+            make.top.equalTo(nameLabel.snp.bottom).offset(AdaptSize_ty(5))
         }
         contentLabel.snp.makeConstraints { make in
             make.left.equalTo(avatarImageView)
-            make.right.equalToSuperview().offset(AdaptSize(-15))
-            make.top.equalTo(avatarImageView.snp.bottom).offset(AdaptSize(15))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
+            make.top.equalTo(avatarImageView.snp.bottom).offset(AdaptSize_ty(15))
         }
         collectionView.snp.remakeConstraints { make in
             make.left.right.equalTo(contentLabel)
-            make.top.equalTo(contentLabel.snp.bottom).offset(AdaptSize(15))
+            make.top.equalTo(contentLabel.snp.bottom).offset(AdaptSize_ty(15))
             if imageList.isEmpty {
                 make.height.equalTo(0)
             } else if imageList.count == 1 {
-                make.height.equalTo(kScreenWidth - AdaptSize(80))
+                make.height.equalTo(kScreenWidth_ty - AdaptSize_ty(80))
             } else {
                 let isRound = imageList.count % 3 > 0
                 var line    = imageList.count/3
                 line        = isRound ? line + 1 : line
-                let h       = CGFloat(line) * AdaptSize(90) - AdaptSize(10)
+                let h       = CGFloat(line) * AdaptSize_ty(90) - AdaptSize_ty(10)
                 make.height.equalTo(h)
             }
         }
         remarkButton.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: AdaptSize(60), height: AdaptSize(35)))
-            make.top.equalTo(collectionView.snp.bottom).offset(AdaptSize(10))
-            make.right.equalToSuperview().offset(AdaptSize(-15))
-            make.bottom.equalToSuperview().offset(AdaptSize(-10))
+            make.size.equalTo(CGSize(width: AdaptSize_ty(60), height: AdaptSize_ty(35)))
+            make.top.equalTo(collectionView.snp.bottom).offset(AdaptSize_ty(10))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
+            make.bottom.equalToSuperview().offset(AdaptSize_ty(-10))
         }
         reportButton.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: AdaptSize(15), height: AdaptSize(15)))
+            make.size.equalTo(CGSize(width: AdaptSize_ty(15), height: AdaptSize_ty(15)))
             make.top.equalTo(avatarImageView)
-            make.right.equalToSuperview().offset(AdaptSize(-15))
+            make.right.equalToSuperview().offset(AdaptSize_ty(-15))
         }
         super.updateConstraints()
     }
@@ -181,7 +182,7 @@ class KFCommunityCell: KFTableViewCell, UICollectionViewDelegate, UICollectionVi
     func setData(model: KFCommunityModel) {
         self.model = model
         if let userModel = model.userModel {
-            self.avatarImageView.setImage(with: userModel.avatar)
+            self.avatarImageView.setImage_ty(imageStr_ty: userModel.avatar)
             self.nameLabel.text    = userModel.name
             self.addressLabel.text = userModel.address
         }
@@ -226,9 +227,9 @@ class KFCommunityCell: KFTableViewCell, UICollectionViewDelegate, UICollectionVi
     // MARK: ==== UICollectionViewDelegateFlowLayout ====
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if self.imageList.count == 1 {
-            return CGSize(width: kScreenWidth - AdaptSize(80), height: kScreenWidth - AdaptSize(80))
+            return CGSize(width: kScreenWidth_ty - AdaptSize_ty(80), height: kScreenWidth_ty - AdaptSize_ty(80))
         } else {
-            return CGSize(width: AdaptSize(80), height: AdaptSize(80))
+            return CGSize(width: AdaptSize_ty(80), height: AdaptSize_ty(80))
         }
     }
 }

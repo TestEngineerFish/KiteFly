@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import STYKit
 
-class KFSettingMyRegisterViewController: KFViewController, UITableViewDelegate, UITableViewDataSource {
+class KFSettingMyRegisterViewController: TYViewController_ty, UITableViewDelegate, UITableViewDataSource {
     
     private let noticCellID = "kKFSettingRegisterCell"
     
     private var noticeModelList = [KFNoticeModel]()
     
-    private var tableView: KFTableView = {
-        let tableView = KFTableView()
-        tableView.estimatedRowHeight             = AdaptSize(56)
+    private var tableView: TYTableView_ty = {
+        let tableView = TYTableView_ty()
+        tableView.estimatedRowHeight             = AdaptSize_ty(56)
         tableView.backgroundColor                = UIColor.clear
         tableView.separatorStyle                 = .none
         tableView.showsVerticalScrollIndicator   = false
@@ -25,9 +26,9 @@ class KFSettingMyRegisterViewController: KFViewController, UITableViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,25 +36,25 @@ class KFSettingMyRegisterViewController: KFViewController, UITableViewDelegate, 
         KFChatRequestManager.share.requestRecord(content: "设置 -- 已报名")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalToSuperview().offset(kNavHeight)
+            make.top.equalToSuperview().offset(kNavigationHeight_ty)
         }
     }
     
-    override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title = "已报名"
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.customNavigationBar_ty?.title_ty = "已报名"
         self.tableView.register(KFSettingRegisterCell.classForCoder(), forCellReuseIdentifier: noticCellID)
         self.tableView.delegate        = self
         self.tableView.dataSource      = self
     }
     
-    override func bindData() {
-        super.bindData()
+    override func bindData_ty() {
+        super.bindData_ty()
         self.noticeModelList = []
         self.tableView.reloadData()
     }
@@ -83,7 +84,7 @@ class KFSettingMyRegisterViewController: KFViewController, UITableViewDelegate, 
         let model = self.noticeModelList[indexPath.row]
         let vc = KFNoticeDetailViewController()
         vc.model = model
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
     
 }

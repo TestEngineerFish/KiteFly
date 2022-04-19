@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 @objc
 open class KFActionSheet: KFTopWindowView {
@@ -21,8 +20,8 @@ open class KFActionSheet: KFTopWindowView {
     private var title: String?
 
     /// 无裁切的底部视图的父视图
-    public var contentView: KFView = {
-        let view = KFView()
+    public var contentView: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor = UIColor.clear
         return view
     }()

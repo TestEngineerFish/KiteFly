@@ -14,7 +14,7 @@ protocol KFSystemPhotoViewDelegate: NSObjectProtocol {
     func unselectImage()
 }
 
-class KFSystemPhotoView: KFView, UICollectionViewDelegate, UICollectionViewDataSource, KFPhotoAlbumCellDelegate {
+class KFSystemPhotoView: TYView_ty, UICollectionViewDelegate, UICollectionViewDataSource, KFPhotoAlbumCellDelegate {
     
     weak var delegate: KFSystemPhotoViewDelegate?
     private let kBPPhotoAlbumCellID = "kBPPhotoAlbumCell"

@@ -10,7 +10,7 @@ import AVFoundation
 import Photos.PHPhotoLibrary
 import UIKit
 
-open class KFSystemPhotoManager: KFView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+open class KFSystemPhotoManager: TYView_ty, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @objc
     public static let share = KFSystemPhotoManager()

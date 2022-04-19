@@ -8,6 +8,7 @@
 import UIKit
 import IQKeyboardManager
 import GrowingCoreKit
+import STYKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,11 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         if !KFUserModel.share.isLogin {
             let tbc = KFTabBarController()
-            let nvc = KFNavigationController(rootViewController: tbc)
+            let nvc = TYNavigationController_ty(rootViewController: tbc)
             self.window?.rootViewController = nvc
         } else {
             let vc  = KFLoginViewController()
-            let nvc = KFNavigationController(rootViewController: vc)
+            let nvc = TYNavigationController_ty(rootViewController: vc)
             self.window?.rootViewController = nvc
         }
         

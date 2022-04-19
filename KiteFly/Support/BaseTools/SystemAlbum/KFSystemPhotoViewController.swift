@@ -9,7 +9,7 @@
 import Photos
 import UIKit
 
-class KFSystemPhotoViewController: KFViewController, KFSystemAlbumListViewDelegate, KFSystemPhotoViewDelegate {
+class KFSystemPhotoViewController: TYViewController_ty, KFSystemAlbumListViewDelegate, KFSystemPhotoViewDelegate {
 
     /// 当前相册对象
     private var albumModel: KFPhotoAlbumModel? {
@@ -17,8 +17,8 @@ class KFSystemPhotoViewController: KFViewController, KFSystemAlbumListViewDelega
             self.contentView.reload(album: newValue)
         }
     }
-    private var titleBackgroundView: KFView = {
-        let view = KFView()
+    private var titleBackgroundView: TYView_ty = {
+        let view = TYView_ty()
         view.backgroundColor = UIColor.gray0
         view.layer.masksToBounds      = true
         view.isUserInteractionEnabled = false

@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import STYKit
 
-class KFRegisterListViewController: KFViewController, UITableViewDelegate, UITableViewDataSource {
+class KFRegisterListViewController: TYViewController_ty, UITableViewDelegate, UITableViewDataSource {
     
     private let cellID = "kKFHomeMemberListCell"
     var modelList: [KFUserModel] = []
     
-    private var tableView: KFTableView = {
-        let tableView = KFTableView()
-        tableView.estimatedRowHeight             = AdaptSize(56)
+    private var tableView: TYTableView_ty = {
+        let tableView = TYTableView_ty()
+        tableView.estimatedRowHeight             = AdaptSize_ty(56)
         tableView.backgroundColor                = UIColor.gray0
         tableView.separatorStyle                 = .none
         tableView.showsVerticalScrollIndicator   = false
@@ -24,9 +25,9 @@ class KFRegisterListViewController: KFViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createSubviews()
-        self.bindProperty()
-        self.bindData()
+        self.createSubviews_ty()
+        self.bindProperty_ty()
+        self.bindData_ty()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,29 +35,29 @@ class KFRegisterListViewController: KFViewController, UITableViewDelegate, UITab
         KFChatRequestManager.share.requestRecord(content: "主页首页 -- 查看报名人列表")
     }
     
-    override func createSubviews() {
-        super.createSubviews()
+    override func createSubviews_ty() {
+        super.createSubviews_ty()
         self.view.addSubview(tableView)
     }
     
-    override func bindProperty() {
-        super.bindProperty()
-        self.customNavigationBar?.title = "报名人员列表"
+    override func bindProperty_ty() {
+        super.bindProperty_ty()
+        self.customNavigationBar_ty?.title_ty = "报名人员列表"
         self.tableView.delegate         = self
         self.tableView.dataSource       = self
         self.tableView.register(KFHomeMemberListCell.classForCoder(), forCellReuseIdentifier: cellID)
     }
     
-    override func bindData() {
-        super.bindData()
-//        self.modelList = KFFileManager.share.getJsonModelList(file: "UserModelList", type: KFUserModel.self) as? [KFUserModel] ?? []
+    override func bindData_ty() {
+        super.bindData_ty()
+//        self.modelList = TYFileManager_ty.share_ty.getJsonModelList(file: "UserModelList", type: KFUserModel.self) as? [KFUserModel] ?? []
         self.tableView.reloadData()
     }
     
     override func updateViewConstraints() {
         tableView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalToSuperview().offset(kNavHeight)
+            make.top.equalToSuperview().offset(kNavigationHeight_ty)
         }
         super.updateViewConstraints()
     }
@@ -82,6 +83,6 @@ class KFRegisterListViewController: KFViewController, UITableViewDelegate, UITab
         let model = self.modelList[indexPath.row]
         let vc = KFSettingUserDetailViewController()
         vc.model = model
-        self.navigationController?.push(vc: vc)
+        self.navigationController?.push_ty(vc_ty: vc)
     }
 }
