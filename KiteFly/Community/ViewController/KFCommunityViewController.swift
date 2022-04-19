@@ -48,6 +48,18 @@ class KFCommunityViewController: TYViewController_ty, UITableViewDelegate, UITab
         self.tableView.delegate              = self
         self.tableView.dataSource            = self
         self.tableView.register(KFCommunityCell.classForCoder(), forCellReuseIdentifier: cellID)
+        self.tableView.setRefreshHeaderEnable_ty { finishedBlock in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.tableView.reloadData()
+                finishedBlock?()
+            }
+        }
+        self.tableView.setRefreshFooterEnable_ty { finishedBlock in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.tableView.reloadData()
+                finishedBlock?()
+            }
+        }
     }
     
     override func rightAction_ty() {

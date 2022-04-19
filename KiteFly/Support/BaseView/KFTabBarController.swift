@@ -36,6 +36,15 @@ open class KFTabBarController: UITabBarController, UITabBarControllerDelegate {
         taskVC.tabBarItem.isSpringLoaded = true
         taskVC.tabBarItem.setTitleTextAttributes([.foregroundColor:UIColor.theme], for: .selected)
         
+        let mapVC = KFMapViewController()
+        mapVC.view.backgroundColor     = .white
+        mapVC.tabBarItem.title         = "足迹"
+        mapVC.tabBarItem.image         = UIImage(named: "map_unselect")?.withRenderingMode(.alwaysOriginal)
+        mapVC.tabBarItem.selectedImage = UIImage(named: "map_selected")?.withRenderingMode(.alwaysOriginal)
+        mapVC.tabBarItem.imageInsets   = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        mapVC.tabBarItem.isSpringLoaded = true
+        mapVC.tabBarItem.setTitleTextAttributes([.foregroundColor:UIColor.theme], for: .selected)
+        
         let settingVC = KFSettingViewController()
         settingVC.view.backgroundColor  = .white
         settingVC.tabBarItem.title         = "设置"
@@ -45,7 +54,7 @@ open class KFTabBarController: UITabBarController, UITabBarControllerDelegate {
         settingVC.tabBarItem.isSpringLoaded = true
         settingVC.tabBarItem.setTitleTextAttributes([.foregroundColor:UIColor.theme], for: .selected)
         
-        self.viewControllers = [homeVC, taskVC, settingVC]
+        self.viewControllers = [homeVC, taskVC, mapVC, settingVC]
         self.updateUI_ty()
         self.selectedIndex = 0
     }

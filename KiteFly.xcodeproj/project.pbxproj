@@ -12,6 +12,11 @@
 		1807470E27F8253300D4902D /* KFSettingUserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807470D27F8253300D4902D /* KFSettingUserDetailCell.swift */; };
 		1807471027F827E800D4902D /* KFSettingUserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807470F27F827E800D4902D /* KFSettingUserHeaderView.swift */; };
 		1807471227F8554600D4902D /* fly.json in Resources */ = {isa = PBXBuildFile; fileRef = 1807471127F8554600D4902D /* fly.json */; };
+		182A433B280E8EB500511672 /* KFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A433A280E8EB500511672 /* KFRequest.swift */; };
+		182A433E280E9C8D00511672 /* KFMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A433D280E9C8D00511672 /* KFMapViewController.swift */; };
+		182A4342280E9E4900511672 /* map.json in Resources */ = {isa = PBXBuildFile; fileRef = 182A4340280E9E4900511672 /* map.json */; };
+		182A4343280E9E4900511672 /* remind.json in Resources */ = {isa = PBXBuildFile; fileRef = 182A4341280E9E4900511672 /* remind.json */; };
+		182A4345280EA28100511672 /* KFMapAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A4344280EA28100511672 /* KFMapAddViewController.swift */; };
 		1857A80B280D677500E31D1A /* KFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857A809280D677500E31D1A /* KFTabBarController.swift */; };
 		1857A80D280D679C00E31D1A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857A80C280D679C00E31D1A /* UIColor+Extension.swift */; };
 		1857A813280D74F600E31D1A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857A812280D74F600E31D1A /* String+Extension.swift */; };
@@ -95,6 +100,11 @@
 		1807470D27F8253300D4902D /* KFSettingUserDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingUserDetailCell.swift; sourceTree = "<group>"; };
 		1807470F27F827E800D4902D /* KFSettingUserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFSettingUserHeaderView.swift; sourceTree = "<group>"; };
 		1807471127F8554600D4902D /* fly.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fly.json; sourceTree = "<group>"; };
+		182A433A280E8EB500511672 /* KFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFRequest.swift; sourceTree = "<group>"; };
+		182A433D280E9C8D00511672 /* KFMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFMapViewController.swift; sourceTree = "<group>"; };
+		182A4340280E9E4900511672 /* map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = map.json; sourceTree = "<group>"; };
+		182A4341280E9E4900511672 /* remind.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = remind.json; sourceTree = "<group>"; };
+		182A4344280EA28100511672 /* KFMapAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFMapAddViewController.swift; sourceTree = "<group>"; };
 		1857A809280D677500E31D1A /* KFTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KFTabBarController.swift; path = KiteFly/Support/BaseView/KFTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		1857A80C280D679C00E31D1A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "KiteFly/Support/Extension/UIColor+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		1857A812280D74F600E31D1A /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "KiteFly/Support/Extension/String+Extension.swift"; sourceTree = SOURCE_ROOT; };
@@ -187,12 +197,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182A433C280E9C8200511672 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				182A433F280E9E3C00511672 /* Resource */,
+				182A433D280E9C8D00511672 /* KFMapViewController.swift */,
+				182A4344280EA28100511672 /* KFMapAddViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		182A433F280E9E3C00511672 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				182A4340280E9E4900511672 /* map.json */,
+				182A4341280E9E4900511672 /* remind.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		1857A807280D676000E31D1A /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				1857A812280D74F600E31D1A /* String+Extension.swift */,
 				1857A80C280D679C00E31D1A /* UIColor+Extension.swift */,
 				1857A809280D677500E31D1A /* KFTabBarController.swift */,
+				182A433A280E8EB500511672 /* KFRequest.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -218,6 +248,7 @@
 		185F5E5827F41CD100AFBA3F /* KiteFly */ = {
 			isa = PBXGroup;
 			children = (
+				182A433C280E9C8200511672 /* Map */,
 				1857A807280D676000E31D1A /* Other */,
 				185F5F6527F6CD5400AFBA3F /* Message */,
 				185F5ED927F47C4500AFBA3F /* Resource */,
@@ -593,7 +624,9 @@
 				185F5E6627F41CD200AFBA3F /* LaunchScreen.storyboard in Resources */,
 				185F5F5427F69CBE00AFBA3F /* Agreement.html in Resources */,
 				185F5EF727F583B800AFBA3F /* CommunityList.json in Resources */,
+				182A4342280E9E4900511672 /* map.json in Resources */,
 				185F5ED527F47A6A00AFBA3F /* PageUrl.json in Resources */,
+				182A4343280E9E4900511672 /* remind.json in Resources */,
 				185F5ECF27F45B9E00AFBA3F /* NoticModelList.json in Resources */,
 				185F5E6327F41CD200AFBA3F /* Assets.xcassets in Resources */,
 				185F5F5027F5CCFE00AFBA3F /* UserModel.json in Resources */,
@@ -699,6 +732,7 @@
 				185F5FAD27F6D03000AFBA3F /* KFRecordVoiceAnimationLayer.swift in Sources */,
 				185F5EE327F556EF00AFBA3F /* KFHomeMemberListCell.swift in Sources */,
 				185F5FAE27F6D03000AFBA3F /* KFEmojiModel.swift in Sources */,
+				182A433B280E8EB500511672 /* KFRequest.swift in Sources */,
 				185F5FAC27F6D03000AFBA3F /* KFRecordAnimationItemLayer.swift in Sources */,
 				185F5F0127F598BD00AFBA3F /* KFCommunityPublishViewController.swift in Sources */,
 				185F5EFB27F58D7C00AFBA3F /* KFCommunityHeaderView.swift in Sources */,
@@ -717,11 +751,13 @@
 				1807471027F827E800D4902D /* KFSettingUserHeaderView.swift in Sources */,
 				185F5FA027F6D03000AFBA3F /* KFChatRoomBaseCell.swift in Sources */,
 				185F5F4427F5B2AD00AFBA3F /* KFCommunityReportViewController.swift in Sources */,
+				182A433E280E9C8D00511672 /* KFMapViewController.swift in Sources */,
 				185F5F9627F6D03000AFBA3F /* KFChatRoomViewController.swift in Sources */,
 				185F5F5C27F6AABB00AFBA3F /* KFSettingNoticeCell.swift in Sources */,
 				185F5FA527F6D03000AFBA3F /* KFChatRoomMessageCellFactory.swift in Sources */,
 				185F5EEE27F5780400AFBA3F /* KFCommunityCell.swift in Sources */,
 				185F5FB027F6D03000AFBA3F /* KFEmojiToolView.swift in Sources */,
+				182A4345280EA28100511672 /* KFMapAddViewController.swift in Sources */,
 				1807470A27F7F86500D4902D /* KFCommunityReplyRemarkViewController.swift in Sources */,
 				185F5F5A27F6AA1000AFBA3F /* KFSettingNoticeViewController.swift in Sources */,
 				1857A813280D74F600E31D1A /* String+Extension.swift in Sources */,

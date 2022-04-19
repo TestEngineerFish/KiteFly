@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let nvc = TYNavigationController_ty(rootViewController: vc)
             self.window?.rootViewController = nvc
         }
-        
+        TYNetworkConfig_ty.share_ty.domainApi_ty = "https://oapi.dingtalk.com"
         self.window?.makeKeyAndVisible()
         return true
     }

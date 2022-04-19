@@ -34,7 +34,7 @@ class KFHomeHeaderView: TYView_ty, TYCyclePagerViewDelegate, TYCyclePagerViewDat
     
     private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: AdaptSize_ty(200), height: AdaptSize_ty(100))
+        layout.itemSize = CGSize(width: AdaptSize_ty(300), height: AdaptSize_ty(300))
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
@@ -94,7 +94,7 @@ class KFHomeHeaderView: TYView_ty, TYCyclePagerViewDelegate, TYCyclePagerViewDat
         collectionView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(pageView.snp.bottom).offset(AdaptSize_ty(10))
-            make.height.equalTo(AdaptSize_ty(100))
+            make.height.equalTo(AdaptSize_ty(300))
             make.bottom.equalToSuperview()
         }
         super.updateConstraints()

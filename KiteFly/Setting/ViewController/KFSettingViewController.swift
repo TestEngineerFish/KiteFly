@@ -100,6 +100,12 @@ class KFSettingViewController: TYViewController_ty, UITableViewDelegate, UITable
         self.tableView.delegate   = self
         self.tableView.dataSource = self
         self.tableView.register(KFSettingCell.classForCoder(), forCellReuseIdentifier: cellID)
+        self.tableView.setRefreshHeaderEnable_ty { finishedBlock in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.tableView.reloadData()
+                finishedBlock?()
+            }
+        }
     }
     
     override func bindData_ty() {

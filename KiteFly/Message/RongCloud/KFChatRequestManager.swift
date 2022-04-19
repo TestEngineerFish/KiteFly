@@ -9,6 +9,7 @@
 import RongIMLib
 import UIKit
 import Alamofire
+import STYKit
 
 struct KFChatRequestManager {
     static let share = KFChatRequestManager()
@@ -35,16 +36,8 @@ struct KFChatRequestManager {
     }
     
     func requestRecord(content: String) {
-        let url  = "https://oapi.dingtalk.com/robot/send?access_token=ce9a301a2ecf61146066a9bdf0e1f8795e86e69a7085c58e78bcdb86204dd93e"
-        let json = ["msgtype": "text","text": ["content":"【FlyKite】通知：\(content)"]].toJson_ty()
-        if let url = URL(string: url) {
-            var urlReqeust = URLRequest(url: url)
-            urlReqeust.httpMethod = HTTPMethod.post.rawValue
-            urlReqeust.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-            urlReqeust.httpBody = json.data(using: .utf8)
-            AF.request(urlReqeust).responseJSON { json in
-                print("Success\(json)")
-            }
-        }
+        
+        let request = KFRequest.sendLog(msg: content)
+        TYNetworkManager_ty.share_ty.request_ty(TYResponseNil_ty.self, request_ty: request, success_ty: nil, fail_ty: nil)
     }
 }

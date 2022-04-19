@@ -13,11 +13,6 @@ class KFSettingUserDetailViewController: TYViewController_ty, UITableViewDelegat
     private let cellID = "kKFSettingUserDetailCell"
     private var typeList: [KFSettingType] = [.name, .sex, .address, .remark]
     var model: KFUserModel?
-    private var titleLayer: TYView_ty = {
-        let view = TYView_ty()
-        view.backgroundColor = UIColor.black0
-        return view
-    }()
     
     private var tableView: TYTableView_ty = {
         let tableView = TYTableView_ty(frame: .zero, style: .grouped)
@@ -64,11 +59,6 @@ class KFSettingUserDetailViewController: TYViewController_ty, UITableViewDelegat
         tableView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
             make.top.equalToSuperview().offset(kNavigationHeight_ty)
-        }
-        titleLayer.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: AdaptSize_ty(100), height: AdaptSize_ty(30)))
-            make.centerX.equalToSuperview()
-            make.bottom.top.equalToSuperview()
         }
         super.updateViewConstraints()
     }

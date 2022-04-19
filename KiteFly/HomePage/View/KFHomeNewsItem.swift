@@ -20,7 +20,7 @@ class KFHomeNewsItem: TYCollectionViewCell_ty {
     
     private var iconImageView: TYImageView_ty = {
         let imageView = TYImageView_ty()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = AdaptSize_ty(10)
         imageView.layer.masksToBounds = true
         return imageView
@@ -31,7 +31,7 @@ class KFHomeNewsItem: TYCollectionViewCell_ty {
         label.text          = ""
         label.textColor     = UIColor.black
         label.font          = UIFont.regular_ty(AdaptSize_ty(14))
-        label.textAlignment = .left
+        label.textAlignment = .center
         label.numberOfLines = 2
         return label
     }()
@@ -56,14 +56,12 @@ class KFHomeNewsItem: TYCollectionViewCell_ty {
             make.bottom.right.equalToSuperview().offset(AdaptSize_ty(-10))
         }
         iconImageView.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: AdaptSize_ty(60), height: AdaptSize_ty(60)))
-            make.centerY.equalToSuperview()
-            make.left.equalToSuperview().offset(AdaptSize_ty(15))
+            make.size.equalTo(CGSize(width: AdaptSize_ty(260), height: AdaptSize_ty(260)))
+            make.center.equalToSuperview()
         }
         titleLabel.snp.makeConstraints { make in
-            make.left.equalTo(iconImageView.snp.right).offset(AdaptSize_ty(10))
-            make.right.equalToSuperview().offset(AdaptSize_ty(-10))
-            make.top.bottom.equalTo(iconImageView)
+            make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview().offset(AdaptSize_ty(-10))
         }
     }
     

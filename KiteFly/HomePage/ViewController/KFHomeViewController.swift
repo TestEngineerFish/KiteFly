@@ -54,6 +54,18 @@ class KFHomeViewController: TYViewController_ty, UITableViewDelegate, UITableVie
         self.tableView.register(KFHomeNoticCell.classForCoder(), forCellReuseIdentifier: noticCellID)
         self.tableView.delegate        = self
         self.tableView.dataSource      = self
+        self.tableView.setRefreshHeaderEnable_ty { finishedBlock in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.tableView.reloadData()
+                finishedBlock?()
+            }
+        }
+        self.tableView.setRefreshFooterEnable_ty { finishedBlock in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.tableView.reloadData()
+                finishedBlock?()
+            }
+        }
     }
     
     override func bindData_ty() {
