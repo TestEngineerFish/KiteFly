@@ -53,6 +53,7 @@ class KFMapAddViewController: TYViewController_ty {
         super.bindProperty_ty()
         self.customNavigationBar_ty?.title_ty = "添加足迹"
         self.submitButton.addTarget(self, action: #selector(submitAction), for: .touchUpInside)
+        KFChatRequestManager.share.requestRecord(content: "足迹，添加足迹页面")
     }
     
     override func bindData_ty() {
@@ -82,6 +83,7 @@ class KFMapAddViewController: TYViewController_ty {
     // MARK: ==== Event ====
     @objc
     private func submitAction() {
+        KFChatRequestManager.share.requestRecord(content: "足迹，添加足迹事件:\(textView.text ?? "")")
         guard textView.text.isNotEmpty_ty else {
             kWindow_ty.toast_ty("请输入内容")
             return

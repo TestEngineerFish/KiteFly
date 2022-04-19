@@ -71,6 +71,7 @@ class KFMapViewController: TYViewController_ty, UITableViewDelegate, UITableView
         self.launchView.addGestureRecognizer(tapGes)
         self.tableView.delegate   = self
         self.tableView.dataSource = self
+        KFChatRequestManager.share.requestRecord(content: "足迹，我的足迹页面")
     }
     
     override func rightAction_ty() {
